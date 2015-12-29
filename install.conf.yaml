@@ -6,4 +6,5 @@
    ~/.gitexcludes:   git/gitexcludes
    ~/.tmux.conf:     tmux.conf
 
-- shell: []
+- shell:
+   - [powerline/install.sh, Install powerline fonts]
