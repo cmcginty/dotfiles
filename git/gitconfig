@@ -1,0 +1,101 @@
+[user]
+   name = Patrick C. McGinty
+   email = casey.mcginty@gmail.com
+[color]
+   ui = true
+[core]
+   excludesfile = ~/.gitexcludes
+[format]
+   pretty = format:"%C(bold blue)%h%C(reset) [%C(green)%ar%Creset] %s, %C(cyan)%an% %C(bold yellow)%d%C(reset)"
+[push]
+   default = tracking
+[diff "odf"]
+   textconv=odt2txt
+[branch]
+   autosetuprebase = always
+   autosetupmerge = always
+[rebase]
+   stat = true
+   autosquash = true
+[mergetool "meld-merged"]
+   cmd = meld \"$LOCAL\" \"$MERGED\" \"$REMOTE\"
+[merge]
+   tool = meld-merged
+   conflictstyle = diff3
+   keepBackup = false
+[mergetool]
+   prompt = false
+[alias]
+   a = add
+   aa = add --all
+   ai = add --interactive
+   ap = add --patch
+   au = add --update
+   br = branch
+   cm = commit --verbose
+   cma = commit --verbose --amend --reset-author
+   co = checkout
+   dc = diff --cached
+   df = diff -M --color-words --ignore-space-at-eol
+   di = diff -M --color-words --ignore-space-at-eol
+   dh = diff HEAD
+   ds = diff --stat
+   lg = log -C
+   lga = log -C --graph --all
+   lgm = log -C --format=medium
+   lgno = log -C --name-only
+   lgns = log -C --name-status
+   lgp = log -C --patch --ignore-space-at-eol
+   lgs = log -C --stat=180
+   lgss = log -C --shortstat
+   lgtxt = log --pretty=format:"%s%n%b"
+   ls = ls-files
+   mg = merge
+   pl = pull
+   pla = pull --all
+   ps = push
+   rb = rebase
+   rba = rebase --abort
+   rbc = rebase --continue
+   rbi = rebase --interactive
+   rbs = rebase --skip
+   rbu = rebase --interactive @{u}
+   rs = reset
+   rsh = reset --hard
+   sa = stash
+   st = status
+   up = remote update
+   # print current sha1 hash only
+   sha = rev-parse --short HEAD
+   # list commit authors
+   who = "!f() { git shortlog -s | sort -rn; }; f"
+   # print branch names of HEAD
+   where = log -1 --pretty=format:%d
+   # start RO server
+   serve = !git daemon --base-path=. --export-all --reuseaddr --informative-errors --verbose
+   # start shared server
+   hub = !git daemon --base-path=. --export-all --enable=receive-pack --reuseaddr --informative-errors --verbose
+   # sync changes to remote
+   sync = !git pull && git push
+   # disk usage of tracked files
+   du = "!f() { git ls-files $@ | xargs -i du -ab {} | awk '{total+=$0}END{print total}'; }; f"
+   # create git repo with non-standard .git dir location
+   initexternal = "!f() { git --work-tree=. --git-dir=\"$1\" init && echo \"gitdir: $1\" >> .git; }; f"
+   # all branches with common parents
+   related = "!f() { git branch --contains $(git rev-list --max-parents=0 HEAD); }; f"
+
+[sendemail]
+   smtpserver = localhost
+   chainreplyto = false
+   aliasesfile = /home/pcm/.gitaliases
+
+[color "diff"]
+   meta = yellow bold
+   frag = magenta bold
+   old = red bold
+   new = green bold
+
+[color "status"]
+   added = green
+   changed = yellow bold
+   untracked = red bold

@@ -1,7 +1,9 @@
 - clean: ['~']
 
 - link:
-   ~/.dotfiles: ''
-   ~/.tmux.conf: tmux.conf
+   ~/.dotfiles:      ''
+   ~/.gitconfig:     git/gitconfig
+   ~/.gitexcludes:   git/gitexcludes
+   ~/.tmux.conf:     tmux.conf
 
 - shell: []
