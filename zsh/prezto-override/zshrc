@@ -5,9 +5,61 @@
 #   Sorin Ionescu <sorin.ionescu@gmail.com>
 #
 
+# start TMUX first
+[[ $TMUX = "" ]] && exec tmux -2
+
 # Source Prezto.
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
 # Customize to your needs...
+
+# Disable XON/XOFF Ctrl-S ctrl-Q in terminals (bad for VIM)
+stty -ixon
+
+# Color Theme
+# ----------------------------------------------------
+# base16 shell colors
+BASE16_SHELL="$HOME/.dotfiles/terminal/base16-shell/base16-default.dark.sh"
+[[ -s $BASE16_SHELL ]] && source $BASE16_SHELL
+
+# Prezto Prompt
+# ----------------------------------------------------
+fpath=($HOME/.zsh.prompts $fpath)
+promptinit
+prompt casey
+
+# ZSH config
+# ----------------------------------------------------
+# why would you type 'cd dir' if you could just type 'dir'?
+setopt AUTO_CD
+# this makes cd=pushd
+setopt AUTO_PUSHD
+# this will ignore multiple directories for the stack.  Useful?  I dunno.
+setopt PUSHD_IGNORE_DUPS
+# 10 second wait if you do something that will delete everything.
+setopt RM_STAR_WAIT
+# case insensitive globbing
+setopt NO_CASE_GLOB
+# be reasonable!
+setopt NUMERIC_GLOB_SORT
+# I don't know why I never set this before.
+setopt EXTENDED_GLOB
+# oh wow!  This is killer...  try it!
+bindkey -M vicmd 'q' push-line
+# !NNN, history auto-completion after space
+bindkey -M viins ' ' magic-space
+# catch accidental CTRL-D
+# setopt ignoreeof
+
+# enable built-in function 'zmv' for batch renames
+autoload -U zmv
+alias zmv="noglob zmv -W"
+
+# alias commands
+if [[ -f ~/.aliases ]]; then . ~/.aliases; fi
+
+# execute local environments
+if [[ -f ~/.bashrc.local ]]; then . ~/.bashrc.local; fi
+if [[ -f ~/.zshrc.local ]]; then . ~/.zshrc.local; fi

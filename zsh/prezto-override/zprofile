@@ -17,8 +17,8 @@ fi
 # Editors
 #
 
-export EDITOR='nano'
-export VISUAL='nano'
+export EDITOR='vim'
+export VISUAL='vim'
 export PAGER='less'
 
 #
@@ -72,3 +72,14 @@ if [[ ! -d "$TMPDIR" ]]; then
 fi
 
 TMPPREFIX="${TMPDIR%/}/zsh"
+
+#
+# Custom settings
+#
+
+# fix pidgin communicator
+export NSS_SSL_CBC_RANDOM_IV=0
+# python virtualenv
+#     requires: sudo pip install virutalenvwrapper
+export PROJECT_HOME="$HOME/src"
+export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages'
