@@ -8,10 +8,10 @@
    ~/.zprezto:       zsh/plugins/prezto
    ~/.zlogin:        zsh/plugins/prezto/runcoms/zlogin
    ~/.zlogout:       zsh/plugins/prezto/runcoms/zlogout
-   ~/.zpreztorc:     zsh/prezto-override/zpreztorc
-   ~/.zprofile:      zsh/prezto-override/zprofile
+   ~/.zpreztorc:     zsh/zpreztorc
+   ~/.zprofile:      zsh/zprofile
    ~/.zshenv:        zsh/plugins/prezto/runcoms/zshenv
-   ~/.zshrc:         zsh/prezto-override/zshrc
+   ~/.zshrc:         zsh/zshrc
 
 - shell:
    - [powerline/install.sh, Install powerline fonts]
