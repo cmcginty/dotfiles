@@ -35,7 +35,7 @@
    cm = commit --verbose
    cma = commit --verbose --amend --reset-author
    co = checkout
-   dc = diff --cached
+   dc = diff -M --color-words --cached
    df = diff -M --color-words --ignore-space-at-eol
    di = diff -M --color-words --ignore-space-at-eol
    dh = diff HEAD
