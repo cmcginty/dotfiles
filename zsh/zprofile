@@ -74,12 +74,7 @@ fi
 TMPPREFIX="${TMPDIR%/}/zsh"
 
 #
-# Custom settings
+# Source environment settings
 #
-
-# fix pidgin communicator
-export NSS_SSL_CBC_RANDOM_IV=0
-# python virtualenv
-#     requires: sudo pip install virutalenvwrapper
-export PROJECT_HOME="$HOME/src"
-export VIRTUALENVWRAPPER_VIRTUALENV_ARGS='--no-site-packages'
+for subdir (zsh pidgin python)
+   for env_file ($HOME/.dotfiles/$subdir/*.env(N)) source $env_file
