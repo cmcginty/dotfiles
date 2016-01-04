@@ -1,38 +1,53 @@
-Dotfiles Template
+Dotfiles
 =================
 
-This is a template repository for bootstrapping your dotfiles with [Dotbot][dotbot].
+Dotfile configuration targeting [Linux Mint 17.x][mint] OS.
 
-To get started, you can [fork][fork] this repository (and probably delete this
-README and rename your version to something like just `dotfiles`).
+- ZSH shell w/ [Prezto][prezto]
+- Tmux
 
-In general, you should be using symbolic links for everything, and using git
-submodules whenever possible.
+Installation
+------------
 
-To keep submodules at their proper versions, you could include something like
-`git submodule update --init --recursive` in your `install.conf.yaml`.
+```bash
+cd ~
+git clone https://github.com/cmcginty/dotfiles
+cd dotfiles
+./install
+```
 
-To upgrade your submodules to their latest versions, you could periodically run
-`git submodule update --init --remote`.
+**Existing files will not be modified.**
 
-Inspiration
------------
+Check for warnings in the install output for existing files that conflict.
 
-If you're looking for inspiration for how to structure your dotfiles or what
-kinds of things you can include, you could take a look at some repos using
-Dotbot.
+Citations
+---------
 
-* [anishathalye's dotfiles][anishathalye_dotfiles]
-* [csivanich's dotfiles][csivanich_dotfiles]
-* [m45t3r's dotfiles][m45t3r_dotfiles]
-* [alexwh's dotfiles][alexwh_dotfiles]
-* [azd325's dotfiles][azd325_dotfiles]
-* [bluekeys' dotfiles][bluekeys_dotfiles]
-* [wazery's dotfiles][wazery_dotfiles]
-* [thirtythreeforty's dotfiles][thirtythreeforty_dotfiles]
+This work is derivative of a large number of shared dotfile repos used as
+resources and inspiration.
 
-If you're using Dotbot and you'd like to include a link to your dotfiles here
-as an inspiration to others, please submit a pull request.
+The framework is based on [Dotbot][dotbot] and forked from the [Dotbot
+Template][fork]. I surveyed a large number of *dotfile frameworks*, and
+chose DotBot for its clean and simple design and limited lock-in.
+
+The repo leverages other projects in the configuration:
+
+* [Base16 Color][base16]
+* [Prezto ZSH][prezto]
+* [Powerline Fonts][powerline]
+
+Additional dotfile projects used for source or inspiration:
+
+* [Holman's Dotfiles][holman_dotfiles]
+* [Skwp's YDAR Dotfiles][yadr_dotfiles]
+
+Information
+---------------
+
+See these links for more help on setting up and creating your own dotfile repo:
+
+* [GitHub Dotfiles][gitdotfiles]
+* [Dotbot][dotbot]
 
 License
 -------
@@ -40,16 +55,12 @@ License
 This software is hereby released into the public domain. That means you can do
 whatever you want with it without restriction. See `LICENSE.md` for details.
 
-That being said, I would appreciate it if you could maintain a link back to
-Dotbot (or this repository) to help other people discover Dotbot.
-
+[base16]: https://github.com/chriskempson/base16
 [dotbot]: https://github.com/anishathalye/dotbot
 [fork]: https://github.com/anishathalye/dotfiles_template/fork
-[anishathalye_dotfiles]: https://github.com/anishathalye/dotfiles
-[csivanich_dotfiles]: https://github.com/csivanich/dotfiles
-[m45t3r_dotfiles]: https://github.com/m45t3r/dotfiles
-[alexwh_dotfiles]: https://github.com/alexwh/dotfiles
-[azd325_dotfiles]: https://github.com/Azd325/dotfiles
-[bluekeys_dotfiles]: https://github.com/bluekeys/.dotfiles
-[wazery_dotfiles]: https://github.com/wazery/dotfiles
-[thirtythreeforty_dotfiles]: https://github.com/thirtythreeforty/dotfiles
+[gitdotfiles]: https://dotfiles.github.io/
+[holman_dotfiles]: https://github.com/holman/dotfiles
+[mint]: http://linuxmint.com
+[powerline]: https://github.com/powerline/fonts
+[prezto]: https://github.com/sorin-ionescu/prezto
+[yadr_dotifles]: https://github.com/skwp/dotfiles
