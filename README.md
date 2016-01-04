@@ -3,8 +3,8 @@ Dotfiles
 
 Dotfile configuration targeting [Linux Mint 17.x][mint] OS.
 
-- ZSH shell w/ [Prezto][prezto]
-- Tmux
+- [Z shell][zsh] w/ [Prezto][prezto]
+- [Tmux][tmux]
 
 Installation
 ------------
@@ -23,20 +23,20 @@ Check for warnings in the install output for existing files that conflict.
 Citations
 ---------
 
-This work is derivative of a large number of shared dotfile repos used as
+This work is derivative from a large number of shared dotfile repos used as
 resources and inspiration.
 
 The framework is based on [Dotbot][dotbot] and forked from the [Dotbot
-Template][fork]. I surveyed a large number of *dotfile frameworks*, and
+Template][fork]. I surveyed a large number of "dotfile frameworks", and
 chose DotBot for its clean and simple design and limited lock-in.
 
-The repo leverages other projects in the configuration:
+The dotfiles leverage other projects:
 
 * [Base16 Color][base16]
 * [Prezto ZSH][prezto]
 * [Powerline Fonts][powerline]
 
-Additional dotfile projects used for source or inspiration:
+Additional dotfile projects used for source and/or inspiration:
 
 * [Holman's Dotfiles][holman_dotfiles]
 * [Skwp's YDAR Dotfiles][yadr_dotfiles]
@@ -44,7 +44,7 @@ Additional dotfile projects used for source or inspiration:
 Information
 ---------------
 
-See these links for more help on setting up and creating your own dotfile repo:
+More links for help on setting up and creating your own dotfile repo:
 
 * [GitHub Dotfiles][gitdotfiles]
 * [Dotbot][dotbot]
@@ -63,4 +63,6 @@ whatever you want with it without restriction. See `LICENSE.md` for details.
 [mint]: http://linuxmint.com
 [powerline]: https://github.com/powerline/fonts
 [prezto]: https://github.com/sorin-ionescu/prezto
-[yadr_dotifles]: https://github.com/skwp/dotfiles
+[tmux]: https://tmux.github.io
+[yadr_dotfiles]: https://github.com/skwp/dotfiles
+[zsh]: http://www.zsh.org
