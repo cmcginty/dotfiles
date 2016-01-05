@@ -5,9 +5,9 @@
    ~/.gitconfig:     git/gitconfig
    ~/.gitexcludes:   git/gitexcludes
    ~/.tmux.conf:     tmux.conf
-   ~/.zprezto:       zsh/plugins/prezto
    ~/.zlogin:        zsh/plugins/prezto/runcoms/zlogin
    ~/.zlogout:       zsh/plugins/prezto/runcoms/zlogout
+   ~/.zprezto:       zsh/plugins/prezto
    ~/.zpreztorc:     zsh/zpreztorc
    ~/.zprofile:      zsh/zprofile
    ~/.zshenv:        zsh/plugins/prezto/runcoms/zshenv
@@ -20,4 +20,4 @@
       description: Install zsh
       stdin: true
       stderr: true
-   - [sudo apt-get install -y tmux, Install tmux]
+   - [hash tmux || sudo apt-get install -y tmux, Install tmux]
