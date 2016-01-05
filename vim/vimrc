@@ -1,0 +1,332 @@
+" import individual configs
+for f in split(glob('~/.vim/*.vim'), '\n')
+   exe 'source' f
+endfor
+
+" Re-enable filetype
+filetype plugin indent on
+
+" Global Settings (display,history)
+"***********************************
+set foldlevel=1   " do not hide first level of folds
+set gdefault      " always use /g for %s/foo/bar/
+set hidden        " do not close buffers after switch
+set history=50    " keep 50 lines of command line history
+set lazyredraw    " do not update screen during macros
+set scrolloff=3   " set visiable zone at top and bottom of display
+set showcmd       " display incomplete commands
+set showmatch     " show matching '()' pairs
+set splitbelow    " new split on bottom
+set splitright    " new vplit on right
+
+" Edit Settings
+"***********************************
+set backspace=indent,eol,start 	"do not restrict backspace
+
+" Spelling Settings
+"***********************************
+set nospell       " disable spelling
+set sps=best,5    " limit to 5 best suggestions
+
+" File Settings
+"***********************************
+set fileformat=unix
+if has("autocmd")
+   filetype plugin indent on 	" enable file type detection
+   autocmd FileType text setlocal textwidth=79
+   " jump to last known cursor position
+   autocmd BufReadPost *
+      \ if line("'\"") > 0 && line("'\"") <= line("$") |
+      \   exe "normal g`\"" |
+      \ endif
+   " trim all trailing whitespace
+   autocmd BufWritePre * :%s/\s\+$//e
+   " open new buffers into a new tab (tip 1317)
+   "autocmd BufAdd,BufNewFile * nested tab sball
+   " update working directory to location of current file (tip 64)
+   autocmd BufEnter * lcd %:p:h
+   " add pyunit integration into python files (tip 280)
+   autocmd FileType python
+      \ setlocal makeprg=../alltests.py\ -q
+   autocmd FileType python
+      \ setlocal efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m
+   " allow for Sphinx '#:' comment delimiters in Python files
+   autocmd FileType python
+      \ setlocal comments+=:#:
+   " auto-save file when switching tabs
+   " autocmd FocusLost * :wa
+   " --- XML settings ---
+   " pretty xml formatting using TIDY
+   autocmd FileType xml  setlocal ep=tidy\ --wrap\ 80\ -i\ --indent-spaces\ 4\ --indent-attributes\ y\ --input-xml\ y\ -\ 2>/dev/null
+   autocmd FileType ant  setlocal ep=tidy\ --wrap\ 80\ -i\ --indent-spaces\ 4\ --indent-attributes\ y\ --input-xml\ y\ -\ 2>/dev/null
+   autocmd FileType html setlocal ep=tidy\ --wrap\ 80\ -i\ --indent-spaces\ 4\ --indent-attributes\ y\ -\ 2>/dev/null
+   " gradle syntax highlights
+   autocmd BufNewFile,BufRead *.gradle set filetype=groovy
+else
+   set autoindent
+endif "has("autocmd")
+
+" Python System Import Jumption w/ 'gf'
+"***********************************
+python << EOF
+import os
+import sys
+import vim
+for p in sys.path:
+   if os.path.isdir(p):
+      vim.command(r"set path+=%s" % (p.replace(" ", r"\ ")))
+EOF
+
+" Map w!! to save file as Root user
+"***********************************
+cnoremap w!! w !sudo tee % >/dev/null<cr>
+
+" Keyboard Shortcuts
+"  'nnoremap' for command mode only
+"  'inoremap' for insert mode only
+"  'vnoremap' for visual mode only
+"  * Do NOT put comments after 'map' commands
+"  * The folllow key combos can not be modified in VIM
+"     C-i - same mapping as TAB key
+"     C-m - same mapping as ENTER key
+"     C-n - breaks superTab plugin
+"***********************************
+" First load mswin.vim defaults
+"  <C-s>    save
+"  <C-x>    cut
+"  <C-c>    copy
+"  <C-v>    paste
+"  <C-z>    undo
+"  <C-y>    redo
+" source $VIMRUNTIME/mswin.vim
+
+" Use 'space' as leader key
+nnoremap <space> <Nop>
+let mapleader = " "
+
+" Navigation
+   " new buffer
+   nnoremap <C-t>     :new\|only<cr>
+   vnoremap <C-t>     <C-C>:new\|only<cr>
+   inoremap <C-t>     <C-C>:new\|only<cr>
+   " next/prev buffer
+   nnoremap <C-h>     :bp!<cr>
+   vnoremap <C-h>     <C-C>:bp!<cr>
+   inoremap <C-h>     <C-O>:bp!<cr>
+   nnoremap <C-l>     :bn!<cr>
+   vnoremap <C-l>     <C-C>:bn!<cr>
+   inoremap <C-l>     <C-O>:bn!<cr>
+   " Vim-window navigation
+   nnoremap <leader>w <C-W>
+   nnoremap <leader>h :wincmd h<cr>
+   nnoremap <leader>j :wincmd j<cr>
+   nnoremap <leader>k :wincmd k<cr>
+   nnoremap <leader>l :wincmd l<cr>
+   nnoremap <leader>q :wincmd q<cr>
+   " increase/decrease window split
+   nnoremap - :wincmd -<cr>
+   nnoremap + :wincmd +<cr>
+   " disable <F1> help .. YES!
+   map  <F1> <ESC>
+   imap <F1> <ESC>
+   " fix 'j' and 'k' to work with wrapped lines
+   noremap j gj
+   noremap k gk
+   " scroll up/down 1/2 page
+   noremap <C-k> <C-u>
+   noremap <C-j> <C-d>
+   " enable tab indent/unindent (tip 224)
+   nnoremap <tab> v>
+   vnoremap <tab> >gv
+   nnoremap <S-tab> v<
+   vnoremap <S-tab> <gv
+   " Source Tag Pop (Ctrl-T is default, but has been re-allocated)
+   nnoremap <C-;> :pop<cr>
+
+" File shortcuts
+   " refresh current file (no save)
+   nnoremap <F5> :e!<cr>
+   vnoremap <F5> <C-C>:e!<cr>
+   inoremap <F5> <C-C>:e!<cr>
+   " new file (no save) (disabled to allow SuperTab to work)
+   " nnoremap <C-n> :enew!<cr>
+   " vnoremap <C-n> <C-C>:enew!<cr>
+   " inoremap <C-n> <C-C>:enew!<cr>
+   " save file (return to command mode)
+   vnoremap <C-s> <C-C>:update<cr>
+   inoremap <C-s> <C-C>:update<cr>
+   " save file as ... (return to command mode)
+   nnoremap <C-A-s> :sav<space>
+   vnoremap <C-A-s> <C-C>:sav<space>
+   inoremap <C-A-s> <C-C>:sav<space>
+   " close tab/file (no save)
+   nnoremap <C-w> :bd!<cr>
+   vnoremap <C-w> <C-C>:bd!<cr>
+   inoremap <C-w> <C-C>:bd!<cr>
+   " close all tabs/quit (no save)
+   nnoremap <C-q> :qa!<cr>
+   vnoremap <C-q> <C-C>:qa!<cr>
+   inoremap <C-q> <C-C>:qa!<cr>
+   " print full file path
+   nnoremap <C-p> :!echo %:p<cr>
+   vnoremap <C-p> <C-C>:!echo %:p<cr>
+   inoremap <C-p> <C-C>:!echo %:p<cr>
+
+" Edit Shortcuts
+   "copy (select word under cursor)
+   " nnoremap <C-c> viw"+y
+   "cut
+   " nnoremap <C-x> viw"+x
+   "undo (keep visual selection)
+   " vnoremap <C-z> <C-C>ugv
+   "redo
+   nnoremap <C-u> <C-r>
+   "select all
+   nnoremap <C-a> ggVG
+   vnoremap <C-a> <C-C>ggVG
+   inoremap <C-a> <C-O>gg<C-O>VG
+   "goto line
+   nnoremap <C-g> :
+   vnoremap <C-g> <C-C>:
+   inoremap <C-g> <C-C>:
+   "find (select word under cursor)
+   nnoremap <C-f> /<C-R><C-W>
+   inoremap <C-f> <C-O>/<C-R><C-W>
+   "find (highlighted text)
+   vnoremap <C-f> y/<C-R>=escape(@", '\\/.*$^~[]')<cr>
+   vnoremap *     y/<C-R>=escape(@", '\\/.*$^~[]')<cr>
+   "reverse find (highlighted text)
+   vnoremap #     y?<C-R>=escape(@", '\\/.*$^~[]')<cr>
+   "find next
+   nnoremap <F3> n
+   vnoremap <F3> <C-C>ln
+   inoremap <F3> <C-O>l<C-O>n
+   nnoremap <S-F3> N
+   vnoremap <S-F3> <C-C>N
+   inoremap <S-F3> <C-O>N
+   "remove highlights after find
+   noremap  <silent><Space> :noh<bar>:echo ""<cr>
+   "toggle spelling
+   nnoremap <silent><F7> :setlocal spell!<cr>
+   vnoremap <silent><F7> <C-C>:setlocal spell!<cr>gv
+   inoremap <silent><F7> <C-O>:setlocal spell!<cr>
+   "auto-wrap text lines
+   nnoremap g<space> gqq
+   vnoremap g<space> gq
+
+" Redo Shortcuts
+   "redo last command on all selected lines
+   vnoremap . :normal .<CR>
+
+" Tab shortcuts
+   "tab left
+   " nnoremap <C-S-tab> :tabprevious<cr>
+   " vnoremap <C-S-tab> <C-C>:tabprevious<cr>
+   " inoremap <C-S-tab> <C-O>:tabprevious<cr>
+   "tab right
+   " nnoremap <C-tab>   :tabnext<cr>
+   " vnoremap <C-tab>   <C-C>:tabnext<cr>
+   " inoremap <C-tab>   <C-O>:tabnext<cr>
+   "tab indexes
+   noremap <A-1> 1gt
+   noremap <A-2> 2gt
+   noremap <A-3> 3gt
+   noremap <A-4> 4gt
+   noremap <A-5> 5gt
+   noremap <A-6> 6gt
+   noremap <A-7> 7gt
+   noremap <A-8> 8gt
+   noremap <A-9> 9gt
+   noremap <A-0> 10gt
+
+" Command shortcuts
+   noremap <F10>   <C-C>:make<cr>
+   map     <F12>    <C-C>:echo expand('%:p')<Return>
+
+   " save a keystroke using ':' command
+   nnoremap ; :
+
+" Nerd Commenter
+"***********************************
+" options
+let NERDSpaceDelims=1
+let NERDDefaultNesting=0
+" toggle comment current line or selection
+noremap  <C-e> :call NERDComment(0,"toggle")<cr>j
+inoremap <C-e> <C-O>:call NERDComment(0,"toggle")<cr>
+vnoremap <C-e> <C-C>:call NERDComment(1,"toggle")<cr>j
+" change default comments for dosbatch files
+autocmd FileType dosbatch autocmd VimEnter * execute "normal \<Plug>NERDCommenterAltDelims"
+
+" Syntax File Settings
+"***********************************
+let python_highlight_all=1       " turn on all python highlights
+
+" Session Plugin Settings
+"***********************************
+set viminfo+=!                   " enable saving of LAST_SESSION
+set sessionoptions=blank,buffers,curdir,folds,help,resize,tabpages,winsize
+noremap <F1> <C-C>:SessionList<cr>
+noremap <F2> <C-C>:SessionOpenLast<cr>
+noremap <F3> <C-C>:SessionSave<cr>
+noremap <F4> <C-C>:SessionSaveAs<cr>
+
+" Restructured Text
+"***********************************
+" Ctrl-u 1:    underline Parts w/ #'s
+" noremap  <C-u>1 yyPVr#yyjp
+" inoremap <C-u>1 <esc>yyPVr#yyjpA
+" Ctrl-u 2:    underline Chapters w/ *'s
+" noremap  <C-u>2 yyPVr*yyjp
+" inoremap <C-u>2 <esc>yyPVr*yyjpA
+" Ctrl-u 3:    underline Section Level 1 w/ ='s
+" noremap  <C-u>3 yypVr=
+" inoremap <C-u>3 <esc>yypVr=A
+" Ctrl-u 4:    underline Section Level 2 w/ -'s
+" noremap  <C-u>4 yypVr-
+" inoremap <C-u>4 <esc>yypVr-A
+" Ctrl-u 5:    underline Section Level 3 w/ ^'s
+" noremap  <C-u>5 yypVr^
+" inoremap <C-u>5 <esc>yypVr^A
+" Ctrl-u 6:    underline Paragraphs w/ ~'s
+" noremap  <C-u>6 yypVr~
+" inoremap <C-u>6 <esc>yypVr~A
+
+" Highlight Lines Longer Than 90 Characters
+"***********************************
+highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+match OverLength /\%91v.*/
+
+" LocalVimRC settings
+"***********************************
+let g:localvimrc_ask = 0
+
+" Airline settings
+"***********************************
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
+let g:airline_theme = "murmur"
+
+" CtrlP settings
+"***********************************
+let g:ctrlp_map = '<C-o>'
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_lazy_update = 1
+let g:ctrlp_match_window = 'top,order:ttb,min:10,max:30,results:100'
+let g:ctrlp_regexp = 1
+let g:ctrlp_show_hidden = 1
+let g:ctrlp_open_new_file = 'r'
+let g:ctrlp_max_files = 50000
+let g:ctrlp_custom_ignore = {
+   \ 'dir':    '\.git$\|build\.ant$\|build-ant$',
+   \ 'file':   '\.class$\|\.swp$',
+   \ }
+
+function! SetupPython()
+    " Here, you can have the final say on what is set.  So
+    " fixup any settings you don't like.
+    setlocal softtabstop=3
+    setlocal tabstop=3
+    setlocal shiftwidth=3
+endfunction
+command! -bar SetupPython call SetupPython()

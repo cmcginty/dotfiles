@@ -4,7 +4,10 @@
    ~/.dotfiles:      ''
    ~/.gitconfig:     git/gitconfig
    ~/.gitexcludes:   git/gitexcludes
+   ~/.gvimrc:        vim/gvimrc
    ~/.tmux.conf:     tmux.conf
+   ~/.vim:           vim/vim
+   ~/.vimrc:         vim/vimrc
    ~/.zlogin:        zsh/plugins/prezto/runcoms/zlogin
    ~/.zlogout:       zsh/plugins/prezto/runcoms/zlogout
    ~/.zprezto:       zsh/plugins/prezto
@@ -21,3 +24,4 @@
       stdin: true
       stderr: true
    - [hash tmux || sudo apt-get install -y tmux, Install tmux]
+   - [hash gvim || sudo apt-get install -y vim vim-gnome, Install vim]
