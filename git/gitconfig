@@ -100,4 +100,4 @@
    changed = yellow bold
    untracked = red bold
 [credential]
-	helper = store --file ~/.git-credentials
+	helper = store --file ~/.gitcredentials
