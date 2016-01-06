@@ -271,12 +271,6 @@ noremap <F4> <C-C>:SessionSaveAs<cr>
 "***********************************
 let g:localvimrc_ask = 0
 
-" Airline settings
-"***********************************
-let g:airline#extensions#tabline#enabled = 1
-let g:airline_powerline_fonts = 1
-let g:airline_theme = "murmur"
-
 " CtrlP settings
 "***********************************
 let g:ctrlp_map = '<C-o>'
