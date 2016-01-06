@@ -8,3 +8,7 @@ set background=dark        " set dark background colors
 colorscheme base16-default
 
 syntax on
+
+" show matching '()' pairs w/ bright-yellow highlight
+set showmatch
+highlight MatchParen cterm=none ctermbg=226 ctermfg=black

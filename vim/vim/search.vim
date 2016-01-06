@@ -1,5 +1,6 @@
 set hlsearch      " highlight searches
-set ignorecase    " case insensitive searches
+set ignorecase    " case insensitive searches ... but
+set smartcase     " ... sensitive when caps in search string
 set incsearch     " do incremental searching
-set smartcase     " use caps when in search string
-set smartindent   " fully indent multi-line comments
+set gdefault      " always use /g for %s/foo/bar/
+set scrolloff=3   " set visible lines above/below cursor during a search

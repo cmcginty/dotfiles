@@ -3,30 +3,9 @@ for f in split(glob('~/.vim/*.vim'), '\n')
    exe 'source' f
 endfor
 
-" Re-enable filetype
-filetype plugin indent on
-
-" Global Settings (display,history)
-"***********************************
-set foldlevel=1   " do not hide first level of folds
-set gdefault      " always use /g for %s/foo/bar/
-set hidden        " do not close buffers after switch
-set history=50    " keep 50 lines of command line history
-set lazyredraw    " do not update screen during macros
-set scrolloff=3   " set visiable zone at top and bottom of display
-set showcmd       " display incomplete commands
-set showmatch     " show matching '()' pairs
-set splitbelow    " new split on bottom
-set splitright    " new vplit on right
-
 " Edit Settings
 "***********************************
 set backspace=indent,eol,start 	"do not restrict backspace
-
-" Spelling Settings
-"***********************************
-set nospell       " disable spelling
-set sps=best,5    " limit to 5 best suggestions
 
 " File Settings
 "***********************************
@@ -99,10 +78,6 @@ cnoremap w!! w !sudo tee % >/dev/null<cr>
 "  <C-z>    undo
 "  <C-y>    redo
 " source $VIMRUNTIME/mswin.vim
-
-" Use 'space' as leader key
-nnoremap <space> <Nop>
-let mapleader = " "
 
 " Navigation
    " new buffer
@@ -291,11 +266,6 @@ noremap <F4> <C-C>:SessionSaveAs<cr>
 " Ctrl-u 6:    underline Paragraphs w/ ~'s
 " noremap  <C-u>6 yypVr~
 " inoremap <C-u>6 <esc>yypVr~A
-
-" Highlight Lines Longer Than 90 Characters
-"***********************************
-highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-match OverLength /\%91v.*/
 
 " LocalVimRC settings
 "***********************************
