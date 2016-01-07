@@ -8,3 +8,7 @@ set showmode      " display mode
 
 " output
 set lazyredraw    " do not update screen during macros
+
+" cursor
+set guicursor+=n-v-c:blinkon0
+set guicursor+=i-ci:ver25-Cursor/lCursor-blinkwait750-blinkoff250-blinkon750
