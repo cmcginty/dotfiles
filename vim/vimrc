@@ -81,9 +81,9 @@ cnoremap w!! w !sudo tee % >/dev/null<cr>
 
 " Navigation
    " new buffer
-   nnoremap <C-t>     :new\|only<cr>
-   vnoremap <C-t>     <C-C>:new\|only<cr>
-   inoremap <C-t>     <C-C>:new\|only<cr>
+   nnoremap <C-t>     :enew<cr>
+   vnoremap <C-t>     <C-C>:enew<cr>
+   inoremap <C-t>     <C-C>:enew<cr>
    " next/prev buffer
    nnoremap <C-h>     :bp!<cr>
    vnoremap <C-h>     <C-C>:bp!<cr>
@@ -119,14 +119,6 @@ cnoremap w!! w !sudo tee % >/dev/null<cr>
    nnoremap <C-;> :pop<cr>
 
 " File shortcuts
-   " refresh current file (no save)
-   nnoremap <F5> :e!<cr>
-   vnoremap <F5> <C-C>:e!<cr>
-   inoremap <F5> <C-C>:e!<cr>
-   " new file (no save) (disabled to allow SuperTab to work)
-   " nnoremap <C-n> :enew!<cr>
-   " vnoremap <C-n> <C-C>:enew!<cr>
-   " inoremap <C-n> <C-C>:enew!<cr>
    " save file (return to command mode)
    vnoremap <C-s> <C-C>:update<cr>
    inoremap <C-s> <C-C>:update<cr>
@@ -172,13 +164,6 @@ cnoremap w!! w !sudo tee % >/dev/null<cr>
    vnoremap *     y/<C-R>=escape(@", '\\/.*$^~[]')<cr>
    "reverse find (highlighted text)
    vnoremap #     y?<C-R>=escape(@", '\\/.*$^~[]')<cr>
-   "find next
-   nnoremap <F3> n
-   vnoremap <F3> <C-C>ln
-   inoremap <F3> <C-O>l<C-O>n
-   nnoremap <S-F3> N
-   vnoremap <S-F3> <C-C>N
-   inoremap <S-F3> <C-O>N
    "remove highlights after find
    noremap  <silent><Space> :noh<bar>:echo ""<cr>
    "toggle spelling

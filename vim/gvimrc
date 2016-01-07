@@ -1,68 +1,9 @@
-" Default colors and fonts
-"##########################
-if !exists("g:colors_name")
-   hi Normal guifg=white guibg=black
-endif
-set guifont=Ubuntu\ Mono\ \derivative\ Powerline\ 12
-
-" Global Settings (display,history)
-"##################################
-set browsedir=last   " use 'last' dir for file browsing
-set columns=97       " set the display width (includes numberwidth columns)
+" display
 set guioptions-=T    " disable toolbars(T), see :help guioptions
 set guioptions-=rL   " disable scroll bars (rL), see :help guioptions
 set guioptions-=t    " disable tear off menus(t), see :help guioptions
+set columns=97       " set the display width (includes numberwidth columns)
 set lines=66         " force gvim to be full screen
-set tabpagemax=50    " maximum number of tabs to create
 
-" Keyboard Shortcuts
-"  'nnoremap' for command mode only
-"  'inoremap' for insert mode only
-"  'vnoremap' for visual mode only
-"  * Do NOT put comments after 'map' commands
-"  * The folllow key combos can not be modified in VIM
-"     C-i - same mapping as TAB key
-"     C-m - same mapping as ENTER key
-"     C-n - breaks superTab plugin
-"     C-p - breaks superTab plugin
-"############################################
-" File Shortcuts
-   " refresh current file (no save)
-   nnoremap <F5> :confirm e<cr>
-   vnoremap <F5> <C-C>:confirm e<cr>
-   inoremap <F5> <C-C>:confirm e<cr>
-   " new file (disable for superTab plugin, see above)
-   " nnoremap <C-n> :confirm enew<cr>
-   " inoremap <C-n> <C-C>:confirm enew<cr>
-   " vnoremap <C-n> <C-C>:confirm enew<cr>
-   " open file
-
-   " ## I prefer non-GUI mode, easier to navigate ##
-   " nnoremap <C-o> :browse tabnew<cr>
-   " inoremap <C-o> <C-C>:browse tabnew<cr>
-   " vnoremap <C-o> <C-C>:browse tabnew<cr>
-   " save file ('save as' on new)
-   nnoremap <C-s>      :if expand("%") == ""<cr>:browse confirm saveas<cr>:else<cr>:update<cr>:endif<cr><cr>
-   inoremap <C-s> <C-C>:if expand("%") == ""<cr>:browse confirm saveas<cr>:else<cr>:update<cr>:endif<cr><cr>
-   " save file as ...
-   nnoremap <C-A-s>      :browse w<cr>
-   inoremap <C-A-s> <C-C>:browse w<cr>
-   vnoremap <C-A-s> <C-C>:browse w<cr>
-   " close tab/file (confirm)
-   nnoremap <C-w>      :confirm bd<cr>
-   vnoremap <C-w> <C-C>:confirm bd<cr>
-   inoremap <C-w> <C-C>:confirm bd<cr>
-   " close all tabs/quit (confirm)
-   nnoremap <C-q>      :confirm qa<cr>
-   vnoremap <C-q> <C-C>:confirm qa<cr>
-   inoremap <C-q> <C-C>:confirm qa<cr>
-
-" Edit Shortcuts
-   " find (enable for Find GUI, non-GUI mode is easier IMO)
-   "nnoremap <C-f> :prompt <C-R><C-W><cr>
-   "inoremap <C-f> <C-O>:prompt <C-R><C-W><cr>
-   "vnoremap <C-f> y:prompt <C-R>=escape(@", '\\/.*$^~[]')<cr>
-   " find & replace
-   nnoremap <C-r> :promptrep <C-R><C-W><cr>
-   inoremap <C-r> <C-O>:promptrep <C-R><C-W><cr>
-   vnoremap <C-r> y:promptrep <C-R>=escape(@", '\\/.*$^~[]')<cr><cr>
+" dialog box
+set browsedir=last   " use 'last' dir for file browsing
