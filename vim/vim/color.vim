@@ -11,4 +11,5 @@ syntax on
 
 " show matching '()' pairs w/ bright-yellow highlight
 set showmatch
-highlight MatchParen cterm=none ctermbg=226 ctermfg=black
+highlight MatchParen cterm=reverse,bold ctermfg=226  ctermbg=0
+highlight MatchParen gui=reverse,bold   guifg=yellow guibg=black
