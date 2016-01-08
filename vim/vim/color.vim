@@ -9,8 +9,6 @@ catch
    colorscheme koehler
 endtry
 
-syntax on
-
 " show matching '()' pairs w/ bright-yellow highlight
 set showmatch
 highlight MatchParen cterm=reverse,bold ctermfg=226  ctermbg=0

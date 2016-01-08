@@ -3,10 +3,6 @@ for f in split(glob('~/.vim/*.vim'), '\n')
    exe 'source' f
 endfor
 
-" Edit Settings
-"***********************************
-set backspace=indent,eol,start 	"do not restrict backspace
-
 " File Settings
 "***********************************
 set fileformat=unix
@@ -40,8 +36,6 @@ if has("autocmd")
    autocmd FileType html setlocal ep=tidy\ --wrap\ 80\ -i\ --indent-spaces\ 4\ --indent-attributes\ y\ -\ 2>/dev/null
    " gradle syntax highlights
    autocmd BufNewFile,BufRead *.gradle set filetype=groovy
-else
-   set autoindent
 endif "has("autocmd")
 
 " Python System Import Jumption w/ 'gf'
@@ -223,7 +217,6 @@ let python_highlight_all=1       " turn on all python highlights
 
 " Session Plugin Settings
 "***********************************
-set viminfo+=!                   " enable saving of LAST_SESSION
 set sessionoptions=blank,buffers,curdir,folds,help,resize,tabpages,winsize
 noremap <F1> <C-C>:SessionList<cr>
 noremap <F2> <C-C>:SessionOpenLast<cr>
