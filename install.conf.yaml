@@ -24,4 +24,8 @@
       stdin: true
       stderr: true
    - [hash tmux || sudo apt-get install -y tmux, Install tmux]
-   - [hash gvim || sudo apt-get install -y vim vim-gnome, Install vim]
+   -
+      command: vim/install.sh
+      description: Install vim
+      stdin: true
+      stdout: true

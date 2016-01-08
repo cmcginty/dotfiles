@@ -11,7 +11,6 @@ set backspace=indent,eol,start 	"do not restrict backspace
 "***********************************
 set fileformat=unix
 if has("autocmd")
-   filetype plugin indent on 	" enable file type detection
    autocmd FileType text setlocal textwidth=79
    " jump to last known cursor position
    autocmd BufReadPost *

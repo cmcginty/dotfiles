@@ -1,5 +1,3 @@
-Plugin 'ctrlpvim/ctrlp.vim'
-
 " set default key/cmd mapping
 let g:ctrlp_map = '<C-o>'
 let g:ctrlp_cmd = 'CtrlP'
