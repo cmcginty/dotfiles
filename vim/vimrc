@@ -53,63 +53,17 @@ EOF
 "***********************************
 cnoremap w!! w !sudo tee % >/dev/null<cr>
 
-" Keyboard Shortcuts
-"  'nnoremap' for command mode only
-"  'inoremap' for insert mode only
-"  'vnoremap' for visual mode only
-"  * Do NOT put comments after 'map' commands
-"  * The folllow key combos can not be modified in VIM
-"     C-i - same mapping as TAB key
-"     C-m - same mapping as ENTER key
-"     C-n - breaks superTab plugin
-"***********************************
-" First load mswin.vim defaults
-"  <C-s>    save
-"  <C-x>    cut
-"  <C-c>    copy
-"  <C-v>    paste
-"  <C-z>    undo
-"  <C-y>    redo
-" source $VIMRUNTIME/mswin.vim
-
 " Navigation
-   " new buffer
-   nnoremap <C-t>     :enew<cr>
-   vnoremap <C-t>     <C-C>:enew<cr>
-   inoremap <C-t>     <C-C>:enew<cr>
-   " next/prev buffer
-   nnoremap <C-h>     :bp!<cr>
-   vnoremap <C-h>     <C-C>:bp!<cr>
-   inoremap <C-h>     <C-O>:bp!<cr>
-   nnoremap <C-l>     :bn!<cr>
-   vnoremap <C-l>     <C-C>:bn!<cr>
-   inoremap <C-l>     <C-O>:bn!<cr>
-   " Vim-window navigation
-   nnoremap <leader>w <C-W>
-   nnoremap <leader>h :wincmd h<cr>
-   nnoremap <leader>j :wincmd j<cr>
-   nnoremap <leader>k :wincmd k<cr>
-   nnoremap <leader>l :wincmd l<cr>
-   nnoremap <leader>q :wincmd q<cr>
    " increase/decrease window split
    nnoremap - :wincmd -<cr>
    nnoremap + :wincmd +<cr>
-   " disable <F1> help .. YES!
-   map  <F1> <ESC>
-   imap <F1> <ESC>
-   " fix 'j' and 'k' to work with wrapped lines
-   noremap j gj
-   noremap k gk
-   " scroll up/down 1/2 page
-   noremap <C-k> <C-u>
-   noremap <C-j> <C-d>
    " enable tab indent/unindent (tip 224)
    nnoremap <tab> v>
    vnoremap <tab> >gv
    nnoremap <S-tab> v<
    vnoremap <S-tab> <gv
    " Source Tag Pop (Ctrl-T is default, but has been re-allocated)
-   nnoremap <C-;> :pop<cr>
+   "nnoremap <C-;> :pop<cr>
 
 " File shortcuts
    " save file (return to command mode)
@@ -119,10 +73,6 @@ cnoremap w!! w !sudo tee % >/dev/null<cr>
    nnoremap <C-A-s> :sav<space>
    vnoremap <C-A-s> <C-C>:sav<space>
    inoremap <C-A-s> <C-C>:sav<space>
-   " close tab/file (no save)
-   nnoremap <C-w> :bd!<cr>
-   vnoremap <C-w> <C-C>:bd!<cr>
-   inoremap <C-w> <C-C>:bd!<cr>
    " close all tabs/quit (no save)
    nnoremap <C-q> :qa!<cr>
    vnoremap <C-q> <C-C>:qa!<cr>
@@ -139,16 +89,6 @@ cnoremap w!! w !sudo tee % >/dev/null<cr>
    " nnoremap <C-x> viw"+x
    "undo (keep visual selection)
    " vnoremap <C-z> <C-C>ugv
-   "redo
-   nnoremap <C-u> <C-r>
-   "select all
-   nnoremap <C-a> ggVG
-   vnoremap <C-a> <C-C>ggVG
-   inoremap <C-a> <C-O>gg<C-O>VG
-   "goto line
-   nnoremap <C-g> :
-   vnoremap <C-g> <C-C>:
-   inoremap <C-g> <C-C>:
    "find (select word under cursor)
    nnoremap <C-f> /<C-R><C-W>
    inoremap <C-f> <C-O>/<C-R><C-W>
@@ -171,33 +111,9 @@ cnoremap w!! w !sudo tee % >/dev/null<cr>
    "redo last command on all selected lines
    vnoremap . :normal .<CR>
 
-" Tab shortcuts
-   "tab left
-   " nnoremap <C-S-tab> :tabprevious<cr>
-   " vnoremap <C-S-tab> <C-C>:tabprevious<cr>
-   " inoremap <C-S-tab> <C-O>:tabprevious<cr>
-   "tab right
-   " nnoremap <C-tab>   :tabnext<cr>
-   " vnoremap <C-tab>   <C-C>:tabnext<cr>
-   " inoremap <C-tab>   <C-O>:tabnext<cr>
-   "tab indexes
-   noremap <A-1> 1gt
-   noremap <A-2> 2gt
-   noremap <A-3> 3gt
-   noremap <A-4> 4gt
-   noremap <A-5> 5gt
-   noremap <A-6> 6gt
-   noremap <A-7> 7gt
-   noremap <A-8> 8gt
-   noremap <A-9> 9gt
-   noremap <A-0> 10gt
-
 " Command shortcuts
    noremap <F10>   <C-C>:make<cr>
-   map     <F12>    <C-C>:echo expand('%:p')<Return>
-
-   " save a keystroke using ':' command
-   nnoremap ; :
+   map     <F12>   <C-C>:echo expand('%:p')<Return>
 
 " Nerd Commenter
 "***********************************
@@ -222,27 +138,6 @@ noremap <F1> <C-C>:SessionList<cr>
 noremap <F2> <C-C>:SessionOpenLast<cr>
 noremap <F3> <C-C>:SessionSave<cr>
 noremap <F4> <C-C>:SessionSaveAs<cr>
-
-" Restructured Text
-"***********************************
-" Ctrl-u 1:    underline Parts w/ #'s
-" noremap  <C-u>1 yyPVr#yyjp
-" inoremap <C-u>1 <esc>yyPVr#yyjpA
-" Ctrl-u 2:    underline Chapters w/ *'s
-" noremap  <C-u>2 yyPVr*yyjp
-" inoremap <C-u>2 <esc>yyPVr*yyjpA
-" Ctrl-u 3:    underline Section Level 1 w/ ='s
-" noremap  <C-u>3 yypVr=
-" inoremap <C-u>3 <esc>yypVr=A
-" Ctrl-u 4:    underline Section Level 2 w/ -'s
-" noremap  <C-u>4 yypVr-
-" inoremap <C-u>4 <esc>yypVr-A
-" Ctrl-u 5:    underline Section Level 3 w/ ^'s
-" noremap  <C-u>5 yypVr^
-" inoremap <C-u>5 <esc>yypVr^A
-" Ctrl-u 6:    underline Paragraphs w/ ~'s
-" noremap  <C-u>6 yypVr~
-" inoremap <C-u>6 <esc>yypVr~A
 
 " LocalVimRC settings
 "***********************************
