@@ -1,3 +1,12 @@
+#
+# shell commands
+#
+
+# remove prezto default '-i' args
+alias rm='nocorrect rm'
+alias cp='nocorrect cp'
+alias mv='nocorrect mv'
+
 # save a directory to 'param'
 # function a() { alias $1=cd\ $PWD; }
 function java-imports() {
