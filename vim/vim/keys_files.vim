@@ -3,8 +3,15 @@
 
 " save buffer
 if has("gui_running")
-   nnoremap <leader>s   <C-c>:if expand("%") == ""<cr>:browse confirm saveas<cr>:else<cr>:update<cr>:endif<cr><cr>
-   vnoremap <leader>s   <C-c>:if expand("%") == ""<cr>:browse confirm saveas<cr>:else<cr>:update<cr>:endif<cr><cr>
+   " if unnamed buffer, open save dialog
+   command GuiUpdate
+         \  if empty(bufname('%')) |
+         \     browse confirm update |
+         \  else |
+         \     update |
+         \  endif
+   nnoremap <leader>s   <C-c>:GuiUpdate<cr>
+   vnoremap <leader>s   <C-c>:GuiUpdate<cr>
 else
    nnoremap <leader>s   <C-c>:update<cr>
    vnoremap <leader>s   <C-c>:update<cr>
@@ -18,11 +25,18 @@ noremap! <F5>        <C-c>:confirm e<cr>
 nnoremap <leader>c   <C-c>:enew<cr>
 vnoremap <leader>c   <C-c>:enew<cr>
 
+" exit vim when if last buffer is closed
+command BdeleteAndQuit
+      \  if len(filter(range(1, bufnr('$')), 'buflisted(v:val)')) > 1 |
+      \     confirm bd |
+      \  else |
+      \     confirm qa |
+      \  endif
 " close buffer (tmux <C-a>x and <C-d>)
-nnoremap <leader>x   <C-c>:confirm bd<cr>
-vnoremap <leader>x   <C-c>:confirm bd<cr>
-nnoremap <C-d>       <C-c>:confirm bd<cr>
-vnoremap <C-d>       <C-c>:confirm bd<cr>
+nnoremap <leader>x   <C-c>:BdeleteAndQuit<cr>
+vnoremap <leader>x   <C-c>:BdeleteAndQuit<cr>
+nnoremap <C-d>       <C-c>:BdeleteAndQuit<cr>
+vnoremap <C-d>       <C-c>:BdeleteAndQuit<cr>
 
 " close all tabs/quit (tmux kill-session)
 nnoremap <leader>q   <C-c>:confirm qa<cr>

@@ -18,8 +18,8 @@
 "    C-i : same mapping as TAB key
 "    C-m : same mapping as ENTER key
 
-" change the <leader> from \ to ,
-let mapleader = ','
+" change the <leader> from \ to ;
+let mapleader = ';'
 
 " enter command mode faser
 nnoremap  <leader><leader>  :
@@ -32,7 +32,7 @@ noremap  <F1> <ESC>
 noremap! <F1> <ESC>
 
 " quickly reload the vimrc file
-nnoremap <silent> <leader>sv :so $MYVIMRC<CR>
+nnoremap <silent> <leader>z :so $MYVIMRC<CR>
 
 " disable command history popup
 nnoremap q: :q
