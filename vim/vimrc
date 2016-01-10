@@ -53,42 +53,7 @@ EOF
 "***********************************
 cnoremap w!! w !sudo tee % >/dev/null<cr>
 
-" Navigation
-   " increase/decrease window split
-   nnoremap - :wincmd -<cr>
-   nnoremap + :wincmd +<cr>
-   " enable tab indent/unindent (tip 224)
-   nnoremap <tab> v>
-   vnoremap <tab> >gv
-   nnoremap <S-tab> v<
-   vnoremap <S-tab> <gv
-   " Source Tag Pop (Ctrl-T is default, but has been re-allocated)
-   "nnoremap <C-;> :pop<cr>
-
-" File shortcuts
-   " save file (return to command mode)
-   vnoremap <C-s> <C-C>:update<cr>
-   inoremap <C-s> <C-C>:update<cr>
-   " save file as ... (return to command mode)
-   nnoremap <C-A-s> :sav<space>
-   vnoremap <C-A-s> <C-C>:sav<space>
-   inoremap <C-A-s> <C-C>:sav<space>
-   " close all tabs/quit (no save)
-   nnoremap <C-q> :qa!<cr>
-   vnoremap <C-q> <C-C>:qa!<cr>
-   inoremap <C-q> <C-C>:qa!<cr>
-   " print full file path
-   nnoremap <C-p> :!echo %:p<cr>
-   vnoremap <C-p> <C-C>:!echo %:p<cr>
-   inoremap <C-p> <C-C>:!echo %:p<cr>
-
 " Edit Shortcuts
-   "copy (select word under cursor)
-   " nnoremap <C-c> viw"+y
-   "cut
-   " nnoremap <C-x> viw"+x
-   "undo (keep visual selection)
-   " vnoremap <C-z> <C-C>ugv
    "find (select word under cursor)
    nnoremap <C-f> /<C-R><C-W>
    inoremap <C-f> <C-O>/<C-R><C-W>
@@ -110,10 +75,6 @@ cnoremap w!! w !sudo tee % >/dev/null<cr>
 " Redo Shortcuts
    "redo last command on all selected lines
    vnoremap . :normal .<CR>
-
-" Command shortcuts
-   noremap <F10>   <C-C>:make<cr>
-   map     <F12>   <C-C>:echo expand('%:p')<Return>
 
 " Nerd Commenter
 "***********************************

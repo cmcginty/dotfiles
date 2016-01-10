@@ -12,9 +12,13 @@ if has("gui_running")
          \  endif
    nnoremap <leader>s   <C-c>:GuiUpdate<cr>
    vnoremap <leader>s   <C-c>:GuiUpdate<cr>
+   noremap  <C-s>       <C-c>:GuiUpdate<cr>
+   inoremap <C-s>       <C-c>:GuiUpdate<cr>
 else
    nnoremap <leader>s   <C-c>:update<cr>
    vnoremap <leader>s   <C-c>:update<cr>
+   noremap  <C-s>       <C-c>:update<cr>
+   inoremap <C-s>       <C-c>:update<cr>
 endif
 
 " reload buffer, warn if not saved
