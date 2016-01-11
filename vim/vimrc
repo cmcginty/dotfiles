@@ -49,10 +49,6 @@ for p in sys.path:
       vim.command(r"set path+=%s" % (p.replace(" ", r"\ ")))
 EOF
 
-" Map w!! to save file as Root user
-"***********************************
-cnoremap w!! w !sudo tee % >/dev/null<cr>
-
 " Edit Shortcuts
    "find (select word under cursor)
    nnoremap <C-f> /<C-R><C-W>

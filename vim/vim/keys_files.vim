@@ -21,6 +21,10 @@ else
    inoremap <C-s>       <C-c>:update<cr>
 endif
 
+" sudo save
+nnoremap <leader><S-s>   <C-c>:SudoWrite<cr>
+vnoremap <leader><S-s>   <C-c>:SudoWrite<cr>
+
 " reload buffer, warn if not saved
 noremap  <F5>        <C-c>:confirm e<cr>
 noremap! <F5>        <C-c>:confirm e<cr>
