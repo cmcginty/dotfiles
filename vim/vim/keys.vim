@@ -25,11 +25,17 @@ let mapleader = ';'
 nnoremap  <leader><leader>  :
 vnoremap  <leader><leader>  :
 
-" fix missed <ESC>, but <Ctrl-[> is better
+" fix missed <ESC>
 noremap  `    <ESC>
 noremap! `    <ESC>
 noremap  <F1> <ESC>
 noremap! <F1> <ESC>
+
+" <esc> alternatives that are faster
+inoremap jj          <ESC>
+noremap! <C-Space>   <ESC>
+vnoremap <C-Space>   <ESC>
+nnoremap <C-Space>   <NOP>
 
 " quickly reload the vimrc file
 nnoremap <silent> <leader>z :so $MYVIMRC<CR>
