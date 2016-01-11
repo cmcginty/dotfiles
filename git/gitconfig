@@ -16,7 +16,10 @@
    autosetupmerge = always
 [rebase]
    stat = true
+   # rebase changes commited with '--squash' or '--fixup'
    autosquash = true
+   # stash uncommited changes during rebase
+   autostash = true
 [mergetool "meld-merged"]
    cmd = meld \"$LOCAL\" \"$MERGED\" \"$REMOTE\"
 [merge]
@@ -34,6 +37,8 @@
    br = branch
    cm = commit --verbose
    cma = commit --verbose --amend --reset-author
+   cmf = commit --fixup
+   cms = commit --squash
    co = checkout
    dc = diff -M --color-words --cached
    df = diff -M --color-words --ignore-space-at-eol
@@ -49,6 +54,7 @@
    lgs = log -C --stat=180
    lgss = log -C --shortstat
    lgtxt = log --pretty=format:"%s%n%b"
+   lgu = log -C @{u}..
    ls = ls-files
    mg = merge
    pl = pull
