@@ -25,6 +25,10 @@ function grep-ant() {
 function fr() {
    for F in $@; do file-roller $(readlink -f $F) & done
 }
+# tweet a string of text
+function t() {
+   echo "$@" | bti
+}
 
 # git
 alias gdg='git ls-files | grep -i'
