@@ -34,17 +34,16 @@ nnoremap <leader>c   <C-c>:enew<cr>
 vnoremap <leader>c   <C-c>:enew<cr>
 
 " exit Vim when if last buffer is closed
-command BDeleteAndQuit
-      \  if len(filter(range(1, bufnr('$')), 'buflisted(v:val)')) > 1 |
-      \     confirm bd |
-      \  else |
-      \     confirm qa |
-      \  endif
+" WARN: NERDTree breaks if buffers not closed with bufkill plugin
+" command BufferDeleteAndQuit
+"       \  if len(filter(range(1, bufnr('$')), 'buflisted(v:val)')) > 1 |
+"       \     confirm <Plug>BufKillBd |
+"       \  else |
+"       \     confirm qa |
+"       \  endif
 " close buffer (tmux <C-a>x and <C-d>)
-nnoremap <leader>x   <C-c>:BDeleteAndQuit<cr>
-vnoremap <leader>x   <C-c>:BDeleteAndQuit<cr>
-nnoremap <C-d>       <C-c>:BDeleteAndQuit<cr>
-vnoremap <C-d>       <C-c>:BDeleteAndQuit<cr>
+nnoremap <C-d>       <C-c>:BD<cr>
+vnoremap <C-d>       <C-c>:BD<cr>
 
 " close all tabs/quit (tmux kill-session)
 nnoremap <leader>q   <C-c>:confirm qa<cr>

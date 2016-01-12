@@ -51,8 +51,10 @@ endif
 noremap     <C-w>x   <C-w>q
 inoremap    <C-w>x   <C-o><C-w>q
 if has("gui_running")
-   map  <C-a>x   <C-w>x
-   imap <C-a>x   <C-w>x
+   map  <C-a>x      <C-w>x
+   imap <C-a>x      <C-w>x
+   map  <leader>x   <C-w>x
+   imap <leader>x   <C-w>x
 endif
 
 " window splits (tmux <C-a>/ and <C-a>\)
