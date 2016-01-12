@@ -7,3 +7,8 @@ set lines=66         " force gvim to be full screen
 
 " dialog box
 set browsedir=last   " use 'last' dir for file browsing
+
+" run local config options
+if filereadable(expand("~/.gvimrc.after"))
+  source ~/.gvimrc.after
+endif

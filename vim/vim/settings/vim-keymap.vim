@@ -1,4 +1,4 @@
-" How commands are mapped into vim:
+" How commands are mapped into Vim:
 "
 "     map  / noremap  :  command / visual modes
 "     map! / noremap! :  command / insert mode
@@ -11,15 +11,12 @@
 "     <C-c>    : go to command mode
 "     <C-o>    : use command mode and return to last mode
 "
-" NOTE: the folllowing key combos can not be modified in VIM
+" NOTE: the folllowing key combos can not be modified in Vim
 "
 "    C-; : can not be captured
 "    C-[ : same as ESC
 "    C-i : same mapping as TAB key
 "    C-m : same mapping as ENTER key
-
-" change the <leader> from \ to ;
-let mapleader = ';'
 
 " enter command mode faser
 nnoremap  <leader><leader>  :

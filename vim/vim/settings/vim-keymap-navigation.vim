@@ -31,7 +31,7 @@ inoremap    <C-w>j   <C-o>:wincmd j<cr>
 inoremap    <C-w>k   <C-o>:wincmd k<cr>
 inoremap    <C-w>l   <C-o>:wincmd l<cr>
 
-" gvim window navigation (like tmux)
+" gVim window navigation (like tmux)
 "  window motion mappings to exactly match <C-a> tmux cmds
 "  NOTE: terminal mode uses default <C-w>[hjkl] motions because tmux blocks
 "        <C-a> key

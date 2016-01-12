@@ -1,6 +1,22 @@
-" import individual configs
-for f in split(glob('~/.vim/*.vim'), '\n')
-   exe 'source' f
+" This must be first, because it changes other options as a side effect.
+set nocompatible
+
+" for changing defaults like 'mapleader'
+if filereadable(expand("~/.vimrc.before"))
+  source ~/.vimrc.before
+endif
+
+" Change leader because the backslash is too far away
+" That means all \x commands turn into ;x
+" WARN: the mapleader has to be set before plugins are loaded.
+let mapleader = ';'
+
+" load all plugins using Vim-Plug
+source ~/.vim/plugins.vim
+
+" custom settings
+for fpath in split(glob('~/.vim/settings/*.vim'), '\n')
+   exe 'source' fpath
 endfor
 
 " File Settings
@@ -108,3 +124,8 @@ function! SetupPython()
     setlocal shiftwidth=3
 endfunction
 command! -bar SetupPython call SetupPython()
+
+" run local config options
+if filereadable(expand("~/.vimrc.after"))
+  source ~/.vimrc.after
+endif

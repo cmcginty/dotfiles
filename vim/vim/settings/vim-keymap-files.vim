@@ -33,7 +33,7 @@ noremap! <F5>        <C-c>:confirm e<cr>
 nnoremap <leader>c   <C-c>:enew<cr>
 vnoremap <leader>c   <C-c>:enew<cr>
 
-" exit vim when if last buffer is closed
+" exit Vim when if last buffer is closed
 command BDeleteAndQuit
       \  if len(filter(range(1, bufnr('$')), 'buflisted(v:val)')) > 1 |
       \     confirm bd |
