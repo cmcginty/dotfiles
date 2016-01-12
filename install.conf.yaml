@@ -19,6 +19,10 @@
 - shell:
    - [powerline/install.sh, Install powerline fonts]
    -
+      command: hash fasd || sudo make install -C tools/fasd
+      description: Install fasd
+      stdin: true
+   -
       command: zsh/install.sh
       description: Install zsh
       stdin: true

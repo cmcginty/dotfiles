@@ -13,3 +13,6 @@
 [submodule "vim/vim-plug"]
 	path = vim/vim-plug
 	url = https://github.com/junegunn/vim-plug.git
+[submodule "tools/fasd"]
+	path = tools/fasd
+	url = https://github.com/clvv/fasd.git
