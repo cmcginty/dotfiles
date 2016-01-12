@@ -34,3 +34,6 @@ let g:ctrlp_open_multiple_files = '1r'
 
 " limit total files to search; increase for large projects
 let g:ctrlp_max_files = 10000
+
+" update keymapping to match <C-space> as ESC
+let g:ctrlp_prompt_mappings = { 'PrtExit()' : ['<bs>', '<c-[>', '<C-Space>'] }
