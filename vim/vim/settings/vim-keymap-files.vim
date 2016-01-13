@@ -2,24 +2,10 @@
 "  INFO: for consistency, these commands mirror the tmux settings
 
 " save buffer
-if has("gui_running")
-   " if unnamed buffer, open save dialog
-   command GuiUpdate
-         \  if empty(bufname('%')) |
-         \     browse confirm update |
-         \  else |
-         \     update |
-         \  endif
-   nnoremap <leader>s   <C-c>:GuiUpdate<cr>
-   vnoremap <leader>s   <C-c>:GuiUpdate<cr>
-   noremap  <C-s>       <C-c>:GuiUpdate<cr>
-   inoremap <C-s>       <C-c>:GuiUpdate<cr>
-else
-   nnoremap <leader>s   <C-c>:update<cr>
-   vnoremap <leader>s   <C-c>:update<cr>
-   noremap  <C-s>       <C-c>:update<cr>
-   inoremap <C-s>       <C-c>:update<cr>
-endif
+nnoremap <leader>s   <C-c>:call SaveBuffer()<cr>
+vnoremap <leader>s   <C-c>:call SaveBuffer()<cr>
+noremap  <C-s>       <C-c>:call SaveBuffer()<cr>
+inoremap <C-s>       <C-c>:call SaveBuffer()<cr>
 
 " sudo save
 nnoremap <leader><S-s>   <C-c>:SudoWrite<cr>
