@@ -12,13 +12,13 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 " keymap to show/hide NERDTree
 map <C-n> :NERDTreeToggle<cr>
 
-" Make nerdtree look nice
+" make nerdtree look nice
 let NERDTreeMinimalUI = 1
+
+" set default width
+let NERDTreeWinSize = 22
 
 " helper function to detect NERDTree window
 function! NERDTreeInFocus()
-   if matchstr(expand("%"), 'NERD') == 'NERD'
-      return 1
-   else
-      return 0
+   return matchstr(expand("%"), 'NERD_tree_') == 'NERD_tree_'
 endfunction
