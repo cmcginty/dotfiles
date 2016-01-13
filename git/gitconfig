@@ -70,6 +70,8 @@
    rsh = reset --hard
    sa = stash
    st = status
+   sub-checkout = submodule update --init --recursive
+   sub-pull = submodule update --remote --rebase
    up = remote update
    # print current sha1 hash only
    sha = rev-parse --short HEAD
