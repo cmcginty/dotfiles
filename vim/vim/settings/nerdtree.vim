@@ -14,3 +14,11 @@ map <C-n> :NERDTreeToggle<cr>
 
 " Make nerdtree look nice
 let NERDTreeMinimalUI = 1
+
+" helper function to detect NERDTree window
+function! NERDTreeInFocus()
+   if matchstr(expand("%"), 'NERD') == 'NERD'
+      return 1
+   else
+      return 0
+endfunction
