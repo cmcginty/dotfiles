@@ -14,7 +14,7 @@ let mapleader = ';'
 " load all plugins using Vim-Plug
 source ~/.vim/plugins.vim
 
-" custom settings
+" source dotfile repo settings
 for fpath in split(glob('~/.vim/settings/*.vim'), '\n')
    exe 'source' fpath
 endfor
@@ -124,8 +124,3 @@ function! SetupPython()
     setlocal shiftwidth=3
 endfunction
 command! -bar SetupPython call SetupPython()
-
-" run local config options
-if filereadable(expand("~/.vimrc.after"))
-  source ~/.vimrc.after
-endif
