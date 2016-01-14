@@ -86,18 +86,6 @@ EOF
    "redo last command on all selected lines
    vnoremap . :normal .<CR>
 
-" Nerd Commenter
-"***********************************
-" options
-let NERDSpaceDelims=1
-let NERDDefaultNesting=0
-" toggle comment current line or selection
-noremap  <C-e> :call NERDComment(0,"toggle")<cr>j
-inoremap <C-e> <C-O>:call NERDComment(0,"toggle")<cr>
-vnoremap <C-e> <C-C>:call NERDComment(1,"toggle")<cr>j
-" change default comments for dosbatch files
-autocmd FileType dosbatch autocmd VimEnter * execute "normal \<Plug>NERDCommenterAltDelims"
-
 " Syntax File Settings
 "***********************************
 let python_highlight_all=1       " turn on all python highlights
