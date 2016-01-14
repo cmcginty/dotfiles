@@ -48,13 +48,15 @@ if has("gui_running")
 endif
 
 " close window split (lke tmux)
-noremap     <C-w>x   <C-w>q
-inoremap    <C-w>x   <C-o><C-w>q
+noremap     <C-w>x   :close!<cr>
+inoremap    <C-w>x   <C-o>:close!<cr>
 if has("gui_running")
-   map  <C-a>x      <C-w>x
-   imap <C-a>x      <C-w>x
-   map  <leader>x   <C-w>x
-   imap <leader>x   <C-w>x
+   noremap  <C-a>x      :close!<cr>
+   inoremap <C-a>x      <C-o>:close!<cr>
+   noremap  <leader>x   :close!<cr>
+   inoremap <leader>x   <C-o>:close!<cr>
+   noremap  <leader>v   :only<cr>
+   inoremap <leader>v   :only<cr>
 endif
 
 " window splits (tmux <C-a>/ and <C-a>\)

@@ -36,6 +36,3 @@ nnoremap <C-Space>   <NOP>
 
 " quickly reload the vimrc file
 nnoremap <silent> <leader>z :so $MYVIMRC<CR>
-
-" disable command history popup
-nnoremap q: :q

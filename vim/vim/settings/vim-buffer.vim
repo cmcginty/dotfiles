@@ -14,11 +14,17 @@ function! SaveBuffer()
    endif
 endfunction
 
-" exit Vim when if last buffer is closed
+" advanced logic to close the current buffer
+"     a) prevents NERDTree from being closed, use NERDTreeToggle
+"     b) correctly handles closing a :Gdiff split window
+"     c) if final buffer is being closed, Vim exits
 " WARN: NERDTree breaks if buffers not closed with bufkill plugin
 function! KillBufferOrExit()
    " never close a nerd tree
    if NERDTreeInFocus() | return | endif
+
+   " cannot bufkill a fugitive diff
+   if FugitiveDiffInFocus() | quit | return | endif
 
    " save, then bufkill or quit on last buffer
    let number_of_buffers = len(filter(range(1, bufnr('$')), 'buflisted(v:val)'))
@@ -32,9 +38,15 @@ function! KillBufferOrExit()
 endfunction
 
 function! PreviousBuffer()
-   if NERDTreeInFocus() | return | else | bp! | endif
+   if NERDTreeInFocus() | return | endif
+   if FugitiveDiffInFocus() | return | endif
+   if FugitiveStatusInFocus() | return | endif
+   bp!
 endfunction
 
 function! NextBuffer()
-   if NERDTreeInFocus() | return | else | bn! | endif
+   if NERDTreeInFocus() | return | endif
+   if FugitiveDiffInFocus() | return | endif
+   if FugitiveStatusInFocus() | return | endif
+   bn!
 endfunction

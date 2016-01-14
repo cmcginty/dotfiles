@@ -33,8 +33,6 @@ if has("autocmd")
    autocmd BufWritePre * :%s/\s\+$//e
    " open new buffers into a new tab (tip 1317)
    "autocmd BufAdd,BufNewFile * nested tab sball
-   " update working directory to location of current file (tip 64)
-   autocmd BufEnter * lcd %:p:h
    " add pyunit integration into python files (tip 280)
    autocmd FileType python
       \ setlocal makeprg=../alltests.py\ -q
