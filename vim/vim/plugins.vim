@@ -14,6 +14,7 @@ Plug 'guns/xterm-color-table.vim'   " open a color palette
 " extensions
 Plug 'christoomey/vim-sort-motion'  " sorting w/ motion commands
 Plug 'tomtom/tcomment_vim'          " quick commenting
+Plug 'tpope/vim-sleuth'             " auto-detect indent size
 
 " project
 Plug 'Yggdroot/indentLine'          " show indent guidelines
