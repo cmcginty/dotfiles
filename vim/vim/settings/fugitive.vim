@@ -9,7 +9,7 @@
 noremap <C-g>  :call ToggleGStatus()<cr>
 noremap gww    :Gwrite<cr>
 noremap gbl    :Gblame<cr>
-noremap gcm    :Gcommit<cr>
+noremap gcc    :Gcommit<cr>
 noremap gd     :Gdiff<cr>
 noremap gmv    :Gmove<space>
 noremap grm    :Gremove<cr>
