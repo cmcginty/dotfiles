@@ -23,4 +23,7 @@ Plug 'tpope/vim-fugitive'           " git support
 " file types
 Plug 'tpope/vim-git'                " git config files
 
+" devicons must load after other plugins it updates
+Plug 'ryanoasis/vim-devicons'       " icon'd fonts
+
 call plug#end()

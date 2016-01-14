@@ -17,7 +17,7 @@
    ~/.zshrc:         zsh/zshrc
 
 - shell:
-   - [powerline/install.sh, Install powerline fonts]
+   - [nerd-fonts/install.sh, Install Nerd fonts]
    -
       command: hash fasd || sudo make install -C tools/fasd
       description: Install fasd
