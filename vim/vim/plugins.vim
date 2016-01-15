@@ -7,6 +7,7 @@ Plug 'tpope/vim-eunuch'             " UNIX file commands
 Plug 'qpkorr/vim-bufkill'           " kill buffers w/o breaking split windows
 
 " appearance
+Plug 'Yggdroot/indentLine'          " show indent guidelines
 Plug 'bling/vim-airline'            " status bars / UI
 Plug 'chriskempson/base16-vim'      " color schemes
 Plug 'guns/xterm-color-table.vim'   " open a color palette
@@ -17,11 +18,11 @@ Plug 'tomtom/tcomment_vim'          " quick commenting
 Plug 'tpope/vim-sleuth'             " auto-detect indent size
 
 " project
-Plug 'Yggdroot/indentLine'          " show indent guidelines
 Plug 'airblade/vim-gitgutter'       " highlight git diffs
 Plug 'ctrlpvim/ctrlp.vim'           " quick file switcher
 Plug 'scrooloose/nerdtree'          " THE file browser
 Plug 'tpope/vim-fugitive'           " git support
+Plug 'ervandew/supertab'            " TAB completion (C-n/C-p)
 
 " file types
 Plug 'tpope/vim-git'                " git config files
