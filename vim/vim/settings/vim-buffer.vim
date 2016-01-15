@@ -10,7 +10,7 @@ endfunction
 function! IsFileBuffer()
    let fname = expand('%')
    " hidden buffers (help, NERDTree) are not files
-   if !buflisted(bufnr('%')) | return 1 | endif
+   if !buflisted(bufnr('%')) | return 0 | endif
    " static buffers are not files
    if !&modifiable | return 0 | endif
    " unamed buffers, are new files
