@@ -20,8 +20,8 @@ nnoremap <leader>c   <C-c>:enew<cr>
 vnoremap <leader>c   <C-c>:enew<cr>
 
 " close buffer (tmux <C-a>x and <C-d>)
-nnoremap <C-d>       <C-c>:call KillBufferOrExit()<cr>
-vnoremap <C-d>       <C-c>:call KillBufferOrExit()<cr>
+nnoremap <C-d>       <C-c>:call KillBuffer()<cr>
+vnoremap <C-d>       <C-c>:call KillBuffer()<cr>
 
 " close all tabs/quit (tmux kill-session)
 nnoremap <leader>q   <C-c>:confirm qa<cr>
