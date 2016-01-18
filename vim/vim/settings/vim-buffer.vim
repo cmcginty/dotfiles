@@ -41,15 +41,15 @@ endfunction
 " WARN: NERDTree breaks if buffers not closed with bufkill plugin
 function! KillBuffer()
    if FugitiveDiffInFocus() | quit | return | endif
-   if !IsFileBuffer() | return | endif
+   if !IsFileBuffer() | quit | return | endif
    let number_of_buffers = len(filter(range(1, bufnr('$')), 'buflisted(v:val)'))
    try
       if &modified | call SaveBuffer() | endif
-      if number_of_buffers == 1
-         bd
+      if number_of_buffers > 1
+         BD!
       else
          " BD (killbuf) on last buffer breaks Airline
-         BD!
+         bd
       endif
    endtry
 endfunction
@@ -58,18 +58,14 @@ function! PreviousBuffer()
    " if buffer is some type of non-file view, do not modify
    if !IsFileBuffer() | return | endif
    " cycle until next file buffer is found
-   while 1
-      bp!
-      if IsFileBuffer() | break | endif
-   endwhile
+   bp!
+   while !IsFileBuffer() | bp! | endwhile
 endfunction
 
 function! NextBuffer()
    " if buffer is some type of non-file view, do not modify
    if !IsFileBuffer() | return | endif
    " cycle until next file buffer is found
-   while 1
-      bn!
-      if IsFileBuffer() | break | endif
-   endwhile
+   bn!
+   while !IsFileBuffer() | bn! | endwhile
 endfunction
