@@ -23,16 +23,13 @@ function! FugitiveDiffInFocus()
    return matchstr(expand("%"), 'fugitive:///') == 'fugitive:///'
 endfunction
 
-" helper to detect a fugitive diff buffer
-function! FugitiveStatusInFocus()
-   return matchstr(expand("%"), '.git/index') == '.git/index'
-endfunction
-
-" toggle the GStatus window (https://gist.github.com/actionshrimp/6493611)
+" toggle the GStatus window
 function! ToggleGStatus()
-   if buflisted(bufname('.git/index'))
-      bd .git/index
+   if bufloaded('.git/index') " true when visible
+      execute bufwinnr('.git/index') . "wincmd w"
+      hide
    else
       Gstatus
+      set nobuflisted   " hide Gstatus from airline tab
    endif
 endfunction
