@@ -26,7 +26,7 @@ Plug 'ervandew/supertab'            " TAB completion (C-n/C-p)
 
 " file types
 Plug 'tpope/vim-git'                " git config files
-Plug 'vim-scripts/vim-gradle'       " gradle build tool
+Plug 'tfnico/vim-gradle'            " gradle build tool
 
 " devicons must load after other plugins it updates
 Plug 'ryanoasis/vim-devicons'       " icon'd fonts
