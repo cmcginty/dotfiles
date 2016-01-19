@@ -9,6 +9,7 @@
    pretty = format:"%C(bold blue)%h%C(reset) [%C(green)%ar%Creset] %s, %C(cyan)%an% %C(bold yellow)%d%C(reset)"
 [push]
    default = tracking
+   recurseSubmodules = check
 [diff "odf"]
    textconv=odt2txt
 [branch]
@@ -92,21 +93,18 @@
    initexternal = "!f() { git --work-tree=. --git-dir=\"$1\" init && echo \"gitdir: $1\" >> .git; }; f"
    # all branches with common parents
    related = "!f() { git branch --contains $(git rev-list --max-parents=0 HEAD); }; f"
-
 [sendemail]
    smtpserver = localhost
    chainreplyto = false
    aliasesfile = /home/pcm/.gitaliases
-
 [color "diff"]
    meta = yellow bold
    frag = magenta bold
    old = red bold
    new = green bold
-
 [color "status"]
    added = green
    changed = yellow bold
    untracked = red bold
 [credential]
-	helper = store --file ~/.gitcredentials
+   helper = store --file ~/.gitcredentials
