@@ -40,7 +40,7 @@ endfunction
 "     c) handles edge case when last open buffer is closed
 " WARN: NERDTree breaks if buffers not closed with bufkill plugin
 function! KillBuffer()
-   if FugitiveDiffInFocus() | quit | return | endif
+   "if FugitiveDiffInFocus() | quit | return | endif
    if !IsFileBuffer() | quit | return | endif
    let number_of_buffers = len(filter(range(1, bufnr('$')), 'buflisted(v:val)'))
    try
