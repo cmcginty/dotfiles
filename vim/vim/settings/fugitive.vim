@@ -7,46 +7,42 @@
 "  gg                go to top
 "  gq<text obj>      format text
 
-noremap <C-g>  :call ToggleGStatus()<cr>
-noremap gww    :Gwrite<cr>
-noremap gbl    :Gblame<cr>
-noremap gcm    :Gcommit<cr>
-noremap gd     :Gdiff<cr>
-noremap gmv    :Gmove<space>
-noremap grm    :Gremove<cr>
-noremap grr    :Gread<cr>
+" only avaiable when 'Fugitive' plugin detects a repo
+autocmd User Fugitive noremap <buffer> <C-g>  :call fugitive#toggleStatus()<cr>
+autocmd User Fugitive noremap <buffer> gww    :Gwrite<cr> |
+autocmd User Fugitive noremap <buffer> gbl    :Gblame<cr> |
+autocmd User Fugitive noremap <buffer> gcm    :Gcommit<cr> |
+autocmd User Fugitive noremap <buffer> gd     :Gdiff<cr> |
+autocmd User Fugitive noremap <buffer> gmv    :Gmove<space> |
+autocmd User Fugitive noremap <buffer> grm    :Gremove<cr> |
+autocmd User Fugitive noremap <buffer> grr    :Gread<cr>
 
 " 3-way diff merge conflicts
 "     diffput,dp        works as usual
 "     dt (diff target)  get the target change
 "     dm (diff merge)   get the merge change
-noremap <leader>dt   :diffget<space>//2<cr>
-noremap <leader>dm   :diffget<space>//3<cr>
-
-" diff options (use dp and do builtins)
-set diffopt=filler,vertical
-
-" helper to detect a fugitive diff buffer
-function! FugitiveDiffInFocus()
-   return matchstr(expand("%"), 'fugitive://') == 'fugitive://'
-endfunction
-
-" toggle the GStatus window
-function! ToggleGStatus()
-   if bufloaded('.git/index') " true when visible
-      execute bufwinnr('.git/index') . "wincmd w"
-      hide
-   else
-      Gstatus
-      set nobuflisted   " hide Gstatus from airline tab
-   endif
-endfunction
+autocmd User Fugitive noremap <leader>dt   :diffget<space>//2<cr>
+autocmd User Fugitive noremap <leader>dm   :diffget<space>//3<cr>
 
 " go 'back' after navigating git tree/blob
 autocmd User Fugitive
    \ if fugitive#buffer().type() =~# '^\%(tree\|blob\)$' |
    \    nnoremap <buffer> .. :edit %:h<CR> |
    \ endif
+
+" diff options (use dp and do builtins)
+set diffopt=filler,vertical
+
+" toggle the GStatus window
+function! fugitive#toggleStatus()
+   if bufloaded(bufname('.git/index')) " true when visible
+      execute bufwinnr('.git/index')."wincmd w"
+      bdelete
+   else
+      Gstatus
+      set nobuflisted   " hide Gstatus from airline tab
+   endif
+endfunction
 
 " delete old fugitive buffers
 autocmd BufReadPost fugitive://* set bufhidden=delete

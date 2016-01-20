@@ -49,7 +49,7 @@ function! KillBuffer()
          BD!
       else
          " BD (killbuf) on last buffer breaks Airline
-         bd
+         bdelete
       endif
    endtry
 endfunction
