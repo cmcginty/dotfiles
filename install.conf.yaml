@@ -15,7 +15,6 @@
    ~/.zprofile:      zsh/zprofile
    ~/.zshenv:        zsh/plugins/prezto/runcoms/zshenv
    ~/.zshrc:         zsh/zshrc
-   ~/.ssh/config:             ssh/config
    ~/.ssh/authorized_keys:    ssh/authorized_keys
    ~/.ssh/id_rsa.pub:         ssh/id_rsa.pub
 
