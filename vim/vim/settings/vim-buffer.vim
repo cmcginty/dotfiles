@@ -1,36 +1,21 @@
 " extended functions for handling buffers
 
-" register a buffer name that return 0 when 'IsFileBuffer' called
-let s:BufferIgnoreList = []
-function! AddIgnoredBuffer(filename)
-   call add(s:BufferIgnoreList,a:filename)
-endfunction
-
 " check buffer contains a real file and not a plugin viewport of some type
 function! IsFileBuffer()
-   let fname = expand('%')
    " hidden buffers (help, NERDTree) are not files
-   if !buflisted(bufnr('%')) | return 0 | endif
+   if !buflisted(bufnr(@%)) | return 0 | endif
    " static buffers are not files
    if !&modifiable | return 0 | endif
    " unamed buffers, are new files
-   if fname == "" | return 1 | endif
+   if empty(@%) | return 1 | endif
    " unreadable buffers are not files
-   if !filereadable(fname) | return 0 | endif
+   if !filereadable(@%) | return 0 | endif
    return 1
 endfunction
 
-" save the current buffer
-function! SaveBuffer()
-   if !empty(bufname('%'))
-      update
-   else " file is unnamed
-      " ask to save a file with no name
-      if confirm('Save changes to "Untitled"?',"&Yes\n&No",1) == 2
-         return
-      else
-         browse update
-      endif
+function! ConfirmSave()
+   if &modified && confirm('Save changes to "Untitled"?',"&Yes\n&No",1) == 1
+      browse update
    endif
 endfunction
 
@@ -49,7 +34,7 @@ function! KillBuffer()
          BD!
       else
          " BD (killbuf) on last buffer breaks Airline
-         bdelete
+         bdelete!
       endif
    endtry
 endfunction
