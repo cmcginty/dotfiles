@@ -36,7 +36,7 @@ set diffopt=filler,vertical
 
 " do not show Fugitive buffers in Airline
 autocmd BufReadPost *.git/index   set nobuflisted
-autocmd BufReadPost fugitive://*  set nobuflisted
+autocmd BufEnter    fugitive://*  if &diff | set nobuflisted | endif
 
 " toggle the GStatus window
 function! fugitive#toggleStatus()
@@ -56,8 +56,8 @@ autocmd BufReadPost *.git/index  nmap <buffer> <C-h> <NOP>
 autocmd BufReadPost *.git/index  nmap <buffer> <C-l> <NOP>
 
 " GitDiff keymaps
-autocmd BufReadPost fugitive://* nmap <buffer> <C-h> <NOP>
-autocmd BufReadPost fugitive://* nmap <buffer> <C-l> <NOP>
+autocmd BufEnter    fugitive://* if &diff | nmap <buffer> <C-h> <NOP>| endif
+autocmd BufEnter    fugitive://* if &diff | nmap <buffer> <C-l> <NOP>| endif
 autocmd BufReadPost fugitive://* nmap <buffer> <C-s> <C-c>:update<cr>
 autocmd BufReadPost fugitive://* nmap <buffer> <C-d> <C-c>:bd!<cr>
 
