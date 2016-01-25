@@ -55,13 +55,15 @@ autocmd BufReadPost *.git/index  nmap <buffer> <C-d> q
 autocmd BufReadPost *.git/index  nmap <buffer> <C-h> <NOP>
 autocmd BufReadPost *.git/index  nmap <buffer> <C-l> <NOP>
 
-" GitDiff keymaps
-autocmd BufEnter    fugitive://* if &diff | nmap <buffer> <C-h> <NOP>| endif
-autocmd BufEnter    fugitive://* if &diff | nmap <buffer> <C-l> <NOP>| endif
+" GitEdit/Diff keymaps
 autocmd BufReadPost fugitive://* nmap <buffer> <C-s> <C-c>:update<cr>
 autocmd BufReadPost fugitive://* nmap <buffer> <C-d> <C-c>:bd!<cr>
 
-" commit message keymaps
+" GitDiff keymaps
+autocmd BufEnter    fugitive://* if &diff | nmap <buffer> <C-h> <NOP>| endif
+autocmd BufEnter    fugitive://* if &diff | nmap <buffer> <C-l> <NOP>| endif
+
+" Gitcommit message keymaps
 autocmd BufReadPost */COMMIT_EDITMSG nmap <buffer> <C-h> <NOP>
 autocmd BufReadPost */COMMIT_EDITMSG nmap <buffer> <C-l> <NOP>
 autocmd BufReadPost */COMMIT_EDITMSG nmap <buffer> <C-d> <C-c>:wq<cr>
