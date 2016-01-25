@@ -9,12 +9,13 @@
 
 " only avaiable when 'Fugitive' plugin detects a repo
 autocmd User Fugitive noremap <buffer> <C-g>  :call fugitive#toggleStatus()<cr>
-autocmd User Fugitive noremap <buffer> gww    :Gwrite<cr> |
-autocmd User Fugitive noremap <buffer> gbl    :Gblame<cr> |
-autocmd User Fugitive noremap <buffer> gcm    :Gcommit<cr> |
-autocmd User Fugitive noremap <buffer> gd     :Gdiff<cr> |
-autocmd User Fugitive noremap <buffer> gmv    :Gmove<space> |
-autocmd User Fugitive noremap <buffer> grm    :Gremove<cr> |
+autocmd User Fugitive noremap <buffer> gww    :Gwrite<cr>
+autocmd User Fugitive noremap <buffer> gbl    :Gblame<cr>
+autocmd User Fugitive noremap <buffer> gcm    :Gcommit<cr>
+autocmd User Fugitive noremap <buffer> gca    :Gcommit --amend<cr>
+autocmd User Fugitive noremap <buffer> gd     :Gdiff<cr>
+autocmd User Fugitive noremap <buffer> gmv    :Gmove<space>
+autocmd User Fugitive noremap <buffer> grm    :Gremove<cr>
 autocmd User Fugitive noremap <buffer> grr    :Gread<cr>
 
 " 3-way diff merge conflicts
@@ -33,16 +34,35 @@ autocmd User Fugitive
 " diff options (use dp and do builtins)
 set diffopt=filler,vertical
 
+" do not show Fugitive buffers in Airline
+autocmd BufReadPost *.git/index   set nobuflisted
+autocmd BufReadPost fugitive://*  set nobuflisted
+
 " toggle the GStatus window
 function! fugitive#toggleStatus()
    if bufloaded(bufname('.git/index')) " true when visible
-      execute bufwinnr('.git/index')."wincmd w"
-      bdelete
+      execute "bdelete".bufnr('.git/index')
    else
       Gstatus
-      set nobuflisted   " hide Gstatus from airline tab
    endif
 endfunction
 
 " delete old fugitive buffers
 autocmd BufReadPost fugitive://* set bufhidden=delete
+
+" GitStatus keymaps
+autocmd BufReadPost *.git/index  nmap <buffer> <C-d> q
+autocmd BufReadPost *.git/index  nmap <buffer> <C-h> <NOP>
+autocmd BufReadPost *.git/index  nmap <buffer> <C-l> <NOP>
+
+" GitDiff keymaps
+autocmd BufReadPost fugitive://* nmap <buffer> <C-h> <NOP>
+autocmd BufReadPost fugitive://* nmap <buffer> <C-l> <NOP>
+autocmd BufReadPost fugitive://* nmap <buffer> <C-s> <C-c>:update<cr>
+autocmd BufReadPost fugitive://* nmap <buffer> <C-d> <C-c>:bd!<cr>
+
+" commit message keymaps
+autocmd BufReadPost */COMMIT_EDITMSG nmap <buffer> <C-h> <NOP>
+autocmd BufReadPost */COMMIT_EDITMSG nmap <buffer> <C-l> <NOP>
+autocmd BufReadPost */COMMIT_EDITMSG nmap <buffer> <C-d> <C-c>:wq<cr>
+autocmd BufReadPost */COMMIT_EDITMSG imap <buffer> <C-d> <C-c>:wq<cr>

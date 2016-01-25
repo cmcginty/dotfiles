@@ -9,30 +9,41 @@ function! SetSaveKeymaps( command )
    execute "inoremap <buffer> <C-s>     ".a:command
 endfunction
 
-" indirectly save the buffer with <leader>s so autocmds handle how to save
+" save current buffer using <leader>s autocmd
 function! SaveBuffer()
    execute "normal".g:mapleader."s"
 endfunction
 
+" disable 'buffer delete' mapping for default windows
+nnoremap <C-d>    <NOP>
+vnoremap <C-d>    <NOP>
+
+" autocmd make it easier to create modal keymaps for different viewports
 augroup keymap_files
    autocmd!
-   " save keymaps on empty buffer and no file(s) specified or pipe from stdin
-   " (needed because BufNew is never called)
    autocmd StdinReadPre * let s:std_in=1
+   "  for empty buffer and no file(s) specified or pipe from stdin
+   "  (needed because BufNew is never called)
    autocmd VimEnter *
       \  if !argc() && !exists("s:std_in") |
       \     let s:buf=bufnr(@%) | buffer 1 |
       \     call SetSaveKeymaps('<C-c>:call ConfirmSave()<cr>') |
+      \     nnoremap <buffer> <C-d>    <C-c>:call KillBuffer()<cr> |
+      \     vnoremap <buffer> <C-d>    <C-d>:call KIllBuffer()<cr> |
       \     execute "buffer".s:buf |
       \  endif
-   " save keymaps for 'new' buffer with empty name
+   "  for 'new' buffer with empty name
    autocmd BufNew *
-      \  echo 'new file' |
       \  if empty(expand('<afile>')) |
       \     call SetSaveKeymaps('<C-c>:call ConfirmSave()<cr>') |
+      \     nnoremap <buffer> <C-d>    <C-c>:call KillBuffer()<cr> |
+      \     vnoremap <buffer> <C-d>    <C-d>:call KIllBuffer()<cr> |
       \  endif
-   " save keymaps for valid buffer, or after naming empty buffer
-   autocmd BufReadPre,BufWritePre * call SetSaveKeymaps('<C-c>:update<cr>')
+   "  for valid buffer, or after naming empty buffer
+   autocmd BufReadPre,BufWritePre *
+      \ call SetSaveKeymaps('<C-c>:update<cr>') |
+      \ nnoremap <buffer> <C-d>    <C-c>:call KillBuffer()<cr> |
+      \ vnoremap <buffer> <C-d>    <C-d>:call KIllBuffer()<cr>
 augroup END
 
 " sudo save
@@ -46,10 +57,6 @@ noremap! <F5>        <C-c>:confirm e<cr>
 " new buffer (tmux <C-A>c)
 nnoremap <leader>c   <C-c>:enew<cr>
 vnoremap <leader>c   <C-c>:enew<cr>
-
-" close buffer (tmux <C-a>x and <C-d>)
-nnoremap <C-d>       <C-c>:call KillBuffer()<cr>
-vnoremap <C-d>       <C-c>:call KillBuffer()<cr>
 
 " close all tabs/quit (tmux kill-session)
 nnoremap <leader>q   <C-c>:confirm qa<cr>
