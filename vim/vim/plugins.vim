@@ -15,7 +15,9 @@ Plug 'guns/xterm-color-table.vim'   " open a color palette
 " extensions
 Plug 'christoomey/vim-sort-motion'  " sorting w/ motion commands
 Plug 'tomtom/tcomment_vim'          " quick commenting
+Plug 'tpope/vim-repeat'             " enhance '.' repeat cmd
 Plug 'tpope/vim-sleuth'             " auto-detect indent size
+Plug 'tpope/vim-unimpaired'         " bracket mappings
 
 " project
 Plug 'airblade/vim-gitgutter'       " highlight git diffs
