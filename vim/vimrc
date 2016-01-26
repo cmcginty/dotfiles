@@ -29,8 +29,6 @@ if has("autocmd")
       \ if line("'\"") > 0 && line("'\"") <= line("$") |
       \   exe "normal g`\"" |
       \ endif
-   " trim all trailing whitespace
-   autocmd BufWritePre * :%s/\s\+$//e
    " add pyunit integration into python files (tip 280)
    autocmd FileType python
       \ setlocal makeprg=../alltests.py\ -q
@@ -87,10 +85,10 @@ let python_highlight_all=1       " turn on all python highlights
 " Session Plugin Settings
 "***********************************
 set sessionoptions=blank,buffers,curdir,folds,help,resize,tabpages,winsize
-noremap <F1> <C-C>:SessionList<cr>
-noremap <F2> <C-C>:SessionOpenLast<cr>
-noremap <F3> <C-C>:SessionSave<cr>
-noremap <F4> <C-C>:SessionSaveAs<cr>
+" noremap <F1> <C-C>:SessionList<cr>
+" noremap <F2> <C-C>:SessionOpenLast<cr>
+" noremap <F3> <C-C>:SessionSave<cr>
+" noremap <F4> <C-C>:SessionSaveAs<cr>
 
 function! SetupPython()
     " Here, you can have the final say on what is set.  So
