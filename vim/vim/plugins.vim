@@ -17,14 +17,17 @@ Plug 'christoomey/vim-sort-motion'  " sorting w/ motion commands
 Plug 'tomtom/tcomment_vim'          " quick commenting
 Plug 'tpope/vim-repeat'             " enhance '.' repeat cmd
 Plug 'tpope/vim-sleuth'             " auto-detect indent size
+Plug 'tpope/vim-surround'           " quickly change parens,brackets,quotes
 Plug 'tpope/vim-unimpaired'         " bracket mappings
 
 " project
-Plug 'airblade/vim-gitgutter'       " highlight git diffs
 Plug 'ctrlpvim/ctrlp.vim'           " quick file switcher
 Plug 'scrooloose/nerdtree'          " THE file browser
-Plug 'tpope/vim-fugitive'           " git support
 Plug 'ervandew/supertab'            " TAB completion (C-n/C-p)
+
+" git
+Plug 'tpope/vim-fugitive'           " git support
+Plug 'airblade/vim-gitgutter'       " highlight git diffs
 
 " file types
 Plug 'tpope/vim-git'                " git config files
