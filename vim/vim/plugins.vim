@@ -13,6 +13,7 @@ Plug 'chriskempson/base16-vim'      " color schemes
 Plug 'guns/xterm-color-table.vim'   " open a color palette
 
 " extensions
+Plug 'Raimondi/delimitMate'         " automatically close quotes, etc.
 Plug 'christoomey/vim-sort-motion'  " sorting w/ motion commands
 Plug 'tomtom/tcomment_vim'          " quick commenting
 Plug 'tpope/vim-repeat'             " enhance '.' repeat cmd
