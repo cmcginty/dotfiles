@@ -2,7 +2,7 @@
 "  INFO: for consistency, these commands mirror the tmux settings
 
 " helper to quickly change the multiple <SAVE> mappings
-function! SetSaveKeymaps( command )
+function! FileSaveKeymaps( command )
    execute "nnoremap <buffer> <leader>s ".a:command
    execute "vnoremap <buffer> <leader>s ".a:command
    execute "noremap  <buffer> <C-s>     ".a:command
@@ -10,13 +10,31 @@ function! SetSaveKeymaps( command )
 endfunction
 
 " save current buffer using <leader>s autocmd
-function! SaveBuffer()
+function! FileSaveExe()
    execute "normal".g:mapleader."s"
 endfunction
 
-" disable 'buffer delete' mapping for default windows
+" set the close buffer keymaps
+function! FileCloseKeymaps()
+   nnoremap <buffer> <C-d>    <C-c>:call KillBuffer()<cr>
+   vnoremap <buffer> <C-d>    <C-d>:call KIllBuffer()<cr>
+endfunction
+
+" set the buffer next/previous keymaps
+function! FileNextPrevKeymaps()
+   noremap  <buffer> <C-h>    <C-c>:bp!<cr>
+   noremap! <buffer> <C-h>    <C-c>:bp!<cr>
+   noremap  <buffer> <C-l>    <C-c>:bn!<cr>
+   noremap! <buffer> <C-l>    <C-c>:bn!<cr>
+endfunction
+
+" clear default file keymaps
 nnoremap <C-d>    <NOP>
 vnoremap <C-d>    <NOP>
+noremap  <C-h>    <NOP>
+noremap! <C-h>    <NOP>
+noremap  <C-l>    <NOP>
+noremap! <C-l>    <NOP>
 
 " autocmd make it easier to create modal keymaps for different viewports
 augroup keymap_files
@@ -27,30 +45,30 @@ augroup keymap_files
    autocmd VimEnter *
       \  if !argc() || exists("s:std_in") |
       \     let s:buf=bufnr(@%) | buffer 1 |
-      \     call SetSaveKeymaps('<C-c>:call ConfirmSave()<cr>') |
-      \     nnoremap <buffer> <C-d>    <C-c>:call KillBuffer()<cr> |
-      \     vnoremap <buffer> <C-d>    <C-d>:call KIllBuffer()<cr> |
+      \     call FileSaveKeymaps('<C-c>:call ConfirmSave()<cr>') |
+      \     call FileCloseKeymaps() |
+      \     call FileNextPrevKeymaps() |
       \     execute "buffer".s:buf |
       \  endif
    " executed on a new 'new' buffer with empty name
    autocmd BufNew *
       \  if empty(expand('<afile>')) |
-      \     call SetSaveKeymaps('<C-c>:call ConfirmSave()<cr>') |
-      \     nnoremap <buffer> <C-d>    <C-c>:call KillBuffer()<cr> |
-      \     vnoremap <buffer> <C-d>    <C-d>:call KIllBuffer()<cr> |
+      \     call FileSaveKeymaps('<C-c>:call ConfirmSave()<cr>') |
+      \     call FileCloseKeymaps() |
+      \     call FileNextPrevKeymaps() |
       \  endif
    " executed on 'new' buffer created with a non-existant file name
    autocmd BufNewFile *
       \ if !exists(expand('<afile>')) |
-      \    call SetSaveKeymaps('<C-c>:update<cr>') |
-      \    nnoremap <buffer> <C-d>    <C-c>:call KillBuffer()<cr> |
-      \    vnoremap <buffer> <C-d>    <C-d>:call KIllBuffer()<cr> |
+      \    call FileSaveKeymaps('<C-c>:update<cr>') |
+      \    call FileCloseKeymaps() |
+      \    call FileNextPrevKeymaps()|
       \ endif
    " executed on reading a file or after writing unnamed buffer
    autocmd BufReadPre,BufWritePre *
-      \ call SetSaveKeymaps('<C-c>:update<cr>') |
-      \ nnoremap <buffer> <C-d>    <C-c>:call KillBuffer()<cr> |
-      \ vnoremap <buffer> <C-d>    <C-d>:call KIllBuffer()<cr>
+      \ call FileSaveKeymaps('<C-c>:update<cr>') |
+      \ call FileCloseKeymaps() |
+      \ call FileNextPrevKeymaps()
 augroup END
 
 " sudo save

@@ -4,12 +4,6 @@
 noremap j gj
 noremap k gk
 
-" left(h) prev/ right(l) next buffer
-noremap  <C-h>    <C-c>:bp!<cr>
-noremap! <C-h>    <C-c>:bp!<cr>
-noremap  <C-l>    <C-c>:bn!<cr>
-noremap! <C-l>    <C-c>:bn!<cr>
-
 " scroll up/down 1/2 page
 noremap  <C-k>    <C-u>
 noremap  <C-j>    <C-d>

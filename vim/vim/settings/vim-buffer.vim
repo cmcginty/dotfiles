@@ -8,7 +8,7 @@ endfunction
 
 " close the current buffer with killbuf plugin (BD) or bd
 function! KillBuffer()
-   if &modified | call SaveBuffer() | endif
+   if &modified | call FileSaveExe() | endif
    let number_of_buffers = len(filter(range(1, bufnr('$')), 'buflisted(v:val)'))
    if number_of_buffers > 1 | execute "BD!" | else | bdelete! | endif
 endfunction
