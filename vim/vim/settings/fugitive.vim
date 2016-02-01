@@ -57,12 +57,13 @@ autocmd BufReadPost fugitive://* set bufhidden=delete
 " GitStatus keymaps
 autocmd BufReadPost *.git/index  nmap <buffer> <C-d> q
 
-" GitEdit/Diff keymaps
+" GitEdit
 autocmd BufReadPost fugitive://* nmap <buffer> <C-s>     <C-c>:update<cr>
 autocmd BufReadPost fugitive://* nmap <buffer> <leader>s <C-c>:update<cr>
-autocmd BufReadPost fugitive://* nmap <buffer> <C-d>     <C-c>:bd!<cr>
+autocmd BufReadPost fugitive://* nmap <buffer> <C-d>     <C-c>:bn!<cr>
 
 " GitDiff keymaps
+autocmd BufEnter    fugitive://* if &diff | nmap <buffer> <C-d> <C-c>:bd!<cr>| endif
 autocmd BufEnter    fugitive://* if &diff | nmap <buffer> <C-h> <NOP>| endif
 autocmd BufEnter    fugitive://* if &diff | nmap <buffer> <C-l> <NOP>| endif
 
