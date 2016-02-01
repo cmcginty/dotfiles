@@ -51,7 +51,7 @@ augroup keymap_files
       \     execute "buffer".s:buf |
       \  endif
    " executed on a new 'new' buffer with empty name
-   autocmd BufNew *
+   autocmd BufEnter *
       \  if empty(expand('<afile>')) |
       \     call FileSaveKeymaps('<C-c>:call ConfirmSave()<cr>') |
       \     call FileCloseKeymaps() |
