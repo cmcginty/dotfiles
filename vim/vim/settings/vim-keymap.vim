@@ -23,8 +23,6 @@ nnoremap  <leader><leader>  :
 vnoremap  <leader><leader>  :
 
 " fix missed <ESC>
-noremap  `    <ESC>
-noremap! `    <ESC>
 noremap  <F1> <ESC>
 noremap! <F1> <ESC>
 
