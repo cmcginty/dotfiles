@@ -8,7 +8,8 @@ Plug 'qpkorr/vim-bufkill'           " kill buffers w/o breaking split windows
 
 " appearance
 Plug 'Yggdroot/indentLine'          " show indent guidelines
-Plug 'bling/vim-airline'            " status bars / UI
+Plug 'vim-airline/vim-airline'         " status bars / UI
+Plug 'vim-airline/vim-airline-themes'  " airline color schemes
 Plug 'chriskempson/base16-vim'      " color schemes
 Plug 'guns/xterm-color-table.vim'   " open a color palette
 
