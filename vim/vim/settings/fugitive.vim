@@ -8,19 +8,18 @@
 "  gq<text obj>      format text
 
 " only avaiable when 'Fugitive' plugin detects a repo
-autocmd User Fugitive noremap <buffer> <C-g>  :call fugitive#toggleStatus()<cr>
-autocmd User Fugitive noremap <buffer> gbl    :Gblame<cr>
-autocmd User Fugitive noremap <buffer> gca    :Gcommit --amend<cr>
-autocmd User Fugitive noremap <buffer> gcm    :Gcommit<cr>
-autocmd User Fugitive noremap <buffer> gd     :Gdiff<cr>
-autocmd User Fugitive noremap <buffer> ge     :Gedit<cr>
-autocmd User Fugitive noremap <buffer> gld    :Glog -20 -- %<cr>
-autocmd User Fugitive noremap <buffer> glg    :Glog -20<cr>
-autocmd User Fugitive noremap <buffer> glp    :Glog -20 --<cr>
-autocmd User Fugitive noremap <buffer> gmv    :Gmove<space>
-autocmd User Fugitive noremap <buffer> grm    :Gremove<cr>
-autocmd User Fugitive noremap <buffer> grr    :Gread<cr>
-autocmd User Fugitive noremap <buffer> gww    :Gwrite<cr>
+autocmd User Fugitive noremap <buffer> <C-g>          :call fugitive#toggleStatus()<cr>
+autocmd User Fugitive noremap <buffer> <leader>gb     :Gblame<cr>
+autocmd User Fugitive noremap <buffer> <leader>ga     :Gcommit --amend<cr>
+autocmd User Fugitive noremap <buffer> <leader>gc     :Gcommit<cr>
+autocmd User Fugitive noremap <buffer> <leader>gd     :Gdiff<cr>
+autocmd User Fugitive noremap <buffer> <leader>ge     :Gedit<cr>
+autocmd User Fugitive noremap <buffer> <leader>gp     :Glog -20 -- %<cr>
+autocmd User Fugitive noremap <buffer> <leader>gl     :Glog -20<cr>
+autocmd User Fugitive noremap <buffer> <leader>gm     :Gmove<space>
+autocmd User Fugitive noremap <buffer> <leader>gx     :Gremove<cr>
+autocmd User Fugitive noremap <buffer> <leader>gr     :Gread<cr>
+autocmd User Fugitive noremap <buffer> <leader>gw     :Gwrite<cr>
 
 " 3-way diff merge conflicts
 "     diffput,dp        works as usual
