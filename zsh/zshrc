@@ -16,5 +16,5 @@ fi
 #
 # Source ZSH configs
 #
-for subdir (zsh terminal)
-   for config_file ($HOME/.dotfiles/$subdir/*.zsh(N)) source $config_file
+for subdir (zsh terminal git vim)
+  for config_file ($HOME/.dotfiles/$subdir/*.zsh(N)) source $config_file
