@@ -42,7 +42,6 @@
    cms = commit --squash
    co = checkout
    dc = diff -M --color-words --cached
-   df = diff -M --color-words --ignore-space-at-eol
    di = diff -M --color-words --ignore-space-at-eol
    dh = diff HEAD
    ds = diff --stat
