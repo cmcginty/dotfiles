@@ -18,3 +18,6 @@ let g:delimitMate_jump_expansion = 1
 
 " prevent closing pair when right-side match already exists
 let g:delimitMate_balance_matchpairs = 1
+
+" enable support for tripple quotes in Python
+au FileType python let b:delimitMate_nesting_quotes = ['"']
