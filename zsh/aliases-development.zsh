@@ -1,7 +1,7 @@
 # Development Commands
 
 # Java
-alias eclipse='eclipse &'
+alias eclipse='eclipse >/dev/null &'
 alias jad-ni='jad -noinner'
 alias jad='jad -d . -s java -ff -noctor -o -space -pi100 -v -lnc'
 alias jks-ls='keytool -list -v -keystore'
