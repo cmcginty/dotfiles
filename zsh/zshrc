@@ -6,7 +6,13 @@
 #
 
 # start TMUX first
-[[ $TMUX = "" ]] && exec tmux -2
+if [[ $TMUX = "" ]]; then
+  # reset colors
+  source $HOME/.dotfiles/terminal/colors.zsh
+  # try to reattach sessions
+  tmux ls | grep -vq attached && TMUXARG="attach -d"
+  exec eval "tmux -2 $TMUXARG"
+fi
 
 # Source Prezto.
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
