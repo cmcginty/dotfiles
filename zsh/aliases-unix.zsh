@@ -4,7 +4,7 @@
 alias sudo='sudo '
 
 # quick switch to root
-alias su='sudo -i'
+alias suroot='sudo -E zsh'
 
 # remove prezto default '-i' args
 alias cp='nocorrect cp'
