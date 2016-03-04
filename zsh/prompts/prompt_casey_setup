@@ -66,8 +66,12 @@ function prompt_skwp_setup {
   zstyle ':prezto:module:python:info:virtualenv' format 'virtualenv:%v'
 
   # Define prompts.
+  autoload -U colors && colors
   NEWLINE=$'\n'
-  PROMPT="${NEWLINE}${_prompt_skwp_colors[3]}%n%f@${_prompt_skwp_colors[2]}%m%f ${_prompt_skwp_colors[5]}%~%f "'${git_info:+${(e)git_info[prompt]}}'"${NEWLINE}$ "
+  USERCOLOR=$([[ $USER == 'root' ]] &&
+    echo "%{$fg_bold[red]%}" ||
+    echo ${_prompt_skwp_colors[3]})
+  PROMPT="${NEWLINE}${USERCOLOR}%n%f%{$reset_color%}@${_prompt_skwp_colors[2]}%m%f ${_prompt_skwp_colors[5]}%~%f "'${git_info:+${(e)git_info[prompt]}}'"${NEWLINE}$ "
   RPROMPT='%F{blue}${ruby_info[version]}'
 }
 
