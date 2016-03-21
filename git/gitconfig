@@ -53,10 +53,10 @@
    lgp = log -C --patch --ignore-space-at-eol
    lgs = log -C --stat=180
    lgss = log -C --shortstat
-   lgtxt = log --pretty=format:"%s%n%b"
    lgu = log -C @{u}..
    ls = ls-files
    mg = merge
+   message = log --format="%B"
    pl = pull
    pla = pull --all
    ps = push

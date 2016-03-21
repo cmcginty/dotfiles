@@ -17,7 +17,7 @@ endfunction
 " set the close buffer keymaps
 function! FileCloseKeymaps()
    nnoremap <buffer> <C-d>    <C-c>:call KillBuffer()<cr>
-   vnoremap <buffer> <C-d>    <C-d>:call KIllBuffer()<cr>
+   vnoremap <buffer> <C-d>    <C-d>:call KillBuffer()<cr>
 endfunction
 
 " set the buffer next/previous keymaps
