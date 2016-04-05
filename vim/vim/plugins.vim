@@ -12,6 +12,7 @@ Plug 'vim-airline/vim-airline'         " status bars / UI
 Plug 'vim-airline/vim-airline-themes'  " airline color schemes
 Plug 'chriskempson/base16-vim'      " color schemes
 Plug 'guns/xterm-color-table.vim'   " open a color palette
+Plug 'luochen1990/rainbow'          " colorize parens
 
 " extensions
 Plug 'Raimondi/delimitMate'         " automatically close quotes, etc.
