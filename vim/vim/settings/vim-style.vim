@@ -10,19 +10,23 @@ set tabstop=3        " set tab character size
 set textwidth=80
 set colorcolumn=80
 
-" highlight lines longer than 90 characters
-highlight OverLength guibg=#341818
-match OverLength /\%91v.*/
+" use autocmd in event syntax is toggled after the buffer loads
+augroup DefaultSyntaxHighlighting
+   autocmd!
+   " highlight lines longer than 90 characters
+   autocmd BufWinEnter * highlight OverLength guibg=#341818
+   autocmd BufWinEnter * match OverLength /\%91v.*/
 
-" extended syntax highlighting
-" Java: 'new', 'instanceof'
-highlight Operator ctermfg=5  guifg=#d175bc
-" Java: 'this', 'super'
-highlight Typedef  ctermfg=5  guifg=#d175bc
-" Java: 'void', 'int', 'double'
-highlight Type     ctermfg=4  guifg=#7cafc2
-" literal numbers
-highlight Number term=bold ctermfg=16 gui=bold guifg=#d2d22d
-" extended symbol operators (e.g. + - = < > ! * /)
-" NOTE: supported operators are customized in local ftplugin/* files
-highlight SymOperator ctermfg=13  guifg=#86c1b9
+   " extended syntax highlighting
+   " Java: 'new', 'instanceof'
+   autocmd BufWinEnter * highlight Operator ctermfg=5  guifg=#d175bc
+   " Java: 'this', 'super'
+   autocmd BufWinEnter * highlight Typedef  ctermfg=5  guifg=#d175bc
+   " Java: 'void', 'int', 'double'
+   autocmd BufWinEnter * highlight Type     ctermfg=4  guifg=#7cafc2
+   " literal numbers
+   autocmd BufWinEnter * highlight Number term=bold ctermfg=16 gui=bold guifg=#d2d22d
+   " extended symbol operators (e.g. + - = < > ! * /)
+   " NOTE: supported operators are customized in local ftplugin/* files
+   autocmd BufWinEnter * highlight SymOperator ctermfg=13  guifg=#86c1b9
+augroup END
