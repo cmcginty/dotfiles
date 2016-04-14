@@ -15,7 +15,7 @@ Plug 'guns/xterm-color-table.vim'   " open a color palette
 Plug 'luochen1990/rainbow'          " colorize parens
 
 " extensions
-Plug 'Raimondi/delimitMate'         " automatically close quotes, etc.
+Plug 'ervandew/matchem'             " automatically close quotes, etc.
 Plug 'christoomey/vim-sort-motion'  " sorting w/ motion commands
 Plug 'tomtom/tcomment_vim'          " quick commenting
 Plug 'tpope/vim-repeat'             " enhance '.' repeat cmd
