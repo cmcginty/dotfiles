@@ -18,11 +18,11 @@ augroup DefaultSyntaxHighlighting
    autocmd BufWinEnter * match OverLength /\%91v.*/
 
    " extended syntax highlighting
-   " Java: 'new', 'instanceof'
+   " java 'new', 'instanceof'
    autocmd BufWinEnter * highlight Operator ctermfg=5  guifg=#d175bc
-   " Java: 'this', 'super'
+   " java 'this', 'super'
    autocmd BufWinEnter * highlight Typedef  ctermfg=5  guifg=#d175bc
-   " Java: 'void', 'int', 'double'
+   " java 'void', 'int', 'double'
    autocmd BufWinEnter * highlight Type     ctermfg=4  guifg=#7cafc2
    " literal numbers
    autocmd BufWinEnter * highlight Number term=bold ctermfg=16 gui=bold guifg=#d2d22d

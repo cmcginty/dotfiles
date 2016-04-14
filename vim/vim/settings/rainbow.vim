@@ -1,6 +1,7 @@
 let g:rainbow_active = 1
 
-" use autocmd in event syntax is toggled off after buffer loaded
+" use autocmd in case 'syntax' mode is disabled after buffer loaded (e.g. bufdo)
 augroup EnableRainbowHighlighting
-   autocmd! BufWinEnter * if !empty(&l:filetype) | execute "RainbowToggle" | endif
+   autocmd!
+   autocmd BufWinEnter * if !empty(&l:filetype) | execute 'RainbowToggleOn' | endif
 augroup END
