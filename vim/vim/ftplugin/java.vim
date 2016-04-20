@@ -1,7 +1,12 @@
 " JAVA filetype configuration
 
 " set compiler, build java classes, open quikcfix window
-"map <silent><F4> :w<cr>:compiler gradlew<cr>:make classes<cr>:cw 4<cr>
+map <silent><F2> :w<cr>:compiler gradlew<cr>:make classes<cr><cr>
+" TIP: Use vim-unimpaired to navigate the quickfixes
+"        ]q    Next error
+"        [q    Previous error
+"        [Q    First error
+"        ]Q    Last error
 
 " increase max line length
 set textwidth=100
