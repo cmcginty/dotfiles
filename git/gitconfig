@@ -39,12 +39,13 @@
    br = branch
    cm = commit --verbose
    cma = commit --verbose --amend --reset-author
+   cmaa = commit --verbose --amend --reset-author --all -C HEAD
    cmf = commit --fixup
    cms = commit --squash
    co = checkout
    dc = diff -M --color-words --cached
-   di = diff -M --color-words --ignore-space-at-eol
    dh = diff HEAD
+   di = diff -M --color-words --ignore-space-at-eol
    ds = diff --stat
    lg = log -C
    lga = log -C --graph --all
