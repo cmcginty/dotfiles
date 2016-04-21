@@ -2,7 +2,7 @@
 set guioptions-=T    " disable toolbars(T), see :help guioptions
 set guioptions-=rL   " disable scroll bars (rL), see :help guioptions
 set guioptions-=t    " disable tear off menus(t), see :help guioptions
-set columns=97       " set the display width (includes numberwidth columns)
+set columns=107      " set the display width (includes numberwidth columns)
 set lines=66         " force gvim to be full screen
 
 " dialog box
