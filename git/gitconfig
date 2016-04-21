@@ -35,6 +35,7 @@
    ai = add --interactive
    ap = add --patch
    au = add --update
+   blame = blame -w
    br = branch
    cm = commit --verbose
    cma = commit --verbose --amend --reset-author
@@ -66,10 +67,12 @@
    rbi = rebase --interactive
    rbs = rebase --skip
    rbu = rebase --interactive @{u}
+   revert = revert -n
    rs = reset
    rsh = reset --hard
+   rss = reset --soft
    sa = stash
-   st = status
+   st = status -s
    sub-checkout = submodule update --remote --checkout
    sub-rebase = submodule update --remote --rebase
    sub-update = submodule update --init --recursive
