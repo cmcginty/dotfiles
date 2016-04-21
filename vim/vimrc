@@ -37,11 +37,6 @@ if has("autocmd")
    " allow for Sphinx '#:' comment delimiters in Python files
    autocmd FileType python
       \ setlocal comments+=:#:
-   " --- XML settings ---
-   " pretty xml formatting using TIDY
-   autocmd FileType xml  setlocal ep=tidy\ --wrap\ 80\ -i\ --indent-spaces\ 4\ --indent-attributes\ y\ --input-xml\ y\ -\ 2>/dev/null
-   autocmd FileType ant  setlocal ep=tidy\ --wrap\ 80\ -i\ --indent-spaces\ 4\ --indent-attributes\ y\ --input-xml\ y\ -\ 2>/dev/null
-   autocmd FileType html setlocal ep=tidy\ --wrap\ 80\ -i\ --indent-spaces\ 4\ --indent-attributes\ y\ -\ 2>/dev/null
 endif "has("autocmd")
 
 " Python System Import Jumption w/ 'gf'
