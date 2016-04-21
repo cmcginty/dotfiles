@@ -37,7 +37,7 @@ noremap  <C-l>    <NOP>
 noremap! <C-l>    <NOP>
 
 " autocmd make it easier to create modal keymaps for different viewports
-augroup keymap_files
+augroup VimKeymapDefaults
    autocmd!
    autocmd StdinReadPre * let s:std_in=1
    " executed on unnamed buffer when vim started w/ no args (no file args or
