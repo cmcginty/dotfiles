@@ -73,7 +73,7 @@
    rsh = reset --hard
    rss = reset --soft
    sa = stash
-   st = status -s
+   st = status -sb
    sub-checkout = submodule update --remote --checkout
    sub-rebase = submodule update --remote --rebase
    sub-update = submodule update --init --recursive
