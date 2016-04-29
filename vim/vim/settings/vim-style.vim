@@ -10,6 +10,8 @@ set tabstop=3        " set tab character size
 set textwidth=80     " line length before wrapping text
 set colorcolumn=80
 
+set fileformat=unix  " default line-ending format
+
 " default text auto-format options (:help fo-table)
 " c = auto-wrap comments, insert leader
 " j = remove leader joining lines

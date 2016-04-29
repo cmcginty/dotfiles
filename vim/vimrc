@@ -21,9 +21,7 @@ endfor
 
 " File Settings
 "***********************************
-set fileformat=unix
 if has("autocmd")
-   autocmd FileType text setlocal textwidth=79
    " jump to last known cursor position
    autocmd BufReadPost *
       \ if line("'\"") > 0 && line("'\"") <= line("$") |
@@ -65,13 +63,6 @@ EOF
    nnoremap <silent><F7> :setlocal spell!<cr>
    vnoremap <silent><F7> <C-C>:setlocal spell!<cr>gv
    inoremap <silent><F7> <C-O>:setlocal spell!<cr>
-   "auto-wrap text lines
-   nnoremap g<space> gqq
-   vnoremap g<space> gq
-
-" Redo Shortcuts
-   "redo last command on all selected lines
-   vnoremap . :normal .<CR>
 
 " Syntax File Settings
 "***********************************
