@@ -79,7 +79,7 @@
    sub-update = submodule update --init --recursive
    up = remote update
    # print current sha1 hash only
-   sha = rev-parse --short HEAD
+   sha = rev-parse --short
    # list commit authors
    who = "!f() { git shortlog -s | sort -rn; }; f"
    # print branch names of HEAD
