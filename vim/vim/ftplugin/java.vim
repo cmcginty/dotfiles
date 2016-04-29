@@ -9,33 +9,7 @@ map <silent> <leader>m     :update<bar>make classes<cr><cr>
 "        [Q    First error
 "        ]Q    Last error
 
-" increase max line length
-set textwidth=100
-set colorcolumn=100
-
-" use autocmd in event syntax is toggled after the buffer loads
-augroup JavaSyntaxHighlighting
-   autocmd!
-   autocmd BufWinEnter *.java match OverLength /\%101v.*/
-
-   " highlight operators like +, -, =, >, <, etc ...
-   autocmd BufWinEnter *.java syntax match symOperator '\v/(/|*)@!' " slash, except if followed by slash or star
-   autocmd BufWinEnter *.java syntax match symOperator '\v\!'
-   autocmd BufWinEnter *.java syntax match symOperator '\v\%'
-   autocmd BufWinEnter *.java syntax match symOperator '\v\&'
-   autocmd BufWinEnter *.java syntax match symOperator '\v\*'
-   autocmd BufWinEnter *.java syntax match symOperator '\v\+'
-   autocmd BufWinEnter *.java syntax match symOperator '\v\,'
-   autocmd BufWinEnter *.java syntax match symOperator '\v\-'
-   autocmd BufWinEnter *.java syntax match symOperator '\v\.'
-   autocmd BufWinEnter *.java syntax match symOperator '\v\:'
-   autocmd BufWinEnter *.java syntax match symOperator '\v\;'
-   autocmd BufWinEnter *.java syntax match symOperator '\v\<'
-   autocmd BufWinEnter *.java syntax match symOperator '\v\='
-   autocmd BufWinEnter *.java syntax match symOperator '\v\>'
-   autocmd BufWinEnter *.java syntax match symOperator '\v\?'
-   autocmd BufWinEnter *.java syntax match symOperator '\v\{'
-   autocmd BufWinEnter *.java syntax match symOperator '\v\|'
-   autocmd BufWinEnter *.java syntax match symOperator '\v\}'
-   autocmd BufWinEnter *.java syntax match symOperator '\v\~'
-augroup END
+" increase max line length and match
+setlocal textwidth=100
+setlocal colorcolumn=100
+match OverLength /\%101v.*/
