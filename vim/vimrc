@@ -28,25 +28,11 @@ if has("autocmd")
       \   exe "normal g`\"" |
       \ endif
    " add pyunit integration into python files (tip 280)
-   autocmd FileType python
-      \ setlocal makeprg=../alltests.py\ -q
-   autocmd FileType python
-      \ setlocal efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m
+   autocmd FileType python setlocal makeprg=../alltests.py\ -q
+   autocmd FileType python setlocal efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m
    " allow for Sphinx '#:' comment delimiters in Python files
-   autocmd FileType python
-      \ setlocal comments+=:#:
+   autocmd FileType python setlocal comments+=:#:
 endif "has("autocmd")
-
-" Python System Import Jumption w/ 'gf'
-"***********************************
-python << EOF
-import os
-import sys
-import vim
-for p in sys.path:
-   if os.path.isdir(p):
-      vim.command(r"set path+=%s" % (p.replace(" ", r"\ ")))
-EOF
 
 " Edit Shortcuts
    "find (select word under cursor)
@@ -64,10 +50,6 @@ EOF
    vnoremap <silent><F7> <C-C>:setlocal spell!<cr>gv
    inoremap <silent><F7> <C-O>:setlocal spell!<cr>
 
-" Syntax File Settings
-"***********************************
-let python_highlight_all=1       " turn on all python highlights
-
 " Session Plugin Settings
 "***********************************
 set sessionoptions=blank,buffers,curdir,folds,help,resize,tabpages,winsize
@@ -75,12 +57,3 @@ set sessionoptions=blank,buffers,curdir,folds,help,resize,tabpages,winsize
 " noremap <F2> <C-C>:SessionOpenLast<cr>
 " noremap <F3> <C-C>:SessionSave<cr>
 " noremap <F4> <C-C>:SessionSaveAs<cr>
-
-function! SetupPython()
-    " Here, you can have the final say on what is set.  So
-    " fixup any settings you don't like.
-    setlocal softtabstop=3
-    setlocal tabstop=3
-    setlocal shiftwidth=3
-endfunction
-command! -bar SetupPython call SetupPython()
