@@ -23,23 +23,26 @@ set fileformat=unix  " default line-ending format
 " t = auto-wrap text (DISABLE for source code)
 set formatoptions+=cjnoqrt
 
-" use autocmd in event syntax is toggled after the buffer loads
-augroup DefaultSyntaxHighlighting
+" create an empty highlight group (color set below)
+highlight OverLength ctermbg=none
+match OverLength /\%91v.*/ " highlight lines longer than 90 characters
+
+" use autocmd to override the color scheme or when 'syntax' mode is toggled
+augroup CustomColorScheme
    autocmd!
-   " highlight lines longer than 90 characters
-   autocmd BufWinEnter * highlight OverLength guibg=#341818
-   autocmd BufWinEnter * match OverLength /\%91v.*/
+   " highlight lines longer than N characters
+   autocmd VimEnter,ColorScheme * highlight OverLength guibg=#341818
 
    " extended syntax highlighting
    " java 'new', 'instanceof'
-   autocmd BufWinEnter * highlight Operator ctermfg=5  guifg=#d175bc
+   autocmd VimEnter,ColorScheme * highlight Operator ctermfg=5  guifg=#d175bc
    " java 'this', 'super'
-   autocmd BufWinEnter * highlight Typedef  ctermfg=5  guifg=#d175bc
+   autocmd VimEnter,ColorScheme * highlight Typedef  ctermfg=8  guifg=#ab4642
    " java 'void', 'int', 'double'
-   autocmd BufWinEnter * highlight Type     ctermfg=4  guifg=#7cafc2
+   autocmd VimEnter,ColorScheme * highlight Type     ctermfg=4  guifg=#7cafc2
    " literal numbers
-   autocmd BufWinEnter * highlight Number term=bold ctermfg=16 gui=bold guifg=#d2d22d
+   autocmd VimEnter,ColorScheme * highlight Number term=bold ctermfg=16 gui=bold guifg=#d2d22d
    " extended symbol operators (e.g. + - = < > ! * /)
-   " NOTE: supported operators are customized in local ftplugin/* files
-   autocmd BufWinEnter * highlight SymOperator ctermfg=13  guifg=#86c1b9
+   " NOTE: supported operators are customized in local syntax/* files
+   autocmd VimEnter,ColorScheme * highlight ExtraOperator ctermfg=9 guifg=#dc9656
 augroup END
