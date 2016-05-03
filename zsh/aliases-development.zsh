@@ -15,6 +15,9 @@ function java-imports() { grep -rh ^import --include="*.java" $@ | sed -r "s/imp
 # Perforce
 alias p4admin='p4admin &'
 alias p4v='p4v &'
+alias p4lg='p4 changes'
+alias p4lgm-me='p4lg -lt --me'
+alias p4lgm-last='p4lgm-me -m 1'
 
 # recursively replace text string
 function replace() { find . -name "${1}" -type f -exec sed -i "s/${2}/${3}/g" {} \+ }
