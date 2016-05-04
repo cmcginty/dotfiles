@@ -48,6 +48,7 @@
    di = diff -M --color-words --ignore-space-at-eol
    ds = diff --stat
    lg = log -C
+   lg-standup = log -C --format="%s" --author=cmcginty --since yesterday
    lga = log -C --graph --all
    lgm = log -C --format=medium
    lgno = log -C --name-only
