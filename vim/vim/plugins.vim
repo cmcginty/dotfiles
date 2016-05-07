@@ -13,6 +13,7 @@ Plug 'vim-airline/vim-airline-themes'  " airline color schemes
 Plug 'chriskempson/base16-vim'      " color schemes
 Plug 'guns/xterm-color-table.vim'   " open a color palette
 Plug 'luochen1990/rainbow'          " colorize parens
+Plug 'gorodinskiy/vim-coloresque'   " colorize RGB strings
 
 " extensions
 Plug 'ervandew/matchem'             " automatically close quotes, etc.
