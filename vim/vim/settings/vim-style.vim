@@ -22,27 +22,3 @@ set fileformat=unix  " default line-ending format
 " r = auto-insert comment leader after <CR>
 " t = auto-wrap text (DISABLE for source code)
 set formatoptions+=cjnoqrt
-
-" create an empty highlight group (color set below)
-highlight OverLength ctermbg=none
-match OverLength /\%91v.*/ " highlight lines longer than 90 characters
-
-" use autocmd to override the color scheme or when 'syntax' mode is toggled
-augroup CustomColorScheme
-   autocmd!
-   " highlight lines longer than N characters
-   autocmd VimEnter,ColorScheme * highlight OverLength guibg=#341818
-
-   " extended syntax highlighting
-   " java 'new', 'instanceof'
-   autocmd VimEnter,ColorScheme * highlight Operator ctermfg=5  guifg=#d175bc
-   " java 'this', 'super'
-   autocmd VimEnter,ColorScheme * highlight Typedef  ctermfg=8  guifg=#ab4642
-   " java 'void', 'int', 'double'
-   autocmd VimEnter,ColorScheme * highlight Type     ctermfg=4  guifg=#7cafc2
-   " literal numbers
-   autocmd VimEnter,ColorScheme * highlight Number term=bold ctermfg=16 gui=bold guifg=#d2d22d
-   " extended symbol operators (e.g. + - = < > ! * /)
-   " NOTE: supported operators are customized in local syntax/* files
-   autocmd VimEnter,ColorScheme * highlight ExtraOperator ctermfg=9 guifg=#dc9656
-augroup END
