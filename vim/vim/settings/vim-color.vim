@@ -9,7 +9,6 @@ try
    " try these other colors (from low -> high saturation)
    "     base16-eighties -> base16-chalk -> base16-monokai
    "     base16-twilight -> base16-default -> base16-tomorrow -> base16-bright
-   "     base16-harmonic16
 catch
    colorscheme koehler
 endtry

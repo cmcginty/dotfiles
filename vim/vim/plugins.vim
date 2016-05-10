@@ -10,10 +10,16 @@ Plug 'qpkorr/vim-bufkill'           " kill buffers w/o breaking split windows
 Plug 'Yggdroot/indentLine'          " show indent guidelines
 Plug 'vim-airline/vim-airline'         " status bars / UI
 Plug 'vim-airline/vim-airline-themes'  " airline color schemes
-Plug 'chriskempson/base16-vim'      " color schemes
 Plug 'guns/xterm-color-table.vim'   " open a color palette
 Plug 'luochen1990/rainbow'          " colorize parens
 Plug 'gorodinskiy/vim-coloresque'   " colorize RGB strings
+
+" color schemes
+Plug 'chriskempson/base16-vim'
+Plug 'chriskempson/vim-tomorrow-theme'
+Plug 'morhetz/gruvbox'
+Plug 'notpratheek/vim-luna'
+Plug 'tomasr/molokai'
 
 " extensions
 Plug 'ervandew/matchem'             " automatically close quotes, etc.
