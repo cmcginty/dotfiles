@@ -5,7 +5,7 @@ set showmatch              " show matching '()' pairs
 " terminal color scheme must be changed to match scheme below for it to work
 " when 'vi' is running in terminal
 try
-   colorscheme base16-bright
+   colorscheme molokai
    " try these other colors (from low -> high saturation)
    "     base16-eighties -> base16-chalk -> base16-monokai
    "     base16-twilight -> base16-default -> base16-tomorrow -> base16-bright
