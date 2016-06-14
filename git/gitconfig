@@ -97,6 +97,8 @@
    initexternal = "!f() { git --work-tree=. --git-dir=\"$1\" init && echo \"gitdir: $1\" >> .git; }; f"
    # all branches with common parents
    related = "!f() { git branch --contains $(git rev-list --max-parents=0 HEAD); }; f"
+   # list conflict files in the current merge/rebase
+   conflict = diff --name-only --diff-filter=U
 [sendemail]
    smtpserver = localhost
    chainreplyto = false
@@ -112,3 +114,5 @@
    untracked = red bold
 [credential]
    helper = store --file ~/.gitcredentials
+[rerere]
+   enabled = true
