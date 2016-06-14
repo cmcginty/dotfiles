@@ -53,11 +53,11 @@ augroup END
 augroup FugitiveIntegration
    autocmd!
    " do not show Fugitive buffers in Airline
-   autocmd BufReadPost *.git/index   set nobuflisted
-   autocmd BufEnter    fugitive://*  if &diff | set nobuflisted | endif
+   autocmd BufReadPost *.git/index   setlocal nobuflisted
+   autocmd BufEnter    fugitive://*  if &diff | setlocal nobuflisted | endif
 
    " delete old fugitive buffers
-   autocmd BufReadPost fugitive://* set bufhidden=delete
+   autocmd BufReadPost fugitive://* setlocal bufhidden=delete
 
    " GitStatus keymaps
    autocmd BufReadPost *.git/index  nmap <buffer> <C-d> q
