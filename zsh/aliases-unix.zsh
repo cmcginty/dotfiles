@@ -37,6 +37,11 @@ alias smartctl='sudo smartctl'
 alias umount-nfs='sudo umount -a -t nfs'
 alias umount='sudo umount'
 
+alias tree='tree --dirsfirst'
+alias t1='tree -L 1'
+alias t2='tree -L 2'
+alias t3='tree -L 3'
+
 # services
 alias invoke-rc.d='sudo invoke-rc.d'
 alias restart='sudo restart'

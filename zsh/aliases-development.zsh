@@ -21,3 +21,13 @@ alias p4lgm-last='p4lgm-me -m 1'
 
 # recursively replace text string
 function replace() { find . -name "${1}" -type f -exec sed -i "s/${2}/${3}/g" {} \+ }
+
+# SSL commands
+function ssl-x509-header() { openssl crl2pkcs7 -nocrl -certfile $1 | openssl pkcs7 -print_certs }
+alias ssl-p12-ls='openssl pkcs12 -in'
+alias ssl-rsa-ls='openssl rsa -noout -text -in'
+alias ssl-rsa-mod='openssl rsa -noout -modulus -in'
+alias ssl-x509-ls='openssl x509 -noout -text -fingerprint -md5 -in'
+alias ssl-x509-mod='openssl x509 -noout -modulus -in'
+alias ssl-x509der-issuer='openssl x509 -inform der -noout -issuer -in'
+alias ssl-x509der-ls='openssl x509 -inform der -noout -text -fingerprint -md5 -in'

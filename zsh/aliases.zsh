@@ -23,12 +23,3 @@ function fr() { for F in $@; do file-roller $(readlink -f $F) & done }
 # remote desktop
 alias rdesktop='rdesktop -x l -g 1024x768 -a 16 -k en-us'
 alias rdp='rdesktop'
-
-# SSL commands
-function ssl-x509-header() { openssl crl2pkcs7 -nocrl -certfile $1 | openssl pkcs7 -print_certs }
-alias ssl-p12-ls='openssl pkcs12 -in'
-alias ssl-rsa-ls='openssl rsa -noout -text -in'
-alias ssl-rsa-mod='openssl rsa -noout -modulus -in'
-alias ssl-x509-issuer='openssl x509 -noout -issuer -in'
-alias ssl-x509-ls='openssl x509 -noout -text -fingerprint -md5 -in'
-alias ssl-x509-mod='openssl x509 -noout -modulus -in'
