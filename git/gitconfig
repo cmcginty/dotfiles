@@ -116,3 +116,5 @@
    helper = store --file ~/.gitcredentials
 [rerere]
    enabled = true
+[diff]
+	compactionHeuristic = true
