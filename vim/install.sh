@@ -14,7 +14,7 @@ hash node      || sudo ln -s /usr/bin/nodejs /usr/bin/node
 hash npm       || sudo apt-get install -y npm
 # code formatters
 hash astyle             || sudo apt-get install -y astyle/trusty-backports
-hash clang-format-3.5   || sudo apt-get install -y clang-format-3.5
+hash clang-format       || sudo apt-get install -y clang-format
 hash js-beautify        || sudo npm install -g js-beautify
 hash remark             || sudo npm install -g remark
 hash tidy               || sudo apt-get install -y tidy

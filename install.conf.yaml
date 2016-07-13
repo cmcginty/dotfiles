@@ -1,6 +1,7 @@
 - clean: ['~']
 
 - link:
+   ~/.clang-format:  vim/clang-format
    ~/.dotfiles:      ''
    ~/.gitconfig:     git/gitconfig
    ~/.gitexcludes:   git/gitexcludes
