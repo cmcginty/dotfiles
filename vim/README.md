@@ -12,7 +12,7 @@ Some basic features and non-default key-mappings in Vim.
 | -------- | ----------- |
 | <kbd>d</kbd> <kbd>s</kbd> | **Delete Surround** command ... |
 | <kbd>ds</kbd> <kbd>"</kbd> | Remove first set of double-quotes `"` |
-| <kbd>dst</kbd> <kbd>"</kbd> | Remove surrounding tag `<>` |
+| <kbd>ds</kbd> <kbd>t</kbd> | Remove surrounding `<>`,`</>` tags |
 |  |  |
 | <kbd>c</kbd> <kbd>s</kbd> | **Change Surround** command ... |
 | <kbd>cs</kbd> <kbd>"</kbd> <kbd>'</kbd> | Change double-quotes `"` to single `'` |
@@ -20,7 +20,9 @@ Some basic features and non-default key-mappings in Vim.
 | <kbd>cst</kbd> <kbd>"</kbd> | Change `<tag>` to double-quotes `"` |
 |  |  |
 | <kbd>y</kbd> <kbd>s</kbd> | **Add Surround** command ... |
+| <kbd>y</kbd> <kbd>ss</kbd> <kbd>)</kbd> | Add `(`...`)` around entire line. |
 | <kbd>ys</kbd> <kbd>iw</kbd> <kbd>]</kbd> | Add `[`...`]` to selected word. <kbd>iw</kbd> is a motion selection "inner word"  |
+| <kbd>ys</kbd> <kbd>iw</kbd> <kbd>t</kbd> <kbd>&lt;tag&gt;</kbd> | Add `<tag>`...`</tag>` to selected word. <kbd>iw</kbd> is a motion selection "inner word"  |
 |  |  |
 | <kbd>S</kbd> | **_Visual_ Add Surround** command ... |
 | <kbd>viw</kbd> <kbd>S</kbd> <kbd>]</kbd> | Select word, surround with `[`...`]` |
