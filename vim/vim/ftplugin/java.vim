@@ -11,6 +11,6 @@ map <silent> <leader>m     :wall<bar>make classes compileTestJava -Dorg.gradle.p
 "        ]Q    Last error
 
 " increase max line length and match
-setlocal textwidth=100
-setlocal colorcolumn=100
+setlocal textwidth=90
+setlocal colorcolumn=101
 match OverLength /\%101v.*/
