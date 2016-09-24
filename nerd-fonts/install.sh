@@ -1,6 +1,6 @@
 #!/bin/bash
-
-set -e
+set -eou pipefail
+IFS=$'\n\t'
 
 mkdir -p ~/.local/share/fonts
 cd ~/.local/share/fonts

@@ -1,6 +1,6 @@
 #!/bin/bash
-
-set +e
+set -eou pipefail
+IFS=$'\n\t'
 
 hash gvim || sudo apt-get install -y vim vim-gnome
 

@@ -1,6 +1,6 @@
 #!/bin/bash
-
-set -e
+set -eou pipefail
+IFS=$'\n\t'
 
 # test is zsh exists
 hash zsh 2>/dev/null || sudo apt-get install -y zsh 2>/dev/null
