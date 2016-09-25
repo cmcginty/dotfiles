@@ -32,6 +32,11 @@
       stderr: true
    - [hash tmux || sudo apt-get install -y tmux, Install tmux]
    -
+      command: python/install.sh
+      description: Install Python features
+      stdin: true
+      stdout: true
+   -
       command: vim/install.sh
       description: Install vim
       stdin: true

@@ -26,7 +26,7 @@ function prompt_skwp_precmd {
 
   # Get Python information.
   if (( $+functions[python-info] )); then
-    # python-info
+    python-info
   fi
 }
 
@@ -72,6 +72,7 @@ function prompt_skwp_setup {
     echo "%{$fg_bold[red]%}" ||
     echo ${_prompt_skwp_colors[3]})
   PROMPT="${NEWLINE}${USERCOLOR}%n%f%{$reset_color%}@${_prompt_skwp_colors[2]}%m%f ${_prompt_skwp_colors[5]}%~%f "'${git_info:+${(e)git_info[prompt]}}'"${NEWLINE}$ "
+  # PROMPT="${NEWLINE}${USERCOLOR}%n%f%{$reset_color%}@${_prompt_skwp_colors[2]}%m%f ${_prompt_skwp_colors[5]}%~%f "'${git_info:+${(e)git_info[prompt]}}'"${NEWLINE}$python_info[virtualenv]$ "
   RPROMPT='%F{blue}${ruby_info[version]}'
 }
 
