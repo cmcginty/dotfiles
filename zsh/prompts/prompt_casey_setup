@@ -13,7 +13,7 @@
 #   http://i.imgur.com/gLgVp6Y.png
 #
 
-function prompt_skwp_precmd {
+function prompt_casey_precmd {
   # Get Git repository information.
   if (( $+functions[git-info] )); then
     git-info
@@ -30,7 +30,7 @@ function prompt_skwp_precmd {
   fi
 }
 
-function prompt_skwp_setup {
+function prompt_casey_setup {
   setopt LOCAL_OPTIONS
   unsetopt XTRACE KSH_ARRAYS
   prompt_opts=(cr percent subst)
@@ -39,10 +39,10 @@ function prompt_skwp_setup {
   autoload -Uz add-zsh-hook
 
   # Add hook to set up prompt parameters before each command.
-  add-zsh-hook precmd prompt_skwp_precmd
+  add-zsh-hook precmd prompt_casey_precmd
 
   # Use default color pallete if available.
-  _prompt_skwp_colors=(
+  _prompt_casey_colors=(
    "%F{cyan}"
    "%F{yellow}"
    "%F{magenta}"
@@ -52,28 +52,37 @@ function prompt_skwp_setup {
 
   # Set git-info parameters.
   zstyle ':prezto:module:git:info' verbose 'yes'
-  zstyle ':prezto:module:git:info:branch' format "${_prompt_skwp_colors[1]}%b%f"
-  zstyle ':prezto:module:git:info:added' format "${_prompt_skwp_colors[5]}●%f"
-  zstyle ':prezto:module:git:info:deleted' format "${_prompt_skwp_colors[2]}●%f"
-  zstyle ':prezto:module:git:info:modified' format "${_prompt_skwp_colors[4]}●%f"
-  zstyle ':prezto:module:git:info:untracked' format "${_prompt_skwp_colors[3]}●%f"
+  zstyle ':prezto:module:git:info:branch' format "${_prompt_casey_colors[1]}%b%f"
+  zstyle ':prezto:module:git:info:added' format "${_prompt_casey_colors[5]}●%f"
+  zstyle ':prezto:module:git:info:deleted' format "${_prompt_casey_colors[2]}●%f"
+  zstyle ':prezto:module:git:info:modified' format "${_prompt_casey_colors[4]}●%f"
+  zstyle ':prezto:module:git:info:untracked' format "${_prompt_casey_colors[3]}●%f"
   zstyle ':prezto:module:git:info:keys' format 'prompt' '(%b%d%a%m%u)'
 
   # Set ruby-info parameters.
-  zstyle ':prezto:module:ruby:info:version' format '[%v]'
+  zstyle ':prezto:module:ruby:info:version' format '[%v] '
 
   # Set Python virtualenv
-  zstyle ':prezto:module:python:info:virtualenv' format 'virtualenv:%v'
+  zstyle ':prezto:module:python:info:virtualenv' format "${_prompt_casey_colors[1]}[%v]%f "
 
   # Define prompts.
   autoload -U colors && colors
   NEWLINE=$'\n'
   USERCOLOR=$([[ $USER == 'root' ]] &&
     echo "%{$fg_bold[red]%}" ||
-    echo ${_prompt_skwp_colors[3]})
-  PROMPT="${NEWLINE}${USERCOLOR}%n%f%{$reset_color%}@${_prompt_skwp_colors[2]}%m%f ${_prompt_skwp_colors[5]}%~%f "'${git_info:+${(e)git_info[prompt]}}'"${NEWLINE}$ "
-  # PROMPT="${NEWLINE}${USERCOLOR}%n%f%{$reset_color%}@${_prompt_skwp_colors[2]}%m%f ${_prompt_skwp_colors[5]}%~%f "'${git_info:+${(e)git_info[prompt]}}'"${NEWLINE}$python_info[virtualenv]$ "
+    echo ${_prompt_casey_colors[3]})
+
+  PROMPT=$NEWLINE
+  PROMPT+="${USERCOLOR}%n%f"                       # user
+  PROMPT+="@"                                      # @
+  PROMPT+="${_prompt_casey_colors[2]}%m%f "        # hostname
+  PROMPT+="${_prompt_casey_colors[5]}%~%f "        # path
+  PROMPT+='${git_info:+${(e)git_info[prompt]}}'    # (gitbranch)
+  PROMPT+=$NEWLINE
+  PROMPT+='${python_info[virtualenv]}'             # (virtualenv)
+  PROMPT+="$ "                                     # $
+
   RPROMPT='%F{blue}${ruby_info[version]}'
 }
 
-prompt_skwp_setup "$@"
+prompt_casey_setup "$@"

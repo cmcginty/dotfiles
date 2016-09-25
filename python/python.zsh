@@ -19,5 +19,7 @@
 #   virtualenvwrapper:     show this help message
 #   wipeenv:               remove all packages installed in the current virtualenv
 #   workon:                list or change working virtualenvs
-#
+
+# disable the builtin prompt since it's managed by ZSH
+export VIRTUAL_ENV_DISABLE_PROMPT=1
 source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
