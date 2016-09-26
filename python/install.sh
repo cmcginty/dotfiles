@@ -2,4 +2,4 @@
 set -eou pipefail
 IFS=$'\n\t'
 
-hash virtualenvwrapper || sudo apt-get install -y virtualenvwrapper
+dpkg -l virtualenvwrapper >/dev/null || sudo apt-get install -y virtualenvwrapper
