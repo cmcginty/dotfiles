@@ -16,10 +16,13 @@ Plug 'gorodinskiy/vim-coloresque'   " colorize RGB strings
 
 " color schemes
 Plug 'chriskempson/base16-vim'
-Plug 'chriskempson/vim-tomorrow-theme'
-Plug 'morhetz/gruvbox'
-Plug 'notpratheek/vim-luna'
-Plug 'tomasr/molokai'
+" Plug 'chriskempson/vim-tomorrow-theme'
+" Plug 'mkarmona/colorsbox'
+" Plug 'morhetz/gruvbox'
+Plug 'nanotech/jellybeans.vim'
+" Plug 'notpratheek/vim-luna'
+" Plug 'tomasr/molokai'
+" Plug 'w0ng/vim-hybrid'
 
 " extensions
 Plug 'ervandew/matchem'             " automatically close quotes, etc.
