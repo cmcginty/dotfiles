@@ -6,7 +6,7 @@
    ~/.gitconfig:     git/gitconfig
    ~/.gitexcludes:   git/gitexcludes
    ~/.gvimrc:        vim/gvimrc
-   ~/.tmux.conf:     tmux.conf
+   ~/.tmux.conf:     tmux/tmux.conf
    ~/.vim:           vim/vim
    ~/.vimrc:         vim/vimrc
    ~/.zlogin:        zsh/plugins/prezto/runcoms/zlogin
@@ -22,6 +22,10 @@
 - shell:
    - [nerd-fonts/install.sh, Install Nerd fonts]
    -
+      command: terminal/install.sh
+      description: Setup terminal tools
+      stdin: true
+   -
       command: hash fasd || sudo make install -C tools/fasd
       description: Install fasd
       stdin: true
@@ -30,7 +34,7 @@
       description: Install zsh
       stdin: true
       stderr: true
-   - [hash tmux || sudo apt-get install -y tmux, Install tmux]
+   - [tmux/install.sh, Install tmux]
    -
       command: python/install.sh
       description: Install Python features

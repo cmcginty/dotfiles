@@ -22,4 +22,10 @@
 
 # disable the builtin prompt since it's managed by ZSH
 export VIRTUAL_ENV_DISABLE_PROMPT=1
-source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
+
+if [[ "$OSTYPE" == linux* ]]; then
+   source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
+
+elif [[ "$OSTYPE" == darwin* ]]; then
+   source /usr/local/bin/virtualenvwrapper.sh
+fi
