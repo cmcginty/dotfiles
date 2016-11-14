@@ -1,5 +1,9 @@
 " gVim needs a powerline font
-set guifont=Ubuntu\ Mono\ \derivative\ Powerline\ 12
+if has("gui_macvim")
+   set guifont=Ubuntu\ Mono\ derivative\ Powerline\ Nerd\ Font\ Complete:h13
+else
+   set guifont=Ubuntu\ Mono\ derivative\ Powerline\ 12
+endif
 
 set cursorline       " highlight current line
 set number           " show line numbers on left hand side
