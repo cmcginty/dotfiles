@@ -8,7 +8,7 @@
 [format]
    pretty = format:"%C(bold blue)%h%C(reset) [%C(green)%ar%Creset] %s, %C(cyan)%an% %C(bold yellow)%d%C(reset)"
 [push]
-   default = tracking
+   default = upstream
    recurseSubmodules = check
 [diff "odf"]
    textconv=odt2txt
