@@ -1,6 +1,6 @@
 " gVim needs a powerline font
 if has("gui_macvim")
-   set guifont=Ubuntu\ Mono\ derivative\ Powerline\ Nerd\ Font\ Complete:h13
+   set guifont=Ubuntu\ Mono\ derivative\ Powerline\ Nerd\ Font\ Complete:h15
 else
    set guifont=Ubuntu\ Mono\ derivative\ Powerline\ 12
 endif
