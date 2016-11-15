@@ -19,7 +19,11 @@ cmap <C-v> <plug>EasyClipCommandModePaste
 "        'middle-click'. Vim text copied with 'CTRL-C' is pasted in the system
 "        using 'CTRL-V' or and 'selected text' in Vim is pasted in the system
 "        using 'middle-click'.
-set clipboard=unnamedplus
+if has("gui_macvim")
+   set clipboard=unnamed
+else
+   set clipboard=unnamedplus
+endif
 
 " move cursor to end of paste
 let g:EasyClipAlwaysMoveCursorToEndOfPaste=1
