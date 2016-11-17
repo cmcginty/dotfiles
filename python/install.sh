@@ -7,7 +7,7 @@ if [[ "$OSTYPE" == linux* ]]; then
    # dpkg -l virtualenvwrapper >/dev/null || sudo apt-get install -y virtualenvwrapper
    true
 elif [[ "$OSTYPE" == darwin* ]]; then
-   # TODO: is python installed already?
+   # install brew python for pip support
    brew list python >/dev/null            || brew install python
    brew list pyenv >/dev/null             || brew install pyenv
    brew list pyenv-virtualenv >/dev/null  || brew install pyenv-virtualenv
