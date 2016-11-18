@@ -118,3 +118,5 @@
    enabled = true
 [diff]
    compactionHeuristic = true
+[include]
+   path = ~/.gitconfig.local
