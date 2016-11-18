@@ -38,6 +38,7 @@ zstyle ':prezto:load' pmodule \
   'fasd' \
   'tmux' \
   'python' \
+  'osx' \
   'syntax-highlighting' \
   'history-substring-search' \
   'prompt' \

@@ -23,7 +23,7 @@ if [[ "$OSTYPE" == linux* ]]; then
 
 elif [[ "$OSTYPE" == darwin* ]]; then
 
-   hash gvim   || brew install macvim --override-system-vim
+   hash gvim   || brew install macvim --with-override-system-vim
    hash node   || brew install node
    hash npm    || brew install npm
    # code formatters
