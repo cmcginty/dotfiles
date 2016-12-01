@@ -18,6 +18,7 @@
    ~/.zshrc:         zsh/zshrc
    ~/.ssh/authorized_keys:    ssh/authorized_keys
    ~/.ssh/id_rsa.pub:         ssh/id_rsa.pub
+   ~/.ssh/box_rsa.pub:        ssh/box_rsa.pub
 
 - shell:
    - [nerd-fonts/install.sh, Install Nerd fonts]
