@@ -12,5 +12,8 @@ set wildmode=list:longest
 set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 
-" Disalbe weird prompts like "Press ENTER or type command to continue"
+" Disable weird prompts like "Press ENTER or type command to continue"
 set shortmess=atI
+
+" Disable bell (sound) alerts
+set belloff=esc,error
