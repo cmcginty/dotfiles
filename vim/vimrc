@@ -11,7 +11,11 @@ endif
 " WARN: the mapleader has to be set before plugins are loaded.
 let mapleader = ';'
 
-" load all plugins using Vim-Plug
+" define plugins so they can be installed/uninstalled
+" NOTE: Most plugins are loaded between .vimrc and .gvimrc but colorscheme
+"       plugins must be made available before sourcing the main dotfile vimrc
+"       configs.
+"
 source ~/.vim/plugins.vim
 
 " source dotfile repo settings

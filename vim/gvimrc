@@ -5,6 +5,10 @@ set guioptions-=t    " disable tear off menus(t), see :help guioptions
 set columns=108      " set the display width (includes numberwidth columns)
 set lines=66         " force gvim to be full screen
 
+" to workaround vim-sensible plugin changing the sidescrolloff value
+" NOTE: can be removed if bug is later fixed in vim-sensible
+set sidescrolloff=0
+
 " dialog box
 set browsedir=last   " use 'last' dir for file browsing
 
