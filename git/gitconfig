@@ -1,5 +1,5 @@
 [user]
-   name = Patrick C. McGinty
+   name = Casey McGinty
    email = casey.mcginty@gmail.com
 [color]
    ui = true
@@ -36,7 +36,7 @@
    ap = add --patch
    au = add --update
    blame = blame -w
-   br = branch
+   br = branch --verbose --verbose
    cm = commit --verbose
    cma = commit --verbose --amend --reset-author
    cmaa = commit --verbose --amend --reset-author --all -C HEAD
