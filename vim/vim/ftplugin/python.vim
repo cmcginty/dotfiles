@@ -5,4 +5,4 @@ setlocal tabstop=4        " set tab character size
 " increase max line length and match
 setlocal textwidth=99
 setlocal colorcolumn=99
-match OverLength /\%100v.*/
+match OverLength /\%101v.*/

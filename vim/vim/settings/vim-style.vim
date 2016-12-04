@@ -1,6 +1,8 @@
 set lbr              " if wrapping, only break on whitespace
 set nowrap           " do not wrap text
 set smartindent      " fully indent multi-line comments
+set sidescroll=1     " prevent text 'jumping' left when writing a long line
+set sidescrolloff=0  " do not scroll until cursor reaches edge of the screen
 
 set expandtab        " use spaces instead of tabs
 set shiftwidth=3     " set 'shift' size
