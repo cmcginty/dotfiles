@@ -21,10 +21,12 @@
    autosquash = true
    # stash uncommited changes during rebase
    autostash = true
-[mergetool "meld-merged"]
+[mergetool "meld"]
    cmd = meld \"$LOCAL\" \"$MERGED\" \"$REMOTE\"
+[mergetool "p4merge-osx"]
+   cmd = /Applications/p4merge.app/Contents/Resources/launchp4merge \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
 [merge]
-   tool = meld-merged
+   tool = meld
    conflictstyle = diff3
    keepBackup = false
 [mergetool]
