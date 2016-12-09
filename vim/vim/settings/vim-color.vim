@@ -24,13 +24,15 @@ endtry
 highlight MatchParen cterm=bold ctermfg=0  ctermbg=226
 highlight MatchParen gui=bold   guifg=black guibg=yellow
 
-" highlight lines longer than N characters
+" highlight lines longer than N-1 characters
 highlight OverLength guibg=#341818
 match OverLength /\%91v.*/ " highlight lines longer than 90 characters
 
 " use autocmd to override the color scheme or when 'syntax' mode is toggled
 augroup CustomColorScheme
    autocmd!
+   " add contrast to line number
+   au VimEnter,ColorScheme * hi LineNr    ctermfg=8 ctermbg=18 guifg=#484848 guibg=#242424
    " java 'new', 'instanceof'
    au VimEnter,ColorScheme * hi Operator  ctermfg=5
    au VimEnter,ColorScheme * hi Operator  guifg=#d175bc
