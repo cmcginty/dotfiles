@@ -6,4 +6,3 @@ set gdefault      " always use /g for %s/foo/bar/
 " clear the highlighting of :set hlsearch
 "  (remapped from vim-sensible/sensible.vim)
 nnoremap <silent> <space> :nohlsearch<C-R>=has('diff')?'<Bar>diffupdate':''<CR><CR><C-L>
-

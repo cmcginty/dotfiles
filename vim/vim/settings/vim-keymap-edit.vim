@@ -17,3 +17,6 @@ vnoremap <S-tab>  <gv
 " sort selection (normal and unique)
 vnoremap s        :sort<cr>
 vnoremap <S-s>    :sort u<cr>
+
+" search/replace visual selection with confirmation
+vnoremap <C-r> "hy:%s/<C-r>h//gc<left><left><left>
