@@ -32,7 +32,8 @@ match OverLength /\%91v.*/ " highlight lines longer than 90 characters
 augroup CustomColorScheme
    autocmd!
    " add contrast to line number
-   au VimEnter,ColorScheme * hi LineNr    ctermfg=8 ctermbg=18 guifg=#484848 guibg=#242424
+   au VimEnter,ColorScheme * hi LineNr     ctermfg=8 ctermbg=18 guifg=#484848 guibg=#242424
+   au VimEnter,ColorScheme * hi SignColumn guibg=#151515
    " java 'new', 'instanceof'
    au VimEnter,ColorScheme * hi Operator  ctermfg=5
    au VimEnter,ColorScheme * hi Operator  guifg=#d175bc
