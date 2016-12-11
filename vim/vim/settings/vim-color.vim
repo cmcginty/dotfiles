@@ -50,4 +50,6 @@ augroup CustomColorScheme
    " NOTE: supported operators are customized in local syntax/* files
    au VimEnter,ColorScheme * hi ExtraOperator ctermfg=9
    au VimEnter,ColorScheme * hi ExtraOperator guifg=#dc9656
+   " change spelling errors to just curly underlines
+   au VimEnter,ColorScheme * hi SpellBad gui=undercurl guibg=NONE
 augroup END

@@ -1,3 +1,6 @@
 " spelling options
-set nospell       " disable spelling
+set spell         " enable spelling
 set sps=best,5    " limit to 5 best suggestions
+
+" create local dictionary of words that updates with 'zg'
+set spellfile=~/.vim/spell/words.utf8.add
