@@ -2,7 +2,7 @@ augroup NERDTreeIntegration
    autocmd!
    " on startup, open NERDTree if no files are specified or pipe from stdin
    autocmd StdinReadPre * let s:std_in=1
-   autocmd VimEnter * if !argc() && !exists("s:std_in") | NERDTree | endif
+   autocmd VimEnter * if !argc() && !exists("s:std_in") | NERDTree | wincmd p | endif
 
    " close Vim if only window open is NERDTree
    autocmd BufEnter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
