@@ -3,6 +3,6 @@ setlocal softtabstop=4    " set 'tab' size during indent mode
 setlocal tabstop=4        " set tab character size
 
 " increase max line length and match
-setlocal textwidth=99
-setlocal colorcolumn=99
-match OverLength /\%101v.*/
+setlocal textwidth=100
+setlocal colorcolumn=100
+match OverLength /\%102v.*/
