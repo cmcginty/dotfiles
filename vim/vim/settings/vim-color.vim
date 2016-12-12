@@ -52,4 +52,5 @@ augroup CustomColorScheme
    au VimEnter,ColorScheme * hi ExtraOperator guifg=#dc9656
    " change spelling errors to just curly underlines
    au VimEnter,ColorScheme * hi SpellBad gui=undercurl guibg=NONE
+   au VimEnter,ColorScheme * hi SpellCap gui=undercurl guibg=NONE
 augroup END
