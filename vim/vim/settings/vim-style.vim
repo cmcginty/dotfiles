@@ -2,6 +2,7 @@ set lbr              " if wrapping, only break on whitespace
 set nowrap           " do not wrap text
 set showbreak=↪>\    " make wrapping text a little prettier (when enabled)
 set smartindent      " fully indent multi-line comments
+set scrolloff=5      " add context lines to top/bottom when moving the cursor
 set sidescroll=1     " prevent text 'jumping' left when writing a long line
 set sidescrolloff=0  " do not scroll until cursor reaches edge of the screen
 

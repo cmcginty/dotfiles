@@ -9,3 +9,5 @@ pylint
 config
 jenkins
 recurse
+rtype
+async
