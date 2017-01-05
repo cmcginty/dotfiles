@@ -37,7 +37,7 @@
    ai = add --interactive
    ap = add --patch
    au = add --update
-   blame = blame -w
+   bl = blame -w
    br = branch --verbose --verbose
    cm = commit --verbose
    cma = commit --verbose --amend --reset-author
@@ -62,8 +62,8 @@
    ls = ls-files
    mg = merge
    message = log --format="%B"
-   pl = pull
-   pla = pull --all
+   pl = pull --prune
+   pla = pull --all --prune
    ps = push
    rb = rebase
    rba = rebase --abort
@@ -71,7 +71,8 @@
    rbi = rebase --interactive
    rbs = rebase --skip
    rbu = rebase --interactive @{u}
-   revert = revert -n
+   rem = remote -v
+   rev = revert -n
    rs = reset
    rsh = reset --hard
    rss = reset --soft
