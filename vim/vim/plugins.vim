@@ -45,12 +45,20 @@ Plug 'tpope/vim-fugitive'           " git support
 Plug 'airblade/vim-gitgutter'       " highlight git diffs
 
 " file types
-Plug 'kh3phr3n/python-syntax'          " better python syntax
+" --- Multiple
 Plug 'sheerun/vim-polyglot'            " multiple language packs
-Plug 'tfnico/vim-gradle'               " gradle build tool
+
+" --- Python
+Plug 'hynek/vim-python-pep8-indent'    " python pep8 auto-indent
+Plug 'kh3phr3n/python-syntax'          " better python syntax
 Plug 'tmhedberg/SimpylFold'            " improves python folding
-Plug 'tpope/vim-git'                   " git config files
+
+" --- Gradle/Groovy
+Plug 'tfnico/vim-gradle'               " gradle build tool
 Plug 'vim-scripts/groovyindent-unix'   " groovy indents syntax
+
+" --- Git Config
+Plug 'tpope/vim-git'                   " git config files
 
 " devicons must load after other plugins it updates
 Plug 'ryanoasis/vim-devicons'       " icon'd fonts
