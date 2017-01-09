@@ -43,3 +43,4 @@ inoremap <silent><F7> <C-O>:setlocal spell!<cr>
 "toggle folding
 nnoremap <silent>f za
 nnoremap <silent>F zA
+vnoremap <silent>f zf
