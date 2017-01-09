@@ -1,20 +1,20 @@
-" key mappings for editing
+"key mappings for editing
 
-" select all
+"select all
 nnoremap <leader>a   ggVG
 vnoremap <leader>a   <C-C>ggVG
 inoremap <leader>a   <C-O>gg<C-O>VG
 
-" redo
+"redo
 nnoremap <C-u> <C-r>
 
-" enable tab indent/unindent (tip 224)
+"enable tab indent/unindent (tip 224)
 nnoremap <tab>    v>
 vnoremap <tab>    >gv
 nnoremap <S-tab>  v<
 vnoremap <S-tab>  <gv
 
-" sort selection (normal and unique)
+"sort selection (normal and unique)
 vnoremap s        :sort<cr>
 vnoremap <S-s>    :sort u<cr>
 
@@ -30,7 +30,7 @@ vnoremap *     y/<C-R>=escape(@", '\\/.*$^~[]')<cr>
 vnoremap #     y?<C-R>=escape(@", '\\/.*$^~[]')<cr>
 
 "remove highlights after find
-noremap  <silent><Space> :noh<bar>:echo ""<cr>
+noremap  <silent><space> :noh<bar>:echo ""<cr>
 
 " search/replace visual selection with confirmation
 vnoremap <C-r> ""y:%s/<C-r>=escape(@", '\\/.*$^~[]')<cr>//gc<left><left><left>
@@ -39,3 +39,7 @@ vnoremap <C-r> ""y:%s/<C-r>=escape(@", '\\/.*$^~[]')<cr>//gc<left><left><left>
 nnoremap <silent><F7> :setlocal spell!<cr>
 vnoremap <silent><F7> <C-C>:setlocal spell!<cr>gv
 inoremap <silent><F7> <C-O>:setlocal spell!<cr>
+
+"toggle folding
+nnoremap <silent>f za
+nnoremap <silent>F zA

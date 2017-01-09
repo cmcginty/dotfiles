@@ -44,3 +44,6 @@ augroup NERDTreeFileTypeColors
    call nerdtree#highlightFile('bashrc',      'Gray',     'none', '#686868',   '#151515')
    call nerdtree#highlightFile('bashprofile', 'Gray',     'none', '#686868',   '#151515')
 augroup END
+
+" disable non-ascii files from being listed
+let NERDTreeIgnore=['\.pyc$', '\~$']
