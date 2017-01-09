@@ -48,6 +48,7 @@ Plug 'airblade/vim-gitgutter'       " highlight git diffs
 Plug 'kh3phr3n/python-syntax'          " better python syntax
 Plug 'sheerun/vim-polyglot'            " multiple language packs
 Plug 'tfnico/vim-gradle'               " gradle build tool
+Plug 'tmhedberg/SimpylFold'            " improves python folding
 Plug 'tpope/vim-git'                   " git config files
 Plug 'vim-scripts/groovyindent-unix'   " groovy indents syntax
 
