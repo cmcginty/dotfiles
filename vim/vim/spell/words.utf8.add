@@ -12,3 +12,11 @@ recurse
 rtype
 async
 bool
+serializable
+JSON
+iterable
+iterables
+dicts
+kwargs
+hacky
+timestamp
