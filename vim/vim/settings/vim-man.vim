@@ -1,6 +1,5 @@
-" enable the man-pager plugin that adds ANSII color escape code support in
-" Gvim/MacVim
-"
+" Enable the man-pager plugin that adds ANSII color escape code support in
+" Gvim/MacVim.
 
 runtime ftplugin/man.vim
 if has("gui_running")
