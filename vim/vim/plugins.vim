@@ -39,6 +39,7 @@ Plug 'ctrlpvim/ctrlp.vim'           " quick file switcher
 Plug 'scrooloose/nerdtree'          " THE file browser
 Plug 'ervandew/supertab'            " TAB completion (C-n/C-p)
 Plug 'Chiel92/vim-autoformat'       " code formatting
+Plug 'majutsushi/tagbar'            " code outline view
 
 " git
 Plug 'tpope/vim-fugitive'           " git support

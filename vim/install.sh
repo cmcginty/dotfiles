@@ -26,6 +26,7 @@ elif [[ "$OSTYPE" == darwin* ]]; then
    hash gvim   || brew install macvim --with-override-system-vim
    hash node   || brew install node
    hash npm    || brew install npm
+   hash ctags  || brew install ctags
    # code formatters
    hash astyle             || brew install astyle
    hash clang-format       || brew install clang-format
