@@ -15,12 +15,14 @@ map <C-n> :NERDTreeToggle<cr>
 let NERDTreeMinimalUI = 1
 
 " set default width
-let NERDTreeWinSize = 22
+let NERDTreeWinSize = 35
 
 " show some nice colors for different files
 function! nerdtree#highlightFile(extension, fg, bg, guifg, guibg)
-   exec 'autocmd FileType nerdtree highlight ' . a:extension .' ctermbg='. a:bg .' ctermfg='. a:fg .' guibg='. a:guibg .' guifg='. a:guifg
-   exec 'autocmd FileType nerdtree syn match ' . a:extension .' #^\s\+.*'. a:extension .'$#'
+   exec 'autocmd FileType nerdtree highlight '. a:extension
+            \ .' ctermbg='. a:bg .' ctermfg='. a:fg
+            \ .' guibg='. a:guibg .' guifg='. a:guifg
+   exec 'autocmd FileType nerdtree syn match '. a:extension .' #^\s\+.*'. a:extension .'$#'
 endfunction
 
 augroup NERDTreeFileTypeColors
