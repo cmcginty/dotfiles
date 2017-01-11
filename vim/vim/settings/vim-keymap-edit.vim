@@ -33,7 +33,7 @@ vnoremap #     y?<C-R>=escape(@", '\\/.*$^~[]')<cr>
 noremap  <silent><space> :noh<bar>:echo ""<cr>
 
 " search/replace visual selection with confirmation
-vnoremap <C-r> ""y:%s/<C-r>=escape(@", '\\/.*$^~[]')<cr>//c<left><left><left>
+vnoremap <C-r> ""y:%s/<C-r>=escape(@", '\\/.*$^~[]')<cr>//c<left><left>
 
 "toggle spelling
 nnoremap <silent><F7> :setlocal spell!<cr>
