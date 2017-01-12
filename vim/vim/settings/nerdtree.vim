@@ -20,5 +20,14 @@ let NERDTreeWinSize = 35
 " disable non-ascii files from being listed
 let NERDTreeIgnore=['\.pyc$', '__pycache__', '\~$']
 
+" DevIcons settings
+" -----------------
+
 " do not add any padding after the devicons
 let g:WebDevIconsNerdTreeAfterGlyphPadding = ''
+
+" enable folder/directory glyph flag
+let g:WebDevIconsUnicodeDecorateFolderNodes = 0
+
+" enable open and close folder/directory glyph flags
+let g:DevIconsEnableFoldersOpenClose = 0
