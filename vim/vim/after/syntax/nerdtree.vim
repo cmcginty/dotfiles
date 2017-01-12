@@ -46,20 +46,20 @@ else
 endif
 
 " built-in types
-exec "highlight NERDTreeDir         ctermfg=". s:cterm0D ."ctermbg=NONE guifg=#". s:gui0D ."guibg=NONE"
-exec "highlight NERDTreeOpenable    ctermfg=". s:cterm0D ."ctermbg=NONE guifg=#". s:gui0D ."guibg=NONE"
-exec "highlight NERDTreeClosable    ctermfg=". s:cterm08 ."ctermbg=NONE guifg=#". s:gui08 ."guibg=NONE"
+exec "highlight NERDTreeDir         ctermfg=". s:cterm0D ." ctermbg=NONE guifg=#". s:gui0D ." guibg=NONE"
+exec "highlight NERDTreeOpenable    ctermfg=". s:cterm0D ." ctermbg=NONE guifg=#". s:gui0D ." guibg=NONE"
+exec "highlight NERDTreeClosable    ctermfg=". s:cterm08 ." ctermbg=NONE guifg=#". s:gui08 ." guibg=NONE"
 
 " custom file types
-exec "highlight FileSourceJs        ctermfg=". s:cterm0B ."ctermbg=NONE guifg=#". s:gui0B ."guibg=NONE"
-exec "highlight FileSourcePhp       ctermfg=". s:cterm0B ."ctermbg=NONE guifg=#". s:gui0B ."guibg=NONE"
-exec "highlight FileSourcePython    ctermfg=". s:cterm0B ."ctermbg=NONE guifg=#". s:gui0B ."guibg=NONE"
-exec "highlight FileMarkup          ctermfg=". s:cterm08 ."ctermbg=NONE guifg=#". s:gui08 ."guibg=NONE"
-exec "highlight FileStyle           ctermfg=". s:cterm0C ."ctermbg=NONE guifg=#". s:gui0C ."guibg=NONE"
-exec "highlight FileDocument        ctermfg=". s:cterm0A ."ctermbg=NONE guifg=#". s:gui0A ."guibg=NONE"
-exec "highlight FileConfig          ctermfg=". s:cterm0E ."ctermbg=NONE guifg=#". s:gui0E ."guibg=NONE"
-exec "highlight FileLogging         ctermfg=". s:cterm04 ."ctermbg=NONE guifg=#". s:gui04 ."guibg=NONE"
-exec "highlight FileIgnore          ctermfg=". s:cterm03 ."ctermbg=NONE guifg=#". s:gui03 ."guibg=NONE"
+exec "highlight FileSourceJs        ctermfg=". s:cterm0B ." ctermbg=NONE guifg=#". s:gui0B ." guibg=NONE"
+exec "highlight FileSourcePhp       ctermfg=". s:cterm0B ." ctermbg=NONE guifg=#". s:gui0B ." guibg=NONE"
+exec "highlight FileSourcePython    ctermfg=". s:cterm0B ." ctermbg=NONE guifg=#". s:gui0B ." guibg=NONE"
+exec "highlight FileMarkup          ctermfg=". s:cterm08 ." ctermbg=NONE guifg=#". s:gui08 ." guibg=NONE"
+exec "highlight FileStyle           ctermfg=". s:cterm0C ." ctermbg=NONE guifg=#". s:gui0C ." guibg=NONE"
+exec "highlight FileDocument        ctermfg=". s:cterm0A ." ctermbg=NONE guifg=#". s:gui0A ." guibg=NONE"
+exec "highlight FileConfig          ctermfg=". s:cterm0E ." ctermbg=NONE guifg=#". s:gui0E ." guibg=NONE"
+exec "highlight FileLogging         ctermfg=". s:cterm04 ." ctermbg=NONE guifg=#". s:gui04 ." guibg=NONE"
+exec "highlight FileIgnore          ctermfg=". s:cterm03 ." ctermbg=NONE guifg=#". s:gui03 ." guibg=NONE"
 
 
 syn match FileConfig          /^\s\+.*\.conf$/
