@@ -16,10 +16,12 @@ Plug 'luochen1990/rainbow'          " colorize parens
 
 " color schemes
 Plug 'chriskempson/base16-vim'
+Plug 'zanglg/nova.vim'
+Plug 'nanotech/jellybeans.vim'
+
 " Plug 'chriskempson/vim-tomorrow-theme'
 " Plug 'mkarmona/colorsbox'
 " Plug 'morhetz/gruvbox'
-Plug 'nanotech/jellybeans.vim'
 " Plug 'notpratheek/vim-luna'
 " Plug 'tomasr/molokai'
 " Plug 'w0ng/vim-hybrid'
