@@ -13,6 +13,7 @@ if [[ "$OSTYPE" == linux* ]]; then
    hash nodejs    || sudo apt-get install -y nodejs
    hash node      || sudo ln -s /usr/bin/nodejs /usr/bin/node
    hash npm       || sudo apt-get install -y npm
+   hash ctags     || sudo apt-get install ctags
    # code formatters
    hash astyle             || sudo apt-get install -y astyle/trusty-backports
    hash clang-format       || sudo apt-get install -y clang-format
