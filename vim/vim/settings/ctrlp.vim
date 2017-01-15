@@ -1,6 +1,7 @@
 " set default key/cmd mapping
 let g:ctrlp_map = '<C-o>'
-let g:ctrlp_cmd = 'CtrlP'
+" close NERDTree to prevent opening in the wrong buffer
+let g:ctrlp_cmd = ':NERDTreeClose\|CtrlP'
 
 " set the local working dir
 "     r = nearest repo
