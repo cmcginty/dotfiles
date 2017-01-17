@@ -35,6 +35,7 @@ Plug 'tpope/vim-surround'           " quickly change parens,brackets,quotes
 Plug 'tpope/vim-unimpaired'         " bracket mappings
 Plug 'svermeulen/vim-easyclip'      " copy/paste
 Plug 'godlygeek/tabular'            " auto-format ascii tables
+Plug 'michaeljsmith/vim-indent-object' " select indent blocks
 
 " project
 Plug 'ctrlpvim/ctrlp.vim'           " quick file switcher
