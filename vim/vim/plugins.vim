@@ -16,9 +16,8 @@ Plug 'luochen1990/rainbow'          " colorize parens
 
 " color schemes
 Plug 'chriskempson/base16-vim'
-Plug 'zanglg/nova.vim'
 Plug 'nanotech/jellybeans.vim'
-
+Plug 'zanglg/nova.vim'
 " Plug 'chriskempson/vim-tomorrow-theme'
 " Plug 'mkarmona/colorsbox'
 " Plug 'morhetz/gruvbox'
@@ -35,6 +34,7 @@ Plug 'tpope/vim-sleuth'             " auto-detect indent size
 Plug 'tpope/vim-surround'           " quickly change parens,brackets,quotes
 Plug 'tpope/vim-unimpaired'         " bracket mappings
 Plug 'svermeulen/vim-easyclip'      " copy/paste
+Plug 'godlygeek/tabular'            " auto-format ascii tables
 
 " project
 Plug 'ctrlpvim/ctrlp.vim'           " quick file switcher
