@@ -26,16 +26,16 @@ Plug 'zanglg/nova.vim'
 " Plug 'w0ng/vim-hybrid'
 
 " extensions
-Plug 'ervandew/matchem'             " automatically close quotes, etc.
 Plug 'christoomey/vim-sort-motion'  " sorting w/ motion commands
+Plug 'ervandew/matchem'             " automatically close quotes, etc.
+Plug 'godlygeek/tabular'            " auto-format ascii tables
+Plug 'michaeljsmith/vim-indent-object' " select indent blocks
+Plug 'svermeulen/vim-easyclip'      " copy/paste
 Plug 'tomtom/tcomment_vim'          " quick commenting
 Plug 'tpope/vim-repeat'             " enhance '.' repeat cmd
 Plug 'tpope/vim-sleuth'             " auto-detect indent size
 Plug 'tpope/vim-surround'           " quickly change parens,brackets,quotes
 Plug 'tpope/vim-unimpaired'         " bracket mappings
-Plug 'svermeulen/vim-easyclip'      " copy/paste
-Plug 'godlygeek/tabular'            " auto-format ascii tables
-Plug 'michaeljsmith/vim-indent-object' " select indent blocks
 
 " project
 Plug 'ctrlpvim/ctrlp.vim'           " quick file switcher
