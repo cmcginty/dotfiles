@@ -23,8 +23,17 @@
 # disable the builtin prompt since it's managed by ZSH
 export VIRTUAL_ENV_DISABLE_PROMPT=1
 
+# NOTE: for convenience since prezto sets the pyenv PATH
+export PYENV_ROOT="$HOME/.pyenv"
+
 # NOTE: prezto provides 'pyenv init' already
 eval "$(pyenv virtualenv-init -)"
 
-alias nose='nosetests -vs'
+# virtualenv aliases
 alias venv='pyenv virtualenv'
+alias activate='pyenv activate'
+alias deactivate='pyenv deactivate'
+# enable pydoc in virtualenvs
+alias pydoc='python -m pydoc'
+
+alias nose='nosetests -vs'
