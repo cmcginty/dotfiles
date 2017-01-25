@@ -14,7 +14,7 @@
 #     pyenv shell VERSION
 #
 # Set global python version:
-#     pyenv version VERSION
+#     pyenv global VERSION
 #
 # Read more at:
 #  http://akbaribrahim.com/managing-multiple-python-versions-with-pyenv/
@@ -23,7 +23,7 @@
 # disable the builtin prompt since it's managed by ZSH
 export VIRTUAL_ENV_DISABLE_PROMPT=1
 
-eval "$(pyenv init -)"
+# NOTE: prezto provides 'pyenv init' already
 eval "$(pyenv virtualenv-init -)"
 
 alias nose='nosetests -vs'
