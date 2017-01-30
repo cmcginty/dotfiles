@@ -34,3 +34,6 @@ alias ssl-x509-ls='openssl x509 -noout -text -fingerprint -md5 -in'
 alias ssl-x509-mod='openssl x509 -noout -modulus -in'
 alias ssl-x509der-issuer='openssl x509 -inform der -noout -issuer -in'
 alias ssl-x509der-ls='openssl x509 -inform der -noout -text -fingerprint -md5 -in'
+
+# curl/httpie
+alias http='http --verbose --style=monokai'
