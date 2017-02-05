@@ -26,11 +26,6 @@ endfor
 " File Settings
 "***********************************
 if has("autocmd")
-   " jump to last known cursor position
-   autocmd BufReadPost *
-      \ if line("'\"") > 0 && line("'\"") <= line("$") |
-      \   exe "normal g`\"" |
-      \ endif
    " add pyunit integration into python files (tip 280)
    autocmd FileType python setlocal makeprg=../alltests.py\ -q
    autocmd FileType python setlocal efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m

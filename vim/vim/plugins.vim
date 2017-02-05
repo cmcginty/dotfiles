@@ -29,7 +29,7 @@ Plug 'zanglg/nova.vim'
 Plug 'christoomey/vim-sort-motion'  " sorting w/ motion commands
 Plug 'ervandew/matchem'             " automatically close quotes, etc.
 Plug 'godlygeek/tabular'            " auto-format ascii tables
-Plug 'michaeljsmith/vim-indent-object' " select indent blocks
+Plug 'michaeljsmith/vim-indent-object' " select indent blocks (python)
 Plug 'svermeulen/vim-easyclip'      " copy/paste
 Plug 'tomtom/tcomment_vim'          " quick commenting
 Plug 'tpope/vim-repeat'             " enhance '.' repeat cmd
@@ -55,7 +55,7 @@ Plug 'sheerun/vim-polyglot'            " multiple language packs
 " --- Python
 Plug 'hynek/vim-python-pep8-indent'    " python pep8 auto-indent
 Plug 'kh3phr3n/python-syntax'          " better python syntax
-Plug 'tmhedberg/SimpylFold'            " improves python folding
+"Plug 'tmhedberg/SimpylFold'           " improves python folding (very slow)
 
 " --- Gradle/Groovy
 Plug 'tfnico/vim-gradle'               " gradle build tool
