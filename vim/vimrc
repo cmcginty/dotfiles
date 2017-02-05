@@ -22,13 +22,3 @@ source ~/.vim/plugins.vim
 for fpath in split(glob('~/.vim/settings/*.vim'), '\n')
    exe 'source' fpath
 endfor
-
-" File Settings
-"***********************************
-if has("autocmd")
-   " add pyunit integration into python files (tip 280)
-   autocmd FileType python setlocal makeprg=../alltests.py\ -q
-   autocmd FileType python setlocal efm=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m
-   " allow for Sphinx '#:' comment delimiters in Python files
-   autocmd FileType python setlocal comments+=:#:
-endif "has("autocmd")

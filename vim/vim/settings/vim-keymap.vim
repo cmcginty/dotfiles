@@ -33,4 +33,7 @@ vnoremap <C-Space>   <ESC>
 nnoremap <C-Space>   <NOP>
 
 " quickly reload the vimrc file
-nnoremap <silent> <leader>z :so $MYVIMRC<CR>
+nnoremap <silent> <leader>z :so $MYVIMRC<cr>
+
+" set make: command shortcut to run 'makeprg' file-type command
+nnoremap <silent> <leader>m :make<cr>
