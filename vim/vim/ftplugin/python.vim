@@ -17,4 +17,4 @@ setlocal makeprg=python\ -c\ \"import\ py_compile,sys;\ sys.stderr=sys.stdout;\ 
 setlocal errorformat=%C\ %.%#,%A\ \ File\ \"%f\"\\,\ line\ %l%.%#,%Z%[%^\ ]%\\@=%m
 
 " allow for Sphinx '#:' comment delimiters in Python files
-python setlocal comments+=:#:
+setlocal comments+=:#:
