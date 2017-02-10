@@ -46,8 +46,9 @@
    cms = commit --squash
    co = checkout
    dc = diff -M --color-words --cached
-   dh = diff HEAD
+   dh = diff -M HEAD
    di = diff -M --color-words --ignore-space-at-eol
+   dino = diff -M --name-only
    ds = diff --stat
    lg = log -C
    lg-standup = log -C --format="%s" --author=cmcginty --since yesterday
