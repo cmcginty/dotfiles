@@ -7,6 +7,9 @@ nmap <C-v> <plug>EasyClipPasteAfter
 imap <C-v> <plug>EasyClipInsertModePaste
 cmap <C-v> <plug>EasyClipCommandModePaste
 
+" move entire line, just like 'D' deletes entire line
+nmap M <Plug>MoveMotionEndOfLinePlug
+
 " clipboard settings:
 "   'unnamed'
 "        When set, system text copied with 'CTRL-C' or 'selected text'is
