@@ -9,6 +9,7 @@ function! fugitive#toggleStatus()
       execute "bdelete".bufnr('.git/index')
    else
       Gstatus
+      resize +20  " increase height
    endif
 endfunction
 
@@ -22,25 +23,31 @@ endfunction
 " only avaiable when 'Fugitive' plugin detects a repo
 augroup FugitiveKeyMapping
    autocmd!
-   autocmd User Fugitive noremap <buffer> <C-g>          :call fugitive#toggleStatus()<cr>
-   autocmd User Fugitive noremap <buffer> <leader>gb     :Gblame<cr>
-   autocmd User Fugitive noremap <buffer> <leader>ga     :Gcommit --amend<cr>
-   autocmd User Fugitive noremap <buffer> <leader>gc     :Gcommit<cr>
-   autocmd User Fugitive noremap <buffer> <leader>gd     :Gdiff<cr>
-   autocmd User Fugitive noremap <buffer> <leader>ge     :Gedit<cr>
-   autocmd User Fugitive noremap <buffer> <leader>gp     :Glog -20 -- %<cr>
-   autocmd User Fugitive noremap <buffer> <leader>gl     :Glog -20<cr>
-   autocmd User Fugitive noremap <buffer> <leader>gm     :Gmove<space>
-   autocmd User Fugitive noremap <buffer> <leader>gx     :Gremove<cr>
-   autocmd User Fugitive noremap <buffer> <leader>gr     :Gread<cr>
-   autocmd User Fugitive noremap <buffer> <leader>gw     :Gwrite<cr>
+   " open git status window at bottom of screen
+   autocmd User Fugitive nnoremap <buffer> <C-g>          :call fugitive#toggleStatus()<cr>
+   " open a 'blame' list next to current file
+   autocmd User Fugitive nnoremap <buffer> <leader>gb     :Gblame<cr>
+   autocmd User Fugitive nnoremap <buffer> <leader>ga     :Gcommit --amend<cr>
+   autocmd User Fugitive nnoremap <buffer> <leader>gc     :Gcommit<cr>
+   " split-diff of current changes
+   autocmd User Fugitive nnoremap <buffer> <leader>gd     :Gdiff<cr>
+   autocmd User Fugitive nnoremap <buffer> <leader>ge     :Gedit<cr>
+   " diff a previous version of the file
+   autocmd User Fugitive nnoremap <buffer> <leader>gp     :Glog -20 -- %<cr>
+   " open a previous version of file to open
+   autocmd User Fugitive nnoremap <buffer> <leader>gl     :Glog -20<cr>
+   autocmd User Fugitive nnoremap <buffer> <leader>gm     :Gmove<space>
+   autocmd User Fugitive nnoremap <buffer> <leader>gx     :Gremove<cr>
+   autocmd User Fugitive nnoremap <buffer> <leader>gr     :Gread<cr>
+   " write the current file to the git-index
+   autocmd User Fugitive nnoremap <buffer> <leader>gw     :Gwrite<cr>
 
    " 3-way diff merge conflicts
    "     diffput,dp        works as usual
    "     dt (diff target)  get the target change
    "     dm (diff merge)   get the merge change
-   autocmd User Fugitive noremap <leader>dt   :diffget<space>//2<cr>
-   autocmd User Fugitive noremap <leader>dm   :diffget<space>//3<cr>
+   autocmd User Fugitive nnoremap <leader>dt   :diffget<space>//2<cr>
+   autocmd User Fugitive nnoremap <leader>dm   :diffget<space>//3<cr>
 
    " go 'back' after navigating git tree/blob
    autocmd User Fugitive
