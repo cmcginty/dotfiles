@@ -3,6 +3,10 @@
 " diff options (use dp and do builtins)
 set diffopt=filler,vertical
 
+" custom git commands
+command! Gpending  :Git! diff -M
+command! Greview   :Git! diff -M --cached
+
 " toggle the GStatus window
 function! fugitive#toggleStatus()
    if bufloaded(bufname('.git/index')) " true when visible
@@ -20,27 +24,36 @@ endfunction
 "  gg                go to top
 "  gq<text obj>      format text
 
-" only avaiable when 'Fugitive' plugin detects a repo
+" only available when 'Fugitive' plugin detects a repo
 augroup FugitiveKeyMapping
    autocmd!
    " open git status window at bottom of screen
-   autocmd User Fugitive nnoremap <buffer> <C-g>          :call fugitive#toggleStatus()<cr>
+   autocmd User Fugitive nnoremap <buffer> <C-g>         :call fugitive#toggleStatus()<cr>
    " open a 'blame' list next to current file
-   autocmd User Fugitive nnoremap <buffer> <leader>gb     :Gblame<cr>
-   autocmd User Fugitive nnoremap <buffer> <leader>ga     :Gcommit --amend<cr>
-   autocmd User Fugitive nnoremap <buffer> <leader>gc     :Gcommit<cr>
+   autocmd User Fugitive nnoremap <buffer> <leader>gb    :Gblame<cr>
+   autocmd User Fugitive nnoremap <buffer> <leader>ga    :Gcommit --amend<cr>
+   autocmd User Fugitive nnoremap <buffer> <leader>gc    :Gcommit<cr>
+
+   " diff of un-staged changes
+   autocmd User Fugitive nnoremap <buffer> <leader>gdd   :Gpending<cr>
    " split-diff of current changes
-   autocmd User Fugitive nnoremap <buffer> <leader>gd     :Gdiff<cr>
-   autocmd User Fugitive nnoremap <buffer> <leader>ge     :Gedit<cr>
+   autocmd User Fugitive nnoremap <buffer> <leader>gds   :Gdiff<cr>
+   " diff of staged changes in index
+   autocmd User Fugitive nnoremap <buffer> <leader>gdc   :Greview<cr>
+
+   autocmd User Fugitive nnoremap <buffer> <leader>ge    :Gedit<cr>
    " diff a previous version of the file
-   autocmd User Fugitive nnoremap <buffer> <leader>gp     :Glog -20 -- %<cr>
+   autocmd User Fugitive nnoremap <buffer> <leader>gp    :Glog -20 -- %<cr>
    " open a previous version of file to open
-   autocmd User Fugitive nnoremap <buffer> <leader>gl     :Glog -20<cr>
-   autocmd User Fugitive nnoremap <buffer> <leader>gm     :Gmove<space>
-   autocmd User Fugitive nnoremap <buffer> <leader>gx     :Gremove<cr>
-   autocmd User Fugitive nnoremap <buffer> <leader>gr     :Gread<cr>
+   autocmd User Fugitive nnoremap <buffer> <leader>gl    :Glog -20<cr>
+   autocmd User Fugitive nnoremap <buffer> <leader>gm    :Gmove<space>
+   autocmd User Fugitive nnoremap <buffer> <leader>gx    :Gremove<cr>
+   autocmd User Fugitive nnoremap <buffer> <leader>gr    :Gread<cr>
    " write the current file to the git-index
-   autocmd User Fugitive nnoremap <buffer> <leader>gw     :Gwrite<cr>
+   autocmd User Fugitive nnoremap <buffer> <leader>gw    :Gwrite<cr>
+
+   " open file in Github
+   autocmd User Fugitive nnoremap <buffer> <leader>gh    :Gbrowse<cr>
 
    " 3-way diff merge conflicts
    "     diffput,dp        works as usual
