@@ -57,7 +57,7 @@ augroup VimKeymapDefaults
       \     call FileCloseKeymaps() |
       \     call FileNextPrevKeymaps() |
       \  endif
-   " executed on 'new' buffer created with a non-existant file name
+   " executed on 'new' buffer created with a non-existent file name
    autocmd BufNewFile *
       \ if !exists(expand('<afile>')) |
       \    call FileSaveKeymaps('<C-c>:update<cr>') |
