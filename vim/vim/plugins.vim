@@ -50,7 +50,7 @@ Plug 'airblade/vim-gitgutter'       " highlight git diffs
 
 " file types
 " --- Multiple
-Plug 'sheerun/vim-polyglot'            " multiple language packs
+" Plug 'sheerun/vim-polyglot'            " multiple language packs
 
 " --- Python
 Plug 'hynek/vim-python-pep8-indent'    " python pep8 auto-indent
