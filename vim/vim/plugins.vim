@@ -16,14 +16,19 @@ Plug 'luochen1990/rainbow'          " colorize parens
 
 " color schemes
 Plug 'chriskempson/base16-vim'
+Plug 'chriskempson/vim-tomorrow-theme'
+Plug 'dikiaap/minimalist'
+Plug 'dunckr/vim-monokai-soda'
+Plug 'marcopaganini/termschool-vim-theme'
+Plug 'mkarmona/colorsbox'
+Plug 'mkarmona/materialbox'
+Plug 'morhetz/gruvbox'
 Plug 'nanotech/jellybeans.vim'
+Plug 'tomasr/molokai'
+Plug 'tyrannicaltoucan/vim-quantum'
+Plug 'w0ng/vim-hybrid'
 Plug 'zanglg/nova.vim'
-" Plug 'chriskempson/vim-tomorrow-theme'
-" Plug 'mkarmona/colorsbox'
-" Plug 'morhetz/gruvbox'
-" Plug 'notpratheek/vim-luna'
-" Plug 'tomasr/molokai'
-" Plug 'w0ng/vim-hybrid'
+Plug 'zcodes/vim-colors-basic'
 
 " extensions
 Plug 'christoomey/vim-sort-motion'  " sorting w/ motion commands

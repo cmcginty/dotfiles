@@ -6,6 +6,6 @@ hi! link pythonOperator             Repeat
 hi link pythonExtraOperator         ExtraOperator
 hi link pythonExtraPseudoOperator   ExtraOperator
 
-" exrtra highlights
+" extra highlights
 syntax match pythonExtraPseudoOperator '\v\.'
 syntax match pythonExtraPseudoOperator '\v\:'

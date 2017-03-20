@@ -22,7 +22,7 @@ set foldlevel=1   " do not hide first level of folds
 
 " window splits
 set splitbelow    " new split on bottom
-set splitright    " new vplit on right
+set splitright    " new vsplit on right
 
 " command line
 set showcmd       " display incomplete commands
