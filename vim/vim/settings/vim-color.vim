@@ -5,9 +5,9 @@ set showmatch              " show matching '()' pairs
 " Color Scheme Override
 " ---------------------------------------------
 " Set darker backround than default
-let g:colorsbox_contrast_dark = 'hard'
+" let g:colorsbox_contrast_dark = 'hard'
 " Set gitgutter column background to default background color
-let g:colorsbox_sign_column = 'bg0'
+" let g:colorsbox_sign_column = 'bg0'
 " Invert gitgutter colors
 let g:colorsbox_invert_signs = 0
 
@@ -35,8 +35,8 @@ endtry
 
 " NOTE: MatchParen can be replaced by colorscheme. Not sure how to force this as
 "       the default.
-highlight MatchParen cterm=bold ctermfg=0  ctermbg=226
-highlight MatchParen gui=bold   guifg=black guibg=yellow
+highlight MatchParen cterm=bold ctermfg=226
+highlight MatchParen gui=bold   guifg=yellow
 
 " highlight lines longer than N-1 characters
 highlight OverLength guibg=#341818
@@ -46,11 +46,12 @@ match OverLength /\%91v.*/ " highlight lines longer than 90 characters
 augroup CustomColorScheme
    autocmd!
    " reduce contrast to line number
-   au VimEnter,ColorScheme * hi LineNr     ctermfg=8 guifg=#404040
+   au VimEnter,ColorScheme * hi LineNr    ctermfg=8
+   au VimEnter,ColorScheme * hi LineNr    guifg=#404040
 
    " literal numbers
    au VimEnter,ColorScheme * hi Number    cterm=bold ctermfg=16
-   au VimEnter,ColorScheme * hi Number    gui=bold   guifg=#d2d22d
+   au VimEnter,ColorScheme * hi Number    gui=bold guifg=#d2d22d
 
    " extended symbol operators (e.g. + - = < > ! * /)
    " NOTE: supported operators are customized in local syntax/* files
