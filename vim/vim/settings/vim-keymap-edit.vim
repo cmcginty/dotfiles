@@ -40,7 +40,9 @@ nnoremap <silent><F7> :setlocal spell!<cr>
 vnoremap <silent><F7> <C-C>:setlocal spell!<cr>gv
 inoremap <silent><F7> <C-O>:setlocal spell!<cr>
 
-"toggle folding
-nnoremap <silent>f za
-nnoremap <silent>F zA
-vnoremap <silent>f zf
+"open/close folds
+nnoremap <space>  za
+"create a fold over a visual range
+vnoremap <space>  zf
+"recursive open/close all folds"
+" nnoremap <leader>f    zA

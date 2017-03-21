@@ -27,7 +27,7 @@ noremap  <F1> <ESC>
 noremap! <F1> <ESC>
 
 " <esc> alternatives that are faster
-inoremap jj          <ESC>
+inoremap kj          <ESC>
 noremap! <C-Space>   <ESC>
 vnoremap <C-Space>   <ESC>
 nnoremap <C-Space>   <NOP>

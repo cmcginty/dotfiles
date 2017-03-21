@@ -18,6 +18,6 @@ set shortmess=atI
 " Disable bell (sound) alerts
 set belloff=esc,error
 
-" Set default folding to manual; use the ftplugin feature to override different
-" file types. Use 'f' in visual mode to create a fold.
-set foldmethod=manual
+" Set default folding method (indent, manual, marker, expr, syntax, diff)
+" Use the ftplugin feature to override different
+set foldmethod=indent
