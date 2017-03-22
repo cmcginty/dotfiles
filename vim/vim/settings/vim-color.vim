@@ -33,32 +33,36 @@ catch
    colorscheme koehler
 endtry
 
-" NOTE: MatchParen can be replaced by colorscheme. Not sure how to force this as
-"       the default.
-highlight MatchParen cterm=bold ctermfg=226
-highlight MatchParen gui=bold   guifg=yellow
-
-" highlight lines longer than N-1 characters
-highlight OverLength guibg=#341818
-match OverLength /\%91v.*/ " highlight lines longer than 90 characters
-
 " use autocmd to override the color scheme or when 'syntax' mode is toggled
 augroup CustomColorScheme
    autocmd!
+
+   " set parenthesis matching colors
+   au VimEnter,ColorScheme * hi! MatchParen cterm=bold ctermfg=226
+   au VimEnter,ColorScheme * hi! MatchParen gui=bold   guifg=#d2d22d
+
+   " highlight lines longer than N-1 characters
+   au VimEnter,ColorScheme * hi! link OverLength Error
+   au VimEnter,ColorScheme * match OverLength /\%91v.*/
+
    " reduce contrast to line number
-   au VimEnter,ColorScheme * hi LineNr    ctermfg=8
-   au VimEnter,ColorScheme * hi LineNr    guifg=#404040
+   au VimEnter,ColorScheme * hi! link LineNr colorsboxBg1
+
+   " comment block text
+   au VimEnter,ColorScheme * hi! link Comment colorsboxFg4
 
    " literal numbers
-   au VimEnter,ColorScheme * hi Number    cterm=bold ctermfg=16
-   au VimEnter,ColorScheme * hi Number    gui=bold guifg=#d2d22d
+   au VimEnter,ColorScheme * hi! Number    cterm=bold ctermfg=16
+   au VimEnter,ColorScheme * hi! Number    gui=bold guifg=#d2d22d
+   au VimEnter,ColorScheme * hi! Float     cterm=bold ctermfg=16
+   au VimEnter,ColorScheme * hi! Float     gui=bold guifg=#d2d22d
 
    " extended symbol operators (e.g. + - = < > ! * /)
    " NOTE: supported operators are customized in local syntax/* files
-   au VimEnter,ColorScheme * hi ExtraOperator ctermfg=9
-   au VimEnter,ColorScheme * hi ExtraOperator guifg=#dc9656
+   au VimEnter,ColorScheme * hi! ExtraOperator ctermfg=9
+   au VimEnter,ColorScheme * hi! ExtraOperator guifg=#dc9656
 
    " change spelling errors to just curly underlines
-   au VimEnter,ColorScheme * hi SpellBad gui=undercurl guibg=NONE guisp=#cc6666
-   au VimEnter,ColorScheme * hi SpellCap gui=undercurl guibg=NONE guisp=#8abeb7
+   au VimEnter,ColorScheme * hi! SpellBad gui=undercurl guibg=NONE guisp=#cc6666
+   au VimEnter,ColorScheme * hi! SpellCap gui=undercurl guibg=NONE guisp=#8abeb7
 augroup END

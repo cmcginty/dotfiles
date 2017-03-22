@@ -34,7 +34,7 @@ Plug 'zcodes/vim-colors-basic'
 Plug 'christoomey/vim-sort-motion'  " sorting w/ motion commands
 Plug 'ervandew/matchem'             " automatically close quotes, etc.
 Plug 'godlygeek/tabular'            " auto-format ascii tables
-Plug 'michaeljsmith/vim-indent-object' " select indent blocks (python)
+Plug 'michaeljsmith/vim-indent-object' " select indent blocks (Python)
 Plug 'svermeulen/vim-easyclip'      " copy/paste
 Plug 'tomtom/tcomment_vim'          " quick commenting
 Plug 'tpope/vim-repeat'             " enhance '.' repeat cmd
@@ -58,9 +58,9 @@ Plug 'airblade/vim-gitgutter'       " highlight git diffs
 " Plug 'sheerun/vim-polyglot'            " multiple language packs
 
 " --- Python
-Plug 'hynek/vim-python-pep8-indent'    " python pep8 auto-indent
-Plug 'kh3phr3n/python-syntax'          " better python syntax
-"Plug 'tmhedberg/SimpylFold'           " improves python folding (very slow)
+Plug 'hynek/vim-python-pep8-indent'    " Python pep8 auto-indent
+Plug 'vim-python/python-syntax'        " better Python syntnax
+"Plug 'tmhedberg/SimpylFold'           " improves Python folding (very slow)
 
 " --- Gradle/Groovy
 Plug 'tfnico/vim-gradle'               " gradle build tool
