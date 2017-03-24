@@ -1,7 +1,7 @@
 " extended functions for handling buffers
 
 function! ConfirmSave()
-   if &modified && confirm('Save changes to "Untitled"?',"&Yes\n&No",1) == 1
+   if &modified && confirm('Save changes to "Untitled"?',"&Yes\n&No",1) ==? 1
       browse update
    endif
 endfunction

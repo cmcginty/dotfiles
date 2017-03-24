@@ -6,7 +6,7 @@ augroup END
 
 " toggle the quickfix window
 function! QFixToggle(forced)
-  if exists("g:qfix_win") && a:forced == 0
+  if exists("g:qfix_win") && a:forced ==? 0
     cclose
     unlet g:qfix_win
   else

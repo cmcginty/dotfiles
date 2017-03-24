@@ -5,7 +5,7 @@ augroup NERDTreeIntegration
    autocmd VimEnter * if !argc() && !exists("s:std_in") | NERDTree | wincmd p | endif
 
    " close Vim if only window open is NERDTree
-   autocmd BufEnter * if winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree() | quit | endif
+   autocmd BufEnter * if winnr("$") ==? 1 && exists("b:NERDTree") && b:NERDTree.isTabTree() | quit | endif
 augroup END
 
 " keymap to show/hide NERDTree
