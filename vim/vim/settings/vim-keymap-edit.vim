@@ -31,7 +31,7 @@ vnoremap #     y?<C-R>=escape(@", '\\/.*$^~[]')<cr>
 
 " clear the highlighting of :set hlsearch
 "  (remapped from vim-sensible/sensible.vim)
-nnoremap <silent> <cr> :nohlsearch<C-R>=has('diff')?'<Bar>diffupdate':''<CR><CR><C-L>
+nnoremap <silent> <leader>l :nohlsearch<C-R>=has('diff')?'<Bar>diffupdate':''<CR><CR><C-L>
 
 " search/replace visual selection with confirmation
 vnoremap <C-r> ""y:%s/<C-r>=escape(@", '\\/.*$^~[]')<cr>//c<left><left>
