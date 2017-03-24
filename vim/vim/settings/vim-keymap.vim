@@ -11,16 +11,19 @@
 "     <C-c>    : go to command mode
 "     <C-o>    : use command mode and return to last mode
 "
-" NOTE: the folllowing key combos can not be modified in Vim
+" NOTE: the following key combos can not be modified in Vim
 "
 "    C-; : can not be captured
 "    C-[ : same as ESC
 "    C-i : same mapping as TAB key
 "    C-m : same mapping as ENTER key
 
-" enter command mode faser
-nnoremap  <leader><leader>  :
-vnoremap  <leader><leader>  :
+" map space to leader (does not break showcmd)
+map <space>    <leader>
+
+" enter command mode faster
+nnoremap  <leader><space>  :
+vnoremap  <leader><space>  :
 
 " fix missed <ESC>
 noremap  <F1> <ESC>
@@ -28,12 +31,12 @@ noremap! <F1> <ESC>
 
 " <esc> alternatives that are faster
 inoremap kj          <ESC>
-noremap! <C-Space>   <ESC>
-vnoremap <C-Space>   <ESC>
-nnoremap <C-Space>   <NOP>
+noremap! <C-space>   <ESC>
+vnoremap <C-space>   <ESC>
+nnoremap <C-space>   <NOP>
 
 " quickly reload the vimrc file
-nnoremap <silent> <leader>z :so $MYVIMRC<cr>
+nnoremap <silent> <leader>` :so $MYVIMRC<cr>
 
 " set make: command shortcut to run 'makeprg' file-type command
 nnoremap <silent> <leader>m :make<cr>

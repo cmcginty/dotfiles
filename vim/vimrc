@@ -7,9 +7,11 @@ if filereadable(expand("~/.vimrc.before"))
 endif
 
 " Change leader because the backslash is too far away
-" That means all \x commands turn into ;x
+" That means all \x commands turn into <space>x
 " WARN: the mapleader has to be set before plugins are loaded.
-let mapleader = ';'
+" IMPORTANT: <space> is mapped to <leader> in vim-keymap.vim. This method
+"            allows showcmd to keep working.
+" let mapleader = "\<space>"
 
 " define plugins so they can be installed/uninstalled
 " NOTE: Most plugins are loaded between .vimrc and .gvimrc but colorscheme

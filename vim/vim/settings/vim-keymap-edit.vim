@@ -29,20 +29,21 @@ vnoremap *     y/<C-R>=escape(@", '\\/.*$^~[]')<cr>
 "reverse find (highlighted text)
 vnoremap #     y?<C-R>=escape(@", '\\/.*$^~[]')<cr>
 
-"remove highlights after find
-noremap  <silent><space> :noh<bar>:echo ""<cr>
+" clear the highlighting of :set hlsearch
+"  (remapped from vim-sensible/sensible.vim)
+nnoremap <silent> <cr> :nohlsearch<C-R>=has('diff')?'<Bar>diffupdate':''<CR><CR><C-L>
 
 " search/replace visual selection with confirmation
 vnoremap <C-r> ""y:%s/<C-r>=escape(@", '\\/.*$^~[]')<cr>//c<left><left>
 
 "toggle spelling
-nnoremap <silent><F7> :setlocal spell!<cr>
-vnoremap <silent><F7> <C-C>:setlocal spell!<cr>gv
-inoremap <silent><F7> <C-O>:setlocal spell!<cr>
+nnoremap <silent> <F7>  :setlocal spell!<cr>
+vnoremap <silent> <F7>  <C-C>:setlocal spell!<cr>gv
+inoremap <silent> <F7>  <C-O>:setlocal spell!<cr>
 
 "open/close folds
-nnoremap <space>  za
-"create a fold over a visual range
-vnoremap <space>  zf
+nnoremap <leader>z   za
 "recursive open/close all folds"
-" nnoremap <leader>f    zA
+nnoremap <leader>Z   zA
+"create a fold over a visual range
+vnoremap <leader>z   zf
