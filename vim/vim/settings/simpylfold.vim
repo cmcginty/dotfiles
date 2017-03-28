@@ -1,5 +1,5 @@
 " Configure settings for Python folding plugin
-"
+" WARN: Plugin is disabled !!
 
 " Show a trailing docstring comment in the fold line
 let g:SimpylFold_docstring_preview = 1

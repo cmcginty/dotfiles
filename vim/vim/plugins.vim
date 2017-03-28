@@ -56,18 +56,17 @@ Plug 'airblade/vim-gitgutter'       " highlight git diffs
 " file types
 " --- Multiple
 " Plug 'sheerun/vim-polyglot'            " multiple language packs
-
 " --- Python
 Plug 'hynek/vim-python-pep8-indent'    " Python pep8 auto-indent
-Plug 'vim-python/python-syntax'        " better Python syntnax
+Plug 'vim-python/python-syntax'        " better Python syntax
 "Plug 'tmhedberg/SimpylFold'           " improves Python folding (very slow)
-
 " --- Gradle/Groovy
 Plug 'tfnico/vim-gradle'               " gradle build tool
 Plug 'vim-scripts/groovyindent-unix'   " groovy indents syntax
-
 " --- Git Config
 Plug 'tpope/vim-git'                   " git config files
+" -- Markdown
+Plug 'plasticboy/vim-markdown'         " markdown support (REQUIRES VIM-TABULAR
 
 " devicons must load after other plugins it updates
 Plug 'ryanoasis/vim-devicons'       " icon'd fonts
