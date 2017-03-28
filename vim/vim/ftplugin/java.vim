@@ -12,5 +12,4 @@ map <silent> <leader>m     :wall<bar>make classes compileTestJava -Dorg.gradle.p
 
 " increase max line length and match
 setlocal textwidth=99
-setlocal colorcolumn=99
 match OverLength /\%101v.*/

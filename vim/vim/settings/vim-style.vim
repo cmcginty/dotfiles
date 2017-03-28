@@ -13,7 +13,7 @@ set softtabstop=3    " set 'tab' size during indent mode
 set tabstop=3        " set tab character size
 
 set textwidth=80     " line length before wrapping text
-set colorcolumn=80
+set colorcolumn=+1   " highlight column after textwidth size
 
 set fileformat=unix  " default line-ending format
 

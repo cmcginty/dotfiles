@@ -2,9 +2,8 @@ setlocal shiftwidth=4     " set 'shift' size
 setlocal softtabstop=4    " set 'tab' size during indent mode
 setlocal tabstop=4        " set tab character size
 
-" increase max line length and match
+" increase max line length
 setlocal textwidth=100
-setlocal colorcolumn=100
 
 " DEV: delay OverLength reference until Vim loads (see vim-color.vim)
 au VimEnter,ColorScheme * match OverLength /\%102v.*/
