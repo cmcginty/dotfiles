@@ -11,5 +11,4 @@ map <silent> <leader>m     :wall<bar>make classes compileTestJava -Dorg.gradle.p
 "        ]Q    Last error
 
 " increase max line length and match
-setlocal textwidth=99
-match OverLength /\%101v.*/
+setlocal textwidth=100

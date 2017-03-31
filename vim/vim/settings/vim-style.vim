@@ -17,6 +17,12 @@ set colorcolumn=+1   " highlight column after textwidth size
 
 set fileformat=unix  " default line-ending format
 
+" highlight lines longer than 'textwidth' size for each filetype
+autocmd FileType *
+    \ if &textwidth |
+    \    exec 'match OverLength /\%' . string(&textwidth+2) . 'v.*/' |
+    \ endif
+
 " default text auto-format options (:help fo-table)
 " c = auto-wrap comments, insert leader
 " j = remove leader joining lines
