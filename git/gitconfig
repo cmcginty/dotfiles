@@ -78,6 +78,7 @@
    rsh = reset --hard
    rss = reset --soft
    sa = stash
+   sai = stash --keep-index
    st = status -sb
    sub-checkout = submodule update --remote --checkout
    sub-rebase = submodule update --remote --rebase
