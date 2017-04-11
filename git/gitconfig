@@ -83,6 +83,7 @@
    sub-checkout = submodule update --remote --checkout
    sub-rebase = submodule update --remote --rebase
    sub-update = submodule update --init --recursive
+   sub-sync = "!f() { git sub-checkout; git sub-update; }; f"
    up = remote update
    # print current sha1 hash only
    sha = rev-parse --short

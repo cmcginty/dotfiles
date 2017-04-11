@@ -36,4 +36,4 @@ alias deactivate='pyenv deactivate'
 # enable pydoc in virtualenvs
 alias pydoc='python -m pydoc'
 
-alias nose='nosetests -vs'
+alias nose='nosetests -vs --pdb'
