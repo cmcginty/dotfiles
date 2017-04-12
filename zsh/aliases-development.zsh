@@ -37,3 +37,4 @@ alias ssl-x509der-ls='openssl x509 -inform der -noout -text -fingerprint -md5 -i
 
 # curl/httpie
 alias http='http --verbose --style=monokai'
+alias https='http --default-scheme=https'

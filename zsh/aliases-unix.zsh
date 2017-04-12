@@ -47,3 +47,6 @@ alias invoke-rc.d='sudo invoke-rc.d'
 alias restart='sudo restart'
 alias start='sudo start'
 alias stop='sudo stop'
+
+# formatting
+alias sort-ip='sort -n -t . -k 1,1 -k 2,2 -k 3,3 -k 4,4'
