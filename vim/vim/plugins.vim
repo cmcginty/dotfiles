@@ -34,6 +34,7 @@ Plug 'zcodes/vim-colors-basic'
 Plug 'christoomey/vim-sort-motion'  " sorting w/ motion commands
 Plug 'ervandew/matchem'             " automatically close quotes, etc.
 Plug 'godlygeek/tabular'            " auto-format ascii tables
+Plug 'jeetsukumaran/vim-indentwise' " jump to indent levels (Python)
 Plug 'michaeljsmith/vim-indent-object' " select indent blocks (Python)
 Plug 'svermeulen/vim-easyclip'      " copy/paste
 Plug 'tomtom/tcomment_vim'          " quick commenting
@@ -66,7 +67,7 @@ Plug 'vim-scripts/groovyindent-unix'   " groovy indents syntax
 " --- Git Config
 Plug 'tpope/vim-git'                   " git config files
 " -- Markdown
-Plug 'plasticboy/vim-markdown'         " markdown support (REQUIRES VIM-TABULAR
+Plug 'plasticboy/vim-markdown'         " markdown support (REQUIRES VIM-TABULAR)
 
 " devicons must load after other plugins it updates
 Plug 'ryanoasis/vim-devicons'       " icon'd fonts
