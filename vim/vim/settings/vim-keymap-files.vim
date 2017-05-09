@@ -22,6 +22,7 @@ endfunction
 
 " set the buffer next/previous keymaps
 function! FileNextPrevKeymaps()
+   " NOTE: map + map! defines a map for every mode
    noremap  <buffer> <C-h>    <C-c>:bp!<cr>
    noremap! <buffer> <C-h>    <C-c>:bp!<cr>
    noremap  <buffer> <C-l>    <C-c>:bn!<cr>

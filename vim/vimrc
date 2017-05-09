@@ -1,6 +1,11 @@
 " This must be first, because it changes other options as a side effect.
 set nocompatible
 
+" Logging method for debugging; Ex: call g:Log('message')
+function! g:Log(eventName)
+  silent execute '!echo '. a:eventName .' >> log'
+endfunction
+
 " for changing defaults like 'mapleader'
 if filereadable(expand("~/.vimrc.before"))
   source ~/.vimrc.before
@@ -13,14 +18,14 @@ endif
 "            allows showcmd to keep working.
 " let mapleader = "\<space>"
 
-" define plugins so they can be installed/uninstalled
+" Define plugins so they can be installed/uninstalled
 " NOTE: Most plugins are loaded between .vimrc and .gvimrc but colorscheme
 "       plugins must be made available before sourcing the main dotfile vimrc
 "       configs.
 "
 source ~/.vim/plugins.vim
 
-" source dotfile repo settings
+" Source dotfile repo settings
 for fpath in split(glob('~/.vim/settings/*.vim'), '\n')
    exe 'source' fpath
 endfor
