@@ -60,6 +60,7 @@ Plug 'airblade/vim-gitgutter'       " highlight git diffs
 " --- Python
 Plug 'hynek/vim-python-pep8-indent'    " Python pep8 auto-indent
 Plug 'vim-python/python-syntax'        " better Python syntax
+Plug 'davidhalter/jedi-vim'            " Python code completion
 "Plug 'tmhedberg/SimpylFold'           " improves Python folding (very slow)
 " --- Gradle/Groovy
 Plug 'tfnico/vim-gradle'               " gradle build tool
