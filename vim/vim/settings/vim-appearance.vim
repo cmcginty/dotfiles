@@ -5,7 +5,7 @@ else
    set guifont=Ubuntu\ Mono\ derivative\ Powerline\ 12
 endif
 
-set cursorline       " highlight current line
+set nocursorline     " do not highlight current line (navigation is very slow when enabled)
 set number           " show line numbers on left hand side
 set numberwidth=5    " set the size of the number column
 set showmode         " display mode
