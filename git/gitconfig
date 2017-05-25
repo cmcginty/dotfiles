@@ -32,59 +32,78 @@
 [mergetool]
    prompt = false
 [alias]
+   #--------------------
    a = add
    aa = add --all
    ai = add --interactive
    ap = add --patch
    au = add --update
+   #--------------------
    bl = blame -w
+   #--------------------
    br = branch --verbose --verbose
+   nuke = "!f() { git branch -D $1; git push origin :$1; }; f"
+   #--------------------
    cm = commit --verbose
    cma = commit --verbose --amend --reset-author
    cmaa = commit --verbose --amend --reset-author --all -C HEAD
    cmf = commit --fixup
    cms = commit --squash
+   #--------------------
    co = checkout
-   dc = diff -M --color-words --cached
-   dh = diff -M HEAD
-   di = diff -M --color-words --ignore-space-at-eol
-   dino = diff -M --name-only
+   #--------------------
+   dc = diff --find-renames --color-words --cached
+   dh = diff --find-renames --color-words HEAD
+   di = diff --find-renames --color-words --ignore-space-at-eol
+   dino = diff --find-renames --name-only
    ds = diff --stat
-   lg = log -C
-   lg-standup = log -C --format="%s" --author=cmcginty --since yesterday
-   lga = log -C --graph --all
-   lgm = log -C --format=medium
-   lgno = log -C --name-only
-   lgns = log -C --name-status
-   lgp = log -C --patch --ignore-space-at-eol
-   lgs = log -C --stat=180
-   lgss = log -C --shortstat
-   lgu = log -C @{u}..
+   #--------------------
+   lg = log --find-copies --no-merges
+   lga = log --find-copies --no-merges --graph --all
+   lgm = log --find-copies --no-merges --format=medium
+   lgno = log --find-copies --no-merges --name-only
+   lgns = log --find-copies --no-merges --name-status
+   lgp = log --find-copies --no-merges --patch --ignore-space-at-eol
+   lgs = log --find-copies --no-merges --stat=180
+   lgss = log --find-copies --no-merges --shortstat
+   lgu = log --find-copies --no-merges @{u}..
+   message = log --no-merges --format="%B"
+   #--------------------
    ls = ls-files
+   #--------------------
    mg = merge
-   message = log --format="%B"
+   #--------------------
    pl = pull --prune
+   #--------------------
    pla = pull --all --prune
    ps = push
+   #--------------------
    rb = rebase
    rba = rebase --abort
    rbc = rebase --continue
    rbi = rebase --interactive
    rbs = rebase --skip
    rbu = rebase --interactive @{u}
+   #--------------------
    rem = remote -v
    rev = revert -n
+   #--------------------
    rs = reset
    rsh = reset --hard
    rss = reset --soft
+   #--------------------
    sa = stash
    sai = stash --keep-index
+   #--------------------
    st = status -sb
+   #--------------------
    sub-checkout = submodule update --remote --checkout
    sub-rebase = submodule update --remote --rebase
    sub-update = submodule update --init --recursive
    sub-sync = "!f() { git sub-checkout; git sub-update; }; f"
+   #--------------------
    up = remote update
+   #--------------------
    # print current sha1 hash only
    sha = rev-parse --short
    # list commit authors
@@ -105,6 +124,8 @@
    related = "!f() { git branch --contains $(git rev-list --max-parents=0 HEAD); }; f"
    # list conflict files in the current merge/rebase
    conflict = diff --name-only --diff-filter=U
+   # show committers in the last 10 weeks
+   stats = shortlog -sn --since='10 weeks' --until='2 weeks'
 [sendemail]
    smtpserver = localhost
    chainreplyto = false
