@@ -123,6 +123,6 @@
 [rerere]
    enabled = true
 [diff]
-   compactionHeuristic = true
+   indentHeuristic = true
 [include]
    path = ~/.gitconfig.local
