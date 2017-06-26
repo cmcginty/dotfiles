@@ -99,8 +99,9 @@
    #--------------------
    sub-checkout = submodule update --remote --checkout
    sub-rebase = submodule update --remote --rebase
-   sub-update = submodule update --init --recursive
+   sub-reset = submodule foreach --recursive git reset --hard
    sub-sync = "!f() { git sub-checkout; git sub-update; }; f"
+   sub-update = submodule update --init --recursive
    #--------------------
    up = remote update
    #--------------------
