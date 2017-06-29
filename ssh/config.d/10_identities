@@ -1,6 +1,6 @@
 
 # 10_identities :: force hosts to load private keys into keychain
-Host *
+host *
   AddKeysToAgent yes
   UseKeychain yes
   IdentityFile ~/.ssh/id_rsa

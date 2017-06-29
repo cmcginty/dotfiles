@@ -47,6 +47,7 @@
    cm = commit --verbose
    cma = commit --verbose --amend --reset-author
    cmaa = commit --verbose --amend --reset-author --all -C HEAD
+   cmaf = commit --verbose --amend --reset-author --no-edit
    cmf = commit --fixup
    cms = commit --squash
    #--------------------
