@@ -22,8 +22,11 @@ alias p4lg='p4 changes'
 alias p4lgm-me='p4lg -lt --me'
 alias p4lgm-last='p4lgm-me -m 1'
 
-# recursively replace text string
+# Text Editing
+# find and replace: ex. replace *.txt "old string" "new string"
 function replace() { find . -name "${1}" -type f -exec sed -i "s/${2}/${3}/g" {} \+ }
+# delete a line in a file: ex. rm-line FILE LINE_NUM
+function rm-line() { sed -i'' -e "${2}d" "$1" }
 
 # SSL commands
 function ssl-x509-header() { openssl crl2pkcs7 -nocrl -certfile $1 | openssl pkcs7 -print_certs }
