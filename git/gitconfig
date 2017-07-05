@@ -13,8 +13,9 @@
 [diff "odf"]
    textconv=odt2txt
 [branch]
-   autosetuprebase = always
    autosetupmerge = always
+[pull]
+   rebase = true
 [rebase]
    stat = true
    # rebase changes commited with '--squash' or '--fixup'
