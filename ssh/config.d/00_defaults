@@ -1,4 +1,4 @@
 
 # 00_defaults :: default host configs
 host *
-   ForwardX11 yes
+    ForwardX11 yes
