@@ -13,6 +13,7 @@ Plug 'vim-airline/vim-airline-themes'  " airline color schemes
 Plug 'gorodinskiy/vim-coloresque'   " colorize RGB strings
 Plug 'guns/xterm-color-table.vim'   " open a color palette
 Plug 'luochen1990/rainbow'          " colorize parens
+Plug 'whatyouhide/vim-lengthmatters' " colorize long lines
 
 " color schemes
 Plug 'chriskempson/base16-vim'

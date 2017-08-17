@@ -33,10 +33,6 @@ catch
    colorscheme koehler
 endtry
 
-" Set initial OverLength color here, but also add to augroup below in event that
-" another color scheme tries to change it
-hi! link OverLength Error
-
 " use autocmd to override the color scheme or when 'syntax' mode is toggled
 augroup CustomColorScheme
    autocmd!
@@ -44,9 +40,6 @@ augroup CustomColorScheme
    " set parenthesis matching colors
    au VimEnter,ColorScheme * hi! MatchParen cterm=bold ctermfg=226
    au VimEnter,ColorScheme * hi! MatchParen gui=bold   guifg=#d2d22d
-
-   " highlight lines longer than N-1 characters
-   au VimEnter,ColorScheme * hi! link OverLength Error
 
    " reduce contrast to line number
    au VimEnter,ColorScheme * hi! link LineNr colorsboxBg1
