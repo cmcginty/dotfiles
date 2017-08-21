@@ -1,7 +1,7 @@
 " setup the quickfix window display and key maps
 
 augroup Quickfix
-   autocmd! BufReadPost quickfix  setlocal wrap nonumber nobuflisted
+   autocmd! FileType quickfix setlocal wrap nonumber nobuflisted
 augroup END
 
 " toggle the quickfix window

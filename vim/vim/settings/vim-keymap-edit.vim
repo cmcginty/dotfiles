@@ -1,9 +1,9 @@
 "key mappings for editing
 
 "select all
-nnoremap <leader>vA   ggVG
-vnoremap <leader>vA   <C-C>ggVG
-inoremap <leader>vA   <C-O>gg<C-O>VG
+nnoremap <leader>vaa  ggVG
+vnoremap <leader>vaa  <C-C>ggVG
+inoremap <leader>vaa  <C-O>gg<C-O>VG
 
 "redo
 nnoremap <C-u> <C-r>
