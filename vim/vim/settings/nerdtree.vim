@@ -9,7 +9,7 @@ augroup NERDTreeIntegration
 augroup END
 
 " keymap to show/hide NERDTree
-map <leader>e :NERDTreeToggle<cr>
+map <C-e> :NERDTreeToggle<cr>
 
 " make nerdtree look nice
 let NERDTreeMinimalUI = 1

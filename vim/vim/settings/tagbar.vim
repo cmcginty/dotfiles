@@ -1,2 +1,2 @@
 " shortcut to enable/disable tagbar
-nnoremap <leader>t  :TagbarToggle<cr>
+nnoremap <C-r>  :TagbarToggle<cr>
