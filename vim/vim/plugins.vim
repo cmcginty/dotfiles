@@ -7,7 +7,7 @@ Plug 'tpope/vim-eunuch'             " UNIX file commands
 Plug 'qpkorr/vim-bufkill'           " kill buffers w/o breaking split windows
 
 " appearance
-Plug 'Yggdroot/indentLine'          " show indent guidelines
+Plug 'Yggdroot/indentLine'             " show indent guidelines
 Plug 'vim-airline/vim-airline'         " status bars / UI
 Plug 'vim-airline/vim-airline-themes'  " airline color schemes
 Plug 'gorodinskiy/vim-coloresque'   " colorize RGB strings
