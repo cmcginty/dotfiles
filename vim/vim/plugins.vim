@@ -7,13 +7,13 @@ Plug 'tpope/vim-eunuch'             " UNIX file commands
 Plug 'qpkorr/vim-bufkill'           " kill buffers w/o breaking split windows
 
 " appearance
-Plug 'Yggdroot/indentLine'             " show indent guidelines
-Plug 'vim-airline/vim-airline'         " status bars / UI
-Plug 'vim-airline/vim-airline-themes'  " airline color schemes
-Plug 'gorodinskiy/vim-coloresque'   " colorize RGB strings
-Plug 'guns/xterm-color-table.vim'   " open a color palette
-Plug 'luochen1990/rainbow'          " colorize parens
-Plug 'whatyouhide/vim-lengthmatters' " colorize long lines
+Plug 'Yggdroot/indentLine'            " show indent guidelines
+Plug 'vim-airline/vim-airline'        " status bars / UI
+Plug 'vim-airline/vim-airline-themes' " airline color schemes
+Plug 'gorodinskiy/vim-coloresque'     " colorize RGB strings
+Plug 'guns/xterm-color-table.vim'     " open a color palette
+Plug 'luochen1990/rainbow'            " colorize parens
+Plug 'whatyouhide/vim-lengthmatters'  " colorize long lines
 
 " color schemes
 Plug 'chriskempson/base16-vim'
@@ -32,17 +32,16 @@ Plug 'zanglg/nova.vim'
 Plug 'zcodes/vim-colors-basic'
 
 " extensions
-Plug 'christoomey/vim-sort-motion'  " sorting w/ motion commands
-Plug 'ervandew/matchem'             " automatically close quotes, etc.
-Plug 'godlygeek/tabular'            " auto-format ascii tables
-Plug 'jeetsukumaran/vim-indentwise' " jump to indent levels (Python)
+Plug 'christoomey/vim-sort-motion'     " sorting w/ motion commands
+Plug 'ervandew/matchem'                " automatically close quotes, etc.
+Plug 'godlygeek/tabular'               " auto-format ASCII tables
 Plug 'michaeljsmith/vim-indent-object' " select indent blocks (Python)
-Plug 'svermeulen/vim-easyclip'      " copy/paste
-Plug 'tomtom/tcomment_vim'          " quick commenting
-Plug 'tpope/vim-repeat'             " enhance '.' repeat cmd
-Plug 'tpope/vim-sleuth'             " auto-detect indent size
-Plug 'tpope/vim-surround'           " quickly change parens,brackets,quotes
-Plug 'tpope/vim-unimpaired'         " bracket mappings
+Plug 'svermeulen/vim-easyclip'         " copy/paste
+Plug 'tomtom/tcomment_vim'             " quick commenting
+Plug 'tpope/vim-repeat'                " enhance '.' repeat cmd
+Plug 'tpope/vim-sleuth'                " auto-detect indent size
+Plug 'tpope/vim-surround'              " quickly change parens,brackets,quotes
+Plug 'tpope/vim-unimpaired'            " bracket mappings
 
 " project
 Plug 'ctrlpvim/ctrlp.vim'           " quick file switcher
@@ -60,7 +59,7 @@ Plug 'airblade/vim-gitgutter'       " highlight git diffs
 " Plug 'sheerun/vim-polyglot'            " multiple language packs
 " --- Python
 Plug 'hynek/vim-python-pep8-indent'    " Python pep8 auto-indent
-Plug 'vim-python/python-syntax'        " better Python syntax
+Plug 'vim-python/python-syntax'        " better Python syntax highlighting
 Plug 'davidhalter/jedi-vim'            " Python code completion
 "Plug 'tmhedberg/SimpylFold'           " improves Python folding (very slow)
 " --- Gradle/Groovy
