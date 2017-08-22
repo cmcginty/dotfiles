@@ -1,6 +1,6 @@
 " format buffer or visual selection
 nnoremap <leader>f   :Autoformat<cr>:update<cr>
-vnoremap f           :Autoformat<cr>:udpate<cr>
+vnoremap <leader>f   :Autoformat<cr>:udpate<cr>
 " format all buffers, not just active one
 nnoremap <leader>F   :bufdo execute "Autoformat" <bar> update<cr>
 
