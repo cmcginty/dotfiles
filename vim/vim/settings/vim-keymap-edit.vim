@@ -5,8 +5,8 @@ nnoremap <leader>vaa  ggVG
 vnoremap <leader>vaa  <C-C>ggVG
 inoremap <leader>vaa  <C-O>gg<C-O>VG
 
-"redo
-nnoremap <C-u> <C-r>
+"redo (DPRECATED: see repeat.vim)
+" nnoremap <C-u> <C-r>
 
 "enable tab indent/unindent (tip 224)
 nnoremap <tab>    v>
