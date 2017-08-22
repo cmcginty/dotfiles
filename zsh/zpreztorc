@@ -28,6 +28,7 @@ zstyle ':prezto:load' pmodule \
   'command-not-found' \
   'completion' \
   'directory' \
+  'docker' \
   'editor' \
   'environment' \
   'fasd' \
@@ -37,13 +38,14 @@ zstyle ':prezto:load' pmodule \
   'osx' \
   'python' \
   'spectrum' \
+  'ssh' \
   'terminal' \
   'tmux' \
   'utility' \
   \
   'syntax-highlighting' \
   'history-substring-search' \
-  'prompt'                       # must be last
+  'prompt'                       # WARN: must be last
 
 #### WARNING: ADD NEW MODULES BEFORE 'syntax-highlighting'
 
@@ -128,12 +130,12 @@ zstyle ':prezto:module:osx:man' dash-keyword 'manpages'
 # Set the prompt theme to load.
 # Setting it to 'random' loads a random theme.
 # Auto set to 'off' on dumb terminals.
-zstyle ':prezto:module:prompt' theme 'sorin'
+zstyle ':prezto:module:prompt' theme 'off'
 
 # Set the working directory prompt display length.
 # By default, it is set to 'short'. Set it to 'long' (without '~' expansion)
 # for longer or 'full' (with '~' expansion) for even longer prompt display.
-# zstyle ':prezto:module:prompt' pwd-length 'short'
+zstyle ':prezto:module:prompt' pwd-length 'long'
 
 #
 # Ruby

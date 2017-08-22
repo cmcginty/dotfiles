@@ -18,6 +18,10 @@
 # prompt sorin
 # prompt steef
 
-# My custom prompt based on skwp in ./prompts. Add your own custom theme in this
-# dir as `prompt_<NAME>_setup`
-prompt casey
+# You can add your own custom theme in ./prompts dir as `prompt_<NAME>_setup`
+
+prompt sorin
+
+# force all prompt to have linebreak
+function prompt_custom_precmd { echo '' }
+add-zsh-hook precmd prompt_custom_precmd
