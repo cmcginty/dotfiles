@@ -1,3 +1,3 @@
 " skip over all inserted braces
-imap <C-[>    <Plug>MatchemSkipAll
-imap <C-]>    <Plug>MatchemSkipNext
+imap <C-CR>   <Plug>MatchemSkipAll
+imap <C-\>    <Plug>MatchemSkipNext
