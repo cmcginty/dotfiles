@@ -23,6 +23,3 @@ function fr() { for F in $@; do file-roller $(readlink -f $F) & done }
 # remote desktop
 alias rdesktop='rdesktop -x l -g 1024x768 -a 16 -k en-us'
 alias rdp='rdesktop'
-
-# brew (OS X)
-alias brew-sync='brew update && brew upgrade && brew cleanup && echo Sync done.'
