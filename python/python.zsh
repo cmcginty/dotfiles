@@ -37,3 +37,5 @@ alias deactivate='pyenv deactivate'
 alias pydoc='python -m pydoc'
 
 alias nose='nosetests -vs --pdb'
+
+alias pt='ptpython'

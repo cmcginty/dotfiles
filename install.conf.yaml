@@ -6,6 +6,10 @@
    ~/.gitconfig:     git/gitconfig
    ~/.gitexcludes:   git/gitexcludes
    ~/.gvimrc:        vim/gvimrc
+   ~/.ptpython/config.py:     python/ptpython_config.py
+   ~/.ssh/authorized_keys:    ssh/authorized_keys
+   ~/.ssh/box_rsa.pub:        ssh/box_rsa.pub
+   ~/.ssh/id_rsa.pub:         ssh/id_rsa.pub
    ~/.tmux.conf:     tmux/tmux.conf
    ~/.vim:           vim/vim
    ~/.vimrc:         vim/vimrc
@@ -16,9 +20,6 @@
    ~/.zprofile:      zsh/zprofile
    ~/.zshenv:        zsh/plugins/prezto/runcoms/zshenv
    ~/.zshrc:         zsh/zshrc
-   ~/.ssh/authorized_keys:    ssh/authorized_keys
-   ~/.ssh/id_rsa.pub:         ssh/id_rsa.pub
-   ~/.ssh/box_rsa.pub:        ssh/box_rsa.pub
 
 - shell:
    - [nerd-fonts/install.sh, Install Nerd fonts]
