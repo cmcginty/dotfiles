@@ -19,8 +19,8 @@ vnoremap s        :sort<cr>
 vnoremap <S-s>    :sort u<cr>
 
 "find (word under cursor)
-nnoremap <C-f> /<C-r><C-w>
-inoremap <C-f> <C-o>/<C-r><C-w>
+nnoremap <C-f> /<C-r><C-w><cr>
+inoremap <C-f> <C-o>/<C-r><C-w><cr>
 
 "find (highlighted text)
 vnoremap <C-f> y/<C-R>=escape(@", '\\/.*$^~[]')<cr>
