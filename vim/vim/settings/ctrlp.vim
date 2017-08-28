@@ -9,8 +9,12 @@ let g:ctrlp_cmd = ':NERDTreeClose\|CtrlP'
 let g:ctrlp_working_path_mode = 'ra'
 
 " ignore temp and binary files
-set wildignore +=*/tmp/*,*.so,*.swp,*.zip,*.class
+set wildignore +=*/tmp/*,*.so,*.swp,*.zip,*.class,.DS_Store
 set wildignore +=*\\tmp\\*,*.zip,*.exe
+
+" ignore specific directories in $HOME
+exec 'set wildignore+='.$HOME.'/Box/*'
+exec 'set wildignore+='.$HOME.'.Trash/*'
 
 " ignore gitignore files
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
