@@ -36,6 +36,10 @@ elif [[ "$OSTYPE" == darwin* ]]; then
    hash tidy               || brew install -y tidy
    hash yapf               || pip install --upgrade yapf
 
+   # disable auto-update prompts
+   defaults write org.vim.MacVim SUEnableAutomaticChecks -bool false
+   # disable title bar (set true)
+   defaults write org.vim.MacVim MMNoTitleBarWindow false
 fi
 
 # clean install/update plugins
