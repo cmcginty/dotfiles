@@ -8,13 +8,6 @@ let g:ctrlp_cmd = ':NERDTreeClose\|CtrlP'
 "     a = shorter of CWD or dir of current file
 let g:ctrlp_working_path_mode = 'ra'
 
-" ignore temp and binary files
-set wildignore +=*/tmp/*,*.so,*.swp,*.zip,*.class,.DS_Store
-set wildignore +=*\\tmp\\*,*.zip,*.exe
-
-" ignore specific directories in $HOME
-exec 'set wildignore+='.$HOME.'/Box/*'
-exec 'set wildignore+='.$HOME.'.Trash/*'
 
 " ignore gitignore files
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
@@ -42,3 +35,16 @@ let g:ctrlp_max_files = 10000
 
 " update keymapping to match <C-space> as ESC
 let g:ctrlp_prompt_mappings = { 'PrtExit()' : ['<bs>', '<c-[>', '<C-Space>'] }
+
+" Use ripgrep over grep
+if executable('rg')
+   let g:ctrlp_user_command = 'rg %s --files --color=never --glob ""'
+   let g:ctrlp_use_caching = 0    " caching should not be needed
+else
+   " ag and ripgrep ignore 'wildignore', instead use ~/.ignore config
+   set wildignore +=*/tmp/*,*.so,*.swp,*.zip,*.class,.DS_Store
+   set wildignore +=*\\tmp\\*,*.zip,*.exe
+   " ignore specific directories in $HOME
+   exec 'set wildignore+='.$HOME.'/Box/*'
+   exec 'set wildignore+='.$HOME.'.Trash/*'
+endif

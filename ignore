@@ -1,0 +1,14 @@
+*.swp
+*.so
+*.zip
+*.class
+
+.Trash/*
+Box/*
+Downloads/*
+Library/*
+Movies/*
+Music/*
+Pictures/*
+TV/*
+tmp/*

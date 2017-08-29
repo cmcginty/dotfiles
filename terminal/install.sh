@@ -8,4 +8,7 @@ if [[ "$OSTYPE" == darwin* ]]; then
 
    # install homebrew
    hash brew || ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+
+   # install ripgrep
+   hash rg || brew install ripgrep
 fi

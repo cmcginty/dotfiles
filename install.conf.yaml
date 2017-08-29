@@ -6,6 +6,7 @@
    ~/.gitconfig:     git/gitconfig
    ~/.gitexcludes:   git/gitexcludes
    ~/.gvimrc:        vim/gvimrc
+   ~/.ignore:        ignore
    ~/.ptpython/config.py:     python/ptpython_config.py
    ~/.ssh/authorized_keys:    ssh/authorized_keys
    ~/.ssh/box_rsa.pub:        ssh/box_rsa.pub
