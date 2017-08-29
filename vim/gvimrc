@@ -15,6 +15,7 @@ set browsedir=last   " use 'last' dir for file browsing
 " in OSX set the focus back the last iTerm instance
 if has("gui_macvim")
   autocmd VimLeave * :!osascript -e 'tell application "System Events" to tell process "iTerm2"' -e 'set frontmost to true' -e 'if windows is not {} then perform action "AXRaise" of item 1 of windows' -e 'end tell'
+  map <D-CR>   :set invfu<cr>
 endif
 
 " run local config options
