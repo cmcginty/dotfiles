@@ -70,7 +70,7 @@ Plug 'tpope/vim-git'                   " git config files
 " -- Markdown
 Plug 'plasticboy/vim-markdown'         " markdown support (REQUIRES VIM-TABULAR)
 " -- Golang
-Plug 'fatih/vim-go'                    " Go programming lang
+Plug 'fatih/vim-go',{'do': ':GoInstallBinaries'} " Go programming lang
 
 " devicons must load after other plugins it updates
 Plug 'ryanoasis/vim-devicons'       " icon'd fonts
