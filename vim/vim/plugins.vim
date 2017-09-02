@@ -42,6 +42,7 @@ Plug 'tpope/vim-repeat'                " enhance '.' repeat cmd
 Plug 'tpope/vim-sleuth'                " auto-detect indent size
 Plug 'tpope/vim-surround'              " quickly change parens,brackets,quotes
 Plug 'tpope/vim-unimpaired'            " bracket mappings
+Plug 'tpope/vim-dispatch'              " async complier commands
 
 " project
 Plug 'ctrlpvim/ctrlp.vim'           " quick file switcher
