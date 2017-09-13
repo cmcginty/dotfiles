@@ -169,7 +169,7 @@ zstyle ':prezto:module:python:virtualenv' auto-switch 'yes'
 #
 
 # Set the SSH identities to load into the agent.
-zstyle ':prezto:module:ssh:load' identities 'id_rsa'
+zstyle ':prezto:module:ssh:load' identities 'id_rsa' 'box_rsa'
 
 #
 # Syntax Highlighting
