@@ -11,4 +11,7 @@ if [[ "$OSTYPE" == darwin* ]]; then
 
    # install ripgrep
    hash rg || brew install ripgrep
+
+   # install GNU PGP
+   hash gpg || brew install gpg2
 fi

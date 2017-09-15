@@ -1,12 +1,13 @@
 [user]
    name = Casey McGinty
    email = casey.mcginty@gmail.com
+   signingkey = CDEB856BFAB22C72CE623BB1BA0229620046D260
 [color]
    ui = true
 [core]
    excludesfile = ~/.gitexcludes
 [format]
-   pretty = format:"%C(bold blue)%h%C(reset) [%C(green)%ar%Creset] %s, %C(cyan)%an% %C(bold yellow)%d%C(reset)"
+   pretty = format:"%C(bold blue)%h%C(reset) %G? [%C(green)%ar%Creset] %s, %C(cyan)%an% %C(bold yellow)%d%C(reset)"
 [push]
    default = simple
    recurseSubmodules = check
@@ -46,7 +47,7 @@
    nuke = "!f() { git branch -D $1; git push origin :$1; }; f"
    #--------------------
    cm = commit --verbose
-   cma = commit --verbose --amend --reset-author
+   cma  = commit --verbose --amend --reset-author
    cmaa = commit --verbose --amend --reset-author --all -C HEAD
    cmaf = commit --verbose --amend --reset-author --no-edit
    cmf = commit --fixup
@@ -105,6 +106,9 @@
    sub-sync = "!f() { git sub-checkout; git sub-update; }; f"
    sub-update = submodule update --init --recursive
    #--------------------
+   tg = tag --sign
+   ta = tag --sign
+   #--------------------
    up = remote update
    #--------------------
    # print current sha1 hash only
@@ -150,3 +154,5 @@
    indentHeuristic = true
 [include]
    path = ~/.gitconfig.local
+[commit]
+   gpgsign = true
