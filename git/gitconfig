@@ -7,7 +7,7 @@
 [core]
    excludesfile = ~/.gitexcludes
 [format]
-   pretty = format:"%C(bold blue)%h%C(reset) %G? [%C(green)%ar%Creset] %s, %C(cyan)%an% %C(bold yellow)%d%C(reset)"
+   pretty = format:"%C(bold blue)%h%C(reset) [%C(green)%ar%C(reset)] %s, %C(cyan)%an %C(reset)[%C(bold magenta)%G?%C(reset)]% %C(bold yellow)%d%C(reset)"
 [push]
    default = simple
    recurseSubmodules = check
