@@ -152,7 +152,7 @@
    enabled = true
 [diff]
    indentHeuristic = true
-[include]
-   path = ~/.gitconfig.local
 [commit]
    gpgsign = true
+[include]
+   path = ~/.gitconfig.local
