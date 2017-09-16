@@ -14,4 +14,5 @@ if [[ "$OSTYPE" == darwin* ]]; then
 
    # install GNU PGP
    hash gpg || brew install gpg2
+   hash keybase || brew install caskroom/cask/keybase
 fi
