@@ -38,6 +38,10 @@ alias ssl-x509-mod='openssl x509 -noout -modulus -in'
 alias ssl-x509der-issuer='openssl x509 -inform der -noout -issuer -in'
 alias ssl-x509der-ls='openssl x509 -inform der -noout -text -fingerprint -md5 -in'
 
+# SSH
+alias ssh-fingerprint='ssh-keygen -E md5 -lf'
+alias ssh-fingerprint-stdin='ssh-keygen -E md5 -lf /dev/stdin'
+
 # curl/httpie
 alias http='http --verbose --style=monokai'
 alias https='http --default-scheme=https'
