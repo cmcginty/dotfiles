@@ -38,5 +38,7 @@ desired character.
 | ----------------- | ----------- |
 | <kbd>a</kbd> | `<` and `>` |
 | <kbd>b</kbd> | `(` and `)` |
+| <kbd>B</kbd> | `{` and `}` |
+| <kbd>r</kbd> | `[` and `]` |
 | <kbd>p</kbd> | `<CR>` and `<CR>` |
 | <kbd>t</kbd> | XML tag |
