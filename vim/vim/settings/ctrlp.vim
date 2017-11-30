@@ -38,7 +38,7 @@ let g:ctrlp_prompt_mappings = { 'PrtExit()' : ['<bs>', '<c-[>', '<C-Space>'] }
 
 " Use ripgrep over grep
 if executable('rg')
-   let g:ctrlp_user_command = 'rg %s --files --color=never --glob ""'
+   let g:ctrlp_user_command = 'rg %s --hidden --no-ignore-vcs --files --color=never --glob ""'
    let g:ctrlp_use_caching = 0    " caching should not be needed
 else
    " ag and ripgrep ignore 'wildignore', instead use ~/.ignore config

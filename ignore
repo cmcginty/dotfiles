@@ -4,6 +4,7 @@
 *.class
 
 .Trash/*
+.git/*
 Box/*
 Downloads/*
 Library/*
