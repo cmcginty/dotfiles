@@ -33,7 +33,6 @@ Plug 'zcodes/vim-colors-basic'
 
 " extensions
 Plug 'christoomey/vim-sort-motion'     " sorting w/ motion commands
-Plug 'ervandew/matchem'                " automatically close quotes, etc.
 Plug 'godlygeek/tabular'               " auto-format ASCII tables
 Plug 'michaeljsmith/vim-indent-object' " select indent blocks (Python)
 Plug 'svermeulen/vim-easyclip'         " copy/paste
