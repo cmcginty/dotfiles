@@ -40,6 +40,8 @@ elif [[ "$OSTYPE" == darwin* ]]; then
    defaults write org.vim.MacVim SUEnableAutomaticChecks -bool false
    # disable title bar (set true)
    defaults write org.vim.MacVim MMNoTitleBarWindow false
+   # fix blank/black sreen issues
+   defaults write org.vim.MacVim MMUseCGLayerAlways -bool YES
 fi
 
 # clean install/update plugins
