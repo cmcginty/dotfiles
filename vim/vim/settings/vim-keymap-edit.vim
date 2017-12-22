@@ -47,3 +47,9 @@ nnoremap <leader>z   za
 nnoremap <leader>Z   zA
 "create a fold over a visual range
 vnoremap <leader>z   zf
+
+" faster motion commands for quotes and brackets
+onoremap q i'
+onoremap Q i"
+onoremap ia i]
+onoremap aa a]

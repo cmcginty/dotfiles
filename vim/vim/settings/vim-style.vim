@@ -27,3 +27,6 @@ set fileformat=unix  " default line-ending format
 " r = auto-insert comment leader after <CR>
 " t = auto-wrap text (DISABLE for source code)
 set formatoptions+=cjnoqrt
+
+" show values for leading whitespace (type 'col' to toggle on/off)
+set listchars=tab:>-,trail:·
