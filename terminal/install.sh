@@ -4,7 +4,7 @@ IFS=$'\n\t'
 
 if [[ "$OSTYPE" == darwin* ]]; then
    # add command line tools
-   xcode-select -p >/dev/null || xcode-select --install
+   xcode-select --install 2> /dev/null || true
 
    # install homebrew
    hash brew || ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"

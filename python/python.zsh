@@ -37,5 +37,6 @@ alias deactivate='pyenv deactivate'
 alias pydoc='python -m pydoc'
 
 alias nose='nosetests -vs --pdb'
-
 alias pt='ptpython'
+alias pip-update='pip3 list --outdated --format=freeze |
+  grep -v \^\-e | cut -d = -f 1 | xargs -n1 pip3 install -U'

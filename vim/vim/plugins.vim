@@ -58,10 +58,11 @@ Plug 'airblade/vim-gitgutter'       " highlight git diffs
 " --- Multiple
 " Plug 'sheerun/vim-polyglot'            " multiple language packs
 " --- Python
-Plug 'hynek/vim-python-pep8-indent'    " Python pep8 auto-indent
-Plug 'vim-python/python-syntax'        " better Python syntax highlighting
 Plug 'davidhalter/jedi-vim'            " Python code completion
-"Plug 'tmhedberg/SimpylFold'           " improves Python folding (very slow)
+Plug 'fisadev/vim-isort'               " Module sorting
+Plug 'hynek/vim-python-pep8-indent'    " Python pep8 auto-indent
+Plug 'tmhedberg/SimpylFold'            " improves Python folding (very slow)
+Plug 'vim-python/python-syntax'        " better Python syntax highlighting
 " --- Gradle/Groovy
 Plug 'tfnico/vim-gradle'               " gradle build tool
 Plug 'vim-scripts/groovyindent-unix'   " groovy indents syntax

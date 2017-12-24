@@ -2,6 +2,14 @@
 set -eou pipefail
 IFS=$'\n\t'
 
+# Fail if inside of a virtual environment
+set +u
+if [[ -n "$PYENV_VERSION" ]] && [[ "$PYENV_VERSION" != "system" ]]; then
+   echo ERROR: PYENV set to \"$PYENV_VERSION\"
+   exit 1
+fi
+set -u
+
 if [[ "$OSTYPE" == linux* ]]; then
 
    hash gvim || sudo apt-get install -y vim vim-gnome
@@ -20,10 +28,11 @@ if [[ "$OSTYPE" == linux* ]]; then
    hash js-beautify        || sudo npm install -g js-beautify
    hash remark             || sudo npm install -g remark
    hash tidy               || sudo apt-get install -y tidy
-   hash yapf               || sudo pip install --upgrade yapf
+   pip3 install --quiet --upgrade yapf
 
 elif [[ "$OSTYPE" == darwin* ]]; then
 
+   hash python3 || brew install python3
    hash gvim   || brew install macvim --with-override-system-vim
    hash node   || brew install node
    hash npm    || brew install npm
@@ -34,7 +43,10 @@ elif [[ "$OSTYPE" == darwin* ]]; then
    hash js-beautify        || npm install -g js-beautify
    hash remark             || npm install -g remark
    hash tidy               || brew install -y tidy
-   hash yapf               || pip install --upgrade yapf
+
+   # yapf: code formatter
+   # isort: vim-isort dependency
+   pip3 install --quiet --upgrade yapf isort
 
    # disable auto-update prompts
    defaults write org.vim.MacVim SUEnableAutomaticChecks -bool false
