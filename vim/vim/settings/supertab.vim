@@ -5,3 +5,7 @@
 " The fallback mode can be modified with g:SuperTabContextDefaultCompletionType
 " or call SuperTabSetDefaultCompletionType()
 let g:SuperTabDefaultCompletionType = "context"
+
+" During completion, a small preview windows is opened, but does not close
+" automatically. This setting will remove the preview pane after completion.
+let g:SuperTabClosePreviewOnPopupClose = 1
