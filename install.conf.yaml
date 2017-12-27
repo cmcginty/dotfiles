@@ -2,6 +2,7 @@
 
 - link:
    ~/.clang-format:  vim/clang-format
+   ~/.config/yapf:   yapf
    ~/.dotfiles:      ''
    ~/.gitconfig:     git/gitconfig
    ~/.gitexcludes:   git/gitexcludes
