@@ -48,8 +48,49 @@ nnoremap <leader>Z   zA
 "create a fold over a visual range
 vnoremap <leader>z   zf
 
-" faster motion commands for quotes and brackets
-onoremap q i'
-onoremap Q i"
-onoremap ia i]
-onoremap aa a]
+" faster motion commands for quotes and brackets.
+" Examples:
+"  delete = d <map>
+"  yank   = y <map>
+"  change = c <map>
+"  move   = m <map>   (w/ EasyClip plugin enabled)
+" p = (
+" B = {
+" r = [
+" A = <
+" Q = "
+" t == <tag>
+" WARNING: do not map letters i, a, b, q
+onoremap "     i"
+" search for next item
+onoremap n"    :<C-u>normal! f"lvi"<cr>
+
+onoremap '     i'
+onoremap n'    :<C-u>normal! f'lvi'<cr>
+
+onoremap (     i(
+onoremap p     i(
+onoremap ap    a(
+onoremap n(    :<C-u>normal! f(lvi(<cr>
+onoremap np    :<C-u>normal! f(lvi(<cr>
+
+onoremap {     i{
+onoremap B     i{
+onoremap aB    a{
+onoremap n{    :<C-u>normal! f{lvi{<cr>
+onoremap nB    :<C-u>normal! f{lvi{<cr>
+
+onoremap [     i[
+onoremap r     i[
+onoremap ar    a[
+onoremap n[    :<C-u>normal! f[lvi[<cr>
+onoremap nr    :<C-u>normal! f[lvi[<cr>
+
+onoremap <     i<
+onoremap A     i<
+onoremap aA    a<
+onoremap n<    :<C-u>normal! f<lvi<<cr>
+onoremap nA    :<C-u>normal! f<lvi<<cr>
+
+onoremap t     it
+onoremap nt    :<C-u>normal! f<lvit<cr>

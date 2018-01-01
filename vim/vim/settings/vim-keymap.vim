@@ -40,3 +40,6 @@ nnoremap <silent> <leader>` :so $MYVIMRC<cr>
 
 " set make: command shortcut to run 'makeprg' file-type command
 nnoremap <silent> <leader>m :make<cr>
+
+" disable ex mode (you probably don't use this)
+nnoremap Q <nop>
