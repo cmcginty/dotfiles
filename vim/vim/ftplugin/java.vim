@@ -9,6 +9,3 @@ map <silent> <leader>m     :wall<bar>make classes compileTestJava -Dorg.gradle.p
 "        [q    Previous error
 "        [Q    First error
 "        ]Q    Last error
-
-" increase max line length and match
-setlocal textwidth=100

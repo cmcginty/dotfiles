@@ -8,11 +8,11 @@ set sidescroll=1     " prevent text 'jumping' left when writing a long line
 set sidescrolloff=0  " do not scroll until cursor reaches edge of the screen
 
 set expandtab        " use spaces instead of tabs
-set shiftwidth=3     " set 'shift' size
-set softtabstop=3    " set 'tab' size during indent mode
-set tabstop=3        " set tab character size
+set shiftwidth=4     " set 'shift' size
+set softtabstop=4    " set 'tab' size during indent mode
+set tabstop=4        " set tab character size
 
-set textwidth=80     " line length before wrapping text
+set textwidth=100    " line length before wrapping text
 set colorcolumn=+1   " highlight column after textwidth size
 
 set fileformat=unix  " default line-ending format
