@@ -18,4 +18,7 @@ if [[ "$OSTYPE" == darwin* ]]; then
 
    # install mosh SSH client
    hash mosh || brew install mosh
+
+   # install moreutils for useful command line tools
+   hash sponge || brew install moreutils
 fi
