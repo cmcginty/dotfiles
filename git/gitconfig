@@ -152,6 +152,7 @@
    enabled = true
 [diff]
    indentHeuristic = true
+   colorMoved = plain
 [commit]
    gpgsign = true
 [include]
