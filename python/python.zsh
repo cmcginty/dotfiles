@@ -21,13 +21,11 @@
 #  http://blog.froehlichundfrei.de/2014/11/30/my-transition-to-python3-and-pyenv-goodby-virtualenvwrapper.html
 
 # disable the builtin prompt since it's managed by ZSH
+# TODO: Remove when prezto#1579 is merged.
 export VIRTUAL_ENV_DISABLE_PROMPT=1
 
-# NOTE: for convenience since prezto sets the pyenv PATH
-export PYENV_ROOT="$HOME/.pyenv"
-
-# NOTE: prezto provides 'pyenv init' already
-eval "$(pyenv virtualenv-init -)"
+# Uncomment if the pyenv stops working or runs slowly.
+# export PYENV_DEBUG=1
 
 # virtualenv aliases
 alias venv='pyenv virtualenv'

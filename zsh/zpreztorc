@@ -15,6 +15,9 @@
 # Color output (auto set to 'no' on dumb terminals).
 zstyle ':prezto:*:*' color 'yes'
 
+# Add additional directories to load prezto modules from
+# zstyle ':prezto:load' pmodule-dirs $HOME/.zprezto-contrib
+
 # Set the Zsh modules to load (man zshmodules).
 # zstyle ':prezto:load' zmodule 'attr' 'stat'
 
@@ -26,7 +29,6 @@ zstyle ':prezto:*:*' color 'yes'
 zstyle ':prezto:load' pmodule \
   'archive' \
   'command-not-found' \
-  'completion' \
   'directory' \
   'docker' \
   'editor' \
@@ -44,6 +46,7 @@ zstyle ':prezto:load' pmodule \
   'tmux' \
   'utility' \
   \
+  'completion' \
   'syntax-highlighting' \
   'history-substring-search' \
   'prompt'                       # WARN: must be last
@@ -111,7 +114,7 @@ zstyle ':prezto:module:history-substring-search:color' found 'bg=228,fg=232,bold
 # zstyle ':prezto:module:history-substring-search' globbing-flags ''
 
 #
-# OS X
+# macOS
 #
 
 # Set the keyword used by `mand` to open man pages in Dash.app
@@ -137,6 +140,10 @@ zstyle ':prezto:module:prompt' theme 'off'
 # By default, it is set to 'short'. Set it to 'long' (without '~' expansion)
 # for longer or 'full' (with '~' expansion) for even longer prompt display.
 zstyle ':prezto:module:prompt' pwd-length 'long'
+
+# Set the prompt to display the return code along with an indicator for non-zero
+# return codes. This is not supported by all prompts.
+zstyle ':prezto:module:prompt' show-return-val 'yes'
 
 #
 # Ruby
