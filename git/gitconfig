@@ -114,7 +114,7 @@
    # print current sha1 hash only
    sha = rev-parse --short
    # list commit authors
-   who = "!f() { git shortlog -s | sort -rn; }; f"
+   who = shortlog -sn
    # print branch names of HEAD
    where = log -1 --pretty=format:%d
    # start RO server
