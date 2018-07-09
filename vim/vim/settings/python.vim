@@ -1,5 +1,9 @@
-" ensure python3 is compiled into vim
-py3 import sys
+if has('python3')
+    " Disable 'import imp' deprecation warnings; github.com/powerline/powerline#1925
+    silent! python3 1
+else
+    echoerr "Python3 support not found!"
+endif
 
 function Py3test()
     py3 import time
