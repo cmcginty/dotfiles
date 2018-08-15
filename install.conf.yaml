@@ -9,7 +9,9 @@
    ~/.gvimrc:        vim/gvimrc
    ~/.ignore:        ignore
    ~/.isort.cfg:     python/isort.cfg
-   ~/.ptpython/config.py:     python/ptpython_config.py
+   ~/.ptpython/config.py:
+      path: python/ptpython_config.py
+      create: true
    ~/.ssh/authorized_keys:    ssh/authorized_keys
    ~/.ssh/box_rsa.pub:        ssh/box_rsa.pub
    ~/.ssh/id_rsa.pub:         ssh/id_rsa.pub

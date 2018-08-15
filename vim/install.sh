@@ -26,7 +26,7 @@ if [[ "$OSTYPE" == linux* ]]; then
    hash astyle             || sudo apt-get install -y astyle/trusty-backports
    hash clang-format       || sudo apt-get install -y clang-format
    hash js-beautify        || sudo npm install -g js-beautify
-   hash remark             || sudo npm install -g remark
+   hash remark             || sudo npm install -g remark-cli
    hash tidy               || sudo apt-get install -y tidy
    pip3 install --quiet --upgrade yapf
 
@@ -41,7 +41,7 @@ elif [[ "$OSTYPE" == darwin* ]]; then
    hash astyle             || brew install astyle
    hash clang-format       || brew install clang-format
    hash js-beautify        || npm install -g js-beautify
-   hash remark             || npm install -g remark
+   hash remark             || npm install -g remark-cli
    hash tidy               || brew install -y tidy
 
    # yapf: code formatter

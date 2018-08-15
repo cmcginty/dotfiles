@@ -6,4 +6,4 @@ set sps=best,5    " limit to 5 best suggestions
 set spellfile=~/.vim/spell/words.utf8.add
 
 " regenerate spell file from source when starting Vim
-exec 'silent mkspell! ' . &spellfile . '.spl'
+exec 'silent mkspell! ' . &spellfile
