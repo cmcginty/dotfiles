@@ -7,6 +7,7 @@
    ~/.gitconfig:     git/gitconfig
    ~/.gitexcludes:   git/gitexcludes
    ~/.gvimrc:        vim/gvimrc
+   ~/.hgrc:          hgrc
    ~/.ignore:        ignore
    ~/.isort.cfg:     python/isort.cfg
    ~/.ptpython/config.py:

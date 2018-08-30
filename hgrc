@@ -1,0 +1,36 @@
+[ui]
+username = Casey McGinty <cmcginty@fb.com>
+merge = p4merge
+
+[extensions]
+hgext.extdiff =
+
+[extdiff]
+cmd.p4diff = p4merge
+
+[tortoisehg]
+vdiff = p4diff
+
+[merge-tools]
+p4merge.priority = 100
+p4merge.premerge = True
+p4merge.gui = True
+p4merge.args = $base $local $other $output
+p4merge.diffargs = $parent $child
+p4merge.diff3args = $child $parent1 $parent2
+p4merge.dirdiff = False
+p4merge.checkchanged = True
+
+[alias]
+bot     = "prev --bottom"
+cm      = "commit"
+cmi     = "commit --interactive"
+cma     = "commit --amend"
+lg      = "sl"
+lgg     = "ssl"
+lgh     = "sl --hidden"
+rba     = "rebase --dest master --rev 'draft()'"
+slh     = "sl --hidden"
+top     = "next --top"
+u       = "undo"
+di      = "diff"

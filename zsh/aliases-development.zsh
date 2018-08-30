@@ -42,7 +42,11 @@ alias ssl-x509der-ls='openssl x509 -inform der -noout -text -fingerprint -md5 -i
 alias ssh-fingerprint='ssh-keygen -E md5 -lf'
 alias ssh-fingerprint-stdin='ssh-keygen -E md5 -lf /dev/stdin'
 alias msh='mosh'
+alias et='et --port 8080'
 
 # curl/httpie
 alias http='http --verbose --style=monokai'
 alias https='http --default-scheme=https'
+
+# Mercurial
+alias h='hg'
