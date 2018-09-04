@@ -22,15 +22,20 @@ p4merge.dirdiff = False
 p4merge.checkchanged = True
 
 [alias]
-bot     = "prev --bottom"
-cm      = "commit"
-cmi     = "commit --interactive"
-cma     = "commit --amend"
-lg      = "sl"
-lgg     = "ssl"
-lgh     = "sl --hidden"
-rba     = "rebase --dest master --rev 'draft()'"
-slh     = "sl --hidden"
-top     = "next --top"
-u       = "undo"
-di      = "diff"
+bot     = 'prev --bottom'
+br      = 'bookmark'
+cm      = 'commit'
+cma     = 'commit --amend'
+cmi     = 'commit --interactive'
+co      = 'checkout'
+di      = 'diff'
+lg      = 'sl'
+lgg     = 'ssl'
+lgh     = 'sl --hidden'
+pl      = 'pull'
+# rebase all draft commits
+rba     = 'rebase --dest master --rev 'draft()''
+rbi     = 'rebase --interactive'
+slh     = 'sl --hidden'
+top     = 'next --top'
+u       = 'undo'
