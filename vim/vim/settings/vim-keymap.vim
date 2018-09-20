@@ -31,9 +31,13 @@ noremap! <F1> <ESC>
 
 " <esc> alternatives that are faster
 inoremap kj          <ESC>
-noremap! <C-space>   <ESC>
+inoremap <C-space>   <ESC>
 vnoremap <C-space>   <ESC>
-nnoremap <C-space>   <NOP>
+cnoremap <C-space>   <C-c>
+" When in terminal, <C-space> gets interpreted as <C-@>
+imap     <C-@>       <C-space>
+vmap     <C-@>       <C-space>
+cmap     <C-@>       <C-space>
 
 " quickly reload the vimrc file
 nnoremap <silent> <leader>` :so $MYVIMRC<cr>
