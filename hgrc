@@ -5,34 +5,37 @@ merge = p4merge
 [extensions]
 hgext.extdiff =
 
+[extdiff]
+cmd.p4merge = /Applications/p4merge.app/Contents/Resources/launchp4merge
+
 [merge-tools]
-p4merge.priority = 100
 p4merge.executable = /Applications/p4merge.app/Contents/Resources/launchp4merge
 p4merge.args = $base $local $other $output
-p4merge.binary = False
-p4merge.checkchanged = True
-p4merge.dirdiff = False
-p4merge.gui = True
-p4merge.premerge = True
+p4merge.binary = false
+p4merge.checkchanged = true
+p4merge.dirdiff = false
+p4merge.gui = true
+p4merge.premerge = true
 
 [alias]
-bot     = 'prev --bottom'
-br      = 'bookmark'
-cm      = 'commit'
-cma     = 'commit --amend'
-cmi     = 'commit --interactive'
-co      = 'checkout'
-di      = 'diff'
-lg      = 'sl'
-lgg     = 'ssl'
-lgh     = 'sl --hidden'
-pl      = 'pull'
+bot     = prev --bottom
+br      = bookmark
+cm      = commit
+cma     = commit --amend
+cmi     = commit --interactive
+co      = checkout
+di      = diff
+lg      = sl
+lgg     = ssl
+lgh     = sl --hidden
+pl      = pull
 # rebase all draft commits
-rba     = 'rebase --dest master --rev 'draft()''
-rbi     = 'rebase --interactive'
-slh     = 'sl --hidden'
-top     = 'next --top'
-u       = 'undo'
-rt      = 'revert'
-rta     = 'revert --all'
-rsh     = 'revert --all' # hard reset
+rba     = rebase --dest master --rev 'draft()'
+rbi     = rebase --interactive
+rsh     = revert --all
+rt      = revert
+rta     = revert --all
+slh     = sl --hidden
+sp      = sparse
+top     = next --top
+u       = undo
