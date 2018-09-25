@@ -21,4 +21,37 @@ if [[ "$OSTYPE" == darwin* ]]; then
 
    # install moreutils for useful command line tools
    hash sponge || brew install moreutils
+
+   # install bat for improved "cat"
+   hash bat || brew install bat
+
+   # install visual "ping"
+   hash prettyping || brew install prettyping
+
+   # install colorized "top"
+   hash htop || brew install htop
+
+   # install colorized diff for git
+   hash diff-so-fancy || brew install diff-so-fancy
+
+   # install improved "find" tool
+   hash fd || brew install fd
+
+   # install improved disk usage visualizer
+   hash ncdu || brew install ncdu
+
+   # install simplified man pages
+   hash tldr || brew install tldr
+
+   # install JSON parser
+   hash jq || brew install jq
+
+   # install desktop CLI notifier
+   hash noti || brew install noti
+
+   # install fzf fuzzy searcher "Ctrl-R" support
+   hash fzf || brew install fzf
+   if [[ ! -f ~/.fzf.zsh ]]; then
+      $(brew --prefix)/opt/fzf/install
+   fi
 fi

@@ -5,5 +5,5 @@ set gdefault      " always use /g for %s/foo/bar/
 
 " Use ripgrep over grep
 if executable('rg')
-   set grepprg=rg\ --color=never
+   set grepprg=rg\ --color=never\ --vimgrep
 endif

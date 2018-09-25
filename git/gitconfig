@@ -23,6 +23,9 @@
    autosquash = true
    # stash uncommited changes during rebase
    autostash = true
+[pager]
+   diff = diff-so-fancy | less --tabs=1,5 -RFX
+   show = diff-so-fancy | less --tabs=1,5 -RFX
 [mergetool "meld"]
    cmd = meld \"$LOCAL\" \"$MERGED\" \"$REMOTE\"
 [mergetool "p4merge-osx"]

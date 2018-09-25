@@ -27,3 +27,5 @@ for subdir (zsh terminal git vim python)
 
 # finalize local config
 for config_file ($HOME/.zsh.after/*.zsh(N)) source $config_file
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
