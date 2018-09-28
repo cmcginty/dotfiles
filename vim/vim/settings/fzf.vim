@@ -34,13 +34,10 @@ let g:fzf_history_dir = '~/.local/share/fzf-history'
 " [Buffers] Jump to the existing window if possible
 let g:fzf_buffers_jump = 1
 
-" From FZF Advanced README; Add "Rg" command to search using ripgrep
+" Replaces default Rg command with non-color version
 command! -bang -nargs=* Rg
   \ call fzf#vim#grep(
-  \   'rg --column --line-number --no-heading --color=never --smart-case '.shellescape(<q-args>), 1,
-  \   <bang>0 ? fzf#vim#with_preview('up:60%')
-  \           : fzf#vim#with_preview('right:50%:hidden', '?'),
-  \   <bang>0)
+  \     "rg --column --line-number --no-heading --color=never --smart-case ".shellescape(<q-args>), 1, <bang>0)
 
 " Search/open a file (closes the NerdTree tab for convenience)
 nnoremap <C-o> :NERDTreeClose\|Files<cr>
