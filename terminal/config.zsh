@@ -8,22 +8,39 @@ if [[ "$OSTYPE" == darwin* ]]; then
    # increase key repeat rate
    defaults write -g InitialKeyRepeat -int 14   # normal minimum is 15 (225 ms)
    defaults write -g KeyRepeat -int 2           # normal minimum is 2 (30 ms)
+
+   # fix homebrew dir permissions
+   alias brewfix="sudo chown -R $(whoami) /usr/local/lib /usr/local/sbin"
+
+   # replace legacy UNIX tools with OSX-only commands
+   alias cat='bat'
+   alias less='bat'
+   alias du='ncdu --color dark -rr -x --exclude .git --exclude node_modules'
+   alias help='tldr'
+   alias noti='noti -bs'  # banner/speak when done
+   alias notiw='noti -w $!'  # watch the last process
+   alias ping='prettyping --nolegend'
 fi
 
-# fix homebrew dir permissions
-alias brewfix="sudo chown -R $(whoami) /usr/local/lib /usr/local/sbin"
+# replace legacy UNIX tools with improved commands
+alias grep='rg'
+alias top='sudo htop'
+alias rgl='rg --files-with-matches'
 
-# replace legacy unix tools with newer versions
-alias cat='bat'
-alias ping='prettyping --nolegend'
-alias top="sudo htop"
-alias du='ncdu --color dark -rr -x --exclude .git --exclude node_modules'
-alias help='tldr'
-alias noti='noti -bs'  # banner/speak when done
-
-## FZF fuzzy searcher
+# ---------------------
+# FZF fuzzy searcher
 # NOTE: Set "Option" key to Esc+ in Iterm->Preferences->Profile->Keys
-export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -200'"  # enable visual tree
-export FZF_DEFAULT_OPTS="--bind='ctrl-o:execute(gvim {})+abort'"  # Ctrl-O opens file in vim
-export FZF_TMUX=1  # tmux support
+
+local FZF_CTRLO="ctrl-o:execute-silent(gvim {})+abort"          # Ctrl-O open file in vim
+local FZF_CTRLY="ctrl-y:execute-silent(echo {}|pbcopy)+abort"   # Ctrl-Y copy the line
+
+export FZF_DEFAULT_COMMAND="fd --type f"                            # use fd
+export FZF_ALT_C_COMMAND="fd --type d"                              # use fd
+export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -200'"          # enable visual tree
+export FZF_DEFAULT_OPTS="--bind='$FZF_CTRLO,$FZF_CTRLY'"            # bind keys
+export FZF_TMUX=1                                                   # tmux support
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
 alias preview="fzf --preview 'bat --color \"always\" {}'"
+# preview all files that contain string
+function rgp() { rg --files-with-matches $@ | preview }

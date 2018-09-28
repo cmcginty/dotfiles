@@ -44,11 +44,12 @@ Plug 'tpope/vim-unimpaired'            " bracket mappings
 Plug 'tpope/vim-dispatch'              " async complier commands
 
 " project
-Plug 'ctrlpvim/ctrlp.vim'           " quick file switcher
-Plug 'scrooloose/nerdtree'          " THE file browser
-Plug 'ervandew/supertab'            " TAB completion (C-n/C-p)
+Plug '/usr/local/opt/fzf'           " FZF lib
 Plug 'Chiel92/vim-autoformat'       " code formatting
+Plug 'ervandew/supertab'            " TAB completion (C-n/C-p)
+Plug 'junegunn/fzf.vim'             " FZF search commands (replace ctrlp)
 Plug 'majutsushi/tagbar'            " code outline view
+Plug 'scrooloose/nerdtree'          " THE file browser
 
 " git
 Plug 'tpope/vim-fugitive'           " git support

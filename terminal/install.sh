@@ -49,6 +49,9 @@ if [[ "$OSTYPE" == darwin* ]]; then
    # install desktop CLI notifier
    hash noti || brew install noti
 
+   # install colorized "curl"
+   hash http || brew install httpie
+
    # install fzf fuzzy searcher "Ctrl-R" support
    hash fzf || brew install fzf
    if [[ ! -f ~/.fzf.zsh ]]; then
