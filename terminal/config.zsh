@@ -36,10 +36,11 @@ local FZF_CTRLY="ctrl-y:execute-silent(echo {}|pbcopy)+abort"   # Ctrl-Y copy th
 
 export FZF_DEFAULT_COMMAND="fd --type f"                            # use fd
 export FZF_ALT_C_COMMAND="fd --type d"                              # use fd
-export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -200'"          # enable visual tree
+export FZF_ALT_C_OPTS="--select-1 --exit-0 --preview 'tree -C {} | head -200'"          # enable visual tree
 export FZF_DEFAULT_OPTS="--bind='$FZF_CTRLO,$FZF_CTRLY'"            # bind keys
 export FZF_TMUX=1                                                   # tmux support
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_CTRL_T_OPTS="--select-1 --exit-0"
 
 alias preview="fzf --preview 'bat --color \"always\" {}'"
 # preview all files that contain string

@@ -6,6 +6,8 @@ let g:fzf_action = {
 " Default fzf layout
 " - down / up / left / right
 let g:fzf_layout = { 'up': '~30%' }
+" Place the 1st result at the top and input line on the bottom
+let $FZF_DEFAULT_OPTS .= ' --layout=reverse-list'
 
 " Customize fzf colors to match your color scheme
 let g:fzf_colors =
