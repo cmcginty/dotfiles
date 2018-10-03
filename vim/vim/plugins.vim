@@ -64,6 +64,7 @@ Plug 'fisadev/vim-isort'               " Module sorting
 Plug 'hynek/vim-python-pep8-indent'    " Python pep8 auto-indent
 Plug 'tmhedberg/SimpylFold'            " improves Python folding (very slow)
 Plug 'vim-python/python-syntax'        " better Python syntax highlighting
+Plug 'ambv/black'                      " code formatting
 " --- Gradle/Groovy
 Plug 'tfnico/vim-gradle'               " gradle build tool
 Plug 'vim-scripts/groovyindent-unix'   " groovy indents syntax
