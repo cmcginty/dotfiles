@@ -14,7 +14,7 @@ if [[ "$OSTYPE" == darwin* ]]; then
 
    # replace legacy UNIX tools with OSX-only commands
    alias cat='bat'
-   alias less='bat'
+   alias less='bat --wrap=never'
    alias du='ncdu --color dark -rr -x --exclude .git --exclude node_modules'
    alias help='tldr'
    alias noti='noti -bs'  # banner/speak when done

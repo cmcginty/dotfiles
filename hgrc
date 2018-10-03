@@ -1,6 +1,7 @@
 [ui]
 username = Casey McGinty <cmcginty@fb.com>
 merge = p4merge
+style = compact
 
 [extensions]
 hgext.extdiff =
@@ -25,17 +26,23 @@ cma     = commit --amend
 cmi     = commit --interactive
 co      = checkout
 di      = diff
-lg      = sl
-lgg     = ssl
-lgh     = sl --hidden
-pl      = pull
+drop    = hide
+fetch   = pull
+lg      = log --template '\x1B[34m{node|short}\x1B[0m [\x1B[32m{date|age}\x1B[0m] {desc|firstline}, \x1B[36m{author|person}\x1B[0m\n'
+lgm     = log
+lgp     = log -p
+pl      = pull --rebase -d master
+pull    = pull --rebase -d master
+slh     = sl --hidden
 # rebase all draft commits
 rba     = rebase --dest master --rev 'draft()'
 rbi     = rebase --interactive
 rsh     = revert --all
 rt      = revert
 rta     = revert --all
+sha     = identify
 slh     = sl --hidden
+slp     = sl -p
 sp      = sparse
 top     = next --top
 u       = undo
