@@ -1,9 +1,12 @@
 - clean: ['~']
 
 - link:
+   ~/.atom/init.coffee: atom/init.coffee
+   ~/.atom/keymap.cson: atom/keymap.cson
+   ~/.atom/styles.less: atom/styles.less
    ~/.clang-format:  vim/clang-format
    ~/.config/yapf:   yapf
-   ~/.dotfiles:      ''
+   ~/.dotfiles:      .
    ~/.gitconfig:     git/gitconfig
    ~/.gitexcludes:   git/gitexcludes
    ~/.gvimrc:        vim/gvimrc

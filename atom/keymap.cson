@@ -1,0 +1,25 @@
+# all
+# ----------------------------------------
+'atom-text-editor.vim-mode-plus':
+
+    # mode switch
+    'ctrl-space': 'vim-mode-plus:reset-normal-mode'
+
+    # undo/redo
+    'ctrl-u': 'vim-mode-plus:redo'
+
+    # motions
+    'ctrl-h': 'vim-mode-plus:previous-tab'
+    'ctrl-l': 'vim-mode-plus:next-tab'
+    'ctrl-k': 'vim-mode-plus:scroll-half-screen-up'
+    'ctrl-j': 'vim-mode-plus:scroll-half-screen-down'
+
+    # file operations
+    'ctrl-s': 'custom:vim-save'
+    'ctrl-d': 'tabs:close-tab'
+
+    # search
+    'ctrl-f': 'vim-mode-plus:search-current-word'
+
+    # code navigation
+    'ctrl-t': 'nuclide-navigation-stack:navigate-backwards'
