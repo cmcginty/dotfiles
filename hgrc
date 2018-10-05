@@ -19,6 +19,8 @@ p4merge.gui = true
 p4merge.premerge = true
 
 [alias]
+# e.g commit --amend
+cam     = amend
 bot     = prev --bottom
 br      = bookmark
 cm      = commit
@@ -34,9 +36,9 @@ lgp     = log -p
 pl      = pull --rebase -d master
 pull    = pull --rebase -d master
 slh     = sl --hidden
-# rebase all draft commits
+# rebase all local branches
 rba     = rebase --dest master --rev 'draft()'
-rbi     = rebase --interactive
+rbi     = histedit
 rsh     = revert --all
 rt      = revert
 rta     = revert --all
