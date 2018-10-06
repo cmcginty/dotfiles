@@ -57,4 +57,7 @@ if [[ "$OSTYPE" == darwin* ]]; then
    if [[ ! -f ~/.fzf.zsh ]]; then
       $(brew --prefix)/opt/fzf/install
    fi
+
+   # install pv to monitor slow shell pipe commands
+   hash pv || brew install pv
 fi
