@@ -17,6 +17,7 @@
     # file operations
     'ctrl-s': 'custom:vim-save'
     'ctrl-d': 'tabs:close-tab'
+    'ctrl-shift-t': 'pane:reopen-closed-item'
 
     # search
     'ctrl-f': 'vim-mode-plus:search-current-word'
