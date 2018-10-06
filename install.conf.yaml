@@ -1,7 +1,9 @@
 - clean: ['~']
 
 - link:
-   ~/.atom/init.coffee: atom/init.coffee
+   ~/.atom/init.coffee:
+      path: atom/init.coffee
+      create: true
    ~/.atom/keymap.cson: atom/keymap.cson
    ~/.atom/styles.less: atom/styles.less
    ~/.clang-format:  vim/clang-format
@@ -49,6 +51,11 @@
    -
       command: python/install.sh
       description: Install Python features
+      stdin: true
+      stdout: true
+   -
+      command: atom/install.sh
+      description: Install atom
       stdin: true
       stdout: true
    -
