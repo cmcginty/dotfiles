@@ -1,0 +1,14 @@
+atom-beautify@0.33.4
+atom-material-syntax@1.0.8
+autocomplete-python@1.10.12
+file-icons@2.1.25
+highlight-selected@0.14.0
+jackhammer-syntax@1.1.0
+markdown-preview-plus@3.7.0
+monokai@0.24.0
+pigments@0.40.2
+predawn-syntax@1.0.4
+sort-lines@0.18.0
+todo-show@2.3.2
+vim-mode-plus@1.35.0
+vim-mode-plus-keymaps-for-surround@0.2.1

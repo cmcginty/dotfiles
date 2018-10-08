@@ -1,0 +1,26 @@
+"*":
+  "atom-beautify":
+    general:
+      _analyticsUserId: "aab204c6-1c8e-47d3-afaa-31c509007127"
+  "autocomplete-python":
+    useKite: false
+  core:
+    disabledPackages: [
+      "markdown-preview"
+    ]
+    telemetryConsent: "limited"
+    themes: [
+      "one-dark-ui"
+      "monokai"
+    ]
+  editor:
+    fontFamily: "UbuntuMono Nerd Font"
+    fontSize: 13
+    lineHeight: 1.1
+    showIndentGuide: true
+  "exception-reporting":
+    userId: "b3bd855a-38b4-44af-961e-0c6cfa5383f2"
+  welcome:
+    showOnStartup: false
+  whitespace:
+    ignoreWhitespaceOnCurrentLine: false

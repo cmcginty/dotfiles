@@ -1,5 +1,17 @@
 # all
 # ----------------------------------------
+'body':
+    # tab navigation
+    'ctrl-d': 'core:close'
+    'ctrl-h': 'pane:show-previous-item'
+    'ctrl-l': 'pane:show-next-item'
+    'ctrl-shift-t': 'pane:reopen-closed-item'
+
+    # file operations
+    'ctrl-o': 'fuzzy-finder:toggle-file-finder'
+
+# editor
+# ----------------------------------------
 'atom-text-editor.vim-mode-plus':
 
     # mode switch
@@ -9,18 +21,18 @@
     'ctrl-u': 'vim-mode-plus:redo'
 
     # motions
-    'ctrl-h': 'vim-mode-plus:previous-tab'
-    'ctrl-l': 'vim-mode-plus:next-tab'
-    'ctrl-k': 'vim-mode-plus:scroll-half-screen-up'
     'ctrl-j': 'vim-mode-plus:scroll-half-screen-down'
+    'ctrl-k': 'vim-mode-plus:scroll-half-screen-up'
 
     # file operations
     'ctrl-s': 'custom:vim-save'
-    'ctrl-d': 'tabs:close-tab'
-    'ctrl-shift-t': 'pane:reopen-closed-item'
 
     # search
     'ctrl-f': 'vim-mode-plus:search-current-word'
 
     # code navigation
     'ctrl-t': 'nuclide-navigation-stack:navigate-backwards'
+
+# visual mode
+# ----------------------------------------
+# 'atom-texteditor.vim-mode-plus(.visual-mode)':

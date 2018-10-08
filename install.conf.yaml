@@ -4,6 +4,7 @@
    ~/.atom/init.coffee:
       path: atom/init.coffee
       create: true
+   ~/.atom/config.cson: atom/config.cson
    ~/.atom/keymap.cson: atom/keymap.cson
    ~/.atom/styles.less: atom/styles.less
    ~/.clang-format:  vim/clang-format
