@@ -1,6 +1,6 @@
 # all
 # ----------------------------------------
-'body':
+'atom-workspace':
     # tab navigation
     'ctrl-d': 'core:close'
     'ctrl-h': 'pane:show-previous-item'
@@ -13,6 +13,8 @@
 # editor
 # ----------------------------------------
 'atom-text-editor.vim-mode-plus':
+    # tab navigation
+    'ctrl-d': 'core:close'
 
     # mode switch
     'ctrl-space': 'vim-mode-plus:reset-normal-mode'
