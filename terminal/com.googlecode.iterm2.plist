@@ -75,9 +75,9 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame NSFontPanel</key>
-	<string>1720 333 580 411 0 0 2560 1578 </string>
+	<string>2707 390 580 277 2560 0 2560 1578 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>1362 784 796 486 0 0 2560 1578 </string>
+	<string>2664 813 796 486 2560 0 2560 1578 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>1708 0 850 1578 0 0 2560 1578 </string>
 	<key>New Bookmarks</key>
@@ -611,7 +611,7 @@
 			<key>Non-ASCII Anti Aliased</key>
 			<true/>
 			<key>Normal Font</key>
-			<string>Monaco 12</string>
+			<string>UbuntuMonoNerdFontCM-Regular 14</string>
 			<key>Option Key Sends</key>
 			<integer>2</integer>
 			<key>Prevent Opening in a Tab</key>
@@ -669,7 +669,7 @@
 			<key>Use Non-ASCII Font</key>
 			<false/>
 			<key>Vertical Spacing</key>
-			<real>0.8687264683734941</real>
+			<real>1</real>
 			<key>Visual Bell</key>
 			<true/>
 			<key>Window Type</key>
