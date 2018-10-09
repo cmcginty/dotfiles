@@ -3,7 +3,6 @@ atom-material-syntax@1.0.8
 autocomplete-python@1.10.12
 file-icons@2.1.25
 highlight-selected@0.14.0
-jackhammer-syntax@1.1.0
 markdown-preview-plus@3.7.0
 monokai@0.24.0
 pigments@0.40.2

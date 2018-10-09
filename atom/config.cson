@@ -66,8 +66,8 @@
     ]
   editor:
     fontFamily: "UbuntuMono Nerd Font"
-    fontSize: 13
     lineHeight: 1.1
+    preferredLineLength: 88
     showIndentGuide: true
   "exception-reporting":
     userId: "b3bd855a-38b4-44af-961e-0c6cfa5383f2"

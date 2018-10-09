@@ -7,14 +7,28 @@
     'ctrl-l': 'pane:show-next-item'
     'ctrl-shift-t': 'pane:reopen-closed-item'
 
+    # pane navigation
+    'ctrl-w ctrl-h': 'window:move-active-item-to-pane-on-left'
+    'ctrl-w ctrl-j': 'window:move-active-item-to-pane-below'
+    'ctrl-w ctrl-k': 'window:move-active-item-to-pane-above'
+    'ctrl-w ctrl-l': 'window:move-active-item-to-pane-on-right'
+    'ctrl-w h': 'window:focus-pane-on-left'
+    'ctrl-w j': 'window:focus-pane-below'
+    'ctrl-w k': 'window:focus-pane-above'
+    'ctrl-w l': 'window:focus-pane-on-right'
+
     # file operations
     'ctrl-o': 'fuzzy-finder:toggle-file-finder'
 
 # editor
 # ----------------------------------------
 'atom-text-editor.vim-mode-plus':
-    # tab navigation
-    'ctrl-d': 'core:close'
+    # disable package defaults so global mappings work
+    'ctrl-d': 'unset!'
+    'ctrl-w ctrl-h': 'unset!'
+    'ctrl-w ctrl-j': 'unset!'
+    'ctrl-w ctrl-k': 'unset!'
+    'ctrl-w ctrl-l': 'unset!'
 
     # mode switch
     'ctrl-space': 'vim-mode-plus:reset-normal-mode'
