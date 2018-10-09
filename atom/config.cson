@@ -67,7 +67,6 @@
   editor:
     fontFamily: "UbuntuMono Nerd Font"
     lineHeight: 1.1
-    preferredLineLength: 88
     showIndentGuide: true
   "exception-reporting":
     userId: "b3bd855a-38b4-44af-961e-0c6cfa5383f2"
@@ -288,11 +287,6 @@
       pathToBuck: "buck"
     "nuclide-clang":
       defaultDiagnostics: false
-      defaultFlags: [
-        "-std=c++14"
-        "-x"
-        "c++"
-      ]
       enableDefaultFlags: true
       libclangPath: ""
       serverProcessMemoryLimit: 15
@@ -356,18 +350,6 @@
       pathToInfer: "infer"
     "nuclide-ios-simulator-logs":
       pathToSyslog: "syslog"
-      senderBlacklist: [
-        "assertiond"
-        "routined"
-        "syslogd"
-        "SpringBoard"
-        "installd"
-        "pkd"
-        "lsd"
-        "searchd"
-        "itunesstored"
-        "backboardd"
-      ]
       whitelistedTags: "^(core\\.react|tid:com\\.facebook\\.react\\.JavaScript|com.apple.console)$"
     "nuclide-js-imports-client":
       componentModulePathFilter: "html/js"
@@ -406,11 +388,6 @@
       autocompleteArguments: true
       enableLinting: true
       includeOptionalArguments: false
-      lintExtensionBlacklist: [
-        ".bzl"
-        ".tw"
-        ""
-      ]
       pathToFlake8: "flake8"
       pathToPython: "python"
       showGlobalVariables: true
@@ -724,6 +701,12 @@
     showOnStartup: false
   whitespace:
     ignoreWhitespaceOnCurrentLine: false
+".python.regexp.source":
+  editor:
+    preferredLineLength: 88
+".python.source":
+  editor:
+    preferredLineLength: 88
 ".text.xml":
   editor:
     nonWordCharacters: "/\\()\"',.;<>~!@#$%^&*|+=[]{}`?…"
