@@ -1,27 +1,32 @@
-# all
+# global key bindings
 # ----------------------------------------
-'atom-workspace':
+'atom-workspace:not([mini])':
     # tab navigation
     'ctrl-d': 'core:close'
     'ctrl-h': 'pane:show-previous-item'
     'ctrl-l': 'pane:show-next-item'
     'ctrl-shift-t': 'pane:reopen-closed-item'
 
-    # pane navigation
-    'ctrl-w ctrl-h': 'window:move-active-item-to-pane-on-left'
-    'ctrl-w ctrl-j': 'window:move-active-item-to-pane-below'
-    'ctrl-w ctrl-k': 'window:move-active-item-to-pane-above'
-    'ctrl-w ctrl-l': 'window:move-active-item-to-pane-on-right'
+    # vim-like bindings for moving panes
     'ctrl-w h': 'window:focus-pane-on-left'
     'ctrl-w j': 'window:focus-pane-below'
     'ctrl-w k': 'window:focus-pane-above'
     'ctrl-w l': 'window:focus-pane-on-right'
 
+    # vim-like bindings for navigating panes and panels
+    'ctrl-w ctrl-h': 'window:move-active-item-to-pane-on-left'
+    'ctrl-w ctrl-j': 'window:move-active-item-to-pane-below'
+    'ctrl-w ctrl-k': 'window:move-active-item-to-pane-above'
+    'ctrl-w ctrl-l': 'window:move-active-item-to-pane-on-right'
+
     # file operations
     'ctrl-o': 'fuzzy-finder:toggle-file-finder'
 
-# editor
+# vim-mode-plus
 # ----------------------------------------
+# Ref : https://github.com/t9md/dotfiles/blob/master/atom/keymap.cson
+#       https://github.com/nwaywood/dotfiles/blob/master/atom/keymap.cson
+
 'atom-text-editor.vim-mode-plus':
     # disable package defaults so global mappings work
     'ctrl-d': 'unset!'
@@ -30,18 +35,20 @@
     'ctrl-w ctrl-k': 'unset!'
     'ctrl-w ctrl-l': 'unset!'
 
-    # mode switch
-    'ctrl-space': 'vim-mode-plus:reset-normal-mode'
-
-    # undo/redo
-    'ctrl-u': 'vim-mode-plus:redo'
+    # file operations
+    'ctrl-s': 'custom:vim-save'
 
     # motions
     'ctrl-j': 'vim-mode-plus:scroll-half-screen-down'
     'ctrl-k': 'vim-mode-plus:scroll-half-screen-up'
 
-    # file operations
-    'ctrl-s': 'custom:vim-save'
+# normal mode
+'atom-text-editor.vim-mode-plus.normal-mode':
+    # switch back to normal mode; clears highlighted search
+    'ctrl-space': 'vim-mode-plus:reset-normal-mode'
+
+    # undo/redo
+    'ctrl-u': 'vim-mode-plus:redo'
 
     # search
     'ctrl-f': 'vim-mode-plus:search-current-word'
@@ -49,6 +56,42 @@
     # code navigation
     'ctrl-t': 'nuclide-navigation-stack:navigate-backwards'
 
+     # vim-unimpaired
+    '] space': 'vim-mode-plus:add-blank-line-below'
+    '[ space': 'vim-mode-plus:add-blank-line-above'
+
+    # make Y work like C and D
+    'Y': 'vim-mode-plus:yank-to-last-character-of-line'
+
+    # toggle highlighted search
+    'space /': 'vim-mode-plus:toggle-highlight-search'
+
+# insert mode
+# 'atom-text-editor.vim-mode-plus.insert-mode':
+
 # visual mode
-# ----------------------------------------
-# 'atom-texteditor.vim-mode-plus(.visual-mode)':
+# 'atom-text-editor.vim-mode-plus.visual-mode':
+
+# not normal mode (insert and visual)
+# 'atom-text-editor.vim-mode-plus:not(.normal-mode)':
+
+# not insert mode (normal and visual)
+'atom-text-editor.vim-mode-plus:not(.insert-mode)':
+ # disable noob navigation and enable quick pane resizing
+    'up': 'pane:increase-size'
+    'down': 'pane:decrease-size'
+    'left': 'core:nop'
+    'right': 'core:nop'
+
+    # vim-unimpaired function navigate
+    '] f': 'vim-mode-plus:move-to-next-function'
+    '[ f': 'vim-mode-plus:move-to-previous-function'
+
+    # emulate vim-commentary binding
+    'g c': 'vim-mode-plus:toggle-line-comments'
+
+    # copy, comment, paste selection
+    'g D': 'vim-mode-plus:duplicate-with-comment-out-original'
+
+# not visual mode (insert and normal)
+# 'atom-text-editor.vim-mode-plus:not(.visual-mode)':

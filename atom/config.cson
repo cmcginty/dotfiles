@@ -66,6 +66,7 @@
     ]
   editor:
     fontFamily: "UbuntuMono Nerd Font"
+    fontSize: 13
     lineHeight: 1.1
     showIndentGuide: true
   "exception-reporting":
@@ -258,7 +259,7 @@
     "fb-prettier":
       formatAlreadyFormattedFilesOnSave: true
     "fb-rating":
-      rating: 0
+      rating: 5
     "fb-similar-code-detector":
       debug: false
     "fb-skip":
