@@ -2,6 +2,8 @@
   "atom-beautify":
     general:
       _analyticsUserId: "aab204c6-1c8e-47d3-afaa-31c509007127"
+  "autocomplete-plus":
+    strictMatching: true
   "autocomplete-python":
     useKite: false
   core:
@@ -124,22 +126,6 @@
       lineHeight: 1.5
       magenta: "#75507b"
       optionIsMeta: false
-      preservedCommands: [
-        "command-palette:toggle"
-        "fb-interactive-smartlog:toggle"
-        "nuclide-quick-open:find-anything"
-        "atom-ide-terminal:add-escape-prefix"
-        "atom-ide-terminal:new-terminal"
-        "atom-ide-terminal:toggle-terminal-focus"
-        "pane:move-active-item-to-top-of-stack"
-        "pane:show-next-recently-used-item"
-        "window:focus-next-pane"
-        "window:focus-previous-pane"
-        "window:focus-pane-above"
-        "window:focus-pane-below"
-        "window:focus-pane-on-left"
-        "window:focus-pane-on-right"
-      ]
       red: "#cc0000"
       rendererType: "auto"
       scrollback: 1000
@@ -456,6 +442,7 @@
       "tool-bar.useTouchBar"
       "core.useTreeSitterParsers"
       "core.automaticallyUpdate"
+      "autocomplete-plus.strictMatching"
     ]
     use:
       "atom-ide-busy-signal": "default"
