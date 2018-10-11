@@ -22,6 +22,9 @@
     # file operations
     'ctrl-o': 'fuzzy-finder:toggle-file-finder'
 
+    # toggle option bar
+    'cmd-o': 'outline-view:toggle'
+
 # vim-mode-plus
 # ----------------------------------------
 # Ref : https://github.com/t9md/dotfiles/blob/master/atom/keymap.cson
@@ -35,6 +38,9 @@
     'ctrl-w ctrl-k': 'unset!'
     'ctrl-w ctrl-l': 'unset!'
 
+    # switch back to normal mode; clears highlighted search
+    'ctrl-space': 'vim-mode-plus:reset-normal-mode'
+
     # file operations
     'ctrl-s': 'custom:vim-save'
 
@@ -44,9 +50,6 @@
 
 # normal mode
 'atom-text-editor.vim-mode-plus.normal-mode':
-    # switch back to normal mode; clears highlighted search
-    'ctrl-space': 'vim-mode-plus:reset-normal-mode'
-
     # undo/redo
     'ctrl-u': 'vim-mode-plus:redo'
 
@@ -77,7 +80,7 @@
 
 # not insert mode (normal and visual)
 'atom-text-editor.vim-mode-plus:not(.insert-mode)':
- # disable noob navigation and enable quick pane resizing
+    # disable noob navigation and enable quick pane resizing
     'up': 'pane:increase-size'
     'down': 'pane:decrease-size'
     'left': 'core:nop'
