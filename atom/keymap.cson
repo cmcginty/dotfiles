@@ -22,8 +22,9 @@
     # file operations
     'ctrl-o': 'fuzzy-finder:toggle-file-finder'
 
-    # toggle option bar
+    # toggle snap-on panes
     'cmd-o': 'outline-view:toggle'
+    'cmd-t': 'atom-ide-terminal:toggle'
 
 # vim-mode-plus
 # ----------------------------------------
