@@ -48,8 +48,10 @@
     'ctrl-j': 'vim-mode-plus:scroll-half-screen-down'
     'ctrl-k': 'vim-mode-plus:scroll-half-screen-up'
 
-    # spell check on/off
-    'f5': 'spell-check:toggle'
+    # spell check on/off, correct
+    'y o s': 'spell-check:toggle'
+    'z =': 'spell-check:correct-misspelling'
+    'space w': 'spell-check:correct-misspelling'
 
 # normal mode
 'atom-text-editor.vim-mode-plus.normal-mode':
