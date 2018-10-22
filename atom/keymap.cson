@@ -25,6 +25,7 @@
     # toggle snap-on panes
     'cmd-o': 'outline-view:toggle'
     'cmd-t': 'atom-ide-terminal:toggle'
+    'cmd-u': 'fb-interactive-smartlog:toggle-commit-info-view'
 
 # vim-mode-plus
 # ----------------------------------------
@@ -33,6 +34,7 @@
 
 'atom-text-editor.vim-mode-plus':
     # disable package defaults so global mappings work
+    'cmd-u':  'unset!'
     'ctrl-d': 'unset!'
     'ctrl-w ctrl-h': 'unset!'
     'ctrl-w ctrl-j': 'unset!'
@@ -49,11 +51,6 @@
     'ctrl-j': 'vim-mode-plus:scroll-half-screen-down'
     'ctrl-k': 'vim-mode-plus:scroll-half-screen-up'
 
-    # spell check on/off, correct
-    'y o s': 'spell-check:toggle'
-    'z =': 'spell-check:correct-misspelling'
-    'space w': 'spell-check:correct-misspelling'
-
 # normal mode
 'atom-text-editor.vim-mode-plus.normal-mode':
     # undo/redo
@@ -65,15 +62,23 @@
     # code navigation
     'ctrl-t': 'nuclide-navigation-stack:navigate-backwards'
 
-     # vim-unimpaired
-    '] space': 'vim-mode-plus:add-blank-line-below'
+    # vim-unimpaired
     '[ space': 'vim-mode-plus:add-blank-line-above'
+    '] space': 'vim-mode-plus:add-blank-line-below'
+    '[ e': 'editor:move-line-up'
+    '] e': 'editor:move-line-down'
+    # nemonic: y o (switch on)
+    'y o s': 'spell-check:toggle'
 
     # make Y work like C and D
     'Y': 'vim-mode-plus:yank-to-last-character-of-line'
 
     # toggle highlighted search
     'space /': 'vim-mode-plus:toggle-highlight-search'
+
+    # spell check word
+    'z =': 'spell-check:correct-misspelling'
+    'space w': 'spell-check:correct-misspelling'
 
 # insert mode
 # 'atom-text-editor.vim-mode-plus.insert-mode':
