@@ -189,8 +189,7 @@
       externalMergeToolEnabled: false
       externalMergeToolPath: ""
       fetchCommitTemplateOption: "File"
-      fetchOption: "arc patch"
-      pullOption: "arc pull"
+      fetchOption: "jf get"
       showCommitInfoViewInline: false
       showTools: true
     "fb-java":
