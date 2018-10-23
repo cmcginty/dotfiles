@@ -73,6 +73,11 @@
     showIndentGuide: true
   "exception-reporting":
     userId: "b3bd855a-38b4-44af-961e-0c6cfa5383f2"
+  "markdown-preview-plus":
+    syncConfig:
+      syncPreviewOnChange: true
+    syntaxThemeName: "solarized-dark-syntax"
+    useGitHubStyle: true
   notifications:
     showErrorsInDevMode: true
   nuclide:
@@ -690,6 +695,7 @@
       "text.html.php"
       "text.html.hack"
       "source.python"
+      "text.md"
     ]
   "tool-bar":
     iconSize: "16px"
