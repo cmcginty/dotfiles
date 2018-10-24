@@ -180,7 +180,7 @@
       "disable-arc-lint-results": true
       logLevel: "INFO"
     "fb-generated-file-support":
-      allowEdits: false
+      allowEdits: true
     "fb-go":
       goLanguageFeaturesProvider: "Default"
     "fb-graphql-metrics":
