@@ -262,6 +262,36 @@
       priority: 10
     "fb-terminal-dash-provider":
       defaultTerminalPane: "bottom"
+    "fb-vscode-ext":
+      "nuclide-js-imports-client":
+        componentModulePathFilter: "html/js"
+        diagnosticsWhitelist: [
+          "/nuclide"
+          "/www"
+          "/instance-ide"
+          "/xplat/js"
+          "/oculus-skyline"
+          "/Software/Apps/skyline"
+          "/www-hg"
+          "/trunk-hg-www"
+        ]
+        logLevel: "INFO"
+        requiresWhitelist: [
+          "/www"
+          "/instance-ide"
+          "/xplat/js"
+          "/www-hg"
+          "/trunk-hg-www"
+        ]
+      "nuclide-ocaml":
+        codeLens: true
+        codeLensCopy: true
+        codeLensMultiLine: false
+        logLevel: "DEBUG"
+        pathToMerlin: "ocamlmerlin"
+        pathToOcpIndent: ""
+        pathToRefmt: "refmt"
+        refmtFlags: ""
     hyperclick:
       darwinTriggerKeys: "metaKey"
       linuxTriggerKeys: "ctrlKey"
