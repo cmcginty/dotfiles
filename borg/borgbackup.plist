@@ -31,5 +31,8 @@
       <string>/Users/pcm/dotfiles/borg/borgbackup.sh</string>
     </array>
 
+    <key>Nice</key>
+    <integer>10</integer>
+
   </dict>
 </plist>
