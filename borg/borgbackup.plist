@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- IMPORTANT: You must add the borgbackup.sh script to Privacy tab  -->
+<!--            of "Security and Privacy" System Preferences to give  -->
+<!--            the script full read access. -->
+
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+
+    <key>Label</key>
+    <string>local.cron.borgbackup.plist</string>
+
+    <key>StartInterval</key>
+    <integer>21600</integer>
+
+    <key>StandardErrorPath</key>
+    <string>/Users/pcm/Library/Logs/borgbackup.log</string>
+    <key>StandardOutPath</key>
+    <string>/Users/pcm/Library/Logs/borgbackup.log</string>
+
+    <key>EnvironmentVariables</key>
+    <dict>
+      <key>PATH</key>
+      <string><![CDATA[/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin]]></string>
+    </dict>
+
+    <key>ProgramArguments</key>
+    <array>
+      <!-- CHANGE TO FULL PATH OF BORGBACKUP.SH -->
+      <string>/Users/pcm/dotfiles/borg/borgbackup.sh</string>
+    </array>
+
+  </dict>
+</plist>

@@ -1,0 +1,16 @@
+*/.DS_Store
+/Users/*/.Trash
+/Users/*/.cache
+/Users/*/.config/borg
+/Users/*/.dropbox
+/Users/*/Creative Cloud Files
+/Users/*/Dropbox
+/Users/*/Library/Caches
+/Users/*/Library/Containers
+/Users/*/Library/Developer/CoreSimulator
+/Users/*/Library/Group Containers
+/Users/*/Library/Logs
+/Users/*/tmp
+/Users/Guest
+/Users/Shared
+sh:/Users/*/Library/**/Chrome/**/Application Cache
