@@ -4,12 +4,14 @@
 <!--            of "Security and Privacy" System Preferences to give  -->
 <!--            the script full read access. -->
 
+<!-- INSTALLATION: Copy edited file to ~/Library/LaunchAgents -->
+
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
   <dict>
 
     <key>Label</key>
-    <string>local.cron.borgbackup.plist</string>
+    <string>local.borgbackup</string>
 
     <key>StartInterval</key>
     <integer>21600</integer>
