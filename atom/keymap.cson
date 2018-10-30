@@ -81,6 +81,9 @@
     'z =': 'spell-check:correct-misspelling'
     'space w': 'spell-check:correct-misspelling'
 
+    # supertab indent
+    'tab': 'editor:indent-selected-rows'
+
 # insert mode
 # 'atom-text-editor.vim-mode-plus.insert-mode':
 
