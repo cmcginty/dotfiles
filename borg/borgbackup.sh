@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Set 'true' to disable backups
-DEBUG=false
+DEBUG=${DEBUG:-false}
 
 #
 # NOTE: Before running this script for the first time the Borg repo must be initialized with
@@ -69,8 +69,8 @@ borg prune                          \
     $STATS_OR_DRYRUN                \
     --show-rc                       \
     --keep-within   24H             \
-    --keep-hourly   4               \
-    --keep-daily    7               \
+    --keep-hourly   1               \
+    --keep-daily    6               \
     --keep-weekly   1               \
     --keep-monthly  1
 
