@@ -458,6 +458,20 @@
             username: "cmcginty"
           saveable: true
         }
+        {
+          deletable: true
+          displayTitle: "configerator"
+          params:
+            authMethod: "SSL_AGENT"
+            cwd: "/data/users/cmcginty/configerator"
+            displayTitle: "configerator"
+            pathToPrivateKey: ""
+            remoteServerCommand: ""
+            server: "our.cmcginty.sb.facebook.com"
+            sshPort: "22"
+            username: "cmcginty"
+          saveable: true
+        }
       ]
       shutdownServerAfterDisconnection: false
     "nuclide-swift":
