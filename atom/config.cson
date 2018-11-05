@@ -50,6 +50,7 @@
       "tree-view"
       "image-view"
       "git-diff"
+      "haskell-grammar"
     ]
     ignoredNames: [
       ".git"
@@ -263,6 +264,15 @@
     "fb-terminal-dash-provider":
       defaultTerminalPane: "bottom"
     "fb-vscode-ext":
+      "fb-cquery":
+        "disable-flag-fetching": false
+        "enable-code-lens": false
+        "enable-libclang-logs": false
+        "indexer-threads": 0
+        "local-cache-directory": ""
+        "memory-limit": 30
+        "remote-cache-directory": ""
+        "use-cquery": false
       "nuclide-js-imports-client":
         componentModulePathFilter: "html/js"
         diagnosticsWhitelist: [
@@ -301,7 +311,7 @@
       pathToAdb: "adb"
       whitelistedTags: "^((unknown:|)React|ReactNativeJS|ACRA|AndroidRuntime|TTI|BuckReporting|unknown)$"
     "nuclide-bookshelf":
-      changeActiveBookmarkBehavior: "Prompt to Restore"
+      changeActiveBookmarkBehavior: "Always Ignore"
     "nuclide-buck":
       buildDbErrorNotify: true
       compileErrorDiagnostics: true
