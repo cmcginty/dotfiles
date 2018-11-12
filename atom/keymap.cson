@@ -1,6 +1,9 @@
 # global key bindings
 # ----------------------------------------
 'atom-workspace:not([mini])':
+    # command window
+    'shift-cmd-P': 'dash-omnisearch-provider:toggle-provider'
+
     # tab navigation
     'ctrl-d': 'core:close'
     'ctrl-h': 'pane:show-previous-item'
@@ -22,11 +25,14 @@
     # file operations
     'ctrl-o': 'fuzzy-finder:toggle-file-finder'
 
+    # toggle file-based pane
+    'ctrl-w b': 'nuclide-blame:toggle-blame'
+
     # toggle snap-on panes
     'cmd-o': 'outline-view:toggle'
+    'cmd-shift-m': 'markdown-preview-plus:toggle'
     'cmd-t': 'atom-ide-terminal:toggle'
     'cmd-u': 'fb-interactive-smartlog:toggle-commit-info-view'
-    'cmd-shift-m': 'markdown-preview-plus:toggle'
 
 # vim-mode-plus
 # ----------------------------------------
@@ -88,7 +94,9 @@
 # 'atom-text-editor.vim-mode-plus.insert-mode':
 
 # visual mode
-# 'atom-text-editor.vim-mode-plus.visual-mode':
+'atom-text-editor.vim-mode-plus.visual-mode':
+    's': 'sort-lines:sort'
+    'shift-s': 'sort-lines:reverse-sort'
 
 # not normal mode (insert and visual)
 # 'atom-text-editor.vim-mode-plus:not(.normal-mode)':
