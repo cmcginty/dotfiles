@@ -487,21 +487,6 @@
         "fb-nuclide-welcome-page"
       ]
     "nuclide-working-sets": {}
-    overriddenThirdPartySettings: [
-      "core.closeDeletedFileTabs"
-      "core.closeEmptyWindows"
-      "tool-bar.position"
-      "tool-bar.iconSize"
-      "nuclide.installRecommendedPackages"
-      "file-icons.coloured"
-      "nuclide.atom-ide-console.diffUrlPattern"
-      "nuclide.atom-ide-console.taskUrlPattern"
-      "whitespace.ignoreWhitespaceOnCurrentLine"
-      "tool-bar.useTouchBar"
-      "core.useTreeSitterParsers"
-      "core.automaticallyUpdate"
-      "autocomplete-plus.strictMatching"
-    ]
     use:
       "atom-ide-busy-signal": "default"
       "atom-ide-code-actions": "default"
