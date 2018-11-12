@@ -213,7 +213,7 @@
       authType: "token"
       gateway: "http://localhost:8888"
     "fb-new-file-template":
-      oncall_name: "set_oncall_in_nuclide_settings @nocommit"
+      oncall_name: "rel_eng"
     "fb-notes":
       "fb-notes": {}
     "fb-on-demand":
