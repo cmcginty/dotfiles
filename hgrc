@@ -46,6 +46,7 @@ slh     = sl --hidden
 # rebase all local branches
 rba     = rebase --dest master --rev 'draft()'
 rbi     = histedit
+rbib    = histedit -r bottom
 rsh     = revert --all
 rt      = revert
 rta     = revert --all
