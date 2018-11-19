@@ -67,6 +67,7 @@
       "one-dark-ui"
       "monokai"
     ]
+    useTreeSitterParsers: false
   editor:
     fontFamily: "UbuntuMono Nerd Font"
     fontSize: 13
@@ -100,7 +101,6 @@
       showDebuggerOnBpSet: true
     "atom-ide-diagnostics-ui":
       autoVisibility: false
-      showDiagnosticTraces: false
       showDirectoryColumn: false
       statusBarPosition: "left"
     "atom-ide-find-references":
@@ -723,6 +723,7 @@
       "nuclide-working-sets": "default"
     useLocalRpc: true
   "spell-check":
+    addKnownWords: true
     grammars: [
       "source.asciidoc"
       "source.gfm"
@@ -735,6 +736,17 @@
       "text.html.hack"
       "source.python"
       "text.md"
+    ]
+    knownWords: [
+      "awaitable"
+      "contbuild"
+      "contbuilds"
+      "darray"
+      "dict"
+      "nullthrows"
+      "oncall"
+      "unlanded"
+      "vec"
     ]
   "tool-bar":
     iconSize: "16px"
