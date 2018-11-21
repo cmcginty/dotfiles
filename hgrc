@@ -18,6 +18,14 @@ p4merge.dirdiff = false
 p4merge.gui = true
 p4merge.premerge = true
 
+[templatealias]
+fb_rev = if(svnrev, 'r{svnrev}', rev)
+subject = truncatelonglines(desc|firstline,72,"·")
+blue  = '\x1B[34m'
+cyan  = '\x1B[36m'
+green = '\x1B[32m'
+reset = '\x1B[0m'
+
 [alias]
 # e.g commit --amend
 bot     = prev --bottom
@@ -33,7 +41,7 @@ co      = checkout
 di      = diff
 drop    = hide
 fetch   = pull
-lg      = log --template '\x1B[34m{node|short}\x1B[0m [\x1B[32m{date|age}\x1B[0m] {desc|firstline}, \x1B[36m{author|person}\x1B[0m\n'
+lg      = log --template '{blue}{fb_rev}{reset} [{green}{date|age}{reset}] {subject}, {cyan}{author|person}{reset}\n'
 lgf     = log --verbose
 lgm     = log
 lgp     = log --patch
@@ -56,5 +64,6 @@ slh     = sl --hidden
 slp     = sl --patch
 sls     = sl --stat
 sp      = sparse
+svn     = log -l1 -T 'r{svnrev}\n'
 top     = next --top
 u       = undo
