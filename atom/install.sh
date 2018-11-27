@@ -14,5 +14,5 @@ if [[ "$OSTYPE" == darwin* ]]; then
       grep -q $PKG <<< $INSTALLED_PKGS || apm install $PKG
    done
 
-   apm upgrade >/dev/null
+   apm upgrade --no-confirm >/dev/null
 fi
