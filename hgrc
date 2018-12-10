@@ -1,6 +1,7 @@
 [ui]
 username = Casey McGinty <cmcginty@fb.com>
 merge = p4merge
+# log style (compact, default, changelog, status, ...)
 style = compact
 
 [extensions]
@@ -24,7 +25,16 @@ subject = truncatelonglines(desc|firstline,72,"·")
 blue  = '\x1B[34m'
 cyan  = '\x1B[36m'
 green = '\x1B[32m'
+red = '\x1B[31m'
 reset = '\x1B[0m'
+shortlog = '{blue}{fb_rev}{reset} [{green}{date|age}{reset}] {subject}, {cyan}{author|person}{reset}\n'
+fulllog = '{shortlog}\t{desc|strip|fill76|tabindent}\n\n'
+fmods = "{file_mods % '{blue}M\t{file}\n'}"
+fadds = "{file_adds % '{green}A\t{file}\n'}"
+fdels = "{file_dels % '{red}R\t{file}\n'}"
+namestatlog = '{shortlog}{fmods}{fadds}{fdels}\n'
+fall = "{files % '{file}\n'}"
+nameonlylog = '{shortlog}{fall}\n'
 
 [alias]
 # e.g commit --amend
@@ -41,13 +51,15 @@ co      = checkout
 di      = diff
 drop    = hide
 fetch   = pull
-lg      = log --template '{blue}{fb_rev}{reset} [{green}{date|age}{reset}] {subject}, {cyan}{author|person}{reset}\n'
-lgf     = log --verbose
+lg      = log --template '{shortlog}'
+lgf     = log --template '{fulllog}'
+lgns    = log --template '{namestatlog}'
+lgno    = log --template '{nameonlylog}'
 lgm     = log
 lgp     = log --patch
 lgp1    = log --patch --limit 1
 lgs     = log --stat
-lgv     = log --verbose
+lgv     = log --template '{fulllog}'
 pl      = pull --rebase -d master
 pull    = pull --rebase -d master
 slh     = sl --hidden
