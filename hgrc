@@ -4,9 +4,6 @@ merge = p4merge
 # log style (compact, default, changelog, status, ...)
 style = compact
 
-[extensions]
-hgext.extdiff =
-
 [extdiff]
 cmd.p4merge = /Applications/p4merge.app/Contents/Resources/launchp4merge
 
@@ -51,6 +48,7 @@ co      = checkout
 di      = diff
 drop    = hide
 fetch   = pull
+gg      = grep
 lg      = log --template '{shortlog}'
 lgf     = log --template '{fulllog}'
 lgns    = log --template '{namestatlog}'
