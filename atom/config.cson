@@ -171,7 +171,8 @@
       "enable-libclang-logs": false
       "indexer-threads": 0
       "memory-limit": 30
-      "use-cquery": false
+      "use-cquery": true
+      "use-cquery-gk-result": true
     "fb-debugger-mobilejs":
       autoAttachComponentScript: "None"
       autoAttachReactNative: "None"
@@ -186,6 +187,19 @@
       goLanguageFeaturesProvider: "Default"
     "fb-graphql-metrics":
       priority: 50
+    "fb-highlight-selected":
+      allowedCharactersToSelect: "$@%-"
+      hideHighlightOnSelectedWord: false
+      highlightBackground: false
+      highlightInPanes: true
+      ignoreCase: false
+      lightTheme: false
+      minimumLength: 2
+      onlyHighlightWholeWords: true
+      showInStatusBar: true
+      showResultsOnScrollBar: false
+      statusBarString: "Highlighted: %c"
+      timeout: 20
     "fb-intellij":
       intelliJKeybindings: false
     "fb-interactive-smartlog":
@@ -272,7 +286,8 @@
         "local-cache-directory": ""
         "memory-limit": 30
         "remote-cache-directory": ""
-        "use-cquery": false
+        "use-cquery": true
+        "use-cquery-gk-result": true
       "nuclide-js-imports-client":
         componentModulePathFilter: "html/js"
         diagnosticsWhitelist: [
