@@ -8,7 +8,7 @@ if [[ "$OSTYPE" == darwin* ]]; then
    hash atom || brew cask install atom
 
    # Install all missing packages from package-list.txt created by:
-   #    apm list --install --bare > package-list.txt
+   #    apm list --installed --bare > package-list.txt
    INSTALLED_PKGS=$(apm list --installed --bare)
    for PKG in $(cut -f1 -d@ $BASEDIR/package-list.txt); do
       grep -q $PKG <<< $INSTALLED_PKGS || apm install $PKG
