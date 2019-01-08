@@ -58,6 +58,7 @@ lgp     = log --patch
 lgp1    = log --patch --limit 1
 lgs     = log --stat
 lgv     = log --template '{fulllog}'
+ls      = manifest
 pl      = pull --rebase -d master
 pull    = pull --rebase -d master
 slh     = sl --hidden
