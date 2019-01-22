@@ -22,6 +22,10 @@
     'ctrl-w ctrl-k': 'window:move-active-item-to-pane-above'
     'ctrl-w ctrl-l': 'window:move-active-item-to-pane-on-right'
 
+    # vim-link bindings for splitting panes
+    'ctrl-w \\': 'pane:split-right-and-copy-active-item'
+    'ctrl-w -':  'pane:split-down-and-copy-active-item'
+
     # file operations
     'ctrl-o': 'fuzzy-finder:toggle-file-finder'
 
