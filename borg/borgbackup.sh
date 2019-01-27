@@ -71,8 +71,8 @@ borg prune                          \
     --keep-within   24H             \
     --keep-hourly   1               \
     --keep-daily    6               \
-    --keep-weekly   1               \
-    --keep-monthly  1
+    --keep-weekly   3               \
+    --keep-monthly  3
 
 prune_exit=$?
 
