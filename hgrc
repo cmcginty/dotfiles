@@ -34,10 +34,10 @@ fall = "{files % '{file}\n'}"
 nameonlylog = '{shortlog}{fall}\n'
 
 [alias]
-# e.g commit --amend
 bot     = prev --bottom
 br      = bookmark
 bra     = bookmark --all
+# e.g commit --amend
 cam     = amend
 came    = amend --edit
 cami    = amend --interactive
@@ -47,7 +47,7 @@ cmi     = commit --interactive
 co      = checkout
 di      = diff
 drop    = hide
-fetch   = pull
+fetch   = !HGPLAIN=1 $HG pull
 gg      = grep
 lg      = log --template '{shortlog}'
 lgf     = log --template '{fulllog}'
@@ -60,11 +60,12 @@ lgr     = log -l1 -T 'r{svnrev}\n'
 lgs     = log --stat
 lgv     = log --template '{fulllog}'
 ls      = manifest
-pl      = pull --rebase -d master
+pl      = pull
 pull    = pull --rebase -d master
 slh     = sl --hidden
+rba     = rebase --abort
 # rebase all local branches
-rba     = rebase --dest master --rev 'draft()'
+rball   = rebase --dest master --rev 'draft()'
 rbi     = histedit
 rbib    = histedit -r bottom
 rsh     = !(hg update --clean -r . && hg revert --all)
