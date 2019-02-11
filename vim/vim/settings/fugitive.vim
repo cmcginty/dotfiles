@@ -63,10 +63,10 @@ augroup FugitiveKeyMapping
    autocmd User Fugitive nnoremap <leader>dm   :diffget<space>//3<cr>
 
    " go 'back' after navigating git tree/blob
-   autocmd User Fugitive
-      \ if fugitive#buffer().type() =~# '^\%(tree\|blob\)$' |
-      \    nnoremap <buffer> .. :edit %:h<CR> |
-      \ endif
+   " autocmd User Fugitive
+   "    \ if fugitive#buffer().type() =~# '^\%(tree\|blob\)$' |
+   "    \    nnoremap <buffer> .. :edit %:h<CR> |
+   "    \ endif
 augroup END
 
 " control Fugitive impacts other plugins and buffer navigation
