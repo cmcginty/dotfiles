@@ -9,7 +9,9 @@
    ~/.atom/styles.less: atom/styles.less
    ~/.bitbar:        bitbar
    ~/.clang-format:  vim/clang-format
-   ~/.config/yapf:   yapf
+   ~/.config/yapf:
+      path: yapf
+      create: true
    ~/.dotfiles:      .
    ~/.gitconfig:     git/gitconfig
    ~/.gitexcludes:   git/gitexcludes

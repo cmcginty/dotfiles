@@ -33,7 +33,7 @@ if [[ "$OSTYPE" == linux* ]]; then
 elif [[ "$OSTYPE" == darwin* ]]; then
 
    hash python3 || brew install python3
-   hash gvim   || brew install macvim --with-override-system-vim
+   hash gvim   || brew install macvim
    hash node   || brew install node
    hash npm    || brew install npm
    hash ctags  || brew install ctags
