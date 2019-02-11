@@ -70,7 +70,6 @@
     useTreeSitterParsers: false
   editor:
     fontFamily: "UbuntuMono Nerd Font"
-    fontSize: 13
     lineHeight: 1.1
     showIndentGuide: true
   "exception-reporting":
@@ -288,6 +287,13 @@
         "remote-cache-directory": ""
         "use-cquery": true
         "use-cquery-gk-result": true
+      javascript:
+        format:
+          enable: false
+        validate:
+          enable: false
+      "js-imports":
+        componentModulePathFilter: "html/js"
       "nuclide-js-imports-client":
         componentModulePathFilter: "html/js"
         diagnosticsWhitelist: [
@@ -317,6 +323,10 @@
         pathToOcpIndent: ""
         pathToRefmt: "refmt"
         refmtFlags: ""
+      pyls:
+        plugins:
+          fb_dataswarm_linter:
+            enabled: true
     hyperclick:
       darwinTriggerKeys: "metaKey"
       linuxTriggerKeys: "ctrlKey"
@@ -331,6 +341,7 @@
       buildDbErrorNotify: true
       compileErrorDiagnostics: true
       pathToBuck: "buck"
+      suggestTaskRunner: false
     "nuclide-clang":
       defaultDiagnostics: false
       enableDefaultFlags: true
