@@ -37,6 +37,9 @@
    ~/.zshrc:         zsh/zshrc
 
 - shell:
+   -
+      command: find ~/.ssh -name "*_rsa" -exec chmod 0600 '{}' ';'
+      description: Set ssh key permissions
    - [nerd-fonts/install.sh, Install Nerd fonts]
    -
       command: terminal/install.sh
@@ -63,12 +66,12 @@
       stdin: true
       stdout: true
    -
-      command: vim/install.sh
-      description: Install vim
+      command: test -d /Applications/BitBar.app || sudo brew cask install bitbar
+      description: Install BitBar
       stdin: true
       stdout: true
    -
-      command: test -d /Applications/BitBar.app || sudo brew cask install bitbar
-      description: Install BitBar
+      command: vim/install.sh
+      description: Install vim
       stdin: true
       stdout: true
