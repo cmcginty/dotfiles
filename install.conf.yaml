@@ -7,6 +7,7 @@
    ~/.atom/config.cson: atom/config.cson
    ~/.atom/keymap.cson: atom/keymap.cson
    ~/.atom/styles.less: atom/styles.less
+   ~/.bitbar:        bitbar
    ~/.clang-format:  vim/clang-format
    ~/.config/yapf:   yapf
    ~/.dotfiles:      .
@@ -62,5 +63,10 @@
    -
       command: vim/install.sh
       description: Install vim
+      stdin: true
+      stdout: true
+   -
+      command: test -d /Applications/BitBar.app || sudo brew cask install bitbar
+      description: Install BitBar
       stdin: true
       stdout: true
