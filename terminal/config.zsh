@@ -8,6 +8,8 @@ if [[ "$OSTYPE" == darwin* ]]; then
    # increase key repeat rate
    defaults write -g InitialKeyRepeat -int 14   # normal minimum is 15 (225 ms)
    defaults write -g KeyRepeat -int 2           # normal minimum is 2 (30 ms)
+   # Enable sub-pixel rendering in Mojave
+   defaults write -g CGFontRenderingFontSmoothingDisabled -bool FALSE
 
    # fix homebrew dir permissions
    alias brewfix="sudo chown -R $(whoami) /usr/local/lib /usr/local/sbin"
