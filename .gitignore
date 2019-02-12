@@ -1,3 +1,4 @@
+bitbar/lib/__pycache__/
 vim/vim/black
 vim/vim/plugged
 *.spl
