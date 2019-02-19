@@ -69,11 +69,12 @@ pl      = pull
 pull    = pull --rebase -d master
 slh     = sl --hidden
 rba     = rebase --abort
+rbc     = rebase --continue
 # rebase all local branches
 rball   = rebase --dest master --rev 'draft()'
 rbi     = histedit
 rbib    = histedit -r bottom
-rs      = uncommit
+rs      = !$HG uncommit && $HG undo --keep
 rt      = revert
 rsh     = revert --all
 rta     = revert --all
