@@ -28,6 +28,7 @@
 
     # file operations
     'ctrl-o': 'fuzzy-finder:toggle-file-finder'
+    'ctrl-n': 'tree-view:add-file-relative'
 
     # toggle file-based pane
     'ctrl-w b': 'nuclide-blame:toggle-blame'

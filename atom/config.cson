@@ -774,6 +774,7 @@
       "oncall"
       "unlanded"
       "vec"
+      "deduped"
     ]
   "tool-bar":
     iconSize: "16px"
