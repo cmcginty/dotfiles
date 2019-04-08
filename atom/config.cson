@@ -134,7 +134,7 @@
       optionIsMeta: false
       red: "#cc0000"
       rendererType: "auto"
-      scrollback: 1000
+      scrollback: 500000
       white: "#d3d7cf"
       yellow: "#c4a000"
     "fb-ai-code-search":
