@@ -25,6 +25,7 @@
    ~/.ssh/authorized_keys:    ssh/authorized_keys
    ~/.ssh/box_rsa.pub:        ssh/box_rsa.pub
    ~/.ssh/id_rsa.pub:         ssh/id_rsa.pub
+   ~/.startup.py:    python/startup.py
    ~/.tmux.conf:     tmux/tmux.conf
    ~/.vim:           vim/vim
    ~/.vimrc:         vim/vimrc

@@ -23,6 +23,9 @@
 # Uncomment if the pyenv stops working or runs slowly.
 # export PYENV_DEBUG=1
 
+# Customize python REPL
+export PYTHONSTARTUP=~/.startup.py
+
 # virtualenv aliases
 alias venv='pyenv virtualenv'
 alias activate='pyenv activate'
