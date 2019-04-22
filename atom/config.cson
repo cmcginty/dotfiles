@@ -210,6 +210,7 @@
       externalMergeToolPath: ""
       fetchCommitTemplateOption: "File"
       fetchOption: "jf get"
+      modalComparison: true
       showCommitInfoViewInline: false
       showTools: true
     "fb-java":
@@ -325,6 +326,7 @@
         pathToRefmt: "refmt"
         refmtFlags: ""
       pyls:
+        formatAlreadyFormattedFilesOnSave: false
         plugins:
           fb_dataswarm_linter:
             enabled: true
@@ -775,6 +777,7 @@
       "unlanded"
       "vec"
       "deduped"
+      "Traversables"
     ]
   "tool-bar":
     iconSize: "16px"

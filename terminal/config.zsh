@@ -13,6 +13,7 @@ if [[ "$OSTYPE" == darwin* ]]; then
 
    # fix homebrew dir permissions
    alias brewfix="sudo chown -R $(whoami) /usr/local/lib /usr/local/sbin"
+   alias brewu="brew upgrade && brew cask upgrade"
 
    # replace legacy UNIX tools with OSX-only commands
    alias cat='bat'
