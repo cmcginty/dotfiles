@@ -38,6 +38,7 @@
     'cmd-shift-m': 'markdown-preview-plus:toggle'
     'cmd-t': 'atom-ide-terminal:toggle'
     'cmd-u': 'fb-interactive-smartlog:toggle-commit-info-view'
+    'cmd-y': 'fb-interactive-smartlog:toggle'
 
 # vim-mode-plus
 # ----------------------------------------

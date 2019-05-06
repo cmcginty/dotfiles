@@ -12,7 +12,7 @@ if [[ "$OSTYPE" == darwin* ]]; then
    defaults write -g CGFontRenderingFontSmoothingDisabled -bool FALSE
 
    # fix homebrew dir permissions
-   alias brewfix="sudo chown -R $(whoami) /usr/local/lib /usr/local/sbin"
+   alias brewfix="sudo chown -R $(whoami) /usr/local/lib /usr/local/sbin /usr/local/bin"
    alias brewu="brew upgrade && brew cask upgrade"
 
    # replace legacy UNIX tools with OSX-only commands
