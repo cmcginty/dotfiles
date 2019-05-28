@@ -211,6 +211,7 @@
       fetchCommitTemplateOption: "File"
       fetchOption: "jf get"
       modalComparison: true
+      pullOption: "hg pull"
       showCommitInfoViewInline: false
       showTools: true
     "fb-java":
@@ -326,6 +327,9 @@
         pathToRefmt: "refmt"
         refmtFlags: ""
       pyls:
+        BuckFormatOnSave: false
+        DsfmtFormatOnSave: false
+        InstagramFormatOnSave: false
         formatAlreadyFormattedFilesOnSave: false
         plugins:
           fb_dataswarm_linter:
