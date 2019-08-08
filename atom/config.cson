@@ -214,6 +214,7 @@
       pullOption: "hg pull"
       showCommitInfoViewInline: false
       showTools: true
+      syncMessagesToPhabricator: false
     "fb-java":
       autoBuild: false
       autoFold: true
@@ -499,6 +500,18 @@
             cwd: "/data/users/cmcginty/configerator"
             displayTitle: "configerator"
             pathToPrivateKey: ""
+            remoteServerCommand: ""
+            server: "our.cmcginty.sb.facebook.com"
+            sshPort: "22"
+            username: "cmcginty"
+          saveable: true
+        }
+        {
+          deletable: true
+          displayTitle: "configerator-dsi"
+          params:
+            cwd: "/home/cmcginty/configerator-dsi"
+            displayTitle: "configerator-dsi"
             remoteServerCommand: ""
             server: "our.cmcginty.sb.facebook.com"
             sshPort: "22"
