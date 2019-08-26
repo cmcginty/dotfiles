@@ -16,3 +16,6 @@ if [[ "$OSTYPE" == darwin* ]]; then
 
    apm upgrade --no-confirm >/dev/null
 fi
+
+# Fix keyboard repeat config
+defaults write com.github.atom ApplePressAndHoldEnabled -bool false
