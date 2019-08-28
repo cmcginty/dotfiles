@@ -17,7 +17,7 @@ p4merge.gui = true
 p4merge.premerge = true
 
 [templatealias]
-fb_rev = if(svnrev, 'r{svnrev}', rev)
+fb_rev = if(globalrev, '{phabdiff} r{globalrev}', rev)
 subject = truncatelonglines(desc|firstline,72,"·")
 blue  = '\x1B[34m'
 cyan  = '\x1B[36m'
@@ -54,14 +54,15 @@ drop    = hide
 fetch   = !HGPLAIN=1 $HG pull
 gg      = grep
 lg      = log --template '{shortlog}'
+lgd     = log --limit 1 --template '{phabdiff}\n'
 lgf     = log --template '{fulllog}'
-lgns    = log --template '{namestatlog}'
-lgno    = log --template '{nameonlylog}'
 lgm     = log
-lgp     = log --patch
-lgp1    = log --patch --limit 1
-lgr     = log -l1 -T 'r{svnrev}\n'
-lgs     = log --stat
+lgno    = log --template '{nameonlylog}'
+lgns    = log --template '{namestatlog}'
+lgp     = lg --patch
+lgp1    = lg --limit 1 --patch
+lgr     = log --limit 1 --template 'r{globalrev}\n'
+lgs     = lg --stat
 lgv     = log --template '{fulllog}'
 ls      = manifest
 pl      = pull

@@ -6,6 +6,9 @@
       create: true
    ~/.atom/config.cson: atom/config.cson
    ~/.atom/keymap.cson: atom/keymap.cson
+   ~/.atom/ondemand/homedir/.hgrc:
+      path: hgrc
+      create: true
    ~/.atom/styles.less: atom/styles.less
    ~/.bitbar:        bitbar
    ~/.clang-format:  vim/clang-format
@@ -16,6 +19,7 @@
    ~/.gitconfig:     git/gitconfig
    ~/.gitexcludes:   git/gitexcludes
    ~/.gvimrc:        vim/gvimrc
+   ~/.hgrc:          hgrc
    ~/.hgrc:          hgrc
    ~/.ignore:        ignore
    ~/.isort.cfg:     python/isort.cfg
