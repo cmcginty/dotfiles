@@ -17,14 +17,15 @@ p4merge.gui = true
 p4merge.premerge = true
 
 [templatealias]
-fb_rev = if(globalrev, '{phabdiff} r{globalrev}', rev)
+fb_rev = if(globalrev, 'r{globalrev}', rev)
+fb_diff = if(phabdiff, ' {phabdiff}')
 subject = truncatelonglines(desc|firstline,72,"·")
 blue  = '\x1B[34m'
 cyan  = '\x1B[36m'
 green = '\x1B[32m'
 red = '\x1B[31m'
 reset = '\x1B[0m'
-shortlog = '{blue}{fb_rev}{reset} [{green}{date|age}{reset}] {subject}, {cyan}{author|person}{reset}\n'
+shortlog = '{blue}{fb_rev}{fb_diff}{reset} [{green}{date|age}{reset}] {subject}, {cyan}{author|person}{reset}\n'
 fulllog = '{shortlog}\t{desc|strip|fill76|tabindent}\n\n'
 fmods = "{file_mods % '{blue}M\t{file}\n'}"
 fadds = "{file_adds % '{green}A\t{file}\n'}"
@@ -77,7 +78,7 @@ rbi     = histedit
 rbib    = histedit -r bottom
 rs      = !$HG uncommit && $HG undo --keep
 rt      = revert
-rsh     = !$HG revert --all && !HG checkout -C .
+rsh     = !$HG revert --all && $HG checkout -C .
 rta     = revert --all
 rti     = revert --interactive
 cop     = revert --interactive
