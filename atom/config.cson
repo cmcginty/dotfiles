@@ -80,6 +80,10 @@
       syncPreviewOnChange: true
     syntaxThemeName: "solarized-dark-syntax"
     useGitHubStyle: true
+  minimap:
+    plugins:
+      "split-diff": true
+      "split-diffDecorationsZIndex": 0
   notifications:
     showErrorsInDevMode: true
   nuclide:

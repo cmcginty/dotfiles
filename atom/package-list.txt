@@ -15,6 +15,7 @@ language-scala@1.1.10
 language-swift@0.5.0
 language-thrift@1.0.2
 markdown-preview-plus@3.9.2
+minimap@4.29.9
 minimap-split-diff@0.3.7
 monokai@0.24.0
 nuclide@0.504.172914151
@@ -26,5 +27,6 @@ sort-lines@0.19.0
 split-diff@1.6.1
 todo-show@2.3.2
 tool-bar@1.1.12
-vim-mode-plus@1.36.1
+vim-mode-plus@1.36.2
 vim-mode-plus-keymaps-for-surround@0.2.1
+
