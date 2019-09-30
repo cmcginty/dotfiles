@@ -96,6 +96,9 @@
     # supertab indent
     'tab': 'editor:indent-selected-rows'
 
+    # visually compare files in current split panes
+    'ctrl-cmd-c': 'split-diff:toggle'
+
 # insert mode
 # 'atom-text-editor.vim-mode-plus.insert-mode':
 
