@@ -218,7 +218,6 @@
       pullOption: "hg pull"
       showCommitInfoViewInline: false
       showTools: true
-      syncMessagesToPhabricator: false
     "fb-java":
       autoBuild: false
       autoFold: true
@@ -337,7 +336,33 @@
         InstagramFormatOnSave: false
         formatAlreadyFormattedFilesOnSave: false
         plugins:
+          fb_buck_format:
+            enabled: true
+          fb_dataswarm_format:
+            enabled: true
           fb_dataswarm_linter:
+            enabled: true
+          fb_dataswarm_macros_definition:
+            enabled: true
+          fb_dataswarm_macros_hover:
+            enabled: true
+          fb_dataswarm_roots:
+            enabled: true
+          fb_dataswarm_table_definition:
+            enabled: true
+          fb_dataswarm_udf_completion:
+            enabled: true
+          fb_dataswarm_udf_hover:
+            enabled: true
+          fb_ig_format:
+            enabled: true
+          fb_ig_source_roots:
+            enabled: true
+          fb_linktree:
+            enabled: true
+          jedi_highlight:
+            enabled: true
+          source_roots:
             enabled: true
     hyperclick:
       darwinTriggerKeys: "metaKey"
