@@ -3,6 +3,8 @@ username = Casey McGinty <cmcginty@fb.com>
 merge = p4merge
 # log style (compact, default, changelog, status, ...)
 style = compact
+# non-cursive UI to fix render errors
+interface=text
 
 [extdiff]
 cmd.p4merge = /Applications/p4merge.app/Contents/Resources/launchp4merge
