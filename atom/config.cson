@@ -339,9 +339,8 @@
           fb_buck_format:
             enabled: true
           fb_dataswarm_format:
-            enabled: true
-          fb_dataswarm_linter:
-            enabled: true
+            enabled: false
+          fb_dataswarm_linter: {}
           fb_dataswarm_macros_definition:
             enabled: true
           fb_dataswarm_macros_hover:
