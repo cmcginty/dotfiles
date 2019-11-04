@@ -78,6 +78,9 @@ rbc     = rebase --continue
 # rebase all local branches
 rball   = rebase --dest master --rev 'draft()'
 rbi     = histedit
+he      = histedit
+hea     = histedit --abort
+hec     = histedit --continue
 rbib    = histedit -r bottom
 rs      = !$HG uncommit && $HG undo --keep
 rt      = revert
