@@ -1,16 +1,22 @@
 */.DS_Store
-/Users/*/.Trash
-/Users/*/.cache
-/Users/*/.config/borg
-/Users/*/.dropbox
-/Users/*/Creative Cloud Files
-/Users/*/Dropbox
-/Users/*/Library/Caches
-/Users/*/Library/Containers
-/Users/*/Library/Developer/CoreSimulator
-/Users/*/Library/Group Containers
-/Users/*/Library/Logs
-/Users/*/tmp
+*/.Trash
+*/.cache
+
 /Users/Guest
 /Users/Shared
+
+sh:/Users/**/vim/plugged
+sh:/Users/*/.atom/.apm
+sh:/Users/*/.atom/packages
+sh:/Users/*/.config/borg
+sh:/Users/*/.dropbox
+sh:/Users/*/.pyenv
+sh:/Users/*/Creative Cloud Files
+sh:/Users/*/Dropbox
 sh:/Users/*/Library/**/Chrome/**/Application Cache
+sh:/Users/*/Library/Caches
+sh:/Users/*/Library/Containers
+sh:/Users/*/Library/Developer/CoreSimulator
+sh:/Users/*/Library/Group Containers
+sh:/Users/*/Library/Logs
+sh:/Users/*/tmp
