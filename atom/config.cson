@@ -218,6 +218,7 @@
       pullOption: "hg pull"
       showCommitInfoViewInline: false
       showTools: true
+      syncMessagesToPhabricator: false
     "fb-java":
       autoBuild: false
       autoFold: true
