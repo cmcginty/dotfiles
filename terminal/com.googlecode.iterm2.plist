@@ -8,6 +8,8 @@
 	<integer>2</integer>
 	<key>AppleAntiAliasingThreshold</key>
 	<integer>1</integer>
+	<key>ApplePressAndHoldEnabled</key>
+	<false/>
 	<key>AppleScrollAnimationEnabled</key>
 	<integer>0</integer>
 	<key>AppleSmoothFixedFontsSizeThreshold</key>
@@ -82,15 +84,15 @@
 		<integer>1</integer>
 	</dict>
 	<key>NSWindow Frame SUUpdateAlert</key>
-	<string>506 476 620 392 0 0 1680 1027 </string>
+	<string>970 888 620 392 0 0 2560 1577 </string>
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>269 147 606 469 0 0 2560 1577 </string>
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>542 327 918 423 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>396 0 1235 1027 0 0 1680 1027 </string>
+	<string>1708 0 850 1577 0 0 2560 1577 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>0 183 640 844 0 0 1680 1027 </string>
+	<string>0 733 640 844 0 0 2560 1577 </string>
 	<key>NeverWarnAboutShortLivedSessions_01CF84B0-5E6B-4585-9E19-745FC2F01D68</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_01CF84B0-5E6B-4585-9E19-745FC2F01D68_selection</key>
@@ -697,9 +699,13 @@
 	</array>
 	<key>NoSyncAllAppVersions</key>
 	<array>
-		<string>3.2.8</string>
 		<string>3.3.2</string>
+		<string>3.3.5</string>
+		<string>3.3.8</string>
+		<string>3.2.8</string>
+		<string>3.3.7</string>
 		<string>3.3.3</string>
+		<string>3.3.6</string>
 	</array>
 	<key>NoSyncFrame_SessionsPreferences</key>
 	<dict>
@@ -707,6 +713,13 @@
 		<string>{{2560, 0}, {2560, 1600}}</string>
 		<key>topLeft</key>
 		<string>{3513, 1312}</string>
+	</dict>
+	<key>NoSyncFrame_SharedPreferences</key>
+	<dict>
+		<key>screenFrame</key>
+		<string>{{2560, 0}, {2560, 1600}}</string>
+		<key>topLeft</key>
+		<string>{2651, 1279}</string>
 	</dict>
 	<key>NoSyncHaveRequestedFullDiskAccess</key>
 	<true/>
@@ -717,7 +730,7 @@
 	<key>NoSyncLastTipTime</key>
 	<real>589497237.96280706</real>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>8</integer>
+	<integer>49</integer>
 	<key>NoSyncNeverAskAboutSettingAlternateMouseScroll</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
@@ -1078,6 +1091,22 @@
 			</dict>
 			<dict>
 				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>currentTab.currentSession.terminalIconName</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>currentTab.currentSession.terminalWindowName</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
 				<false/>
 				<key>name</key>
 				<string>currentTab</string>
@@ -1204,6 +1233,22 @@
 				<true/>
 				<key>name</key>
 				<string>currentSession.commandLine</string>
+				<key>nonterminalContext</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<false/>
+				<key>name</key>
+				<string>title</string>
+				<key>nonterminalContext</key>
+				<integer>1</integer>
+			</dict>
+			<dict>
+				<key>isTerminal</key>
+				<true/>
+				<key>name</key>
+				<string>title</string>
 				<key>nonterminalContext</key>
 				<integer>0</integer>
 			</dict>
@@ -1547,13 +1592,13 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2019-09-30T20:06:20Z</date>
+	<date>2020-02-13T18:27:18Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
-	<key>SUSkippedVersion</key>
-	<string>3.3.4</string>
+	<key>SUUpdateGroupIdentifier</key>
+	<integer>774966735</integer>
 	<key>SUUpdateRelaunchingMarker</key>
-	<false/>
+	<true/>
 	<key>SoundForEsc</key>
 	<false/>
 	<key>SplitPaneDimmingAmount</key>
@@ -1573,6 +1618,6 @@
 	<key>findMode_iTerm</key>
 	<integer>0</integer>
 	<key>iTerm Version</key>
-	<string>3.3.3</string>
+	<string>3.3.8</string>
 </dict>
 </plist>
