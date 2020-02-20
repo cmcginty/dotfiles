@@ -41,7 +41,9 @@
    ~/.zshenv:        zsh/plugins/prezto/runcoms/zshenv
    ~/.zshrc:         zsh/zshrc
    ~/Library/Application Support/Code/User/settings.json: vscode/settings.json
-   ~/Library/Application Support/VS Code @ FB/User/settings.json: vscode/settings.json
+   ~/Library/Application Support/VS Code @ FB/User/settings.json:
+      path: vscode/settings.json
+      create: true
 
 - shell:
    -
