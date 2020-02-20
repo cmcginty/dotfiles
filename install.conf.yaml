@@ -40,6 +40,7 @@
    ~/.zprofile:      zsh/zprofile
    ~/.zshenv:        zsh/plugins/prezto/runcoms/zshenv
    ~/.zshrc:         zsh/zshrc
+   ~/Library/Application Support/Code/User/settings.json: vscode/settings.json
 
 - shell:
    -
@@ -68,6 +69,11 @@
    -
       command: atom/install.sh
       description: Install atom
+      stdin: true
+      stdout: true
+   -
+      command: vscode/install.sh
+      description: Install vscode
       stdin: true
       stdout: true
    -
