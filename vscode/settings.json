@@ -1,2 +1,28 @@
 {
+    "fb.remote-connections.hosts": [
+        {
+            "hostname": "our.cmcginty.sb.facebook.com",
+            "folders": [
+                "/data/users/cmcginty/configerator/",
+                "/data/users/cmcginty/configerator-dj/",
+                "/data/users/cmcginty/configerator-dsi/",
+                "/data/users/cmcginty/fbsource/",
+                "/data/users/cmcginty/www-hg/"
+            ]
+        }
+    ],
+    "window.zoomLevel": 0,
+    "workbench.colorTheme": "Monokai Dimmed",
+    "editor.fontFamily": "UbuntuMono Nerd Font",
+    "editor.fontSize": 13,
+    "editor.lineHeight": 16,
+    "arclint.applyLintFixesOnSave": [
+        "HACKFMT",
+        "BLACK"
+    ],
+    "window.openFilesInNewWindow": "on",
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+    "workbench.sideBar.location": "left",
+    "interactive-smartlog.pull": "hg pull",
+    "interactive-smartlog.fetch": "jf get"
 }
