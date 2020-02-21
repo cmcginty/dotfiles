@@ -15,7 +15,7 @@
     "workbench.colorTheme": "Monokai Dimmed",
     "editor.fontFamily": "UbuntuMono Nerd Font",
     "editor.fontSize": 13,
-    "editor.lineHeight": 16,
+    "editor.lineHeight": 13,
     "arclint.applyLintFixesOnSave": [
         "HACKFMT",
         "BLACK"
@@ -24,5 +24,6 @@
     "workbench.editor.enablePreviewFromQuickOpen": false,
     "workbench.sideBar.location": "left",
     "interactive-smartlog.pull": "hg pull",
-    "interactive-smartlog.fetch": "jf get"
+    "interactive-smartlog.fetch": "jf get",
+    "intern-tools.showReminderBeforeMeetings": true
 }
