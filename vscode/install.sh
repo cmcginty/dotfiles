@@ -9,7 +9,7 @@ if [[ "$OSTYPE" == darwin* ]]; then
    # Skip installing public VS code if FB version exists.
    if hash code-fb; then
       # Install all missing packages from package-list.txt created by:
-      #    code --list-extensions > package-list.txt
+      #    gen-package-list.sh
       cat $BASEDIR/package-list.txt | xargs -n 1 code-fb --force --install-extension
    else
       # Try to install vscode ... No guarantee this will work.
@@ -25,4 +25,8 @@ if [[ "$OSTYPE" == darwin* ]]; then
       #    code --list-extensions > package-list.txt
       cat $BASEDIR/package-list.txt | xargs -n 1 code --force --install-extension
    fi
+
+   # Enable key repeat
+   defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
+   defaults write com.facebook.fbvscode ApplePressAndHoldEnabled -bool false
 fi

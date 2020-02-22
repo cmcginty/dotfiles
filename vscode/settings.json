@@ -25,5 +25,49 @@
     "workbench.sideBar.location": "left",
     "interactive-smartlog.pull": "hg pull",
     "interactive-smartlog.fetch": "jf get",
-    "intern-tools.showReminderBeforeMeetings": true
+    "intern-tools.showReminderBeforeMeetings": true,
+
+    "files.trimTrailingWhitespace": true,
+
+
+    // ---------------------------------------------
+    // --- Vim Extension Settings / Key Mappings ---
+    "vim.leader": "space",
+    "vim.debug.loggingLevelForConsole": "debug", // set to "deubg" to lot all keypresses
+    // NORMAL mode
+    "vim.normalModeKeyBindingsNonRecursive": [
+        // Cursor motion commands
+        {
+            "before": ["ctrl+k"],
+            "after": [ "ctrl+u", "M" ] // half-page up, centered
+        },
+        {
+            "before": ["ctrl+j"],
+            "after": [ "ctrl+d", "M" ] // half-page down, centered
+        }
+    ],
+    // INSERT mode
+    "vim.insertModeKeyBindingsNonRecursive": [
+        {
+            "before": ["ctrl+space"],
+            "after": ["<ESC>"]
+        },
+    ],
+    // OTHER mode
+    "vim.otherModesKeyBindingsNonRecursive": [
+    ],
+
+
+    // ---------------------------------------------
+    // --------  Multi-Command Extension   ---------
+    "multiCommand.commands": [
+        {
+            // This is a hack so <ctrl-s> can map to SAVE and "enter normal mode"
+            "command": "multiCommand.vimSaveNormalMode",
+            "sequence": [
+                "workbench.action.files.save",
+                "extension.vim_ctrl+["
+            ]
+        },
+    ],
 }

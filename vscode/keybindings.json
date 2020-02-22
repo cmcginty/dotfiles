@@ -1,0 +1,45 @@
+// Place your key bindings in this file to override the defaults
+[
+    // Tab navigation
+    {
+        "key": "ctrl+l",
+        "command": "workbench.action.nextEditor" // next tab
+    },
+    {
+        "key": "ctrl+h",
+        "command": "workbench.action.previousEditor" // previous tab
+    },
+    {
+        "key": "ctrl+d",
+        "command": "workbench.action.closeActiveEditor" // close tab
+    },
+    {
+        "key": "ctrl+shift+t",
+        "command": "workbench.action.reopenClosedEditor" // re-oepn tab
+    },
+
+
+    // File operations
+    {
+        "key": "ctrl+s",
+        "command": "extension.multiCommand.execute" ,
+        "args": { "command": "multiCommand.vimSaveNormalMode" },
+        "when": "editorTextFocus"
+    },
+
+
+    // Window operations
+    {
+        "key": "ctrl+b",
+        "command":"workbench.action.toggleSidebarVisibility" // toggle side-bar
+    },
+    {
+        "key": "ctrl+e",
+        "command":"workbench.explorer.fileView.focus" // show explorer bar
+    },
+    {
+        "key": "cmd+enter",
+        "command": "workbench.action.toggleZenMode"  // toggle full-screen
+    }
+
+]
