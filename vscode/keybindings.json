@@ -17,29 +17,40 @@
         "key": "ctrl+shift+t",
         "command": "workbench.action.reopenClosedEditor" // re-oepn tab
     },
-
-
     // File operations
     {
+        // save file (enable vim normal mode)
         "key": "ctrl+s",
-        "command": "extension.multiCommand.execute" ,
-        "args": { "command": "multiCommand.vimSaveNormalMode" },
+        "command": "extension.multiCommand.execute",
+        "args": {
+            "command": "multiCommand.vimSaveNormalMode"
+        },
         "when": "editorTextFocus"
     },
-
-
     // Window operations
     {
         "key": "ctrl+b",
-        "command":"workbench.action.toggleSidebarVisibility" // toggle side-bar
+        "command": "workbench.action.toggleSidebarVisibility" // toggle left-hand sidebar
     },
     {
         "key": "ctrl+e",
-        "command":"workbench.explorer.fileView.focus" // show explorer bar
+        "command": "workbench.explorer.fileView.focus" // show explorer bar
     },
     {
         "key": "cmd+enter",
-        "command": "workbench.action.toggleZenMode"  // toggle full-screen
-    }
-
+        "command": "workbench.action.toggleZenMode" // toggle full-screen
+    },
+    // Editor shortcuts
+    {
+        "key": "ctrl+space",
+        "command": "extension.vim_escape" // switch to normal mode
+    },
+    {
+        "key": "ctrl+shift+f",
+        "command": "editor.action.formatDocument" // switch to normal mode
+    },
+    {
+        "key": "ctrl+;",
+        "command": "editor.action.triggerSuggest" // auto-complete
+    },
 ]
