@@ -12,7 +12,6 @@
         }
     ],
     "window.zoomLevel": 0,
-    "workbench.colorTheme": "Monokai Dimmed",
     "editor.fontFamily": "UbuntuMono Nerd Font",
     "editor.fontSize": 13,
     "editor.lineHeight": 13,
@@ -21,19 +20,22 @@
         "BLACK"
     ],
     "window.openFilesInNewWindow": "on",
-    "workbench.editor.enablePreviewFromQuickOpen": false,
-    "workbench.sideBar.location": "left",
     "interactive-smartlog.pull": "hg pull",
     "interactive-smartlog.fetch": "jf get",
     "intern-tools.showReminderBeforeMeetings": true,
 
     "files.trimTrailingWhitespace": true,
 
+    // Layout, highlighting, and icons
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+    "workbench.sideBar.location": "left",
+    "workbench.colorTheme": "Super One Dark",
+    "workbench.iconTheme": "vscode-icons",
 
     // ---------------------------------------------
     // --- Vim Extension Settings / Key Mappings ---
     "vim.leader": "space",
-    "vim.debug.loggingLevelForConsole": "debug", // set to "deubg" to lot all keypresses
+    "vim.debug.loggingLevelForConsole": "error", // set to "deubg" to lot all keypresses
     // NORMAL mode
     "vim.normalModeKeyBindingsNonRecursive": [
         // Cursor motion commands
