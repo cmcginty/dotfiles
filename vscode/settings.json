@@ -31,6 +31,17 @@
     "workbench.colorTheme": "Super One Dark",
     "workbench.iconTheme": "vscode-icons",
     // ---------------------------------------------
+    // -------- Spell Right Extention --------------
+    "spellright.language": [
+        "en"
+    ],
+    "spellright.documentTypes": [
+        "markdown",
+        "latex",
+        "plaintext",
+        "jsonc"
+    ],
+    // ---------------------------------------------
     // --- Vim Extension Settings / Key Mappings ---
     "vim.leader": "space",
     "vim.hlsearch": true,
