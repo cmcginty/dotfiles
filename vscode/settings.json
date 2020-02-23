@@ -46,10 +46,11 @@
     ],
     // ---------------------------------------------
     // --- Vim Extension Settings / Key Mappings ---
-    "vim.leader": "space",
+    "vim.debug.loggingLevelForConsole": "error", // set to "debug" to log all keypresses
     "vim.hlsearch": true,
-    "vim.debug.loggingLevelForConsole": "error", // set to "deubg" to log all keypresses
+    "vim.leader": "space",
     "vim.searchHighlightColor": "rgba(246, 246, 80, 0.9)", // yellow highlight color
+    "vim.useSystemClipboard": true,
     // NORMAL mode
     "vim.normalModeKeyBindingsNonRecursive": [
         // ## Window toggles:
@@ -163,6 +164,25 @@
             ]
         },
         // ## Editor:
+        { // yank current position to end of line (like D)
+            "before": [
+                "Y"
+            ],
+            "after": [
+                "y",
+                "$"
+            ]
+        },
+        { // paste after current line
+            "before": [
+                "<leader>",
+                "p"
+            ],
+            "commands": [
+                "editor.action.insertLineAfter",
+                "editor.action.clipboardPasteAction"
+            ]
+        },
         { // search word under cursor
             "before": [
                 "ctrl+f"
