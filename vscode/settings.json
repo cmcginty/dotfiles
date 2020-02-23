@@ -255,6 +255,22 @@
                 "editor.action.moveLinesDownAction",
             ]
         },
+        { // TAB indent
+            "before": [
+                "tab"
+            ],
+            "commands": [
+                "editor.action.indentLines"
+            ]
+        },
+        {
+            "before": [
+                "shift+tab"
+            ],
+            "commands": [
+                "editor.action.outdentLines"
+            ]
+        },
     ],
     // INSERT mode
     "vim.insertModeKeyBindingsNonRecursive": [
@@ -280,6 +296,23 @@
     "vim.otherModesKeyBindingsNonRecursive": [],
     // VISUAL mode
     "vim.visualModeKeyBindingsNonRecursive": [
+        // ## Tab motion commands <C-w>:
+        { // go to previous tab
+            "before": [
+                "ctrl+h",
+            ],
+            "commands": [
+                "workbench.action.previousEditor"
+            ]
+        },
+        { // go to next tab
+            "before": [
+                "ctrl+l",
+            ],
+            "commands": [
+                "workbench.action.nextEditor"
+            ]
+        },
         // ## Cursor motion commands:
         { // half-page up, centered
             "before": [
@@ -297,6 +330,22 @@
             "after": [
                 "ctrl+d",
                 "M"
+            ]
+        },
+        { // TAB indent
+            "before": [
+                "tab"
+            ],
+            "commands": [
+                "editor.action.indentLines"
+            ]
+        },
+        {
+            "before": [
+                "shift+tab"
+            ],
+            "commands": [
+                "editor.action.outdentLines"
             ]
         },
     ],
