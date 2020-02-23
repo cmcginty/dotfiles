@@ -26,10 +26,11 @@
     "intern-tools.showReminderBeforeMeetings": true,
     "files.trimTrailingWhitespace": true,
     // Layout, highlighting, and icons
-    "workbench.editor.enablePreviewFromQuickOpen": false,
-    "workbench.sideBar.location": "left",
     "workbench.colorTheme": "Super One Dark",
+    "workbench.editor.enablePreviewFromQuickOpen": false,
     "workbench.iconTheme": "vscode-icons",
+    "workbench.sideBar.location": "left",
+    "workbench.startupEditor": "newUntitledFile",
     // ---------------------------------------------
     // -------- Spell Right Extention --------------
     "spellright.language": [
