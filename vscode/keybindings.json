@@ -3,6 +3,11 @@
 // WARNING: Any key presses will be intercepted before Vim
 //          unles !editorTextFocus is used.
 [
+    // Development console
+    {
+        "key": "cmd+alt+i",
+        "command": "workbench.action.toggleDevTools",
+    },
     // Tab navigation (non-VIM)
     {
         "key": "ctrl+l",
@@ -39,7 +44,8 @@
     },
     {
         "key": "ctrl+e",
-        "command": "workbench.explorer.fileView.focus" // show explorer bar
+        "command": "workbench.action.toggleSidebarVisibility", // show explorer bar
+        "when": "sideBarFocus"
     },
     {
         "key": "cmd+enter",
@@ -48,6 +54,21 @@
     {
         "key": "ctrl+o",
         "command": "omni-search:quick-search" // toggle omni-file search
+    },
+    {
+        "key": "cmd+o", // open outline panel
+        "command": "outline.focus",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "cmd+o", // close outline panel
+        "command": "workbench.action.toggleSidebarVisibility",
+        "when": "sideBarFocus"
+    },
+    {
+        "key": "ctrl+0", // return focus to editor
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "sideBarFocus"
     },
     // Editor shortcuts
     {

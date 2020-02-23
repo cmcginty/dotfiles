@@ -52,6 +52,15 @@
     "vim.searchHighlightColor": "rgba(246, 246, 80, 0.9)", // yellow highlight color
     // NORMAL mode
     "vim.normalModeKeyBindingsNonRecursive": [
+        // ## Window toggles:
+        { // toggle file explorer
+            "before": [
+                "ctrl+e",
+            ],
+            "commands": [
+                "workbench.explorer.fileView.focus"
+            ],
+        },
         // ## Feature toggles:
         { // toggle word wrap
             "before": [
