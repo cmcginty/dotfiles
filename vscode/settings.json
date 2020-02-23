@@ -348,6 +348,24 @@
                 "editor.action.outdentLines"
             ]
         },
+        { // Sort seleted lines
+            "before": [
+                "<leader>",
+                "s"
+            ],
+            "commands": [
+                "editor.action.sortLinesAscending"
+            ]
+        },
+        { // Reverse sort seleted lines
+            "before": [
+                "<leader>",
+                "S"
+            ],
+            "commands": [
+                "editor.action.sortLinesDescending"
+            ]
+        },
     ],
     // ---------------------------------------------
     // --------  Multi-Command Extension   ---------
