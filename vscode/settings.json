@@ -11,26 +11,28 @@
             ]
         }
     ],
-    "window.zoomLevel": 0,
-    "editor.fontFamily": "UbuntuMono Nerd Font",
-    "editor.fontSize": 13,
-    "editor.lineHeight": 13,
-    "editor.minimap.enabled": true,
     "arclint.applyLintFixesOnSave": [
         "HACKFMT",
         "BLACK"
     ],
-    "window.openFilesInNewWindow": "on",
     "interactive-smartlog.pull": "hg pull",
     "interactive-smartlog.fetch": "jf get",
+    // ---------------------------------------------
+    // -------- VSCode Core Settings ---------------
+    "editor.fontFamily": "UbuntuMono Nerd Font",
+    "editor.fontSize": 13,
+    "editor.lineHeight": 13,
+    "editor.minimap.enabled": true,
+    "editor.tabCompletion": "on",
     "intern-tools.showReminderBeforeMeetings": true,
     "files.trimTrailingWhitespace": true,
-    // Layout, highlighting, and icons
     "workbench.colorTheme": "Super One Dark",
     "workbench.editor.enablePreviewFromQuickOpen": false,
     "workbench.iconTheme": "vscode-icons",
     "workbench.sideBar.location": "left",
     "workbench.startupEditor": "newUntitledFile",
+    "workbench.editor.tabSizing": "shrink",
+    "window.zoomLevel": 0,
     // ---------------------------------------------
     // -------- Spell Right Extention --------------
     "spellright.language": [
