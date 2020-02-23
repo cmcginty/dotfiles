@@ -72,6 +72,15 @@
                 "editor.action.toggleWordWrap"
             ],
         },
+        { // toggle hg blame
+            "before": [
+                "ctrl+w",
+                "b",
+            ],
+            "commands": [
+                "blame.toggle-blame"
+            ],
+        },
         // ## Cursor motion commands:
         { // half-page up, centered
             "before": [
@@ -175,8 +184,8 @@
             "before": [
                 "ctrl+u"
             ],
-            "commands": [
-                "redo"
+            "after": [
+                "ctrl+r"
             ]
         },
         { // document format
@@ -186,6 +195,44 @@
             ],
             "commands": [
                 "editor.action.formatDocument"
+            ]
+        },
+        { // Vim-Unimpaired, add line above
+            "before": [
+                "[",
+                "<space>"
+            ],
+            "commands": [
+                "editor.action.insertLineBefore",
+                "cursorDown"
+            ]
+        },
+        { // Vim-Unimpaired, add line above
+            "before": [
+                "]",
+                "<space>"
+            ],
+            "commands": [
+                "editor.action.insertLineAfter",
+                "cursorUp"
+            ]
+        },
+        { // Vim-Unimpaired, move line up
+            "before": [
+                "[",
+                "e"
+            ],
+            "commands": [
+                "editor.action.moveLinesUpAction",
+            ]
+        },
+        { // Vim-Unimpaired, move line down
+            "before": [
+                "]",
+                "e"
+            ],
+            "commands": [
+                "editor.action.moveLinesDownAction",
             ]
         },
     ],
