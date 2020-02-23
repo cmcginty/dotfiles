@@ -52,6 +52,17 @@
     "vim.searchHighlightColor": "rgba(246, 246, 80, 0.9)", // yellow highlight color
     // NORMAL mode
     "vim.normalModeKeyBindingsNonRecursive": [
+        // ## Feature toggles:
+        { // toggle word wrap
+            "before": [
+                "<leader>",
+                "o",
+                "w"
+            ],
+            "commands": [
+                "editor.action.toggleWordWrap"
+            ],
+        },
         // ## Cursor motion commands:
         { // half-page up, centered
             "before": [
@@ -151,12 +162,12 @@
                 ":nohls"
             ]
         },
-        { // re-do
+        { // redo
             "before": [
                 "ctrl+u"
             ],
-            "after": [
-                "ctrl+r"
+            "commands": [
+                "redo"
             ]
         },
         { // document format
