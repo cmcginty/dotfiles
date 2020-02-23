@@ -1,13 +1,18 @@
 // Place your key bindings in this file to override the defaults
+//
+// WARNING: Any key presses will be intercepted before Vim
+//          unles !editorTextFocus is used.
 [
-    // Tab navigation
+    // Tab navigation (non-VIM)
     {
         "key": "ctrl+l",
-        "command": "workbench.action.nextEditor" // next tab
+        "command": "workbench.action.nextEditor", // next tab
+        "when": "!editorTextFocus"
     },
     {
         "key": "ctrl+h",
-        "command": "workbench.action.previousEditor" // previous tab
+        "command": "workbench.action.previousEditor", // previous tab
+        "when": "!editorTextFocus"
     },
     {
         "key": "ctrl+d",
@@ -40,6 +45,10 @@
         "key": "cmd+enter",
         "command": "workbench.action.toggleZenMode" // toggle full-screen
     },
+    {
+        "key": "ctrl+o",
+        "command": "omni-search:quick-search" // toggle omni-file search
+    },
     // Editor shortcuts
     {
         "key": "ctrl+space",
@@ -47,7 +56,7 @@
     },
     {
         "key": "ctrl+shift+f",
-        "command": "editor.action.formatDocument" // switch to normal mode
+        "command": "editor.action.formatDocument" // enable auto code-formatting
     },
     {
         "key": "ctrl+;",

@@ -15,6 +15,7 @@
     "editor.fontFamily": "UbuntuMono Nerd Font",
     "editor.fontSize": 13,
     "editor.lineHeight": 13,
+    "editor.minimap.enabled": true,
     "arclint.applyLintFixesOnSave": [
         "HACKFMT",
         "BLACK"
@@ -37,7 +38,7 @@
     "vim.searchHighlightColor": "rgba(246, 246, 80, 0.9)", // yellow highlight color
     // NORMAL mode
     "vim.normalModeKeyBindingsNonRecursive": [
-        // Cursor motion commands:
+        // ## Cursor motion commands:
         { // half-page up, centered
             "before": [
                 "ctrl+k"
@@ -56,7 +57,69 @@
                 "M"
             ]
         },
-        // Editor:
+        // ## Tab motion commands <C-w>:
+        { // go to previous tab
+            "before": [
+                "ctrl+h",
+            ],
+            "commands": [
+                "workbench.action.previousEditor"
+            ]
+        },
+        { // go to next tab
+            "before": [
+                "ctrl+l",
+            ],
+            "commands": [
+                "workbench.action.nextEditor"
+            ]
+        },
+        { // move tab to left group
+            "before": [
+                "ctrl+w",
+                "ctrl+h"
+            ],
+            "commands": [
+                "workbench.action.moveActiveEditorGroupLeft"
+            ]
+        },
+        { // move tab to right group
+            "before": [
+                "ctrl+w",
+                "ctrl+l"
+            ],
+            "commands": [
+                "workbench.action.moveActiveEditorGroupRight"
+            ]
+        },
+        { // move tab to above group
+            "before": [
+                "ctrl+w",
+                "ctrl+k"
+            ],
+            "commands": [
+                "workbench.action.moveActiveEditorGroupUp"
+            ]
+        },
+        { // move tab to lower group
+            "before": [
+                "ctrl+w",
+                "ctrl+j"
+            ],
+            "commands": [
+                "workbench.action.moveActiveEditorGroupDown"
+            ]
+        },
+        { // join all tabs to single window
+            "before": [
+                "ctrl+w",
+                "w"
+            ],
+            "commands": [
+                "workbench.action.joinAllGroups"
+            ]
+        },
+        // ## Editor:
         { // search word under cursor
             "before": [
                 "ctrl+f"
@@ -93,11 +156,49 @@
         },
     ],
     // INSERT mode
-    "vim.insertModeKeyBindingsNonRecursive": [],
+    "vim.insertModeKeyBindingsNonRecursive": [
+        // ## Tab motion commands <C-w>:
+        { // go to previous tab
+            "before": [
+                "ctrl+h",
+            ],
+            "commands": [
+                "workbench.action.previousEditor"
+            ]
+        },
+        { // go to next tab
+            "before": [
+                "ctrl+l",
+            ],
+            "commands": [
+                "workbench.action.nextEditor"
+            ]
+        },
+    ],
     // OTHER mode
     "vim.otherModesKeyBindingsNonRecursive": [],
     // VISUAL mode
-    "vim.visualModeKeyBindingsNonRecursive": [],
+    "vim.visualModeKeyBindingsNonRecursive": [
+        // ## Cursor motion commands:
+        { // half-page up, centered
+            "before": [
+                "ctrl+k"
+            ],
+            "after": [
+                "ctrl+u",
+                "M"
+            ]
+        },
+        { // half-page down, centered
+            "before": [
+                "ctrl+j"
+            ],
+            "after": [
+                "ctrl+d",
+                "M"
+            ]
+        },
+    ],
     // ---------------------------------------------
     // --------  Multi-Command Extension   ---------
     "multiCommand.commands": [
