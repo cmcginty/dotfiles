@@ -59,8 +59,36 @@
                 "ctrl+e",
             ],
             "commands": [
-                "workbench.explorer.fileView.focus"
+                "workbench.explorer.fileView.focus" // open directory tree
             ],
+        },
+        {
+            "before": [
+                "<leader>",
+                "t"
+            ],
+            "commands": [
+                "workbench.action.toggleSidebarVisibility" // toggle sidebar (cmd-b)
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "f"
+            ],
+            "commands": [
+                "revealInExplorer" // select file in directory tree
+            ],
+        },
+        {
+            "before": [
+                "<leader>",
+                "r",
+                "f"
+            ],
+            "commands": [
+                "renameFile" // rename file in directory tree
+            ]
         },
         // ## Feature toggles:
         { // toggle word wrap
