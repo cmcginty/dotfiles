@@ -53,6 +53,7 @@
     "vim.useSystemClipboard": true,
     // NORMAL mode
     "vim.normalModeKeyBindingsNonRecursive": [
+        // --------------------------------------------------------------------
         // ## Window toggles:
         { // toggle file explorer
             "before": [
@@ -90,6 +91,7 @@
                 "renameFile" // rename file in directory tree
             ]
         },
+        // --------------------------------------------------------------------
         // ## Feature toggles:
         { // toggle word wrap
             "before": [
@@ -110,6 +112,7 @@
                 "blame.toggle-blame"
             ],
         },
+        // --------------------------------------------------------------------
         // ## Cursor motion commands:
         { // half-page up, centered
             "before": [
@@ -129,6 +132,7 @@
                 "M"
             ]
         },
+        // --------------------------------------------------------------------
         // ## Tab motion commands <C-w>:
         { // go to previous tab
             "before": [
@@ -191,6 +195,7 @@
                 "workbench.action.joinAllGroups"
             ]
         },
+        // --------------------------------------------------------------------
         // ## Editor:
         { // yank current position to end of line (like D)
             "before": [
@@ -324,6 +329,7 @@
     "vim.otherModesKeyBindingsNonRecursive": [],
     // VISUAL mode
     "vim.visualModeKeyBindingsNonRecursive": [
+        // --------------------------------------------------------------------
         // ## Tab motion commands <C-w>:
         { // go to previous tab
             "before": [
@@ -341,6 +347,7 @@
                 "workbench.action.nextEditor"
             ]
         },
+        // --------------------------------------------------------------------
         // ## Cursor motion commands:
         { // half-page up, centered
             "before": [
@@ -402,8 +409,8 @@
             // This is a hack so <ctrl-s> can map to SAVE and "enter normal mode"
             "command": "multiCommand.vimSaveNormalMode",
             "sequence": [
-                "workbench.action.files.save",
-                "extension.vim_escape"
+                "extension.vim_escape",
+                "workbench.action.files.save"
             ]
         },
     ],
