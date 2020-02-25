@@ -39,6 +39,10 @@
     },
     // Window operations
     {
+        "key": "cmd+i",
+        "command": "fb-hg.toggle-interactive-smartlog"
+    },
+    {
         "key": "ctrl+b",
         "command": "workbench.action.toggleSidebarVisibility" // toggle left-hand sidebar
     },
@@ -140,6 +144,6 @@
         "key": "ctrl+k",
         "command": "workbench.action.quickOpenSelectPrevious", // prev list item
         "when": "inQuickOpen"
-      }
+    },
 
 ]
