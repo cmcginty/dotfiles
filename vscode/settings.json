@@ -105,7 +105,8 @@
         },
         { // toggle hg blame
             "before": [
-                "ctrl+w",
+                "<leader>",
+                "o",
                 "b",
             ],
             "commands": [
