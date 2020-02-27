@@ -12,12 +12,12 @@
     {
         "key": "ctrl+l",
         "command": "workbench.action.nextEditor", // next tab
-        "when": "!editorTextFocus && !listFocus"
+        "when": "!editorFocus && !listFocus"
     },
     {
         "key": "ctrl+h",
         "command": "workbench.action.previousEditor", // previous tab
-        "when": "!editorTextFocus && !listFocus"
+        "when": "!editorFocus && !listFocus"
     },
     {
         "key": "ctrl+d",
@@ -35,7 +35,7 @@
         "args": {
             "command": "multiCommand.vimSaveNormalMode"
         },
-        "when": "editorTextFocus"
+        "when": "editorFocus"
     },
     // Window operations
     {
@@ -67,7 +67,7 @@
     {
         "key": "cmd+o", // open outline panel
         "command": "outline.focus",
-        "when": "editorTextFocus"
+        "when": "editorFocus"
     },
     {
         "key": "cmd+o", // close outline panel
@@ -83,7 +83,7 @@
     {
         "key": "ctrl+space",
         "command": "extension.vim_escape", // switch to normal mode
-        "when": "editorTextFocus"
+        "when": "editorFocus"
     },
     {
         "key": "ctrl+shift+f",
@@ -92,6 +92,11 @@
     {
         "key": "ctrl+;",
         "command": "editor.action.triggerSuggest" // auto-complete
+    },
+    {
+        "key": "ctrl+p",
+        "command": "editor.action.peekDefinition", // peek definition of some code variable
+        "when": "editorFocus"
     },
     // List navigation
     {
@@ -129,21 +134,20 @@
         "key": "ctrl+j",
         "command": "selectNextSuggestion", // next list item
         "when": "suggestWidgetVisible"
-      },
-      {
+    },
+    {
         "key": "ctrl+j",
         "command": "workbench.action.quickOpenSelectNext", // next list item
         "when": "inQuickOpen"
-      },
-      {
+    },
+    {
         "key": "ctrl+k",
         "command": "selectPrevSuggestion", // prev list item
         "when": "suggestWidgetVisible"
-      },
-      {
+    },
+    {
         "key": "ctrl+k",
         "command": "workbench.action.quickOpenSelectPrevious", // prev list item
         "when": "inQuickOpen"
     },
-
 ]

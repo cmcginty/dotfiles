@@ -305,6 +305,16 @@
                 "editor.action.outdentLines"
             ]
         },
+        // --------------------------------------------------------------------
+        // ## Code Navigation:
+        { // Map jumpstack to ctrl-t, as default ctrl-t adds extra steps
+            "before": [
+                "ctrl+t"
+            ],
+            "after": [
+                "ctrl+o"
+            ]
+        },
     ],
     // INSERT mode
     "vim.insertModeKeyBindingsNonRecursive": [
