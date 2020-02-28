@@ -27,6 +27,14 @@
         "key": "ctrl+shift+t",
         "command": "workbench.action.reopenClosedEditor" // re-oepn tab
     },
+    {
+        "key": "ctrl+shift+h",
+        "command": "workbench.action.moveEditorLeftInGroup" // move tab position left
+    },
+    {
+        "key": "ctrl+shift+l",
+        "command": "workbench.action.moveEditorRightInGroup" // move tab position right
+    },
     // File operations
     {
         // save file (enable vim normal mode)
