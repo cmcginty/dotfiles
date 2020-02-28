@@ -82,8 +82,13 @@
     // Editor shortcuts
     {
         "key": "ctrl+space",
-        "command": "extension.vim_escape", // switch to normal mode
+        "command": "extension.vim_escape", // switch to normal mode from editor and peek view
         "when": "editorFocus"
+    },
+    {
+        "key": "ctrl+space",
+        "command": "workbench.action.closeQuickOpen", // switch to normal mode from Omni Search box
+        "when": "inQuickOpen"
     },
     {
         "key": "ctrl+shift+f",
