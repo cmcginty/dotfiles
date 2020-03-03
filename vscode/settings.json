@@ -91,6 +91,15 @@
                 "renameFile" // rename file in directory tree
             ]
         },
+        {
+            "before": [
+                "<leader>",
+                "g"
+            ],
+            "commands": [
+                "nuclide-biggrep:open-pane" // select file in directory tree
+            ],
+        },
         // --------------------------------------------------------------------
         // ## Feature toggles:
         { // toggle word wrap
