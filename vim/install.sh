@@ -10,7 +10,12 @@ if [[ -n "$PYENV_VERSION" ]] && [[ "$PYENV_VERSION" != "system" ]]; then
 fi
 set -u
 
-if [[ "$OSTYPE" == linux* && -f /etc/debian_version ]]; then
+if [[ $IS_FB_VIM ]]; then
+
+   # Install 8.x vim release
+   sudo feature install fb-vim
+
+elif [[ "$OSTYPE" == linux* && -f /etc/debian_version ]]; then
 
    hash gvim || sudo apt-get install -y vim vim-gnome
    # enable trusty-backports
