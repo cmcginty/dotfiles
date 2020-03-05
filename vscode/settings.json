@@ -24,6 +24,10 @@
     "editor.lineHeight": 13,
     "editor.minimap.enabled": true,
     "editor.tabCompletion": "on",
+    "editor.rulers": [
+        80,
+        120
+    ],
     "intern-tools.showReminderBeforeMeetings": true,
     "files.trimTrailingWhitespace": true,
     "workbench.colorTheme": "Super One Dark",
