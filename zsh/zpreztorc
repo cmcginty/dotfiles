@@ -6,6 +6,14 @@
 #
 
 #
+# Variables
+#
+
+# FB has a custom pyenv binary, so Python plugin needs to be disabled
+# when the pyenv is detected as XAR format.
+head -1 $(which pyenv) | grep -q xarexec_fuse || PYTHON_MODULE='python'
+
+#
 # General
 #
 
@@ -44,7 +52,7 @@ zstyle ':prezto:load' pmodule \
   'gpg' \
   'homebrew' \
   'osx' \
-  'python' \
+  $PYTHON_MODULE \
   'ssh' \
   'tmux' \
   \
