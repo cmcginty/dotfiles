@@ -2,9 +2,6 @@
 
 hash gvim 2> /dev/null && VIM=gvim || VIM=vim
 
-alias sdvi="sudo $VIM -p > /dev/null 2>&1"
-alias vi="$VIM > /dev/null 2>&1"
-
-if [[ $VIM == "gvim" ]]; then
-    alias vim="$VIM > /dev/null 2>&1"
-fi
+alias sdvi="sudo $VIM -p"
+alias vi="$VIM"
+alias vim="$VIM"
