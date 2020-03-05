@@ -77,7 +77,7 @@ TMPPREFIX="${TMPDIR%/}/zsh"
 #
 # Set env when running on an FB host as tools are non-standard
 #
-hostname | grep -q facebook.com && export IS_FB_HOST=1
+export IS_FB_HOST=$(hostname | grep -q facebook.com && echo 1)
 
 #
 # Source environment settings

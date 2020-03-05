@@ -10,7 +10,7 @@ if [[ -n "$PYENV_VERSION" ]] && [[ "$PYENV_VERSION" != "system" ]]; then
 fi
 set -u
 
-if [[ $IS_FB_VIM ]]; then
+if [[ $IS_FB_HOST ]]; then
 
    # Install 8.x vim release
    sudo feature install fb-vim
