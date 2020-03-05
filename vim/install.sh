@@ -10,7 +10,7 @@ if [[ -n "$PYENV_VERSION" ]] && [[ "$PYENV_VERSION" != "system" ]]; then
 fi
 set -u
 
-if [[ "$OSTYPE" == linux* ]]; then
+if [[ "$OSTYPE" == linux* && -f /etc/debian_version ]]; then
 
    hash gvim || sudo apt-get install -y vim vim-gnome
    # enable trusty-backports

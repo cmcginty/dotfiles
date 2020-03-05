@@ -9,7 +9,7 @@
 # Browser
 #
 
-if [[ "$OSTYPE" == darwin* ]]; then
+if [[ $(uname) == 'Darwin' ]]; then
   export BROWSER='open'
 fi
 
@@ -73,6 +73,11 @@ if [[ ! -d "$TMPDIR" ]]; then
 fi
 
 TMPPREFIX="${TMPDIR%/}/zsh"
+
+#
+# Set env when running on an FB host as tools are non-standard
+#
+hostname | grep -q facebook.com && export IS_FB_HOST=1
 
 #
 # Source environment settings
