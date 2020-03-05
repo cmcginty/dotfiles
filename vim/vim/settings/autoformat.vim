@@ -6,6 +6,3 @@ nnoremap <leader>F   :bufdo execute "Autoformat" <bar> update<cr>
 
 " add XML formatter for ANT files
 let g:formatters_ant = ['tidy_xml']
-
-" change default YAPF (python) formatter style
-let g:formatter_yapf_style='google'

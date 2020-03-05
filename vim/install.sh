@@ -33,7 +33,6 @@ elif [[ "$OSTYPE" == linux* && -f /etc/debian_version ]]; then
    hash js-beautify        || sudo npm install -g js-beautify
    hash remark             || sudo npm install -g remark-cli
    hash tidy               || sudo apt-get install -y tidy
-   pip3 install --quiet --upgrade yapf
 
 elif [[ "$OSTYPE" == darwin* ]]; then
 
@@ -49,9 +48,8 @@ elif [[ "$OSTYPE" == darwin* ]]; then
    hash remark             || npm install -g remark-cli
    hash tidy               || brew install -y tidy
 
-   # yapf: code formatter
    # isort: vim-isort dependency
-   pip3 install --quiet --upgrade yapf isort
+   pip3 install --quiet --upgrade isort
 
    # disable auto-update prompts
    defaults write org.vim.MacVim SUEnableAutomaticChecks -bool false
