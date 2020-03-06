@@ -29,6 +29,7 @@
         120
     ],
     "intern-tools.showReminderBeforeMeetings": true,
+    "files.insertFinalNewline": true,
     "files.trimTrailingWhitespace": true,
     "workbench.colorTheme": "Super One Dark",
     "workbench.editor.enablePreviewFromQuickOpen": false,
@@ -58,50 +59,59 @@
     // NORMAL mode
     "vim.normalModeKeyBindingsNonRecursive": [
         // --------------------------------------------------------------------
+        { // Quit (i.e cmd-q)
+            "before": [
+                "<leader>",
+                "q"
+            ],
+            "commands": [
+                "workbench.action.quit"
+            ],
+        },
         // ## Window toggles:
         { // toggle file explorer
             "before": [
                 "ctrl+e",
             ],
             "commands": [
-                "workbench.explorer.fileView.focus" // open directory tree
+                "workbench.explorer.fileView.focus"
             ],
         },
-        {
+        { // toggle sidebar (cmd-b)
             "before": [
                 "<leader>",
                 "t"
             ],
             "commands": [
-                "workbench.action.toggleSidebarVisibility" // toggle sidebar (cmd-b)
+                "workbench.action.toggleSidebarVisibility"
             ]
         },
-        {
+        { // select file in directory tree
             "before": [
                 "<leader>",
                 "f"
             ],
             "commands": [
-                "revealInExplorer" // select file in directory tree
+                "revealInExplorer"
             ],
         },
-        {
+        { // rename file in directory tree
             "before": [
                 "<leader>",
                 "r",
                 "f"
             ],
             "commands": [
-                "renameFile" // rename file in directory tree
+                "renameFile"
             ]
         },
-        {
+        { // select file in directory tree
             "before": [
                 "<leader>",
                 "g"
             ],
             "commands": [
-                "nuclide-biggrep:open-pane" // select file in directory tree
+                "nuclide-biggrep:open-pane"
             ],
         },
         // --------------------------------------------------------------------
