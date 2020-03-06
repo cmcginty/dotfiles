@@ -55,6 +55,8 @@ cmi     = commit --interactive
 co      = checkout
 di      = diff
 drop    = hide
+dropall = hide 'draft() and not .'
+hideall = hide 'draft() and not .'
 fetch   = !HGPLAIN=1 $HG pull
 gg      = grep
 lg      = log --template '{shortlog}'
