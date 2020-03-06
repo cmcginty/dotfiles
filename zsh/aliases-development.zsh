@@ -13,7 +13,7 @@ function grep-gradle() { g ls | grep -i .gradle | xargs -i grep -H -i "${1}" '{}
 function java-imports() { grep -rh ^import --include="*.java" $@ | sed -r "s/import (.*)\..+;/\1/" | sort -u }
 
 # Perforce
-if [[ $(uname) == 'Darwin' ]]; then
+if [[ "$OSTYPE" == darwin* ]]; then
    alias p4merge='/Applications/p4merge.app/Contents/Resources/launchp4merge'
 fi
 alias p4admin='p4admin &'
