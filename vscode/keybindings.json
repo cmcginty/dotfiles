@@ -111,6 +111,11 @@
         "command": "editor.action.peekDefinition", // peek definition of some code variable
         "when": "editorFocus"
     },
+    { // Close the panel (same shortcut as close editor)
+        "key": "ctrl+d",
+        "command": "workbench.action.togglePanel",
+        "when": "panelFocus"
+    },
     // List navigation
     {
         "key": "enter",

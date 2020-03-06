@@ -105,13 +105,24 @@
                 "renameFile"
             ]
         },
-        { // select file in directory tree
+        { // open big grep search
             "before": [
                 "<leader>",
+                "g",
                 "g"
             ],
             "commands": [
                 "nuclide-biggrep:open-pane"
+            ],
+        },
+        { // open terminal
+            "before": [
+                "<leader>",
+                "g",
+                "t"
+            ],
+            "commands": [
+                "workbench.action.terminal.toggleTerminal"
             ],
         },
         // --------------------------------------------------------------------
