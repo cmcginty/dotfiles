@@ -39,6 +39,18 @@
     "workbench.editor.tabSizing": "shrink",
     "window.zoomLevel": 0,
     // ---------------------------------------------
+    // --------- Language Overrides ----------------
+    "[git-commit]": {
+        "editor.rulers": [
+            50
+        ]
+    },
+    "[python]": {
+        "editor.rulers": [
+            88
+        ]
+    },
+    // ---------------------------------------------
     // -------- Spell Right Extention --------------
     "spellright.language": [
         "en"
