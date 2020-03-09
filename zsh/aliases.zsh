@@ -14,12 +14,6 @@ function aptrm-linux() {
                         done)
 }
 
-# tweet a string of text
-function t() { echo "$@" | bti }
-
-# file-roller (fix multiple instance bug)
-function fr() { for F in $@; do file-roller $(readlink -f $F) & done }
-
 # remote desktop
 alias rdesktop='rdesktop -x l -g 1024x768 -a 16 -k en-us'
 alias rdp='rdesktop'
