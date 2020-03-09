@@ -125,6 +125,16 @@
                 "workbench.action.terminal.toggleTerminal"
             ],
         },
+        { // open interactive smartlog (ISL)
+            "before": [
+                "<leader>",
+                "g",
+                "i"
+            ],
+            "commands": [
+                "fb-hg.toggle-interactive-smartlog"
+            ],
+        },
         // --------------------------------------------------------------------
         // ## Feature toggles:
         { // toggle word wrap
