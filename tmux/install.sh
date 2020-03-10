@@ -2,7 +2,8 @@
 set -eou pipefail
 IFS=$'\n\t'
 
-if [[ $IS_FB_HOST ]]; then
+set +u
+if [[ -n ${IS_FB_HOST} ]]; then
    # Update tmux to latest release
    sudo yum update --assumeyes tmux
 
@@ -13,3 +14,4 @@ elif [[ "$OSTYPE" == darwin* ]]; then
    hash tmux || brew install tmux
    hash reattach-to-user-namespace || brew install reattach-to-user-namespace
 fi
+set -u

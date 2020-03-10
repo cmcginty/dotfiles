@@ -8,9 +8,8 @@ if [[ -n "$PYENV_VERSION" ]] && [[ "$PYENV_VERSION" != "system" ]]; then
    echo ERROR: PYENV set to \"$PYENV_VERSION\"
    exit 1
 fi
-set -u
 
-if [[ $IS_FB_HOST ]]; then
+if [[ -n ${IS_FB_HOST} ]]; then
 
    # Install 8.x vim release
    sudo feature install fb-vim
@@ -58,6 +57,7 @@ elif [[ "$OSTYPE" == darwin* ]]; then
    # fix blank/black screen issues
    defaults write org.vim.MacVim MMUseCGLayerAlways -bool YES
 fi
+set -u
 
 # clean install/update plugins
 vim '+PlugClean|only' +PlugUpdate +sleep1 +qall
