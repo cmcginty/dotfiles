@@ -99,6 +99,10 @@
     # visually compare files in current split panes
     'ctrl-cmd-c': 'split-diff:toggle'
 
+'atom-text-editor[data-grammar*="python"].vim-mode-plus.normal-mode':
+    # python format
+    'cmd-shift-c': 'python-black:format'
+
 # insert mode
 # 'atom-text-editor.vim-mode-plus.insert-mode':
 
