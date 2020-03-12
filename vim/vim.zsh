@@ -8,3 +8,6 @@ alias vi="$VIM"
 if [[ $VIM != "vim" ]]; then
     alias vim="$VIM"
 fi
+
+# Setting VIM causes the prompt to print "V" before repo info.
+unset VIM
