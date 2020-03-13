@@ -28,16 +28,18 @@
         80,
         120
     ],
-    "intern-tools.showReminderBeforeMeetings": true,
+    "editor.smoothScrolling": true,
+    "explorer.openEditors.visible": 25,
     "files.insertFinalNewline": true,
     "files.trimTrailingWhitespace": true,
+    "intern-tools.showReminderBeforeMeetings": true,
+    "window.zoomlevel": 0,
     "workbench.colorTheme": "Super One Dark",
-    "workbench.editor.enablePreviewFromQuickOpen": false,
-    "workbench.iconTheme": "vscode-icons",
-    "workbench.sideBar.location": "left",
-    "workbench.startupEditor": "newUntitledFile",
-    "workbench.editor.tabSizing": "shrink",
-    "window.zoomLevel": 0,
+    "workbench.editor.enablepreviewfromquickopen": false,
+    "workbench.editor.tabsizing": "shrink",
+    "workbench.icontheme": "vscode-icons",
+    "workbench.sidebar.location": "left",
+    "workbench.startupeditor": "newuntitledfile",
     // ---------------------------------------------
     // --------- Language Overrides ----------------
     "[git-commit]": {
@@ -145,6 +147,16 @@
             ],
             "commands": [
                 "fb-hg.toggle-interactive-smartlog"
+            ],
+        },
+        { // focus "open editors" sidebar
+            "before": [
+                "<leader>",
+                "g",
+                "e"
+            ],
+            "commands": [
+                "workbench.files.action.focusOpenEditorsView"
             ],
         },
         // --------------------------------------------------------------------
