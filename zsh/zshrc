@@ -5,13 +5,10 @@
 #   Sorin Ionescu <sorin.ionescu@gmail.com>
 #
 
-# start TMUX first
-if [[ $TMUX = "" ]]; then
-  # reset colors
-  source $HOME/.dotfiles/terminal/colors.zsh
-  # try to reattach sessions
-  tmux ls | grep -vq attached && TMUXARG="attach -d"
-  exec eval "tmux -2 $TMUXARG"
+# Start TMUX first; try to reattach a session
+if [[ -z $TMUX ]]; then
+  ATTACH_OPT=$(tmux ls | grep -vq attached && echo "attach -d")
+  exec eval "tmux $ATTACH_OPT"
 fi
 
 # Source Prezto.
