@@ -464,7 +464,6 @@
         },
         { // Sort seleted lines
             "before": [
-                "<leader>",
                 "s"
             ],
             "commands": [
@@ -473,11 +472,26 @@
         },
         { // Reverse sort seleted lines
             "before": [
-                "<leader>",
                 "S"
             ],
             "commands": [
                 "editor.action.sortLinesDescending"
+            ]
+        },
+        { // Expand selection
+            "before": [
+                "H"
+            ],
+            "commands": [
+                "editor.action.smartSelect.expand"
+            ]
+        },
+        { // Shrink selection
+            "before": [
+                "L"
+            ],
+            "commands": [
+                "editor.action.smartSelect.shrink"
             ]
         },
     ],
