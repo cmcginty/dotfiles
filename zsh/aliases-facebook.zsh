@@ -10,3 +10,12 @@ function pastry-show-cmd {
    { echo "\$ ${LAST_COMMAND}" & pastry $1; } |
       pastry
 }
+
+alias ab='arc build'
+alias arb='arc rebuild --disable-smart'
+alias au='arc unit'
+
+alias deploy='/var/www/scripts/sandcastle/deploy.php'
+
+alias php-dbg='hphpd -h localhost'
+alias php='HPHPI_OPTIONS=Eval.EnablePHP=1 php'
