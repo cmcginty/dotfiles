@@ -20,6 +20,7 @@
    ~/.hgrc:          hgrc
    ~/.ignore:        ignore
    ~/.isort.cfg:     python/isort.cfg
+   ~/.local/bin/pcmds: tmux/pastry-get-commands.py
    ~/.ptpython/config.py:
       path: python/ptpython_config.py
       create: true
