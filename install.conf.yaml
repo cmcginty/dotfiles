@@ -28,7 +28,8 @@
    ~/.ssh/id_rsa.pub:         ssh/id_rsa.pub
    ~/.startup.py:    python/startup.py
    ~/.tmux.conf:     tmux/tmux.conf
-   ~/.tmux-macos.conf: tmux/tmux-macos.conf
+   ~/.tmux-macos.conf:  tmux/tmux-macos.conf
+   ~/.tmux-remote.conf: tmux/tmux-remote.conf
    ~/.vim:           vim/vim
    ~/.vimrc:         vim/vimrc
    ~/.zlogin:        zsh/plugins/prezto/runcoms/zlogin
