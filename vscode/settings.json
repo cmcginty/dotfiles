@@ -39,7 +39,7 @@
     "workbench.editor.tabsizing": "shrink",
     "workbench.icontheme": "vscode-icons",
     "workbench.sidebar.location": "left",
-    "workbench.startupeditor": "newuntitledfile",
+    "workbench.startupEditor": "newUntitledFile",
     // ---------------------------------------------
     // --------- Language Overrides ----------------
     "[git-commit]": {

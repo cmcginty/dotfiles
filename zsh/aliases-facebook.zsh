@@ -36,4 +36,3 @@ alias au='arc unit'
 alias deploy='/var/www/scripts/sandcastle/deploy.php'
 
 alias php-dbg='hphpd -h localhost'
-alias php='HPHPI_OPTIONS=Eval.EnablePHP=1 php'

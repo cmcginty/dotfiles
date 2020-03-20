@@ -4,5 +4,6 @@ ms-python.python
 oderwat.indent-rainbow
 ryuta46.multi-command
 seansassenrath.vscode-theme-superonedark
+stuart.unique-window-colors
 vscode-icons-team.vscode-icons
 vscodevim.vim
