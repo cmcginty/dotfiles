@@ -10,7 +10,7 @@ if [[ "$OSTYPE" == darwin* ]]; then
    if hash code-fb; then
       # Install all missing packages from package-list.txt created by:
       #    gen-package-list.sh
-      cat $BASEDIR/package-list.txt | xargs -n 1 code-fb --force --install-extension
+      cat $BASEDIR/package-list.txt | xargs -n 1 code-fb --force --install-extension || true
    else
       # Try to install vscode ... No guarantee this will work.
       hash code || $( \
