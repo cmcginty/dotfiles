@@ -11,9 +11,9 @@ Dependencies:
 Credits: https://fb.workplace.com/groups/hack.of.the.day/permalink/1488151284566815/
 """
 
-import subprocess
 import itertools
 import re
+import subprocess
 import sys
 import tempfile
 
@@ -28,7 +28,9 @@ panecap = subprocess.run(
 scrollback = panecap.stdout.splitlines()
 
 # NOTE: Change to match your custom prompt.
-PROMPT_CMDLINE = r"^.*❯❯❯ "
+#  - "(?!Pasting)" prevents matching the output of this script.
+#  - "(❯❯❯|❮❮❮)" allows for modal prompt.
+PROMPT_CMDLINE = r"^(?!Pasting).*(❯❯❯|❮❮❮) "
 
 cmds = []
 collect = []
@@ -61,6 +63,11 @@ if len(cmds):
         idx = int(line.split("\t")[0])
         print('Pasting output of "{}"'.format(cmds[idx][0]))
         paste += cmds[idx] + [""]
+    paste += [
+        "-" * 80,
+        "Created by "
+        "https://github.com/cmcginty/dotfiles/blob/master/tmux/pastry-tmux.py",
+    ]
 
     subprocess.run(
         ["pastry", "-t", "shell output"], input="\n".join(paste), encoding="utf-8"
