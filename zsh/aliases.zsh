@@ -17,3 +17,6 @@ function aptrm-linux() {
 # remote desktop
 alias rdesktop='rdesktop -x l -g 1024x768 -a 16 -k en-us'
 alias rdp='rdesktop'
+
+# fasd
+alias jj='j -1'

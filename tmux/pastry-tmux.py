@@ -66,7 +66,7 @@ if len(cmds):
     paste += [
         "-" * 80,
         "Created by "
-        "https://github.com/cmcginty/dotfiles/blob/master/tmux/pastry-tmux.py",
+        "https://fburl.com/zqmoqzc0",
     ]
 
     subprocess.run(

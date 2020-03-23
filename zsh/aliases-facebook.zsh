@@ -29,10 +29,14 @@ pastry-send() {
 }
 alias psend='pastry-send'
 
+alias deploy='/var/www/scripts/sandcastle/deploy.php'
+alias php-dbg='hphpd -h localhost'
+
+# Sandcastle
+alias odc='ondemand connect'
+
+# Arc
 alias ab='arc build'
 alias arb='arc rebuild --disable-smart'
+alias arb='arc rebuild --disable-smart'
 alias au='arc unit'
-
-alias deploy='/var/www/scripts/sandcastle/deploy.php'
-
-alias php-dbg='hphpd -h localhost'
