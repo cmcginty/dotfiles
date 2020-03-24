@@ -55,9 +55,3 @@ alias jfsu='jf submit --update-fields'
 
 # Atom IDE
 alias a='atom'
-
-# Sandcastle
-alias odc='ondemand connect'
-
-# Arc Rrebuild
-alias arb='arc rebuild --disable-smart'
