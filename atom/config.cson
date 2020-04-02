@@ -70,7 +70,7 @@
     ]
     useTreeSitterParsers: false
   editor:
-    fontFamily: "UbuntuMono Nerd Font"
+    fontFamily: "UbuntuMono Nerd Font Mono"
     lineHeight: 1.1
     showIndentGuide: true
   "exception-reporting":

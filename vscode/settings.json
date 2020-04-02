@@ -19,7 +19,7 @@
     "interactive-smartlog.fetch": "jf get",
     // ---------------------------------------------
     // -------- VSCode Core Settings ---------------
-    "editor.fontFamily": "UbuntuMono Nerd Font",
+    "editor.fontFamily": "UbuntuMono Nerd Font Mono",
     "editor.fontSize": 13,
     "editor.lineHeight": 13,
     "editor.minimap.enabled": true,

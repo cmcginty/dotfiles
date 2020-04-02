@@ -9,7 +9,7 @@ elif [[ "$OSTYPE" == darwin* ]]; then
    cd ~/Library/Fonts
 fi
 
-REPO="https://github.com/ryanoasis/nerd-fonts/releases/download/v1.0.0"
+REPO="https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0"
 URL="$REPO/UbuntuMono.zip"
 FILE=$(sed 's/%20/ /g' <<<${URL##*/})
 
