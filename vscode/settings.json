@@ -33,7 +33,7 @@
     "files.insertFinalNewline": true,
     "files.trimTrailingWhitespace": true,
     "intern-tools.showReminderBeforeMeetings": true,
-    "window.zoomlevel": 0,
+    "window.zoomLevel": 0,
     "workbench.colorTheme": "Super One Dark",
     "workbench.editor.enablepreviewfromquickopen": false,
     "workbench.editor.tabsizing": "shrink",
