@@ -42,6 +42,12 @@
 	<true/>
 	<key>LoadPrefsFromCustomFolder</key>
 	<true/>
+	<key>NSNavLastRootDirectory</key>
+	<string>~/Documents</string>
+	<key>NSNavLastUserSetHideExtensionButtonState</key>
+	<true/>
+	<key>NSNavPanelExpandedSizeForSaveMode</key>
+	<string>{712, 448}</string>
 	<key>NSQuotedKeystrokeBinding</key>
 	<string></string>
 	<key>NSRepeatCountBinding</key>
@@ -90,9 +96,9 @@
 	<key>NSWindow Frame SharedPreferences</key>
 	<string>542 327 918 423 0 0 1680 1027 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>1708 0 850 1577 0 0 2560 1577 </string>
+	<string>1027 288 640 844 0 0 1920 1177 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>0 733 640 844 0 0 2560 1577 </string>
+	<string>1675 0 836 1417 0 0 2560 1417 </string>
 	<key>NeverWarnAboutShortLivedSessions_01CF84B0-5E6B-4585-9E19-745FC2F01D68</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_01CF84B0-5E6B-4585-9E19-745FC2F01D68_selection</key>
@@ -678,7 +684,7 @@
 			<key>Thin Strokes</key>
 			<integer>0</integer>
 			<key>Transparency</key>
-			<real>0.05416203997461929</real>
+			<real>0.020826062817258885</real>
 			<key>Unlimited Scrollback</key>
 			<false/>
 			<key>Use Bold Font</key>
@@ -701,13 +707,21 @@
 	</array>
 	<key>NoSyncAllAppVersions</key>
 	<array>
-		<string>3.3.2</string>
-		<string>3.3.5</string>
+		<string>3.3.6</string>
 		<string>3.3.8</string>
 		<string>3.2.8</string>
-		<string>3.3.7</string>
 		<string>3.3.3</string>
-		<string>3.3.6</string>
+		<string>3.3.5</string>
+		<string>3.3.7</string>
+		<string>3.3.9</string>
+		<string>3.2.9</string>
+		<string>3.3.2</string>
+		<string>3.3.0</string>
+	</array>
+	<key>NoSyncBFPRecents</key>
+	<array>
+		<string>UbuntuMono Nerd Font Mono</string>
+		<string>Menlo</string>
 	</array>
 	<key>NoSyncFrame_SessionsPreferences</key>
 	<dict>
@@ -719,9 +733,9 @@
 	<key>NoSyncFrame_SharedPreferences</key>
 	<dict>
 		<key>screenFrame</key>
-		<string>{{2560, 0}, {2560, 1600}}</string>
+		<string>{{0, 0}, {1920, 1200}}</string>
 		<key>topLeft</key>
-		<string>{2651, 1279}</string>
+		<string>{174, 970}</string>
 	</dict>
 	<key>NoSyncHaveRequestedFullDiskAccess</key>
 	<true/>
@@ -732,7 +746,7 @@
 	<key>NoSyncLastTipTime</key>
 	<real>589497237.96280706</real>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>49</integer>
+	<integer>91</integer>
 	<key>NoSyncNeverAskAboutSettingAlternateMouseScroll</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
@@ -1451,6 +1465,8 @@
 			</dict>
 		</array>
 	</dict>
+	<key>NoSyncSaveDocumentAsPathSet_saveDocumentAs:</key>
+	<true/>
 	<key>NoSyncSilenceAnnoyingBellAutomatically</key>
 	<true/>
 	<key>NoSyncSuppressClipboardAccessDeniedWarning</key>
@@ -1594,13 +1610,13 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2020-02-13T18:27:18Z</date>
+	<date>2020-04-01T18:30:45Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SUUpdateGroupIdentifier</key>
 	<integer>774966735</integer>
 	<key>SUUpdateRelaunchingMarker</key>
-	<true/>
+	<false/>
 	<key>SoundForEsc</key>
 	<false/>
 	<key>SplitPaneDimmingAmount</key>
@@ -1620,6 +1636,6 @@
 	<key>findMode_iTerm</key>
 	<integer>0</integer>
 	<key>iTerm Version</key>
-	<string>3.3.8</string>
+	<string>3.3.9</string>
 </dict>
 </plist>
