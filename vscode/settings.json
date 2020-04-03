@@ -65,6 +65,7 @@
     ],
     // ---------------------------------------------
     // --- Vim Extension Settings / Key Mappings ---
+    "vim.debug.silent": true, // disable all errors
     "vim.debug.loggingLevelForConsole": "error", // set to "debug" to log all keypresses
     "vim.hlsearch": true,
     "vim.leader": "space",
