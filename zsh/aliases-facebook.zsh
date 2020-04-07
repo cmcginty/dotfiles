@@ -42,4 +42,4 @@ alias arb='arc rebuild --disable-smart'
 alias au='arc unit'
 
 alias pm='pingme'
-alias done="pingme $HOSTNAME READY"
+alias fin="pingme $HOSTNAME READY"
