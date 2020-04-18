@@ -47,8 +47,3 @@ alias et='et --port 8080'
 # curl/httpie
 alias http='http --verbose --style=monokai'
 alias https='http --default-scheme=https'
-
-# Mercurial/Phabricator
-alias h='hg'
-alias jfs='jf submit'
-alias jfsu='jf submit --update-fields'

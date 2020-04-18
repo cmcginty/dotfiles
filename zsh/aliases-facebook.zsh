@@ -43,3 +43,8 @@ alias au='arc unit'
 
 alias pm='pingme'
 alias fin="pingme $HOSTNAME READY"
+
+# Mercurial/Phabricator
+alias h='hg'
+alias jfs='jf submit'
+alias jfsu='jf submit --update-fields'
