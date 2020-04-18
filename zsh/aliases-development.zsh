@@ -52,6 +52,3 @@ alias https='http --default-scheme=https'
 alias h='hg'
 alias jfs='jf submit'
 alias jfsu='jf submit --update-fields'
-
-# Atom IDE
-alias a='atom'

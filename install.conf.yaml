@@ -1,15 +1,6 @@
 - clean: ['~']
 
 - link:
-   ~/.atom/init.coffee:
-      path: atom/init.coffee
-      create: true
-   ~/.atom/config.cson: atom/config.cson
-   ~/.atom/keymap.cson: atom/keymap.cson
-   ~/.atom/ondemand/homedir/.hgrc:
-      path: hgrc
-      create: true
-   ~/.atom/styles.less: atom/styles.less
    ~/.bitbar:        bitbar
    ~/.clang-format:  vim/clang-format
    ~/.dotfiles:      .
@@ -71,11 +62,6 @@
    -
       command: python/install.sh
       description: Install Python features
-      stdin: true
-      stdout: true
-   -
-      command: atom/install.sh
-      description: Install atom
       stdin: true
       stdout: true
    -
