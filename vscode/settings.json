@@ -267,6 +267,14 @@
         },
         // --------------------------------------------------------------------
         // ## Editor:
+        { // Reload file from disk (drop editor changes)
+            "before": [
+                "ctrl+r"
+            ],
+            "after": [
+                "workbench.action.files.revert"
+            ]
+        },
         { // yank current position to end of line (like D)
             "before": [
                 "Y"
