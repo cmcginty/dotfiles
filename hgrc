@@ -72,13 +72,14 @@ lgs     = lg --stat
 lgv     = log --template '{fulllog}'
 ls      = manifest
 pl      = pull
-pull    = pull --rebase -d master
+pull    = pull --rebase --dest master
 push    = push --to master
 slh     = sl --hidden
+rb      = rebase
 rba     = rebase --abort
 rbc     = rebase --continue
 # rebase all local branches
-rball   = rebase --dest master --rev 'draft()'
+sync    = rebase --dest master --rev 'draft()'
 rbi     = histedit
 he      = histedit
 hea     = histedit --abort
@@ -97,4 +98,3 @@ sls     = sl --stat
 sp      = sparse
 top     = next --top
 u       = undo
-ninja   = !HGPLAIN=1 $HG meta -m "$(echo -e "$($HG log --template {desc} -l1)\n\nReviewed By: jkurtz\n\nTest Plan: revert-hammer\n\nOncall Short Name: tree_hugger\n\n@overriding_review_checks_triggers_an_audit_and_retroactive_review")" && $HG push
