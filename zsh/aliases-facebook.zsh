@@ -48,3 +48,6 @@ alias fin="pingme $HOSTNAME READY"
 alias h='hg'
 alias jfs='jf submit'
 alias jfsu='jf submit --update-fields'
+
+# Vscode
+fixvscode='sudo systemctl restart vscode-daemon && kill $(lsof -t -i :9092)'
