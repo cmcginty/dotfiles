@@ -42,12 +42,16 @@ alias arb='arc rebuild --disable-smart'
 alias au='arc unit'
 
 alias pm='pingme'
-alias fin="pingme $HOSTNAME READY"
+alias fin='pingme "$HOSTNAME READY"'
 
 # Mercurial/Phabricator
 alias h='hg'
 alias jfs='jf submit'
 alias jfsu='jf submit --update-fields'
 
-# Vscode
-fixvscode='sudo systemctl restart vscode-daemon && kill $(lsof -t -i :9092)'
+# Vscode (server-side)
+alias fixvscode='sudo systemctl restart vscode-daemon && kill $(lsof -t -i :9092)'
+
+# Certificates
+alias renew_certs='openssl x509 -checkend $((3600*4)) -noout -in /var/facebook/credentials/cmcginty/presto/cmcginty.pem || cc-certs -duo_pass push'
+alias renew_dev='expect -c "spawn renew_creds devvm3470.ftw3.facebook.com; expect Passcode\ or\ option\ (1-1):; send push\r; expect eof"'
