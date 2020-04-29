@@ -29,8 +29,11 @@ pastry-send() {
 }
 alias psend='pastry-send'
 
+# Www
 alias deploy='/var/www/scripts/sandcastle/deploy.php'
-alias php-dbg='hphpd -h localhost'
+alias gencode='/var/www/scripts/entschema/gencode'
+alias gensandcastle='phps SandcastleAutogenScript'
+alias pdbg='hphpd -h localhost'
 
 # Sandcastle
 alias odc='ondemand connect'
