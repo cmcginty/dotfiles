@@ -19,6 +19,7 @@
     "interactive-smartlog.fetch": "jf get",
     // ---------------------------------------------
     // -------- VSCode Core Settings ---------------
+    "editor.cursorSmoothCaretAnimation": false,
     "editor.fontFamily": "UbuntuMono Nerd Font Mono",
     "editor.fontSize": 13,
     "editor.lineHeight": 13,
@@ -28,7 +29,7 @@
         80,
         120
     ],
-    "editor.smoothScrolling": true,
+    "editor.smoothScrolling": false,
     "explorer.openEditors.visible": 25,
     "files.insertFinalNewline": true,
     "files.trimTrailingWhitespace": true,

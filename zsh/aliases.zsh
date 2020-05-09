@@ -20,3 +20,6 @@ alias rdp='rdesktop'
 
 # fasd
 alias jj='j -1'
+
+# tmux
+alias takeover="tmux detach -a"
