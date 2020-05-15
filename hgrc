@@ -54,6 +54,7 @@ cma     = metaedit
 cmi     = commit --interactive
 co      = checkout
 di      = diff
+dh      = diff --rev '.^'
 drop    = hide
 dropall = hide 'draft() and not .'
 hideall = hide 'draft() and not .'
