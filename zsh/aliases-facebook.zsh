@@ -61,4 +61,4 @@ alias renew_dev='expect -c "spawn renew_creds devvm3470.ftw3.facebook.com; expec
 
 # Everstore
 alias esget='clowder get'
-function espatch() { (clowder get $1 - 2>/dev/null && echo "") | patch -p1 }
+function espatch() { (clowder get $1 - 2>/dev/null && echo "") | patch -p1; }
