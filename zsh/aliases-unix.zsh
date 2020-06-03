@@ -55,3 +55,4 @@ alias sort-ip='sort -n -t . -k 1,1 -k 2,2 -k 3,3 -k 4,4'
 alias unixdate='date +%s'
 alias unixtime=unixdate
 alias epoch=unixdate
+alias timeat='date -r'
