@@ -18,6 +18,9 @@ alias psg='ps ax | grep'
 alias watch='watch --color'
 alias please='sudo $(fc -ln -1)'
 
+# xargs using newlines as separater
+alias nxargs='gxargs -i -d\\n'
+
 # raid
 alias mdadm='sudo mdadm'
 
