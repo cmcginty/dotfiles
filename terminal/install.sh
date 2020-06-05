@@ -43,6 +43,8 @@ if [[ "$OSTYPE" == darwin* ]]; then
    fi
    # install pv to monitor slow shell pipe commands
    hash pv || brew install pv
+   # install GNU findutils
+   hash gfind || brew install findutils
    # Setup iterm2 preference saving
    defaults write com.googlecode.iterm2.plist PrefsCustomFolder -string "~/dotfiles/terminal"
    defaults write com.googlecode.iterm2.plist LoadPrefsFromCustomFolder -bool true
