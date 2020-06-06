@@ -8,9 +8,8 @@ if [[ "$OSTYPE" == linux* ]]; then
    true
 elif [[ "$OSTYPE" == darwin* ]]; then
    # install brew python for pip support
-   brew list python >/dev/null            || brew install python
-   brew list pyenv >/dev/null             || brew install pyenv
-   brew list pyenv-virtualenv >/dev/null  || brew install pyenv-virtualenv
-
-   hash black || brew install black
+   hash python3             || brew install python
+   hash pyenv               || brew install pyenv
+   hash pyenv-virtualenv    || brew install pyenv-virtualenv
+   hash black               || brew install black
 fi
