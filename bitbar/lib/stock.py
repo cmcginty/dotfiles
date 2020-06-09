@@ -30,11 +30,12 @@ def print_quote(q, show_percent=False, link=False):
     )
     # direction = "⬇" if q.percent < 0 else "⬆"
     direction = ""
-    output = f"{q.ticker} {q.price:0.2f}{direction}"
-    output += f" ({q.percent * 100:0.2f}%)" if show_percent else ""
-    output += f"| color={color}"
-    output += f" href=https://www.finance.yahoo.com/quote/{q.ticker}" if link else ""
-    print(output)
+    print(
+        f"{q.ticker} {q.price:0.2f}{direction}"
+        + (f" ({q.percent * 100:0.2f}%)" if show_percent else "")
+        + f"| color={color}"
+        + (f" href=https://www.finance.yahoo.com/quote/{q.ticker}" if link else "")
+    )
 
 
 def _store_price(ticker, price, size=100):
@@ -47,6 +48,6 @@ def _store_price(ticker, price, size=100):
     pickle.dump(db, open(DB_NAME, "wb+"))
 
 
-def _is_trading(ticker, size=3):
+def _is_trading(ticker, size=4):
     db = pickle.load(open(DB_NAME, "rb"))
     return len(set(db[ticker][:size])) > 1
