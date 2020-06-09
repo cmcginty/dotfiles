@@ -40,8 +40,7 @@ alias odc='ondemand connect'
 
 # Arc
 alias ab='arc build'
-alias arb='arc rebuild --disable-smart'
-alias arb='arc rebuild --disable-smart'
+alias arb='arc rebuild'
 alias au='arc unit'
 
 alias pm='pingme'
