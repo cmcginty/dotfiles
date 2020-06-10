@@ -1,4 +1,7 @@
 {
+    "fb.doctor.disabled-tests": [
+        "CorpcanalDoctor"
+    ],
     "fb.remote-connections.hosts": [
         {
             "hostname": "our.cmcginty.sb.facebook.com",
@@ -15,8 +18,10 @@
         "HACKFMT",
         "BLACK"
     ],
-    "interactive-smartlog.pull": "hg pull",
     "interactive-smartlog.fetch": "jf get",
+    "interactive-smartlog.pull": "hg pull",
+    "interactive-smartlog.bottom-drawer-height": 500,
+    "interactive-smartlog.right-drawer-width": 300,
     // ---------------------------------------------
     // -------- VSCode Core Settings ---------------
     "editor.cursorSmoothCaretAnimation": false,
@@ -65,12 +70,16 @@
         "jsonc"
     ],
     // ---------------------------------------------
+    // -------- VS Icons Extention --------------
+    "vsicons.dontShowNewVersionMessage": true,
+    // ---------------------------------------------
     // --- Vim Extension Settings / Key Mappings ---
     "vim.debug.silent": true, // disable all errors
     "vim.debug.loggingLevelForConsole": "error", // set to "debug" to log all keypresses
     "vim.hlsearch": true,
     "vim.leader": "space",
-    "vim.searchHighlightColor": "rgba(246, 246, 80, 0.9)", // yellow highlight color
+    "vim.searchHighlightColor": "rgba(246, 246, 80)", // yellow highlight color
+    "vim.searchHighlightTextColor": "rgba(0,0,0)",
     "vim.useSystemClipboard": true,
     // NORMAL mode
     "vim.normalModeKeyBindingsNonRecursive": [
