@@ -29,11 +29,13 @@ function pastry-send() {
 }
 alias psend='pastry-send'
 
+alias unix2email='while read -r; do echo $REPLY@fb.com; done'
+
 # Www
 alias deploy='/var/www/scripts/sandcastle/deploy.php'
 alias gencode='/var/www/scripts/entschema/gencode'
 alias gensandcastle='phps SandcastleAutogenScript'
-alias pdbg='hphpd -h localhost'
+alias hack='hphpd -h localhost'
 
 # Sandcastle
 alias odc='ondemand connect'
@@ -57,6 +59,7 @@ alias fixvscode='sudo systemctl restart vscode-daemon && kill $(lsof -t -i :9092
 # Certificates
 alias renew_certs='openssl x509 -checkend $((3600*4)) -noout -in /var/facebook/credentials/cmcginty/presto/cmcginty.pem || cc-certs -duo_pass push'
 alias renew_dev='expect -c "spawn renew_creds devvm3470.ftw3.facebook.com; expect Passcode\ or\ option\ (1-1):; send push\r; expect eof"'
+alias renew='renew_certs && renew_dev'
 
 # Everstore
 alias esget='clowder get'
