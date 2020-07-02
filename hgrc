@@ -40,6 +40,7 @@ nameonlylog = '{shortlog}{fall}\n'
 bot     = prev --bottom
 br      = bookmark
 bra     = bookmark --all
+branch  = bookmark
 bs      = bisect
 bsb     = bisect --bad
 bsc     = bisect --command

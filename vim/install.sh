@@ -49,6 +49,8 @@ elif [[ "$OSTYPE" == darwin* ]]; then
 
    # isort: vim-isort dependency
    pip3 install --quiet --upgrade isort
+   # black: ambv/black dependency
+   pip3 install --quiet --upgrade black
 
    # disable auto-update prompts
    defaults write org.vim.MacVim SUEnableAutomaticChecks -bool false
