@@ -70,7 +70,12 @@
       stdin: true
       stdout: true
    -
-      command: test -d /Applications/BitBar.app || brew cask install bitbar
+      command: tools/homebrew.sh
+      description: Install homebrew
+      stdin: true
+      stdout: true
+   -
+      command: bitbar/install.sh
       description: Install BitBar
       stdin: true
       stdout: true

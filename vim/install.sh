@@ -48,9 +48,9 @@ elif [[ "$OSTYPE" == darwin* ]]; then
    hash tidy               || brew install -y tidy
 
    # isort: vim-isort dependency
-   pip3 install --quiet --upgrade isort
+   pip3 install --user --quiet --upgrade isort
    # black: ambv/black dependency
-   pip3 install --quiet --upgrade black
+   pip3 install --user --quiet --upgrade black
 
    # disable auto-update prompts
    defaults write org.vim.MacVim SUEnableAutomaticChecks -bool false

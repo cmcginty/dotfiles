@@ -11,7 +11,7 @@ if [[ "$OSTYPE" == darwin* ]]; then
    hash rg || brew install ripgrep
    # install GNU PGP
    hash gpg || brew install gpg2
-   hash keybase || brew install caskroom/cask/keybase
+   hash keybase || brew cask install keybase
    # install mosh SSH client
    hash mosh || brew install mosh
    # install moreutils for useful command line tools
