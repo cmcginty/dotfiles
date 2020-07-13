@@ -41,7 +41,7 @@ alias hack='hphpd -h localhost'
 alias odc='ondemand connect'
 
 # Arc
-alias ab='arc build'
+alias ar='arc rebuild'
 alias arb='arc rebuild'
 alias au='arc unit'
 
