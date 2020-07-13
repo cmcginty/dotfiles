@@ -20,6 +20,14 @@ cd dotfiles
 
 Check for warnings in the install output for existing files that conflict.
 
+
+Push Auth
+---------
+To convert your local repo to support ssh key-based push auth, run the command:
+
+    git remote set-url origin git@github.com:cmcginty/dotfiles.git
+
+
 Citations
 ---------
 
