@@ -39,6 +39,7 @@ alias hack='hphpd -h localhost'
 
 # Sandcastle
 alias odc='ondemand connect'
+function scutil-retry() { scutil get-spec $1 | grep -v nonce | scutil canary-command --parameters-stdin }
 
 # Arc
 alias ar='arc rebuild'
