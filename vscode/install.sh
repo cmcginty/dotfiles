@@ -10,8 +10,7 @@ if [[ "$OSTYPE" == darwin* ]]; then
    if hash code-fb 2>/dev/null; then
       # Install all missing packages from package-list.txt created by:
       #    gen-package-list.sh
-      # cat $BASEDIR/package-list.txt | xargs -n 1 code-fb --force --install-extension || true
-
+      cat $BASEDIR/package-list.txt | xargs -n 1 code-fb --force --install-extension || true
       HOMEDIR=~/.ondemand/homedir/
       mkdir -p $HOMEDIR
       ln -fs $HOME/.hgrc $HOMEDIR
