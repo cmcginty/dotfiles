@@ -34,7 +34,7 @@
    ~/Library/Application Support/Code/User/settings.json:
       path: vscode/settings.json
       create: true
-   ~/Library/Application Support/Code/User/keybindings.json: vscode/keybindings.json
+   ~/Library/Application Support/Code/User/keybindings.json:
       path: vscode/keybindings.json
       create: true
    ~/Library/Application Support/VS Code @ FB/User/settings.json:
