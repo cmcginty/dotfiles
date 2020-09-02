@@ -65,7 +65,7 @@ if len(cmds):
         paste += cmds[idx] + [""]
     paste += [
         "-" * 80,
-        "Created by "
+        "Terminal output captured with "
         "https://fburl.com/zqmoqzc0",
     ]
 
