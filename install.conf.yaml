@@ -24,6 +24,7 @@
    ~/.tmux.conf:     tmux/tmux.conf
    ~/.vim:           vim/vim
    ~/.vimrc:         vim/vimrc
+   ~/.ytdl.conf:     ytdl.conf
    ~/.zlogin:        zsh/plugins/prezto/runcoms/zlogin
    ~/.zlogout:       zsh/plugins/prezto/runcoms/zlogout
    ~/.zprezto:       zsh/plugins/prezto
