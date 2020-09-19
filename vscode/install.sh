@@ -13,9 +13,10 @@ if [[ "$OSTYPE" == darwin* ]]; then
       cat $BASEDIR/package-list.txt | xargs -n 1 code-fb --force --install-extension || true
       HOMEDIR=~/.ondemand/homedir/
       mkdir -p $HOMEDIR
-      ln -fs $HOME/.hgrc $HOMEDIR
-      ln -fs $HOME/.gitconfig $HOMEDIR
-      ln -fs $HOME/.dotfiles/zsh/aliases-facebook.zsh $HOMEDIR/.aliases
+      # Softlinks are ignored, must be hardlinked.
+      ln -f $HOME/.hgrc $HOMEDIR
+      ln -f $HOME/.gitconfig $HOMEDIR
+      ln -f $HOME/.dotfiles/zsh/aliases-facebook.zsh $HOMEDIR/.aliases
    else
       # Try to install vscode ... No guarantee this will work.
       hash code 2>/dev/null || $( \

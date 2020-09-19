@@ -498,7 +498,7 @@
                 "editor.action.sortLinesAscending"
             ]
         },
-        { // Reverse sort seleted lines
+        { // Reverse sort selected lines
             "before": [
                 "S"
             ],
