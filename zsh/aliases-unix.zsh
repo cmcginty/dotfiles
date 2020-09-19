@@ -13,10 +13,14 @@ alias rm='nocorrect rm'
 
 # processes
 alias psg='ps ax | grep'
+alias meminfo='free -m -l -t'
+alias psmem='ps auxf | sort -nr -k 4 | head -10'
+alias pscpu='ps auxf | sort -nr -k 3 | head -10'
 
 # terminal tricks
 alias watch='watch --color'
 alias please='sudo $(fc -ln -1)'
+alias path='echo -e ${PATH//:/\\n}'
 
 # xargs using newlines as separater
 alias nxargs='gxargs -i -d\\n'
@@ -46,6 +50,7 @@ alias t2='tree -L 2'
 alias t3='tree -L 3'
 
 # services
+alias ports='netstat -tulanp'
 alias invoke-rc.d='sudo invoke-rc.d'
 alias restart='sudo restart'
 alias start='sudo start'
@@ -59,3 +64,6 @@ alias unixdate='date +%s'
 alias unixtime=unixdate
 alias epoch=unixdate
 alias timeat='date -r'
+alias now='date +"%T"'
+alias nowtime=now
+alias nowdate='date +"%d-%m-%Y"'
