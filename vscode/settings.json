@@ -10,7 +10,8 @@
                 "/data/users/cmcginty/configerator-dj/",
                 "/data/users/cmcginty/configerator-dsi/",
                 "/data/users/cmcginty/fbsource/",
-                "/data/users/cmcginty/www-hg/"
+                "/data/users/cmcginty/www-hg/",
+                "/home/cmcginty/local/opsfiles/"
             ]
         }
     ],
@@ -21,7 +22,7 @@
     "interactive-smartlog.fetch": "jf get",
     "interactive-smartlog.pull": "hg pull",
     "interactive-smartlog.bottom-drawer-height": 500,
-    "interactive-smartlog.right-drawer-width": 300,
+    "interactive-smartlog.right-drawer-width": 525,
     // ---------------------------------------------
     // -------- VSCode Core Settings ---------------
     "editor.cursorSmoothCaretAnimation": false,
@@ -29,12 +30,13 @@
     "editor.fontSize": 13,
     "editor.lineHeight": 13,
     "editor.minimap.enabled": true,
-    "editor.tabCompletion": "on",
+    "editor.quickSuggestionsDelay": 100,
     "editor.rulers": [
         80,
         120
     ],
     "editor.smoothScrolling": false,
+    "editor.tabCompletion": "on",
     "explorer.openEditors.visible": 25,
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
@@ -53,6 +55,9 @@
         "editor.rulers": [
             50
         ]
+    },
+    "[plaintext]": {
+        "editor.quickSuggestions": false
     },
     "[python]": {
         "editor.rulers": [
@@ -530,4 +535,5 @@
             ]
         },
     ],
+    "fb.vscode-feedback.lastsurveydate": 1596074667104,
 }
