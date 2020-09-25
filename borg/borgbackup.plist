@@ -36,5 +36,8 @@
     <key>Nice</key>
     <integer>10</integer>
 
+    <key>AbandonProcessGroup</key>
+    <true/>
+
   </dict>
 </plist>

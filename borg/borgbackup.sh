@@ -1,4 +1,5 @@
 #!/bin/bash
+set -o pipefail
 
 # Set 'true' to disable backups
 DEBUG=${DEBUG:-false}
@@ -15,6 +16,7 @@ DEBUG=${DEBUG:-false}
 #   export BORG_REPO=<USER>@<HOSTNAME>:<REPO_NAME>
 #   BORG_BACKUP_DIRS=<DIRS>
 #   BORG_COMPRESSION=<COMPRESSION>,<NUM>
+#   BORG_EMAIL=<EMAIL ADDRESS>
 #
 # To exclude files or dirs, create a ~/.borgignore file.
 #
@@ -38,6 +40,9 @@ EXCLUDE_LOCAL_FILE="$HOME/.borgignore"
 info() { printf "\n%s %s\n\n" "$( date )" "$*" >&2; }
 trap 'echo $( date ) Backup interrupted >&2; exit 2' INT TERM
 
+LOG=$(mktemp -t borgbackup)
+trap "rm -f $LOG" EXIT
+
 info "Starting backup"
 
 # Backup the most important directories into an archive named after
@@ -53,7 +58,7 @@ borg create                         \
     $EXCLUDE_HOST_ARG               \
     $EXCLUDE_HOME_ARG               \
     ::'{now}'                       \
-    $BORG_BACKUP_DIRS
+    "$BORG_BACKUP_DIRS" 2>&1 | tee "$LOG"
 
 backup_exit=$?
 
@@ -68,11 +73,12 @@ borg prune                          \
     --list                          \
     $STATS_OR_DRYRUN                \
     --show-rc                       \
-    --keep-within   24H             \
+    --keep-within   48H             \
     --keep-hourly   1               \
     --keep-daily    6               \
     --keep-weekly   3               \
-    --keep-monthly  3
+    --keep-monthly  6               \
+    --keep-yearly   2 2>&1 | tee -a "$LOG"
 
 prune_exit=$?
 
@@ -87,6 +93,12 @@ fi
 if [ ${global_exit} -gt 1 ];
 then
     info "Backup and/or Prune finished with an error"
+fi
+
+if [[ ${global_exit} -gt 0 && -n $BORG_EMAIL ]];
+then
+    info "Sending notification to $BORG_EMAIL"
+    mail -s "Borg Backup notification from $HOSTNAME" "$BORG_EMAIL" < "$LOG"
 fi
 
 exit ${global_exit}

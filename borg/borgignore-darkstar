@@ -6,11 +6,10 @@
 /Users/Shared
 
 sh:/Users/**/vim/plugged
-sh:/Users/*/.atom/.apm
-sh:/Users/*/.atom/packages
 sh:/Users/*/.config/borg
 sh:/Users/*/.dropbox
 sh:/Users/*/.pyenv
+sh:/Users/*/.vscode/extensions
 sh:/Users/*/Creative Cloud Files
 sh:/Users/*/Dropbox
 sh:/Users/*/Library/**/Chrome/**/Application Cache

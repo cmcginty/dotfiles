@@ -12,3 +12,6 @@ BORG_COMPRESSION=zstd,6
 
 # List of dirs to backup.
 BORG_BACKUP_DIRS="/Users"
+
+# Failure notifications email address
+BORG_EMAIL=<< CHANGE THIS TO YOUR EMAIL >>
