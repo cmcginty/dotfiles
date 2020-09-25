@@ -286,6 +286,14 @@
         },
         // --------------------------------------------------------------------
         // ## Editor:
+        { // Show hover/peek window at current cursor
+            "before": [
+                "ctrl+i"
+            ],
+            "commands": [
+                "editor.action.showHover"
+            ]
+        },
         { // Reload file from disk (drop editor changes)
             "before": [
                 "ctrl+r"
