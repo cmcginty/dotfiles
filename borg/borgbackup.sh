@@ -58,7 +58,7 @@ borg create                         \
     $EXCLUDE_HOST_ARG               \
     $EXCLUDE_HOME_ARG               \
     ::'{now}'                       \
-    "$BORG_BACKUP_DIRS" 2>&1 | tee "$LOG"
+    "$BORG_BACKUP_DIRS" 2> >(tee "$LOG")
 
 backup_exit=$?
 
@@ -78,7 +78,7 @@ borg prune                          \
     --keep-daily    6               \
     --keep-weekly   3               \
     --keep-monthly  6               \
-    --keep-yearly   2 2>&1 | tee -a "$LOG"
+    --keep-yearly   2 2> >(tee -a "$LOG")
 
 prune_exit=$?
 

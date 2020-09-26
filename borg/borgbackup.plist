@@ -29,8 +29,8 @@
 
     <key>ProgramArguments</key>
     <array>
-      <!-- CHANGE TO FULL PATH OF BORGBACKUP.SH -->
-      <string>/Users/pcm/dotfiles/borg/borgbackup.sh</string>
+      <string>/usr/bin/open</string>
+      <string>/Applications/borgbackup.app</string>
     </array>
 
     <key>Nice</key>
