@@ -44,6 +44,7 @@
    ~/Library/Application Support/VS Code @ FB/User/keybindings.json:
       path: vscode/keybindings.json
       create: true
+   ~/Library/Preferences/gzdoom.ini:  gzdoom.ini
 
 - shell:
    -
