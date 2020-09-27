@@ -54,7 +54,7 @@ Restart Postfix and test:
 For Mac you need to create a simple wrapper app to bypass the platform security. Use automator.app
 to do this.
 
-* Open `borgbackup.workflow` in Mac's automator.app
+* Open `./borgbackup.app` in Mac's automator.app
 * Edit the script to match your system.
 * Save the worflow as an "Application" to /Applicaitons/borgbackup.app
 * Open "System Preferences --> Security and Privacy --> Full Disk Access (FDA)".

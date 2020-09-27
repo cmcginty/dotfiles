@@ -1,6 +1,12 @@
 #!/bin/bash
 set -o pipefail
 
+# Treat the first arg as a file to redirect all output to.
+if [[ -n $1 ]]; then
+    exec >> $1
+    exec 2>&1
+fi
+
 # Set 'true' to disable backups
 DEBUG=${DEBUG:-false}
 

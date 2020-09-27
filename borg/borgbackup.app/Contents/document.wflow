@@ -60,7 +60,7 @@
 				<dict>
 					<key>COMMAND_STRING</key>
 					<string>PATH+=":/usr/local/bin"
-/Users/pcm/dotfiles/borg/borgbackup.sh
+/Users/pcm/dotfiles/borg/borgbackup.sh ~/Library/Logs/borgbackup.log
 exit 0</string>
 					<key>CheckedForUserDefaultShell</key>
 					<true/>
@@ -176,7 +176,7 @@ exit 0</string>
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>516.000000:364.000000</string>
+				<string>515.000000:252.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run Shell Script.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>
@@ -189,7 +189,7 @@ exit 0</string>
 	<key>workflowMetaData</key>
 	<dict>
 		<key>workflowTypeIdentifier</key>
-		<string>com.apple.Automator.workflow</string>
+		<string>com.apple.Automator.application</string>
 	</dict>
 </dict>
 </plist>

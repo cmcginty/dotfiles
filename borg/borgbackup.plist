@@ -16,11 +16,6 @@
     <key>StartInterval</key>
     <integer>21600</integer>
 
-    <key>StandardErrorPath</key>
-    <string>/Users/pcm/Library/Logs/borgbackup.log</string>
-    <key>StandardOutPath</key>
-    <string>/Users/pcm/Library/Logs/borgbackup.log</string>
-
     <key>EnvironmentVariables</key>
     <dict>
       <key>PATH</key>
