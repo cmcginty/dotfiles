@@ -19,7 +19,7 @@ p4merge.gui = true
 p4merge.premerge = true
 
 [templatealias]
-fb_rev = if(globalrev, 'r{globalrev}', rev)
+fb_rev = if(globalrev, 'rWWW{globalrev}', rev)
 fb_diff = if(phabdiff, ' {phabdiff}')
 subject = truncatelonglines(desc|firstline,72,"·")
 blue  = '\x1B[34m'
@@ -66,10 +66,11 @@ lgd     = log --limit 1 --template '{phabdiff}\n'
 lgf     = log --template '{fulllog}'
 lgm     = log
 lgno    = log --template '{nameonlylog}'
+lgnr    = log --template "{files % '{fb_rev}  {file}\n'}"
 lgns    = log --template '{namestatlog}'
 lgp     = lg --patch
 lgp1    = lg --limit 1 --patch
-lgr     = log --limit 1 --template 'r{globalrev}\n'
+lgr     = log --limit 1 --template '{fb_rev}\n'
 lgs     = lg --stat
 lgv     = log --template '{fulllog}'
 ls      = manifest
