@@ -14,6 +14,9 @@
    ~/.local/bin/ptmux:
       path: tmux/pastry-tmux.py
       create: true
+   ~/.local/bin/openurls:
+      path: tools/openurls.sh
+      create: true
    ~/.ptpython/config.py:
       path: python/ptpython_config.py
       create: true

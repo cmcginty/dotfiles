@@ -19,6 +19,3 @@ alias mktoc='mktoc -c -18'
 alias ytdl='youtube-dl --config-location ~/.ytdl.conf'
 alias ytdlpl='ytdl --yes-playlist'
 alias watchlist='ytdl --yes-playlist -- "https://www.youtube.com/playlist?list=WL"'
-
-# Web
-function openurls() { egrep -o 'https?://[^ ]+' | sort -u | while read X; do open "$X"; sleep 1.5; done }
