@@ -14,7 +14,7 @@
     <string>local.borgbackup</string>
 
     <key>StartInterval</key>
-    <integer>21600</integer>
+    <integer>10800</integer>
 
     <key>EnvironmentVariables</key>
     <dict>
