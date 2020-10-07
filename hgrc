@@ -54,8 +54,10 @@ cm      = commit
 cma     = metaedit
 cmi     = commit --interactive
 co      = checkout
-di      = diff
+dg      = diffgrep
 dh      = diff --rev '.^'
+di      = diff
+diffgrep = !$HG log --patch --template 'rWWW{globalrev}\n{fulllog}' $@ | while read -r LINE; do REV=$(echo $LINE | grep -Eo '^rWWW[[:digit:]]+$' || echo $REV); echo "$REV" "$LINE"; done
 drop    = hide
 dropall = hide 'draft() and not .'
 hideall = hide 'draft() and not .'
