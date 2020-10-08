@@ -2,7 +2,7 @@
     "fb.doctor.disabled-tests": [
         "CorpcanalDoctor"
     ],
-    "fb.remote-connections.hosts": [
+    "fb.ms-remote-connections.hosts": [
         {
             "hostname": "our.cmcginty.sb.facebook.com",
             "folders": [
@@ -66,6 +66,11 @@
         "editor.codeActionsOnSave": {
             "source.organizeImports": true
         }
+    },
+    // ---------------------------------------------
+    // -------- Force Extension Type --------------
+    "remote.extensionKind": {
+        "ryuta46.multi-command": [ "ui" ],
     },
     // ---------------------------------------------
     // -------- Spell Right Extention --------------
