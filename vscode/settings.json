@@ -11,7 +11,8 @@
                 "/data/users/cmcginty/configerator-dsi/",
                 "/data/users/cmcginty/fbsource/",
                 "/data/users/cmcginty/www-hg/",
-                "/home/cmcginty/local/opsfiles/"
+                "/home/cmcginty/local/opsfiles/",
+                "/data/users/cmcginty/opsfiles/"
             ]
         }
     ],
@@ -291,12 +292,21 @@
         },
         // --------------------------------------------------------------------
         // ## Editor:
-        { // Show hover/peek window at current cursor
+        { // Show hover/peek window at current cursor (gh)
             "before": [
                 "ctrl+i"
             ],
             "commands": [
                 "editor.action.showHover"
+            ]
+        },
+        { // Find all code refrences of current symbol
+            "before": [
+                "<leader>",
+                "ctrl+]"
+            ],
+            "commands": [
+                "references-view.find"
             ]
         },
         { // Reload file from disk (drop editor changes)
