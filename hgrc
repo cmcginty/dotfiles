@@ -37,6 +37,7 @@ fall = "{files % '{file}\n'}"
 nameonlylog = '{shortlog}{fall}\n'
 
 [alias]
+bo      = backout
 bot     = prev --bottom
 br      = bookmark
 bra     = bookmark --all
