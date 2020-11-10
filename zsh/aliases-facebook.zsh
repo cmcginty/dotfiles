@@ -56,7 +56,7 @@ alias jfs='jf submit'
 alias jfsu='jf submit --update-fields'
 
 # Vscode (server-side)
-alias fixvscode='sudo systemctl restart vscode-daemon && kill $(lsof -t -i :9092)'
+alias fixvscode='sudo systemctl restart vscode-daemon; sleep 5; sudo kill -15 $(sudo lsof -ti :9094)'
 
 # Certificates
 alias renew_certs='openssl x509 -checkend $((3600*4)) -noout -in /var/facebook/credentials/cmcginty/presto/cmcginty.pem || cc-certs -duo_pass push'
