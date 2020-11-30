@@ -37,8 +37,11 @@ fall = "{files % '{file}\n'}"
 nameonlylog = '{shortlog}{fall}\n'
 
 [alias]
-bo      = backout
+top     = next --top
 bot     = prev --bottom
+co      = checkout
+
+bo      = backout
 br      = bookmark
 bra     = bookmark --all
 branch  = bookmark
@@ -54,7 +57,6 @@ ami     = amend --interactive
 cm      = commit
 cma     = metaedit
 cmi     = commit --interactive
-co      = checkout
 dg      = diffgrep
 dh      = diff --rev '.^'
 di      = diff
@@ -81,7 +83,8 @@ pl      = pull
 pull    = pull --rebase --dest master
 push    = push --to master
 slh     = sl --hidden
-rb      = rebase
+rb      = rebase --dest master --base
+rbs     = rebase --dest master --source
 rba     = rebase --abort
 rbc     = rebase --continue
 # rebase all local branches
@@ -102,5 +105,4 @@ slh     = sl --hidden
 slp     = sl --patch
 sls     = sl --stat
 sp      = sparse
-top     = next --top
 u       = undo
