@@ -19,7 +19,7 @@ fi
 #
 # Source ZSH configs
 #
-for subdir (zsh terminal git vim python)
+for subdir (zsh terminal git vim python borg)
   for config_file ($HOME/.dotfiles/$subdir/*.zsh(N)) source $config_file
 
 # finalize local config
