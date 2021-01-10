@@ -33,7 +33,15 @@ DEBUG=${DEBUG:-false}
 $DEBUG && STATS_OR_DRYRUN="--dry-run --list" || STATS_OR_DRYRUN="--stats"
 
 # Find exclude files
-SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
+SOURCE="${BASH_SOURCE[0]}"
+while [ -h "$SOURCE" ]; do # Resolve $SOURCE until the file is no longer a symlink
+    DIR="$( cd -P "$( dirname "$SOURCE" )" >/dev/null 2>&1 && pwd )"
+    SOURCE="$(readlink "$SOURCE")"
+    # if $SOURCE was a relative symlink, we need to resolve it relative to the path where the
+    # symlink file was located
+    [[ $SOURCE != /* ]] && SOURCE="$DIR/$SOURCE"
+done
+SCRIPT_DIR="$( cd "$( dirname "${SOURCE}" )" >/dev/null && pwd )"
 
 EXCLUDE_HOST_FILE="$SCRIPT_DIR/borgignore-$(hostname)"
 EXCLUDE_LOCAL_FILE="$HOME/.borgignore"
