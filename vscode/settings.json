@@ -12,7 +12,8 @@
                 "/data/users/cmcginty/fbsource/",
                 "/data/users/cmcginty/www-hg/",
                 "/home/cmcginty/local/opsfiles/",
-                "/data/users/cmcginty/opsfiles/"
+                "/data/users/cmcginty/opsfiles/",
+                "/data/users/cmcginty/fbsource/fbcode/"
             ]
         }
     ],
@@ -71,7 +72,9 @@
     // ---------------------------------------------
     // -------- Force Extension Type --------------
     "remote.extensionKind": {
-        "ryuta46.multi-command": [ "ui" ],
+        "ryuta46.multi-command": [
+            "ui"
+        ],
     },
     // ---------------------------------------------
     // -------- Spell Right Extention --------------
@@ -292,6 +295,14 @@
         },
         // --------------------------------------------------------------------
         // ## Editor:
+        { // Fixes vim-undo brokenness (FXIME)
+            "before": [
+                "u"
+            ],
+            "commands": [
+                "undo"
+            ],
+        },
         { // Show hover/peek window at current cursor (gh)
             "before": [
                 "ctrl+i"
@@ -357,8 +368,8 @@
             "before": [
                 "ctrl+u"
             ],
-            "after": [
-                "ctrl+r"
+            "commands": [
+                "redo"
             ]
         },
         { // document format
