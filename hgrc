@@ -39,6 +39,7 @@ nameonlylog = '{shortlog}{fall}\n'
 [alias]
 top     = next --top
 bot     = prev --bottom
+bottom  = prev --bottom
 co      = checkout
 
 bo      = backout
@@ -51,7 +52,7 @@ bsc     = bisect --command
 bsg     = bisect --good
 bsr     = bisect --reset
 # e.g commit --amend
-am      = amend
+cam     = amend
 ams     = amend --stack
 ami     = amend --interactive
 cm      = commit
