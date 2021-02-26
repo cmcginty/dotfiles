@@ -57,11 +57,12 @@ alias jfsu='jf submit --update-fields'
 
 # Vscode (server-side)
 alias fixvscode='sudo systemctl restart vscode-daemon; sleep 5; sudo kill -15 $(sudo lsof -ti :9094)'
+alias kill-hh='pkill -f "(hh_server|hh_client)"'
 
 # Certificates
-alias renew_certs='openssl x509 -checkend $((3600*4)) -noout -in /var/facebook/credentials/cmcginty/presto/cmcginty.pem || cc-certs -duo_pass push'
-alias renew_dev='expect -c "spawn renew_creds devvm3470.ftw3.facebook.com; expect Passcode\ or\ option\ (1-1):; send push\r; expect eof"'
-alias renew='renew_certs && renew_dev'
+alias renew-certs='openssl x509 -checkend $((3600*4)) -noout -in /var/facebook/credentials/cmcginty/presto/cmcginty.pem || cc-certs -duo_pass push'
+alias renew-dev='expect -c "spawn renew_creds devvm3470.ftw3.facebook.com; expect Passcode\ or\ option\ (1-1):; send push\r; expect eof"'
+alias renew='renew-certs && renew-dev'
 
 # Everstore
 alias esget='clowder get'
