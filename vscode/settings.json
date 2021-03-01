@@ -9,11 +9,12 @@
                 "/data/users/cmcginty/configerator/",
                 "/data/users/cmcginty/configerator-dj/",
                 "/data/users/cmcginty/configerator-dsi/",
-                "/data/users/cmcginty/fbsource/",
-                "/data/users/cmcginty/www-hg/",
                 "/home/cmcginty/local/opsfiles/",
                 "/data/users/cmcginty/opsfiles/",
-                "/data/users/cmcginty/fbsource/fbcode/"
+                "/data/users/cmcginty/fbsource/fbcode/",
+                "/data/users/cmcginty/fbsource/",
+                "/data/users/cmcginty/www/",
+                "/data/users/cmcginty/configerator-hg/"
             ]
         }
     ],
@@ -39,7 +40,7 @@
     ],
     "editor.smoothScrolling": false,
     "editor.tabCompletion": "on",
-    "explorer.openEditors.visible": 25,
+    "explorer.openEditors.visible": 12,
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": true,
@@ -560,4 +561,8 @@
         },
     ],
     "fb.vscode-feedback.lastsurveydate": 1596074667104,
+    "[cpp]": {
+        "editor.defaultFormatter": "nuclide.cpp"
+    },
+    "editor.suggestSelection": "first",
 }
