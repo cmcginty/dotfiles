@@ -60,8 +60,9 @@ alias fixvscode='sudo systemctl restart vscode-daemon; sleep 5; sudo kill -15 $(
 alias kill-hh='pkill -f "(hh_server|hh_client)"'
 
 # Certificates
+FB_DEV_HOST='devvm4991.prn0.facebook.com'
 alias renew-certs='openssl x509 -checkend $((3600*4)) -noout -in /var/facebook/credentials/cmcginty/presto/cmcginty.pem || cc-certs -duo_pass push'
-alias renew-dev='expect -c "spawn renew_creds devvm3470.ftw3.facebook.com; expect Passcode\ or\ option\ (1-1):; send push\r; expect eof"'
+alias renew-dev="expect -c \"spawn renew_creds $FB_DEV_HOST; expect Passcode\ or\ option\ (1-1):; send push\r; expect eof\""
 alias renew='renew-certs && renew-dev'
 
 # Everstore

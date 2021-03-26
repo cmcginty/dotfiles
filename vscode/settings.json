@@ -28,6 +28,8 @@
     "interactive-smartlog.right-drawer-width": 525,
     // ---------------------------------------------
     // -------- VSCode Core Settings ---------------
+    "editor.autoClosingQuotes": "never", // NO, GOD! PLEASE NO!!! NOOOOOO!!!
+    "editor.autoSurround": "never", // When the word is selected.
     "editor.cursorSmoothCaretAnimation": false,
     "editor.fontFamily": "UbuntuMono Nerd Font Mono",
     "editor.fontSize": 13,
