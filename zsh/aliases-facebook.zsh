@@ -37,6 +37,7 @@ alias gencode='/var/www/scripts/entschema/gencode'
 alias gensandcastle='phps SandcastleAutogenScript'
 alias hack='hphpd -h localhost'
 alias jest-e2e='http_proxy= jest-e2e'
+alias t='testpilot'
 
 # Sandcastle
 alias odc='ondemand connect'

@@ -61,7 +61,8 @@ cmi     = commit --interactive
 dg      = diffgrep
 dh      = diff --rev '.^'
 di      = diff
-diffgrep = !$HG log --patch --template 'rWWW{globalrev}\n{fulllog}' $@ | while read -r LINE; do REV=$(echo $LINE | grep -Eo '^rWWW[[:digit:]]+$' || echo $REV); echo "$REV" "$LINE"; done
+diffgrep = !$HG log --patch --template 'rWWW{globalrev}\n{fulllog}' $@ | while read -r LINE; do REV=$(echo "$LINE" | grep -Eo '^rWWW[[:digit:]]+$' || echo "$REV"); echo "$REV" "$LINE"; done
+diffsize = !$HG log --template         'rWWW{globalrev}\n{stat()}'  $@ | while read -r LINE; do REV=$(echo "$LINE" | grep -Eo '^rWWW[[:digit:]]+$' || echo "$REV"); [[ -n $REV ]] || continue; (echo "$LINE" | grep -Eq '[0-9]+ files changed') || continue; CHG=$(echo "$LINE" | gawk 'z=0;match($z, /([0-9]+).*, ([0-9]+).*, ([0-9]+)/, a) { print a[1]+a[2]+a[3] }'); echo "$CHG" "$REV"; done | sort -n
 drop    = hide
 dropall = hide 'draft() and not .'
 hideall = hide 'draft() and not .'
