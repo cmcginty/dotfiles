@@ -3,3 +3,4 @@ vim/vim/black
 vim/vim/plugged
 *.spl
 .vscode/
+.DS_Store
