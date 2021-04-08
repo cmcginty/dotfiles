@@ -23,12 +23,15 @@ DEBUG=${DEBUG:-false}
 #   BORG_BACKUP_DIRS=<DIRS>
 #   BORG_COMPRESSION=<COMPRESSION>,<NUM>
 #   BORG_EMAIL=<EMAIL ADDRESS>
+#   BORG_PRUNE=1
 #
 # To exclude files or dirs, create a ~/.borgignore file.
 #
 
 [ -e .borgconfig ] && source .borgconfig
 [ -e $HOME/.borgconfig ] && source $HOME/.borgconfig
+
+BORG_PRUNE=${BORG_PRUNE:-1}
 
 $DEBUG && STATS_OR_DRYRUN="--dry-run --list" || STATS_OR_DRYRUN="--stats"
 
@@ -76,25 +79,28 @@ borg create                         \
 
 backup_exit=$?
 
-info "Pruning repository"
+if [[ $BORG_PRUNE -eq 1 ]]; then
+    info "Pruning repository"
 
-# Use the `prune` subcommand to maintain 7 daily, 4 weekly and 6 monthly
-# archives of THIS machine. The '{hostname}-' prefix is very important to
-# limit prune's operation to this machine's archives and not apply to
-# other machines' archives also:
+    # Use the `prune` subcommand to maintain 7 daily, 4 weekly and 6 monthly
+    # archives of THIS machine. The '{hostname}-' prefix is very important to
+    # limit prune's operation to this machine's archives and not apply to
+    # other machines' archives also:
 
-borg prune                          \
-    --list                          \
-    $STATS_OR_DRYRUN                \
-    --show-rc                       \
-    --keep-within   48H             \
-    --keep-hourly   1               \
-    --keep-daily    6               \
-    --keep-weekly   3               \
-    --keep-monthly  6               \
-    --keep-yearly   2 2> >(tee -a "$LOG")
+    borg prune                          \
+        --list                          \
+        $STATS_OR_DRYRUN                \
+        --show-rc                       \
+        --keep-within   48H             \
+        --keep-daily    6               \
+        --keep-weekly   3               \
+        --keep-monthly  11              \
+        --keep-yearly   2 2> >(tee -a "$LOG")
 
-prune_exit=$?
+    prune_exit=$?
+else
+    prune_exit=0
+fi
 
 # use highest exit code as global exit code
 global_exit=$(( backup_exit > prune_exit ? backup_exit : prune_exit ))
