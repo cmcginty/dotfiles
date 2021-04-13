@@ -10,6 +10,10 @@ export BORG_REPO=backup@pine64:$(hostname)
 # Uncomment to disable auto-pruning by the script.
 # BORG_PRUNE=0
 
+# Uncomment to set daily period to disable backups (i.e. server offline).
+# Ex: No updates between 11pm and 7am.
+# BORG_SLEEP=("23:00" "07:00")
+
 # Compression level (from low to high): lz4 | zstd,3 | zstd,6 | zstd,9
 BORG_COMPRESSION=zstd,6
 

@@ -1,14 +1,57 @@
 #!/bin/bash
 set -o pipefail
 
+function info() { printf "\n%s %s\n\n" "$( date )" "$*" >&2; }
+
+function now_to_secs() {
+    : "${date_bin:=$(command -v gdate)}" "${date_bin:=$(command -v date)}"
+    local midnight; midnight=$($date_bin -d0 +%s)
+    local now; now=$($date_bin +%s)
+    echo $((now - midnight))
+}
+
+function time_to_secs() {
+    : "${date_bin:=$(command -v gdate)}" "${date_bin:=$(command -v date)}"
+    local midnight; midnight=$($date_bin -d0 +%s)
+    local time; time=$($date_bin -d"$1" +%s)
+    echo $((time - midnight))
+}
+
+function exit_if_during_sleep_time() {
+    : "${BORG_SLEEP:=()}"
+    if ((${#BORG_SLEEP[@]} != 2)); then
+        return
+    fi
+    local start_time; start_time=$(time_to_secs ${BORG_SLEEP[0]})
+    local end_time; end_time=$(time_to_secs ${BORG_SLEEP[1]})
+    local cur_time; cur_time=$(now_to_secs)
+    local sleep
+    # Sleep depending if the range overlaps to the next day.
+    if ((start_time < end_time)); then
+        sleep=$((start_time <= cur_time && cur_time < end_time ))
+    else
+        sleep=$((!(end_time <= cur_time && cur_time < start_time)))
+    fi
+    if ((sleep)); then
+        info "Backup is disabled between ${BORG_SLEEP[0]} and" \
+             "${BORG_SLEEP[1]}. Nothing to do!"
+        exit
+    fi
+}
+
+# Exception handling
+LOG=$(mktemp -t borgbackup)
+trap 'echo $( date ) Backup interrupted >&2; exit 2' INT TERM
+trap "rm -f $LOG" EXIT
+
 # Treat the first arg as a file to redirect all output to.
 if [[ -n $1 ]]; then
-    exec >> $1
+    exec >> "$1"
     exec 2>&1
 fi
 
 # Set 'true' to disable backups
-DEBUG=${DEBUG:-false}
+: "${DEBUG:=false}"
 
 #
 # NOTE: Before running this script for the first time the Borg repo must be initialized with
@@ -31,17 +74,20 @@ DEBUG=${DEBUG:-false}
 [ -e .borgconfig ] && source .borgconfig
 [ -e $HOME/.borgconfig ] && source $HOME/.borgconfig
 
-BORG_PRUNE=${BORG_PRUNE:-1}
+: ${BORG_PRUNE:=1}
 
 $DEBUG && STATS_OR_DRYRUN="--dry-run --list" || STATS_OR_DRYRUN="--stats"
 
-# Find exclude files
+# Check time if backups are disabled.
+exit_if_during_sleep_time
+
+# Find exclude files.
 SOURCE="${BASH_SOURCE[0]}"
 while [ -h "$SOURCE" ]; do # Resolve $SOURCE until the file is no longer a symlink
     DIR="$( cd -P "$( dirname "$SOURCE" )" >/dev/null 2>&1 && pwd )"
     SOURCE="$(readlink "$SOURCE")"
-    # if $SOURCE was a relative symlink, we need to resolve it relative to the path where the
-    # symlink file was located
+    # if $SOURCE was a relative symlink, we need to resolve it relative to the
+    # path where the symlink file was located
     [[ $SOURCE != /* ]] && SOURCE="$DIR/$SOURCE"
 done
 SCRIPT_DIR="$( cd "$( dirname "${SOURCE}" )" >/dev/null && pwd )"
@@ -52,13 +98,6 @@ EXCLUDE_LOCAL_FILE="$HOME/.borgignore"
 [ -e $EXCLUDE_HOST_FILE  ] && EXCLUDE_HOST_ARG="--exclude-from $EXCLUDE_HOST_FILE"
 [ -e $EXCLUDE_LOCAL_FILE ] && EXCLUDE_HOME_ARG="--exclude-from $EXCLUDE_LOCAL_FILE"
 
-
-# some helpers and error handling:
-info() { printf "\n%s %s\n\n" "$( date )" "$*" >&2; }
-trap 'echo $( date ) Backup interrupted >&2; exit 2' INT TERM
-
-LOG=$(mktemp -t borgbackup)
-trap "rm -f $LOG" EXIT
 
 info "Starting backup"
 
