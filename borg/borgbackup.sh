@@ -40,9 +40,10 @@ function exit_if_during_sleep_time() {
 }
 
 # Exception handling
-LOG=$(mktemp -t borgbackup)
+: "${MKTEMP_BIN:=$(command -v gmktemp)}" "${MKTEMP_BIN:=$(command -v mktemp)}"
+LOG=$($MKTEMP_BIN -t borgbackup.XXXXXX)
 trap 'echo $( date ) Backup interrupted >&2; exit 2' INT TERM
-trap "rm -f $LOG" EXIT
+trap 'rm -f $LOG' EXIT
 
 # Treat the first arg as a file to redirect all output to.
 if [[ -n $1 ]]; then
@@ -72,9 +73,9 @@ fi
 #
 
 [ -e .borgconfig ] && source .borgconfig
-[ -e $HOME/.borgconfig ] && source $HOME/.borgconfig
+[ -e "$HOME/.borgconfig" ] && source "$HOME/.borgconfig"
 
-: ${BORG_PRUNE:=1}
+: "${BORG_PRUNE:=1}"
 
 $DEBUG && STATS_OR_DRYRUN="--dry-run --list" || STATS_OR_DRYRUN="--stats"
 
@@ -95,8 +96,8 @@ SCRIPT_DIR="$( cd "$( dirname "${SOURCE}" )" >/dev/null && pwd )"
 EXCLUDE_HOST_FILE="$SCRIPT_DIR/borgignore-$(hostname)"
 EXCLUDE_LOCAL_FILE="$HOME/.borgignore"
 
-[ -e $EXCLUDE_HOST_FILE  ] && EXCLUDE_HOST_ARG="--exclude-from $EXCLUDE_HOST_FILE"
-[ -e $EXCLUDE_LOCAL_FILE ] && EXCLUDE_HOME_ARG="--exclude-from $EXCLUDE_LOCAL_FILE"
+[ -e "$EXCLUDE_HOST_FILE"  ] && EXCLUDE_HOST_ARG=(--exclude-from "$EXCLUDE_HOST_FILE")
+[ -e "$EXCLUDE_LOCAL_FILE" ] && EXCLUDE_HOME_ARG=(--exclude-from "$EXCLUDE_LOCAL_FILE")
 
 
 info "Starting backup"
@@ -104,16 +105,16 @@ info "Starting backup"
 # Backup the most important directories into an archive named after
 # the machine this script is currently running on:
 
-borg create                         \
-    --verbose                       \
-    --filter 'AME-'                 \
-    $STATS_OR_DRYRUN                \
-    --show-rc                       \
-    --compression $BORG_COMPRESSION \
-    --exclude-caches                \
-    $EXCLUDE_HOST_ARG               \
-    $EXCLUDE_HOME_ARG               \
-    ::'{now}'                       \
+borg create                           \
+    --verbose                         \
+    --filter 'AME-'                   \
+    $STATS_OR_DRYRUN                  \
+    --show-rc                         \
+    --compression "$BORG_COMPRESSION" \
+    --exclude-caches                  \
+    "${EXCLUDE_HOST_ARG[@]}"          \
+    "${EXCLUDE_HOME_ARG[@]}"          \
+    ::'{now}'                         \
     "$BORG_BACKUP_DIRS" 2> >(tee "$LOG")
 
 backup_exit=$?
