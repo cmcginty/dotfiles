@@ -12,6 +12,8 @@ setopt NO_CASE_GLOB
 setopt NUMERIC_GLOB_SORT
 #
 setopt EXTENDED_GLOB
+# Save lines in history that have leading spaces. (i.e copied/pasted to the term)
+unsetopt HIST_IGNORE_SPACE
 #
 bindkey -M vicmd 'q' push-line
 # !NNN, history auto-completion after space
