@@ -10,6 +10,11 @@ if [[ "$OSTYPE" == darwin* ]]; then
    defaults write -g KeyRepeat -int 2           # normal minimum is 2 (30 ms)
    # Enable sub-pixel rendering in Mojave
    defaults write -g CGFontRenderingFontSmoothingDisabled -bool FALSE
+   # disable all ridiculous input manipulation
+   defaults write -g NSAutomaticSpellingCorrectionEnabled -bool false
+   defaults write -g NSAutomaticPeriodSubstitutionEnabled -bool false
+   defaults write -g NSAutomaticCapitalizationEnabled -bool false
+   defaults write -g NSAutomaticQuoteSubstitutionEnabled -bool false
 
    # fix homebrew dir permissions
    alias brewfix="sudo chown -R $(whoami) /usr/local/lib /usr/local/sbin /usr/local/bin"
