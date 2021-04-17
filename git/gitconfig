@@ -65,16 +65,16 @@
    dino = diff --find-renames --name-only
    ds = diff --stat
    #--------------------
-   lg = log --find-copies --no-merges
-   lga = log --find-copies --no-merges --graph --all
-   lgm = log --find-copies --no-merges --format=medium
-   lgno = log --find-copies --no-merges --name-only
-   lgns = log --find-copies --no-merges --name-status
-   lgp = log --find-copies --no-merges --patch --ignore-space-at-eol
-   lgs = log --find-copies --no-merges --stat=180
-   lgss = log --find-copies --no-merges --shortstat
-   lgu = log --find-copies --no-merges @{u}..
-   message = log --no-merges --format="%B"
+   lg = log --find-copies
+   lga = log --find-copies --graph --all
+   lgm = log --find-copies --format=medium
+   lgno = log --find-copies --name-only
+   lgns = log --find-copies --name-status
+   lgp = log --find-copies --patch --ignore-space-at-eol
+   lgs = log --find-copies --stat=180
+   lgss = log --find-copies --shortstat
+   lgu = log --find-copies @{u}..
+   message = log --format="%B"
    #--------------------
    ls = ls-files
    #--------------------
