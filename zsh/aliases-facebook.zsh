@@ -46,7 +46,7 @@ function scutil-retry() { scutil get-spec $1 | grep -v nonce | scutil canary-com
 # Arc
 alias ar='arc rebuild'
 alias arb='arc rebuild'
-alias au='arc unit'
+alias unit='arc unit --no-time-limit'
 
 alias pm='pingme'
 alias fin="pingme \"\$(hostname | rg -o '^\w+\.\w+') READY\""
