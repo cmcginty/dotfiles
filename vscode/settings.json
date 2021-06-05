@@ -6,15 +6,13 @@
         {
             "hostname": "our.cmcginty.sb.facebook.com",
             "folders": [
-                "/data/users/cmcginty/configerator/",
-                "/data/users/cmcginty/configerator-dj/",
-                "/data/users/cmcginty/configerator-dsi/",
-                "/home/cmcginty/local/opsfiles/",
-                "/data/users/cmcginty/opsfiles/",
                 "/data/users/cmcginty/fbsource/fbcode/",
                 "/data/users/cmcginty/fbsource/",
                 "/data/users/cmcginty/www/",
-                "/data/users/cmcginty/configerator-hg/"
+                "/data/users/cmcginty/configerator-hg/",
+                "/data/users/cmcginty/configerator/",
+                "/data/users/cmcginty/configerator-dj/",
+                "/data/users/cmcginty/configerator-dsi/"
             ]
         }
     ],
@@ -80,18 +78,28 @@
         ],
     },
     // ---------------------------------------------
-    // -------- Spell Right Extention --------------
-    "spellright.language": [
-        "en"
+    // -------- cSpell Right Extension --------------
+    "cSpell.enabled": true,
+    "cSpell.userWords": [
+        "Oncalls",
+        "UNBREAK",
+        "allowlisted",
+        "classname",
+        "cmcginty",
+        "configerator",
+        "ents",
+        "logview",
+        "nonnull",
+        "oncall",
+        "releng",
+        "struct"
     ],
-    "spellright.documentTypes": [
-        "markdown",
-        "latex",
-        "plaintext",
-        "jsonc"
+    "cSpell.enableFiletypes": [
+        "flow",
+        "hack"
     ],
     // ---------------------------------------------
-    // -------- VS Icons Extention --------------
+    // -------- VS Icons Extension --------------
     "vsicons.dontShowNewVersionMessage": true,
     // ---------------------------------------------
     // --- Vim Extension Settings / Key Mappings ---
