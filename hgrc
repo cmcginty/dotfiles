@@ -41,6 +41,7 @@ top     = next --top
 bot     = prev --bottom
 bottom  = prev --bottom
 co      = checkout
+coi     = revert -i
 
 bo      = backout
 br      = bookmark
@@ -80,7 +81,6 @@ lgp1    = lg --limit 1 --patch
 lgr     = log --limit 1 --template '{fb_rev}\n'
 lgs     = lg --stat
 lgv     = log --template '{fulllog}'
-ls      = manifest
 pl      = pull
 plm     = pull --rebase --dest master
 pull    = pull --rebase --dest stable

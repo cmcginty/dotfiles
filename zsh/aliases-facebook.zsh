@@ -54,7 +54,10 @@ alias fin="pingme \"\$(hostname | rg -o '^\w+\.\w+') READY\""
 # Mercurial/Phabricator
 alias h='hg'
 alias jfs='jf submit'
-alias jfsu='jf submit --update-fields'
+alias jfdraft='jf submit --draft'
+alias jfpublish='jf submit --publish-when-ready'
+alias jfup='jf submit --draft --update'
+alias jfwip='jf submit --plan-changes'
 
 # Vscode (server-side)
 alias fixvscode='sudo systemctl restart vscode-daemon; sleep 5; sudo kill -15 $(sudo lsof -ti :9094)'
