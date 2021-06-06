@@ -96,7 +96,8 @@
     ],
     "cSpell.enableFiletypes": [
         "flow",
-        "hack"
+        "hack",
+        "shellscript"
     ],
     // ---------------------------------------------
     // -------- VS Icons Extension --------------
