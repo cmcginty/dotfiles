@@ -86,10 +86,13 @@
     "cSpell.enabled": true,
     "cSpell.userWords": [
         "Oncalls",
+        "TRUNKSTABLE",
+        "TRUNKTERN",
         "UNBREAK",
         "allowlisted",
         "classname",
         "cmcginty",
+        "config's",
         "configerator",
         "ents",
         "logview",
@@ -99,6 +102,9 @@
         "struct",
         "shellcheck",
         "snapraid"
+    ],
+    "cSpell.flagWords": [
+        "pipelien"
     ],
     "cSpell.enableFiletypes": [
         "bat",

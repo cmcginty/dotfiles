@@ -1,6 +1,4 @@
-ban.spellright
 brandonjmatthews.one-dark-dark-plus
-ms-python.python
 oderwat.indent-rainbow
 ryuta46.multi-command
 seansassenrath.vscode-theme-superonedark
