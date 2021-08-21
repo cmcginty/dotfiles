@@ -65,15 +65,10 @@ Plug 'hynek/vim-python-pep8-indent'    " Python pep8 auto-indent
 Plug 'tmhedberg/SimpylFold'            " improves Python folding (very slow)
 Plug 'vim-python/python-syntax'        " better Python syntax highlighting
 Plug 'ambv/black'                      " code formatting
-" --- Gradle/Groovy
-Plug 'tfnico/vim-gradle'               " gradle build tool
-Plug 'vim-scripts/groovyindent-unix'   " groovy indents syntax
 " --- Git Config
 Plug 'tpope/vim-git'                   " git config files
 " -- Markdown
 Plug 'plasticboy/vim-markdown'         " markdown support (REQUIRES VIM-TABULAR)
-" -- Golang
-Plug 'fatih/vim-go',{'do': ':GoInstallBinaries'} " Go programming lang
 
 " devicons must load after other plugins it updates
 Plug 'ryanoasis/vim-devicons'       " icon'd fonts
