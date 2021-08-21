@@ -2,3 +2,4 @@
 .*swo
 .lvimrc
 .python-version
+.DS_Store
