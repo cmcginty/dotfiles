@@ -25,7 +25,7 @@ nmap M <Plug>MoveMotionEndOfLinePlug
 if has("gui_macvim")
    set clipboard=unnamed
 else
-   set clipboard=unnamedplus
+   set clipboard=
 endif
 
 " move cursor to end of paste

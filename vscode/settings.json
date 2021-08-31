@@ -26,6 +26,7 @@
     "interactive-smartlog.right-drawer-width": 525,
     // ---------------------------------------------
     // -------- VSCode Core Settings ---------------
+    "blame.disableInlineBlame": true,
     "editor.autoClosingBrackets": "never",
     "editor.autoClosingQuotes": "never", // NO, GOD! PLEASE NO!!! NOOOOOO!!!
     "editor.autoSurround": "never", // When the word is selected.
@@ -42,6 +43,7 @@
     ],
     "editor.smoothScrolling": false,
     "editor.suggestSelection": "first",
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
     "editor.tabCompletion": "on",
     "explorer.openEditors.visible": 12,
     "files.insertFinalNewline": true,
@@ -95,6 +97,7 @@
         "config's",
         "configerator",
         "ents",
+        "frontends",
         "logview",
         "nonnull",
         "oncall",
@@ -659,4 +662,8 @@
             ]
         },
     ],
+    "fb.vscode-feedback.lastsurveydate": 1596074667104,
+    "[cpp]": {
+        "editor.defaultFormatter": "nuclide.cpp"
+    }
 }
