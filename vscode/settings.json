@@ -26,6 +26,7 @@
     "interactive-smartlog.right-drawer-width": 525,
     // ---------------------------------------------
     // -------- VSCode Core Settings ---------------
+    "editor.autoClosingBrackets": "never",
     "editor.autoClosingQuotes": "never", // NO, GOD! PLEASE NO!!! NOOOOOO!!!
     "editor.autoSurround": "never", // When the word is selected.
     "editor.cursorSmoothCaretAnimation": false,
@@ -33,19 +34,20 @@
     "editor.fontSize": 13,
     "editor.lineHeight": 13,
     "editor.minimap.enabled": true,
+    "editor.quickSuggestions": false,
     "editor.quickSuggestionsDelay": 100,
     "editor.rulers": [
         80,
         120
     ],
     "editor.smoothScrolling": false,
+    "editor.suggestSelection": "first",
     "editor.tabCompletion": "on",
     "explorer.openEditors.visible": 12,
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": true,
     "intern-tools.showReminderBeforeMeetings": true,
-    "window.zoomLevel": 0,
     "workbench.colorTheme": "Super One Dark",
     "workbench.editor.enablepreviewfromquickopen": false,
     "workbench.editor.tabsizing": "shrink",
@@ -70,6 +72,7 @@
             "source.organizeImports": true
         }
     },
+    "python.languageServer": "Pylance",
     // ---------------------------------------------
     // -------- Force Extension Type --------------
     "remote.extensionKind": {
@@ -79,6 +82,7 @@
     },
     // ---------------------------------------------
     // -------- cSpell Right Extension --------------
+    "cSpell.language": "en",
     "cSpell.enabled": true,
     "cSpell.userWords": [
         "Oncalls",
@@ -92,12 +96,90 @@
         "nonnull",
         "oncall",
         "releng",
-        "struct"
+        "struct",
+        "shellcheck",
+        "snapraid"
     ],
     "cSpell.enableFiletypes": [
+        "bat",
+        "clojure",
+        "coffeescript",
+        "diff",
+        "dockercompose",
+        "dockerfile",
         "flow",
+        "fsharp",
+        "git-rebase",
+        "groovy",
         "hack",
-        "shellscript"
+        "hlsl",
+        "ignore",
+        "ini",
+        "jinja",
+        "jsx-tags",
+        "julia",
+        "juliamarkdown",
+        "jupyter",
+        "log",
+        "lua",
+        "makefile",
+        "objective-c",
+        "objective-cpp",
+        "perl",
+        "perl6",
+        "pip-requirements",
+        "powershell",
+        "properties",
+        "r",
+        "razor",
+        "ruby",
+        "scminput",
+        "search-result",
+        "shaderlab",
+        "shellscript",
+        "sql",
+        "swift",
+        "toml",
+        "vb",
+        "vimrc",
+        "xml",
+        "xsl"
+    ],
+    "cSpell.enabledLanguageIds": [
+        "asciidoc",
+        "c",
+        "cpp",
+        "csharp",
+        "css",
+        "git-commit",
+        "go",
+        "graphql",
+        "handlebars",
+        "haskell",
+        "html",
+        "jade",
+        "java",
+        "javascript",
+        "javascriptreact",
+        "json",
+        "jsonc",
+        "latex",
+        "less",
+        "markdown",
+        "php",
+        "plaintext",
+        "python",
+        "pug",
+        "restructuredtext",
+        "rust",
+        "scala",
+        "scss",
+        "text",
+        "typescript",
+        "typescriptreact",
+        "yaml",
+        "yml",
+        "bash"
     ],
     // ---------------------------------------------
     // -------- VS Icons Extension --------------
@@ -571,9 +653,4 @@
             ]
         },
     ],
-    "fb.vscode-feedback.lastsurveydate": 1596074667104,
-    "[cpp]": {
-        "editor.defaultFormatter": "nuclide.cpp"
-    },
-    "editor.suggestSelection": "first",
 }
