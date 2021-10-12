@@ -16,6 +16,7 @@ alias cdrdao='sudo cdrdao'
 alias mktoc='mktoc -c -18'
 
 # Youtube
-alias ytdl='youtube-dl --config-location ~/.ytdl.conf'
-alias ytdlpl='ytdl --yes-playlist'
-alias watchlist='ytdl --yes-playlist -- "https://www.youtube.com/playlist?list=WL"'
+local YTDL='yt-dlp'
+alias ytdl="$YTDL --config-location ~/.ytdl.conf"
+alias ytdlpl="$YTDL --yes-playlist"
+alias watchlist="$YTDL --yes-playlist -- \"https://www.youtube.com/playlist?list=WL\""
