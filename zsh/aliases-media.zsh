@@ -18,5 +18,5 @@ alias mktoc='mktoc -c -18'
 # Youtube
 local YTDL='yt-dlp'
 alias ytdl="$YTDL --config-location ~/.ytdl.conf"
-alias ytdlpl="$YTDL --yes-playlist"
-alias watchlist="$YTDL --yes-playlist -- \"https://www.youtube.com/playlist?list=WL\""
+alias ytdlpl='ytdl --yes-playlist'
+alias watchlist='ytdl --yes-playlist -- "https://www.youtube.com/playlist?list=WL"'
