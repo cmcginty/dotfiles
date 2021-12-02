@@ -48,6 +48,7 @@
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": true,
+    "hg.jumpToNextConflictOnSave": "Jump On Save And Open ISL When Done",
     "intern-tools.showReminderBeforeMeetings": true,
     "workbench.colorTheme": "Super One Dark",
     "workbench.editor.enablepreviewfromquickopen": false,
@@ -57,10 +58,19 @@
     "workbench.startupEditor": "newUntitledFile",
     // ---------------------------------------------
     // --------- Language Overrides ----------------
+    "[cpp]": {
+        "editor.defaultFormatter": "nuclide.cpp"
+    },
     "[git-commit]": {
         "editor.rulers": [
             50
         ]
+    },
+    "[hack]": {
+        "editor.formatOnType": false,
+        "editor.tabSize": 2,
+        "editor.wordSeparators": "`~!@#%^&*()-=+[{]}\\|;:'\",.<>/?",
+        "editor.autoClosingBrackets": "never"
     },
     "[plaintext]": {
         "editor.quickSuggestions": false
@@ -87,6 +97,7 @@
     "cSpell.enabled": true,
     "cSpell.userWords": [
         "Oncalls",
+        "Phabricator",
         "TRUNKSTABLE",
         "TRUNKTERN",
         "UNBREAK",
@@ -100,10 +111,11 @@
         "logview",
         "nonnull",
         "oncall",
+        "referer",
         "releng",
-        "struct",
         "shellcheck",
-        "snapraid"
+        "snapraid",
+        "struct"
     ],
     "cSpell.flagWords": [
         "pipelien"
@@ -662,7 +674,5 @@
         },
     ],
     "fb.vscode-feedback.lastsurveydate": 1596074667104,
-    "[cpp]": {
-        "editor.defaultFormatter": "nuclide.cpp"
-    }
+    "interactive-smartlog.autoRunMergeDrivers": true,
 }
