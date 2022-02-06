@@ -21,6 +21,7 @@ alias pscpu='ps auxf | sort -nr -k 3 | head -10'
 alias watch='watch --color'
 alias please='sudo $(fc -ln -1)'
 alias path='echo -e ${PATH//:/\\n}'
+alias randfile='find . -type f -maxdepth 1 | sort -R | tail -n1'
 
 # xargs using newlines as separater
 alias nxargs='gxargs -i -d\\n'

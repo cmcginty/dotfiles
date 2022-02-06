@@ -23,3 +23,6 @@ alias jj='j -1'
 
 # tmux
 alias takeover="tmux detach -a"
+
+# Mac OSx
+alias osx-reindex='sudo mdutil -a -i off; sleep 1; sudo mdutil -a -i on'

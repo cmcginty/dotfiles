@@ -15,6 +15,8 @@ if [[ "$OSTYPE" == darwin* ]]; then
    defaults write -g NSAutomaticPeriodSubstitutionEnabled -bool false
    defaults write -g NSAutomaticCapitalizationEnabled -bool false
    defaults write -g NSAutomaticQuoteSubstitutionEnabled -bool false
+   # disable hidden files on network shares
+   defaults write -g com.apple.desktopservices DSDontWriteNetworkStores -bool true
 
    # fix homebrew dir permissions
    alias brewfix="sudo chown -R $(whoami) /usr/local/lib /usr/local/sbin /usr/local/bin"
