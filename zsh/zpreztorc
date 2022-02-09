@@ -63,7 +63,7 @@ zstyle ':prezto:load' pmodule \
 #### WARNING: ADD NEW MODULES BEFORE 'syntax-highlighting'
 
 #
-# Autosuggestions
+# Auto-suggestions
 #
 
 # Set the query found color.

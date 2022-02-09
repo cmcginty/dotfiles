@@ -25,3 +25,6 @@ prompt sorin
 # force all prompt to have linebreak
 function prompt_custom_precmd { echo '' }
 add-zsh-hook precmd prompt_custom_precmd
+
+# Highlighting long lines is very slow, so just don't do it
+export ZSH_HIGHLIGHT_MAXLENGTH=256
