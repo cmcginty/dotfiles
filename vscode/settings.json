@@ -19,7 +19,7 @@
         "HACKFMT",
         "BLACK"
     ],
-    "interactive-smartlog.fetch": "jf get",
+    "interactive-smartlog.fetch": "jf get and checkout",
     "interactive-smartlog.pull": "hg pull",
     "interactive-smartlog.bottom-drawer-height": 500,
     "interactive-smartlog.right-drawer-width": 525,
@@ -45,6 +45,8 @@
     "editor.suggest.snippetsPreventQuickSuggestions": false,
     "editor.tabCompletion": "on",
     "explorer.openEditors.visible": 12,
+    "extensions.localSocketKeeper": false,  // Fix "activating extensions" loading bugs.
+    "extensions.remoteSocketKeeper": false, // Fix "activating extensions" loading bugs.
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": true,
