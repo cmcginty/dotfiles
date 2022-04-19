@@ -55,9 +55,14 @@
     "workbench.colorTheme": "Super One Dark",
     "workbench.editor.enablepreviewfromquickopen": false,
     "workbench.editor.tabsizing": "shrink",
+    "workbench.editor.untitled.hint": "hidden",
     "workbench.icontheme": "vscode-icons",
     "workbench.sidebar.location": "left",
     "workbench.startupEditor": "newUntitledFile",
+    "workbench.colorCustomizations": {
+        "tab.activeBackground": "#2B78C8",
+        "tab.activeFont": "#2B78C8"
+    },
     // ---------------------------------------------
     // --------- Language Overrides ----------------
     "[cpp]": {
