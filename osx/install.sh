@@ -1,0 +1,24 @@
+#!/bin/bash
+set -eou pipefail
+
+if [[ "$OSTYPE" != darwin* ]]; then
+    exit
+fi
+
+# 'defaults find NSUserKeyEquivalents' shows current settings.
+# Disable a shortcut by assigning the menu item to something like \U200B (ZERO-WIDTH SPACE)
+
+defaults write org.videolan.vlc NSUserKeyEquivalents '{
+    "Step Backward" = "\U2190";
+    "Step Forward" = "\U2192";
+}'
+
+defaults write com.google.Chrome NSUserKeyEquivalents '{
+    "Close Tab" = "^w";
+    "Find..." = "^f";
+    "New Tab" = "^t";
+    "Reload This Page" = "^r";
+    "Reopen Closed Tab" = "^$t";
+    "Select Next Tab" = "^l";
+    "Select Previous Tab" = "^h";
+}'

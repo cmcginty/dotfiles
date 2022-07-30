@@ -53,6 +53,7 @@
    -
       command: find ~/.ssh -name "*_rsa" -exec chmod 0600 '{}' ';'
       description: Set ssh key permissions
+   - [osx/install.sh, Install default OSX config]
    - [nerd-fonts/install.sh, Install Nerd fonts]
    -
       command: terminal/install.sh
