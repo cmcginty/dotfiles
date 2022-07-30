@@ -1,7 +1,6 @@
 - clean: ['~']
 
 - link:
-   ~/.bitbar:        bitbar
    ~/.clang-format:  vim/clang-format
    ~/.dotfiles:      .
    ~/.gitconfig:     git/gitconfig
@@ -82,11 +81,6 @@
    -
       command: tools/homebrew.sh
       description: Install homebrew
-      stdin: true
-      stdout: true
-   -
-      command: bitbar/install.sh
-      description: Install BitBar
       stdin: true
       stdout: true
    -
