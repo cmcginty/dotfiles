@@ -11,7 +11,8 @@
                 "/data/users/cmcginty/configerator-hg/",
                 "/data/users/cmcginty/configerator/",
                 "/data/users/cmcginty/configerator-dj/",
-                "/data/users/cmcginty/configerator-dsi/"
+                "/data/users/cmcginty/configerator-dsi/",
+                "/data/users/cmcginty/configerator-sitevars/"
             ]
         }
     ],
@@ -103,6 +104,7 @@
     "cSpell.language": "en",
     "cSpell.enabled": true,
     "cSpell.userWords": [
+        "FBID",
         "Krusty",
         "Oncalls",
         "Phabricator",
@@ -119,13 +121,17 @@
         "ents",
         "frontends",
         "logview",
+        "lowercasing",
+        "multisect",
         "nonnull",
         "oncall",
         "referer",
         "releng",
         "shellcheck",
+        "sitevar",
         "snapraid",
-        "struct"
+        "struct",
+        "unixname"
     ],
     "cSpell.flagWords": [
         "pipelien"

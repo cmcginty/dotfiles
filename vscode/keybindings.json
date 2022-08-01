@@ -104,7 +104,18 @@
     },
     {
         "key": "ctrl+;",
-        "command": "editor.action.triggerSuggest" // auto-complete
+        "command": "editor.action.triggerSuggest", // auto-complete
+        "when": "editorTextFocus && editorHasCompletionItemProvider && !editorReadonly"
+    },
+    {
+        "key": "ctrl+;",
+        "command": "toggleSuggestionDetails",  // show more auto-complete details
+        "when": "editorTextFocus && suggestWidgetVisible"
+    },
+    {
+        "key": "ctrl+alt+;",
+        "command": "toggleSuggestionFocus",
+        "when": "editorTextFocus && suggestWidgetVisible"
     },
     {
         "key": "ctrl+p",
