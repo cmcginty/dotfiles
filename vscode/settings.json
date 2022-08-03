@@ -6,14 +6,26 @@
         {
             "hostname": "our.cmcginty.sb.facebook.com",
             "folders": [
-                "/data/users/cmcginty/fbsource/fbcode/",
-                "/data/users/cmcginty/www/",
-                "/data/users/cmcginty/configerator-hg/",
-                "/data/users/cmcginty/configerator/",
                 "/data/users/cmcginty/configerator-dj/",
                 "/data/users/cmcginty/configerator-dsi/",
-                "/data/users/cmcginty/configerator-sitevars/"
+                "/data/users/cmcginty/configerator-hg/",
+                "/data/users/cmcginty/configerator-sitevars/",
+                "/data/users/cmcginty/configerator/",
+                "/data/users/cmcginty/fbsource/fbcode/",
+                "/data/users/cmcginty/www/"
             ]
+        }
+    ],
+    "fb.ms-remote-connections.starred": [
+        {
+            "hostType": "ondemand_www",
+            "flavor": "default",
+            "label": "WWW",
+            "folders": [],
+            "preferredHardwareOption": {
+                "name": "faster IO",
+                "label": "Prefer instances that are single-tenant and have better IO"
+            }
         }
     ],
     "arclint.applyLintFixesOnSave": [
