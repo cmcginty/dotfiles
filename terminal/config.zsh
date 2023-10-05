@@ -19,7 +19,7 @@ if [[ "$OSTYPE" == darwin* ]]; then
    defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 
    # fix homebrew dir permissions
-   alias brewfix="sudo chown -R $(whoami) /usr/local/lib /usr/local/sbin /usr/local/bin"
+   alias brewfix="sudo chown -R $(whoami) /opt/homebrew/"
    alias brewu="brew upgrade && brew upgrade --cask"
 
    # replace legacy UNIX tools with OSX-only commands

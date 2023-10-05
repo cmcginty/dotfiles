@@ -5,6 +5,13 @@
 #   Sorin Ionescu <sorin.ionescu@gmail.com>
 #
 
+## DEBUG
+# set -o xtrace -o verbose
+# tmux kill-server
+
+# Wait to show any pre-tmux output
+sleep 1
+
 # Start TMUX first; try to reattach a session
 if [[ -z $TMUX ]]; then
   ATTACH_OPT=$(tmux ls | grep -vq attached && echo "attach -d")
