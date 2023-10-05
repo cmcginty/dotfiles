@@ -127,6 +127,11 @@
         "command": "workbench.action.togglePanel",
         "when": "panelFocus"
     },
+    {
+        "key": "cmd+t",
+        "command": "extension.goto-symbol-stack.goToSearchSymbolDeclaration",
+        "when": "editorFocus"
+    }
     // List navigation
     {
         "key": "enter",

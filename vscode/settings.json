@@ -14,6 +14,37 @@
                 "/data/users/cmcginty/fbsource/fbcode/",
                 "/data/users/cmcginty/www/"
             ]
+        },
+        {
+            "hostname": "devvm4733.atn0.facebook.com",
+            "folders": []
+        }
+    ],
+    "fb.ms-remote-connections.odtypes": [
+        {
+            "type": "ondemand_www",
+            "flavor": "default",
+            "folders": []
+        },
+        {
+            "type": "ondemand_instagram",
+            "flavor": "default",
+            "folders": []
+        },
+        {
+            "type": "ondemand_fbcode",
+            "flavor": "default",
+            "folders": []
+        },
+        {
+            "type": "ondemand_configerator",
+            "flavor": "default",
+            "folders": []
+        },
+        {
+            "type": "ondemand_instagram_www",
+            "flavor": "default",
+            "folders": []
         }
     ],
     "fb.ms-remote-connections.starred": [
@@ -32,41 +63,57 @@
         "HACKFMT",
         "BLACK"
     ],
+    "interactive-smartlog.autoRunMergeDrivers": true,
+    "interactive-smartlog.bottom-drawer-height": 500,
     "interactive-smartlog.fetch": "jf get and checkout",
     "interactive-smartlog.pull": "hg pull",
-    "interactive-smartlog.bottom-drawer-height": 500,
-    "interactive-smartlog.right-drawer-width": 525,
+    "interactive-smartlog.right-drawer-width": 747,
     // ---------------------------------------------
     // -------- VSCode Core Settings ---------------
     "blame.disableInlineBlame": true,
     "editor.autoClosingBrackets": "never",
     "editor.autoClosingQuotes": "never", // NO, GOD! PLEASE NO!!! NOOOOOO!!!
     "editor.autoSurround": "never", // When the word is selected.
-    "editor.cursorSmoothCaretAnimation": false,
+    "editor.cursorSmoothCaretAnimation": "off",
     "editor.fontFamily": "UbuntuMono Nerd Font Mono",
     "editor.fontSize": 13,
     "editor.lineHeight": 13,
     "editor.minimap.enabled": true,
-    "editor.quickSuggestions": false,
+    "editor.quickSuggestions": {
+        "comments": "off",
+        "strings": "off",
+        "other": "off"
+    },
     "editor.quickSuggestionsDelay": 100,
     "editor.rulers": [
         80,
         120
     ],
+    "editor.formatOnSave": true,
     "editor.smoothScrolling": false,
-    "editor.suggestSelection": "first",
     "editor.suggest.snippetsPreventQuickSuggestions": false,
+    "editor.suggestSelection": "first",
     "editor.tabCompletion": "on",
     "explorer.openEditors.visible": 12,
-    "extensions.localSocketKeeper": false,  // Fix "activating extensions" loading bugs.
+    "extensions.localSocketKeeper": false, // Fix "activating extensions" loading bugs.
     "extensions.remoteSocketKeeper": false, // Fix "activating extensions" loading bugs.
+    "fb.vscode-feedback.lastsurveydate": 1596074667104,
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": true,
     "hg.jumpToNextConflictOnSave": "Jump On Save And Open ISL When Done",
+    "homepage.startup": "Never",
+    "meta.global.history.enabled": true,
+    "terminal.integrated.defaultProfile.osx": "zsh",
+    "terminal.integrated.enableMultiLinePasteWarning": false,
+    "terminal.integrated.systemd.shouldUse": true,
+    "wasabi.interactiveDevelopment.disableIntroMessage": true,
     "intern-tools.showReminderBeforeMeetings": true,
     "workbench.colorTheme": "Super One Dark",
+    "workbench.editor.enablePreview": true,
+    "workbench.editor.enablePreviewFromCodeNavigation": true,
     "workbench.editor.enablepreviewfromquickopen": false,
+    "workbench.editor.enablePreviewFromQuickOpen": true,
     "workbench.editor.tabsizing": "shrink",
     "workbench.editor.untitled.hint": "hidden",
     "workbench.icontheme": "vscode-icons",
@@ -93,7 +140,11 @@
         "editor.autoClosingBrackets": "never"
     },
     "[plaintext]": {
-        "editor.quickSuggestions": false
+        "editor.quickSuggestions": {
+            "comments": "off",
+            "strings": "off",
+            "other": "off"
+        }
     },
     "[python]": {
         "editor.rulers": [
@@ -116,34 +167,42 @@
     "cSpell.language": "en",
     "cSpell.enabled": true,
     "cSpell.userWords": [
-        "FBID",
-        "Krusty",
-        "Oncalls",
-        "Phabricator",
-        "TRUNKSTABLE",
-        "TRUNKTERN",
-        "UNBREAK",
         "allowlist",
         "allowlisted",
+        "backout",
         "blocklist",
         "classname",
+        "Clearning",
         "cmcginty",
         "config's",
         "configerator",
         "ents",
+        "FBID",
         "frontends",
+        "instanceof",
+        "Krusty",
         "logview",
         "lowercasing",
+        "Mandoline",
         "multisect",
         "nonnull",
         "oncall",
+        "Oncalls",
+        "Phabricator",
         "referer",
         "releng",
         "shellcheck",
         "sitevar",
         "snapraid",
         "struct",
-        "unixname"
+        "Subcommand",
+        "Subcommands",
+        "Traversables",
+        "TRUNKSTABLE",
+        "TRUNKTERN",
+        "UNBREAK",
+        "unixname",
+        "Upsert"
     ],
     "cSpell.flagWords": [
         "pipelien"
@@ -577,6 +636,30 @@
                 "editor.action.outdentLines"
             ]
         },
+        { // Go to symbol
+            "before": [
+                "ctrl+]"
+            ],
+            "commands": [
+                "extension.goto-symbol-stack.goToSymbolDeclaration"
+            ]
+        },
+        { // Go to NEXT symbol
+            "before": [
+                "ctrl+shift+]"
+            ],
+            "commands": [
+                "extension.goto-symbol-stack.goNextOnStack"
+            ]
+        },
+        { // Go to PREVIOUS symbol
+            "before": [
+                "ctrl+t"
+            ],
+            "commands": [
+                "extension.goto-symbol-stack.goPrevOnStack"
+            ]
+        },
     ],
     // INSERT mode
     "vim.insertModeKeyBindingsNonRecursive": [
@@ -701,6 +784,4 @@
             ]
         },
     ],
-    "fb.vscode-feedback.lastsurveydate": 1596074667104,
-    "interactive-smartlog.autoRunMergeDrivers": true,
 }
