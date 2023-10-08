@@ -20,3 +20,6 @@ local YTDL='yt-dlp'
 alias ytdl="$YTDL --config-location ~/.ytdl.conf"
 alias ytdlpl='ytdl --yes-playlist'
 alias watchlist='ytdl --yes-playlist -- "https://www.youtube.com/playlist?list=WL"'
+
+# CD Game ISO
+function chd-createcd() { chdman createcd -i "$1" -o "${1/%.*/.chd}"}
