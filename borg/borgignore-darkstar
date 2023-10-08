@@ -5,6 +5,10 @@
 /Users/Guest
 /Users/Shared
 
+sh:/Users/**/NPS Downloads
+sh:/Users/**/Virtual Machines
+sh:/Users/**/tmp
+sh:/Users/**/temp
 sh:/Users/**/vim/plugged
 sh:/Users/*/.config/borg
 sh:/Users/*/.dropbox
@@ -18,4 +22,3 @@ sh:/Users/*/Library/Containers
 sh:/Users/*/Library/Developer/CoreSimulator
 sh:/Users/*/Library/Group Containers
 sh:/Users/*/Library/Logs
-sh:/Users/*/tmp
