@@ -45,6 +45,21 @@
             "type": "ondemand_instagram_www",
             "flavor": "default",
             "folders": []
+        },
+        {
+            "type": "ondemand_fbsource",
+            "flavor": "default",
+            "folders": []
+        },
+        {
+            "type": "ondemand_whatsapp_server_vpnless",
+            "flavor": "default",
+            "folders": []
+        },
+        {
+            "type": "ondemand_opsfiles",
+            "flavor": "default",
+            "folders": []
         }
     ],
     "fb.ms-remote-connections.starred": [
@@ -59,6 +74,7 @@
             }
         }
     ],
+    "arcinfer.runOnSave": true,
     "arclint.applyLintFixesOnSave": [
         "HACKFMT",
         "BLACK"
@@ -68,9 +84,11 @@
     "interactive-smartlog.fetch": "jf get and checkout",
     "interactive-smartlog.pull": "hg pull",
     "interactive-smartlog.right-drawer-width": 747,
+    "interactive-smartlog.prefer-new-isl": true,
     // ---------------------------------------------
     // -------- VSCode Core Settings ---------------
     "blame.disableInlineBlame": true,
+    "debug.saveBeforeStart": "nonUntitledEditorsInActiveGroup",
     "editor.autoClosingBrackets": "never",
     "editor.autoClosingQuotes": "never", // NO, GOD! PLEASE NO!!! NOOOOOO!!!
     "editor.autoSurround": "never", // When the word is selected.
@@ -92,7 +110,6 @@
     "editor.formatOnSave": true,
     "editor.smoothScrolling": false,
     "editor.suggest.snippetsPreventQuickSuggestions": false,
-    "editor.suggestSelection": "first",
     "editor.tabCompletion": "on",
     "explorer.openEditors.visible": 12,
     "extensions.localSocketKeeper": false, // Fix "activating extensions" loading bugs.
@@ -104,18 +121,21 @@
     "hg.jumpToNextConflictOnSave": "Jump On Save And Open ISL When Done",
     "homepage.startup": "Never",
     "meta.global.history.enabled": true,
+    "notebook.formatOnSave.enabled": true,
     "terminal.integrated.defaultProfile.osx": "zsh",
     "terminal.integrated.enableMultiLinePasteWarning": false,
     "terminal.integrated.systemd.shouldUse": true,
     "wasabi.interactiveDevelopment.disableIntroMessage": true,
     "intern-tools.showReminderBeforeMeetings": true,
+    "window.restoreWindows": "none",
+    "window.zoomLevel": 1,
     "workbench.colorTheme": "Super One Dark",
+    "workbench.editor.empty.hint": "hidden",
     "workbench.editor.enablePreview": true,
     "workbench.editor.enablePreviewFromCodeNavigation": true,
     "workbench.editor.enablepreviewfromquickopen": false,
     "workbench.editor.enablePreviewFromQuickOpen": true,
     "workbench.editor.tabsizing": "shrink",
-    "workbench.editor.untitled.hint": "hidden",
     "workbench.icontheme": "vscode-icons",
     "workbench.sidebar.location": "left",
     "workbench.startupEditor": "newUntitledFile",
@@ -126,7 +146,8 @@
     // ---------------------------------------------
     // --------- Language Overrides ----------------
     "[cpp]": {
-        "editor.defaultFormatter": "nuclide.cpp"
+        "editor.defaultFormatter": "nuclide.cpp",
+        "files.trimTrailingWhitespace": false
     },
     "[git-commit]": {
         "editor.rulers": [
@@ -151,10 +172,20 @@
             88
         ],
         "editor.codeActionsOnSave": {
-            "source.organizeImports": true
-        }
+            "source.organizeImports": "always"
+        },
+        "files.trimTrailingWhitespace": true
     },
     "python.languageServer": "Pylance",
+    "[java]": {
+        "files.trimTrailingWhitespace": true
+    },
+    "[kotlin]": {
+        "files.trimTrailingWhitespace": true
+    },
+    "[rust]": {
+        "files.trimTrailingWhitespace": true
+    },
     // ---------------------------------------------
     // -------- Force Extension Type --------------
     "remote.extensionKind": {
@@ -176,6 +207,7 @@
         "cmcginty",
         "config's",
         "configerator",
+        "EMEA",
         "ents",
         "FBID",
         "frontends",
@@ -184,16 +216,22 @@
         "logview",
         "lowercasing",
         "Mandoline",
+        "minva",
         "multisect",
         "nonnull",
+        "NORAM",
+        "omni",
         "oncall",
         "Oncalls",
         "Phabricator",
+        "println",
         "referer",
         "releng",
         "shellcheck",
         "sitevar",
+        "smartlog",
         "snapraid",
+        "strtotime",
         "struct",
         "Subcommand",
         "Subcommands",
@@ -202,7 +240,9 @@
         "TRUNKTERN",
         "UNBREAK",
         "unixname",
-        "Upsert"
+        "UNIXTIME",
+        "Upsert",
+        "vtable"
     ],
     "cSpell.flagWords": [
         "pipelien"
@@ -409,6 +449,16 @@
             ],
             "commands": [
                 "blame.toggle-blame"
+            ],
+        },
+        { // toggle spellchecker
+            "before": [
+                "<leader>",
+                "o",
+                "s",
+            ],
+            "commands": [
+                "cSpell.toggleEnableSpellChecker"
             ],
         },
         // --------------------------------------------------------------------
@@ -641,7 +691,7 @@
                 "ctrl+]"
             ],
             "commands": [
-                "extension.goto-symbol-stack.goToSymbolDeclaration"
+                "editor.action.revealDefinition"
             ]
         },
         { // Go to NEXT symbol
@@ -649,7 +699,7 @@
                 "ctrl+shift+]"
             ],
             "commands": [
-                "extension.goto-symbol-stack.goNextOnStack"
+                "workbench.action.navigateForward"
             ]
         },
         { // Go to PREVIOUS symbol
@@ -657,7 +707,36 @@
                 "ctrl+t"
             ],
             "commands": [
-                "extension.goto-symbol-stack.goPrevOnStack"
+                "workbench.action.navigateBack"
+            ]
+        },
+        { // Spelling, next word
+            "before": [
+                "]",
+                "s"
+            ],
+            "commands": [
+                "cSpell.goToNextSpellingIssue",
+                "extension.vim_escape"
+            ]
+        },
+        { // Spelling, previous word
+            "before": [
+                "[",
+                "s"
+            ],
+            "commands": [
+                "cSpell.goToPreviousSpellingIssue",
+                "extension.vim_escape"
+            ]
+        },
+        { // Spelling, previous word
+            "before": [
+                "z",
+                "g"
+            ],
+            "commands": [
+                "cSpell.addWordToUserSettings"
             ]
         },
     ],
@@ -739,7 +818,7 @@
                 "editor.action.outdentLines"
             ]
         },
-        { // Sort seleted lines
+        { // Sort selected lines
             "before": [
                 "s"
             ],

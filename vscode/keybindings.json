@@ -25,7 +25,7 @@
     },
     {
         "key": "ctrl+shift+t",
-        "command": "workbench.action.reopenClosedEditor" // re-oepn tab
+        "command": "workbench.action.reopenClosedEditor" // re-open tab
     },
     {
         "key": "ctrl+shift+h",
@@ -109,7 +109,7 @@
     },
     {
         "key": "ctrl+;",
-        "command": "toggleSuggestionDetails",  // show more auto-complete details
+        "command": "toggleSuggestionDetails", // show more auto-complete details
         "when": "editorTextFocus && suggestWidgetVisible"
     },
     {
@@ -121,6 +121,11 @@
         "key": "ctrl+p",
         "command": "editor.action.peekDefinition", // peek definition of some code variable
         "when": "editorFocus"
+    },
+    {
+        "key": "ctrl+.",
+        "command": "editor.action.autoFix", // auto-fix (spelling for example)
+        "when": "textInputFocus && !editorReadonly && supportedCodeAction =~ /(\\s|^)quickfix\\b/"
     },
     { // Close the panel (same shortcut as close editor)
         "key": "ctrl+d",
