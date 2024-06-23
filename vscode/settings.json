@@ -75,10 +75,6 @@
         }
     ],
     "arcinfer.runOnSave": true,
-    "arclint.applyLintFixesOnSave": [
-        "HACKFMT",
-        "BLACK"
-    ],
     "interactive-smartlog.autoRunMergeDrivers": true,
     "interactive-smartlog.bottom-drawer-height": 500,
     "interactive-smartlog.fetch": "jf get and checkout",
@@ -112,9 +108,6 @@
     "editor.suggest.snippetsPreventQuickSuggestions": false,
     "editor.tabCompletion": "on",
     "explorer.openEditors.visible": 12,
-    "extensions.localSocketKeeper": false, // Fix "activating extensions" loading bugs.
-    "extensions.remoteSocketKeeper": false, // Fix "activating extensions" loading bugs.
-    "fb.vscode-feedback.lastsurveydate": 1596074667104,
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": true,
@@ -125,19 +118,13 @@
     "terminal.integrated.defaultProfile.osx": "zsh",
     "terminal.integrated.enableMultiLinePasteWarning": false,
     "terminal.integrated.systemd.shouldUse": true,
-    "wasabi.interactiveDevelopment.disableIntroMessage": true,
-    "intern-tools.showReminderBeforeMeetings": true,
     "window.restoreWindows": "none",
     "window.zoomLevel": 1,
     "workbench.colorTheme": "Super One Dark",
     "workbench.editor.empty.hint": "hidden",
     "workbench.editor.enablePreview": true,
     "workbench.editor.enablePreviewFromCodeNavigation": true,
-    "workbench.editor.enablepreviewfromquickopen": false,
     "workbench.editor.enablePreviewFromQuickOpen": true,
-    "workbench.editor.tabsizing": "shrink",
-    "workbench.icontheme": "vscode-icons",
-    "workbench.sidebar.location": "left",
     "workbench.startupEditor": "newUntitledFile",
     "workbench.colorCustomizations": {
         "tab.activeBackground": "#2B78C8",
@@ -176,7 +163,6 @@
         },
         "files.trimTrailingWhitespace": true
     },
-    "python.languageServer": "Pylance",
     "[java]": {
         "files.trimTrailingWhitespace": true
     },
@@ -333,8 +319,6 @@
     "vsicons.dontShowNewVersionMessage": true,
     // ---------------------------------------------
     // --- Vim Extension Settings / Key Mappings ---
-    "vim.debug.silent": true, // disable all errors
-    "vim.debug.loggingLevelForConsole": "error", // set to "debug" to log all keypresses
     "vim.hlsearch": true,
     "vim.leader": "space",
     "vim.searchHighlightColor": "rgba(246, 246, 80)", // yellow highlight color
@@ -760,8 +744,6 @@
             ]
         },
     ],
-    // OTHER mode
-    "vim.otherModesKeyBindingsNonRecursive": [],
     // VISUAL mode
     "vim.visualModeKeyBindingsNonRecursive": [
         // --------------------------------------------------------------------
