@@ -5,6 +5,6 @@
 if [[ "$OSTYPE" == darwin* ]]; then
   test -d /Applications/KeePassXC.app || brew install keepassxc --cask
   test -d /Applications/Rectangle.app || brew install rectangle --cask
-  test -d /Applications/iGlance.app || brew install iglance --cask
-  test -d /Applications/Keybase.app || brew install keybase --cask
+  test -d /Applications/Stats.app || brew install stats --cask
+  test -d "/Applications/Silicon Info.app" || brew install silicon-info --cask
 fi
