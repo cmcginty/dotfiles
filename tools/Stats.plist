@@ -3,25 +3,35 @@
 <plist version="1.0">
 <dict>
 	<key>Battery_barChart_position</key>
-	<integer>4</integer>
+	<integer>3</integer>
+	<key>Battery_bar_chart_box</key>
+	<false/>
+	<key>Battery_bar_chart_frame</key>
+	<true/>
 	<key>Battery_batteryDetails_position</key>
-	<integer>2</integer>
+	<integer>1</integer>
 	<key>Battery_battery_additional</key>
-	<string>percentageAndTime</string>
+	<string>innerPercentage</string>
 	<key>Battery_battery_chargerInside</key>
 	<true/>
 	<key>Battery_battery_color</key>
 	<true/>
+	<key>Battery_battery_details_mode</key>
+	<string>percentageAndTime</string>
+	<key>Battery_battery_hideAdditionalWhenFull</key>
+	<true/>
 	<key>Battery_battery_position</key>
 	<integer>0</integer>
 	<key>Battery_battery_xlSize</key>
-	<true/>
+	<false/>
 	<key>Battery_color</key>
 	<true/>
 	<key>Battery_label_position</key>
-	<integer>1</integer>
+	<integer>4</integer>
 	<key>Battery_mini_position</key>
-	<integer>3</integer>
+	<integer>2</integer>
+	<key>Battery_oneView</key>
+	<true/>
 	<key>Battery_state</key>
 	<true/>
 	<key>Battery_timeFormat</key>
@@ -73,47 +83,101 @@
 	<key>Clock_widget</key>
 	<string>sensors</string>
 	<key>Disk_barChart_position</key>
-	<integer>3</integer>
-	<key>Disk_label_position</key>
-	<integer>4</integer>
-	<key>Disk_memory_position</key>
-	<integer>1</integer>
-	<key>Disk_mini_position</key>
 	<integer>0</integer>
-	<key>Disk_networkChart_position</key>
-	<integer>6</integer>
-	<key>Disk_pieChart_position</key>
-	<integer>2</integer>
-	<key>Disk_speed_position</key>
+	<key>Disk_label_position</key>
 	<integer>5</integer>
+	<key>Disk_memory_orderReversed</key>
+	<false/>
+	<key>Disk_memory_position</key>
+	<integer>2</integer>
+	<key>Disk_mini_position</key>
+	<integer>1</integer>
+	<key>Disk_networkChart_position</key>
+	<integer>3</integer>
+	<key>Disk_notifications_utilization_state</key>
+	<true/>
+	<key>Disk_notifications_utilization_value</key>
+	<integer>95</integer>
+	<key>Disk_pieChart_position</key>
+	<integer>4</integer>
+	<key>Disk_removable</key>
+	<false/>
+	<key>Disk_speed_position</key>
+	<integer>6</integer>
 	<key>Disk_state</key>
 	<true/>
 	<key>Disk_widget</key>
-	<string>mini</string>
+	<string>bar_chart</string>
+	<key>EF5BB875-5E18-419B-A7A4-B1C197C37E3F_details</key>
+	<false/>
 	<key>FAN_bar_chart_label</key>
 	<false/>
 	<key>GPU_state</key>
 	<false/>
+	<key>LaunchAtLoginNext</key>
+	<true/>
 	<key>NSNavPanelExpandedSizeForSaveMode</key>
 	<string>{800, 448}</string>
 	<key>NSNavPanelExpandedStateForSaveMode</key>
 	<true/>
-	<key>NSStatusItem Preferred Position Battery_battery</key>
-	<real>256</real>
+	<key>NSOSPLastRootDirectory</key>
+	<data>
+	Ym9vawgDAAAAAAQQMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4AEA
+	AAQAAAADAwAAAAQAAAUAAAABAQAAVXNlcnMAAAADAAAAAQEAAHBjbQAIAAAAAQEAAGRv
+	dGZpbGVzAwAAAAEBAABvc3gAEAAAAAEGAAAQAAAAIAAAACwAAAA8AAAACAAAAAQDAAAd
+	QgAAAAAAAAgAAAAEAwAAEyQEAAAAAAAIAAAABAMAAD97DwAAAAAACAAAAAQDAAB9rQ8A
+	AAAAABAAAAABBgAAYAAAAHAAAACAAAAAkAAAAAgAAAAABAAAQcRK68Z6wRIYAAAAAQIA
+	AAIAAAAAAAAAHwIAAAAAAAAfAgAAAAAAAAAAAAABBQAACAAAAAQDAAACAAAAAAAAAAQA
+	AAADAwAA9QEAAAgAAAABCQAAZmlsZTovLy8MAAAAAQEAAE1hY2ludG9zaCBIRAgAAAAE
+	AwAAAJCClucAAAAIAAAAAAQAAEHGc4gsgAAAJAAAAAEBAAAzMTQzMkUwQS04N0VDLTRG
+	NDMtQURBRS1DQTZGMkRDNjZFRDIYAAAAAQIAAIEAAAABAAAA7xMAAAEAAADvEwAAAQAA
+	AAEAAAABAQAALwAAADAAAAABAgAAZG5pYgAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+	AAAAAAAAcmRsZgIAAAAAAAAA8AAAAP7///8BAAAAAAAAABMAAAAEEAAASAAAAAAAAAAF
+	EAAAoAAAAAAAAAAQEAAAyAAAAAAAAABAEAAAuAAAAAAAAAACIAAAnAEAAAAAAAAFIAAA
+	DAEAAAAAAAAQIAAAHAEAAAAAAAARIAAAUAEAAAAAAAASIAAAMAEAAAAAAAATIAAAQAEA
+	AAAAAAAgIAAAfAEAAAAAAAAwIAAA6AAAAAAAAAABwAAA8AAAAAAAAAARwAAAIAAAAAAA
+	AAASwAAAAAEAAAAAAAAB0AAA6AAAAAAAAAAQ0AAABAAAAAAAAAAX8AAAPAAAAAAAAAAi
+	8AAAqAEAAAAAAAA=
+	</data>
+	<key>NSStatusItem Preferred Position Battery</key>
+	<real>231</real>
 	<key>NSStatusItem Preferred Position CPU_line_chart</key>
-	<real>500</real>
-	<key>NSStatusItem Preferred Position Disk_mini</key>
-	<real>556</real>
+	<real>433</real>
+	<key>NSStatusItem Preferred Position Disk_bar_chart</key>
+	<real>489</real>
 	<key>NSStatusItem Preferred Position Network_speed</key>
-	<integer>372</integer>
+	<real>327</real>
 	<key>NSStatusItem Preferred Position RAM_bar_chart</key>
-	<real>465</real>
-	<key>NSStatusItem Preferred Position Sensors_sensors</key>
-	<real>325</real>
+	<real>398</real>
+	<key>NSStatusItem Preferred Position Sensors</key>
+	<real>277</real>
+	<key>NSStatusItem Restore Position Battery_battery</key>
+	<integer>241</integer>
+	<key>NSStatusItem Restore Position Battery_battery_details</key>
+	<integer>200</integer>
+	<key>NSStatusItem Restore Position Disk_memory</key>
+	<integer>487</integer>
+	<key>NSStatusItem Restore Position Disk_mini</key>
+	<integer>487</integer>
 	<key>NSStatusItem Restore Position Network_label</key>
 	<integer>443</integer>
+	<key>NSStatusItem Restore Position Sensors_bar_chart</key>
+	<integer>588</integer>
+	<key>NSStatusItem Restore Position Sensors_sensors</key>
+	<integer>246</integer>
+	<key>NSToolbar Configuration eu.exelban.Stats.Settings.Toolbar</key>
+	<dict>
+		<key>TB Display Mode</key>
+		<integer>1</integer>
+		<key>TB Icon Size Mode</key>
+		<integer>1</integer>
+		<key>TB Is Shown</key>
+		<true/>
+		<key>TB Size Mode</key>
+		<integer>1</integer>
+	</dict>
 	<key>NSWindow Frame NSNavPanelAutosaveName</key>
-	<string>440 402 800 448 0 0 1728 1079 </string>
+	<string>337 372 800 448 0 0 1512 944 </string>
 	<key>Network_label_position</key>
 	<integer>2</integer>
 	<key>Network_networkChart_position</key>
@@ -178,18 +242,44 @@
 	<integer>2</integer>
 	<key>RAM_widget</key>
 	<string>bar_chart</string>
+	<key>SSD_bar_chart_box</key>
+	<false/>
+	<key>SSD_bar_chart_frame</key>
+	<true/>
+	<key>SSD_bar_chart_label</key>
+	<true/>
+	<key>SSD_mini_color</key>
+	<string>monochrome</string>
+	<key>SSD_mini_label</key>
+	<true/>
+	<key>Sensor_mini_alignment</key>
+	<string>left</string>
+	<key>Sensor_mini_color</key>
+	<string>monochrome</string>
+	<key>Sensor_mini_label</key>
+	<true/>
 	<key>Sensors_barChart_position</key>
-	<integer>1</integer>
+	<integer>2</integer>
 	<key>Sensors_hid</key>
 	<false/>
 	<key>Sensors_label_position</key>
 	<integer>3</integer>
 	<key>Sensors_mini_position</key>
-	<integer>2</integer>
+	<integer>1</integer>
+	<key>Sensors_oneView</key>
+	<true/>
+	<key>Sensors_sensors_mode</key>
+	<string>automatic</string>
+	<key>Sensors_sensors_monospacedFont</key>
+	<true/>
+	<key>Sensors_sensors_size</key>
+	<false/>
 	<key>Sensors_stack_position</key>
 	<integer>0</integer>
 	<key>Sensors_state</key>
 	<true/>
+	<key>Sensors_updateInterval</key>
+	<integer>10</integer>
 	<key>Sensors_widget</key>
 	<string>sensors</string>
 	<key>dockIcon</key>
@@ -230,8 +320,16 @@
 	<false/>
 	<key>setupProcess</key>
 	<true/>
+	<key>stack_PDTR_index</key>
+	<integer>0</integer>
+	<key>stack_PSTR_index</key>
+	<integer>1</integer>
+	<key>telemetry</key>
+	<true/>
+	<key>telemetry_id</key>
+	<string>3835433F-F882-4B80-8BAC-84A6216B3402</string>
 	<key>updater_check_ts</key>
-	<integer>1732344746</integer>
+	<integer>1732411217</integer>
 	<key>version</key>
 	<string>2.11.18</string>
 </dict>
