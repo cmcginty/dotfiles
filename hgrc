@@ -1,22 +1,22 @@
 [ui]
 username = Casey McGinty <cmcginty@fb.com>
-merge = p4merge
+# merge = p4merge
 # log style (compact, default, changelog, status, ...)
 style = compact
 # non-cursive UI to fix render errors
 interface=text
 
-[extdiff]
-cmd.p4merge = /Applications/p4merge.app/Contents/Resources/launchp4merge
+# [extdiff]
+# cmd.p4merge = /Applications/p4merge.app/Contents/Resources/launchp4merge
 
-[merge-tools]
-p4merge.executable = /Applications/p4merge.app/Contents/Resources/launchp4merge
-p4merge.args = $base $local $other $output
-p4merge.binary = false
-p4merge.checkchanged = true
-p4merge.dirdiff = false
-p4merge.gui = true
-p4merge.premerge = true
+# [merge-tools]
+# p4merge.executable = /Applications/p4merge.app/Contents/Resources/launchp4merge
+# p4merge.args = $base $local $other $output
+# p4merge.binary = false
+# p4merge.checkchanged = true
+# p4merge.dirdiff = false
+# p4merge.gui = true
+# p4merge.premerge = true
 
 [templatealias]
 fb_rev = if(globalrev, 'rWWW{globalrev}', rev)
