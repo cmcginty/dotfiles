@@ -13,7 +13,8 @@
 sleep 1
 
 # Start TMUX first; try to reattach a session
-if [[ -z $TMUX ]]; then
+IS_FB_DEVICE=$(scutil --dns |grep fb.com -q)
+if (( IS_FB_DEVICE )) && [[ -z $TMUX ]]; then
   ATTACH_OPT=$(tmux ls | grep -vq attached && echo "attach -d")
   exec eval "tmux $ATTACH_OPT"
 fi
