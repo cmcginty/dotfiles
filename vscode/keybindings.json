@@ -47,7 +47,7 @@
     },
     // Window operations
     {
-        "key": "cmd+i",
+        "key": "cmd+shift+i",
         "command": "fb-hg.toggle-interactive-smartlog"
     },
     {
@@ -136,7 +136,7 @@
         "key": "cmd+t",
         "command": "extension.goto-symbol-stack.goToSearchSymbolDeclaration",
         "when": "editorFocus"
-    }
+    },
     // List navigation
     {
         "key": "enter",
@@ -146,27 +146,27 @@
     {
         "key": "enter",
         "command": "list.select", // list action, i.e. open file, goto ref
-        "when": "listFocus"
+        "when": "listFocus && !editorFocus"
     },
     {
         "key": "ctrl+j",
         "command": "list.focusDown", // next list item
-        "when": "listFocus"
+        "when": "listFocus && !editorFocus"
     },
     {
         "key": "ctrl+k",
         "command": "list.focusUp", // prev list item
-        "when": "listFocus"
+        "when": "listFocus && !editorFocus"
     },
     {
         "key": "ctrl+h",
         "command": "list.collapse", // go up to parent
-        "when": "listFocus"
+        "when": "listFocus && !editorFocus"
     },
     {
         "key": "ctrl+l",
         "command": "list.expand", // expand children items
-        "when": "listFocus"
+        "when": "listFocus && !editorFocus"
     },
     // Quick-select navigation
     {

@@ -60,6 +60,11 @@
             "type": "ondemand_opsfiles",
             "flavor": "default",
             "folders": []
+        },
+        {
+            "type": "ondemand_www_fbsource_configerator",
+            "flavor": "default",
+            "folders": []
         }
     ],
     "fb.ms-remote-connections.starred": [
@@ -133,8 +138,9 @@
     // ---------------------------------------------
     // --------- Language Overrides ----------------
     "[cpp]": {
-        "editor.defaultFormatter": "nuclide.cpp",
-        "files.trimTrailingWhitespace": false
+        "editor.defaultFormatter": "nuclide.arclint",
+        "files.trimTrailingWhitespace": false,
+        "editor.formatOnSave": true
     },
     "[git-commit]": {
         "editor.rulers": [
@@ -145,7 +151,8 @@
         "editor.formatOnType": false,
         "editor.tabSize": 2,
         "editor.wordSeparators": "`~!@#%^&*()-=+[{]}\\|;:'\",.<>/?",
-        "editor.autoClosingBrackets": "never"
+        "editor.autoClosingBrackets": "never",
+        "editor.defaultFormatter": "nuclide.hack"
     },
     "[plaintext]": {
         "editor.quickSuggestions": {
@@ -161,16 +168,24 @@
         "editor.codeActionsOnSave": {
             "source.organizeImports": "always"
         },
-        "files.trimTrailingWhitespace": true
+        "files.trimTrailingWhitespace": true,
+        "editor.defaultFormatter": "nuclide.arclint",
+        "editor.formatOnSave": true
     },
     "[java]": {
-        "files.trimTrailingWhitespace": true
+        "files.trimTrailingWhitespace": true,
+        "editor.defaultFormatter": "nuclide.arclint",
+        "editor.formatOnSave": true
     },
     "[kotlin]": {
-        "files.trimTrailingWhitespace": true
+        "files.trimTrailingWhitespace": true,
+        "editor.defaultFormatter": "nuclide.arclint",
+        "editor.formatOnSave": true
     },
     "[rust]": {
-        "files.trimTrailingWhitespace": true
+        "files.trimTrailingWhitespace": true,
+        "editor.defaultFormatter": "nuclide.arclint",
+        "editor.formatOnSave": true
     },
     // ---------------------------------------------
     // -------- Force Extension Type --------------
@@ -182,12 +197,14 @@
     // ---------------------------------------------
     // -------- cSpell Right Extension --------------
     "cSpell.language": "en",
-    "cSpell.enabled": true,
     "cSpell.userWords": [
         "allowlist",
         "allowlisted",
+        "arcanist",
+        "automations",
         "backout",
         "blocklist",
+        "Bouncycastle",
         "classname",
         "Clearning",
         "cmcginty",
@@ -196,14 +213,19 @@
         "EMEA",
         "ents",
         "FBID",
+        "fblite",
         "frontends",
         "instanceof",
         "Krusty",
+        "Landcastle",
+        "lastx",
         "logview",
         "lowercasing",
         "Mandoline",
+        "megarepo",
         "minva",
         "multisect",
+        "MWFS",
         "nonnull",
         "NORAM",
         "omni",
@@ -213,6 +235,7 @@
         "println",
         "referer",
         "releng",
+        "remediations",
         "shellcheck",
         "sitevar",
         "smartlog",
@@ -227,6 +250,7 @@
         "UNBREAK",
         "unixname",
         "UNIXTIME",
+        "unland",
         "Upsert",
         "vtable"
     ],
@@ -276,7 +300,8 @@
         "vb",
         "vimrc",
         "xml",
-        "xsl"
+        "xsl",
+        "thrift"
     ],
     "cSpell.enabledLanguageIds": [
         "asciidoc",
@@ -845,4 +870,43 @@
             ]
         },
     ],
+    "extensions.experimental.deferredStartupFinishedActivation": true,
+    "[c]": {
+        "files.trimTrailingWhitespace": false,
+        "editor.defaultFormatter": "nuclide.arclint",
+        "editor.formatOnSave": true
+    },
+    "[proto]": {
+        "files.trimTrailingWhitespace": false,
+        "editor.defaultFormatter": "nuclide.arclint"
+    },
+    "editor.inlineSuggest.allowSuggestOnTriggerCharacters": true,
+    "[starlark]": {
+        "files.trimTrailingWhitespace": false,
+        "editor.defaultFormatter": "nuclide.arclint",
+        "editor.formatOnSave": true
+    },
+    "wasabi.interactiveDevelopment.introMessageNumTimesShown": 3,
+    "wasabi.interactiveDevelopment.disableIntroMessage": true,
+    "python-debugger.displaySeamlessDebuggingMessage": false,
+    "bento.defaultPythonNotebookViewTypeOnOpeningFile": "notebook",
+    "terminal.integrated.scrollback": 10000,
+    "[objective-c]": {
+        "editor.defaultFormatter": "nuclide.arclint"
+    },
+    "[objective-cpp]": {
+        "editor.defaultFormatter": "nuclide.arclint"
+    },
+    "[cuda-cpp]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "nuclide.arclint"
+    },
+    "[tcc-cpp]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "nuclide.arclint"
+    },
+    "[ocaml]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "nuclide.arclint"
+    },
 }
