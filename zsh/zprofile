@@ -82,5 +82,5 @@ export IS_FB_HOST=$(hostname | grep -q facebook.com && echo 1)
 #
 # Source environment settings
 #
-for subdir (zsh pidgin python terminal)
+for subdir (zsh pidgin python terminal vscode)
    for env_file ($HOME/.dotfiles/$subdir/*.env(N)) source $env_file

@@ -13,7 +13,7 @@ if [[ "$OSTYPE" == darwin* ]]; then
       cat $BASEDIR/package-list.txt | xargs -n 1 code-fb --force --install-extension || true
       HOMEDIR=~/.ondemand/homedir/
       mkdir -p $HOMEDIR
-      # Softlinks are ignored, must be hardlinked.
+      # Soft-links are ignored, must be hard-linked.
       ln -f $HOME/.hgrc $HOMEDIR
       ln -f $HOME/.gitconfig $HOMEDIR
       ln -f $HOME/.dotfiles/zsh/aliases-facebook.zsh $HOMEDIR/.aliases
