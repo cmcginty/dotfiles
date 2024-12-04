@@ -74,3 +74,22 @@ alias renew='renew-certs && renew-dev'
 # Everstore
 alias esget='clowder get'
 function espatch() { (clowder get $1 - 2>/dev/null && echo "") | patch -p1; }
+
+# JEST
+function jest-snap-repair() {
+   hg pull &&
+   hg co master &&
+   jest -u html/intern/js/jest/__tests__/InlineSnapshotExample-test.js &&
+   hg commit --addremove -m \
+   "[jest] Cleanup snapshots
+
+   Summary:
+   Remove obsolete snapshots
+
+   Test Plan:
+     jest -u html/intern/js/jest/__tests__/InlineSnapshotExample-test.js
+
+   Reviewers: #releng-www
+   " &&
+   jf submit
+}
