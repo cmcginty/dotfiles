@@ -81,15 +81,15 @@ function jest-snap-repair() {
    hg co master &&
    jest -u html/intern/js/jest/__tests__/InlineSnapshotExample-test.js &&
    hg commit --addremove -m \
-   "[jest] Cleanup snapshots
+"[jest] Cleanup snapshots
 
-   Summary:
-   Remove obsolete snapshots
+Summary:
+Remove obsolete snapshots
 
-   Test Plan:
-     jest -u html/intern/js/jest/__tests__/InlineSnapshotExample-test.js
+Test Plan:
+ jest -u html/intern/js/jest/__tests__/InlineSnapshotExample-test.js
 
-   Reviewers: #releng-www
-   " &&
+Reviewers: #releng-www
+" &&
    jf submit
 }
