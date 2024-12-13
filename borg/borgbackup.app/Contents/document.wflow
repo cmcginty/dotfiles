@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>AMApplicationBuild</key>
-	<string>492</string>
+	<string>526</string>
 	<key>AMApplicationVersion</key>
 	<string>2.10</string>
 	<key>AMDocumentVersion</key>
@@ -59,7 +59,7 @@
 				<key>ActionParameters</key>
 				<dict>
 					<key>COMMAND_STRING</key>
-					<string>PATH+=":/usr/local/bin"
+					<string>PATH+=":/usr/local/bin:/opt/homebrew/bin"
 /Users/pcm/dotfiles/borg/borgbackup.sh ~/Library/Logs/borgbackup.log
 exit 0</string>
 					<key>CheckedForUserDefaultShell</key>
@@ -176,7 +176,7 @@ exit 0</string>
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>515.000000:252.000000</string>
+				<string>348.000000:252.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run Shell Script.action/Contents/Resources/Base.lproj/main.nib</string>
 			</dict>

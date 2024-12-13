@@ -1,0 +1,28 @@
+*/.DS_Store
+*/.Trash
+*/.cache
+
+/Users/Guest
+/Users/Shared
+/Users/macports
+
+sh:/Users/**/NPS Downloads
+sh:/Users/**/Virtual Machines
+sh:/Users/**/tmp
+sh:/Users/**/temp
+sh:/Users/**/vim/plugged
+sh:/Users/*/.config/borg
+sh:/Users/*/.dropbox
+sh:/Users/*/.pyenv
+sh:/Users/*/.vscode/extensions
+sh:/Users/*/Creative Cloud Files
+sh:/Users/*/Dropbox
+sh:/Users/*/Library/**/Chrome/**/Application Cache
+sh:/Users/*/Library/Biome/streams/restricted
+sh:/Users/*/Library/Caches
+sh:/Users/*/Library/Containers
+sh:/Users/*/Library/Daemon Containers
+sh:/Users/*/Library/Developer/CoreSimulator
+sh:/Users/*/Library/Group Containers
+sh:/Users/*/Library/Logs
+sh:/Users/*/Library/Metadata

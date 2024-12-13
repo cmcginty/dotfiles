@@ -2,7 +2,7 @@
 # Directions: Copy this file to ~/.borgconfig and define BORG_PASSPHRASE
 #
 
-export BORG_REPO=backup@pine64:$(hostname)
+export BORG_REPO=backup@pine64:$(hostname -s)
 
 # Uncomment and set a unique passphrase.
 #export BORG_PASSPHRASE='<< CHANGE THIS TO A LONG PASSPHRASE >>'

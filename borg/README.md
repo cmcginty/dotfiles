@@ -4,6 +4,7 @@ Borg is a backup tool and requires a remote server with ssh access.
 # OVERVIEW:
 To get everything working you'll need to follow this outline of steps:
 
+ 0. Ensure client has authorization to your server
  1. Create an initial borg repo on your server
  2. Setup the borgconfig-template file and copy to ~/.borgconfig
  3. Configure a local SMTP service for e-mailing reports
@@ -13,6 +14,35 @@ To get everything working you'll need to follow this outline of steps:
 
 
 # STEP DETAILS
+
+## STEP 0
+
+Check the ~backup/.ssh/authorized_keys file to verify client authorization
+
+## STEP 1
+
+Confirm your hostname is setup correctly with
+
+    $ hostname -s
+
+If that value is not correct in Mac, check the following values:
+
+    sudo scutil --get ComputerName
+    sudo scutil --get HostName
+    sudo scutil --get LocalHostName
+
+Follow the setup instructions in borgbackup.sh
+
+## STEP 2
+
+Given the pasphrase generated during `borg init`, create and update the
+~/.borgconfig file.
+
+Create a new dotfiles/borg/borgignore-<HOSTNAME> file if needed.
+
+After `borg init`, create the repo and verify there were no errors.
+
+    ./borgbackup.sh
 
 ## STEP 3 - Mac OS Postfix Setup:
 
@@ -56,8 +86,8 @@ to do this.
 
 * Open `./borgbackup.app` in Mac's automator.app
 * Edit the script to match your system.
-* Save the worflow as an "Application" to /Applicaitons/borgbackup.app
-* Open "System Preferences --> Security and Privacy --> Full Disk Access (FDA)".
+* Export the worflow as an "Application" to /Applicaitons/borgbackup.app
+* Open "System Preferences --> Privacy and Security --> Full Disk Access (FDA)".
 * Unlock the tool in the bottom left, and make sure `borgbackup.app` is checked.
 
 You can now test the app by running:

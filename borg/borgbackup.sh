@@ -58,7 +58,7 @@ fi
 # NOTE: Before running this script for the first time the Borg repo must be initialized with
 #       the command below.
 #
-#   borg init --encryption=repokey backup@pine64:$(hostname)
+#   borg init --encryption=repokey backup@pine64:$(hostname -s)
 #
 # Then create the ~/.borgconfig file containing:
 #
@@ -93,7 +93,7 @@ while [ -h "$SOURCE" ]; do # Resolve $SOURCE until the file is no longer a symli
 done
 SCRIPT_DIR="$( cd "$( dirname "${SOURCE}" )" >/dev/null && pwd )"
 
-EXCLUDE_HOST_FILE="$SCRIPT_DIR/borgignore-$(hostname)"
+EXCLUDE_HOST_FILE="$SCRIPT_DIR/borgignore-$(hostname -s)"
 EXCLUDE_LOCAL_FILE="$HOME/.borgignore"
 
 [ -e "$EXCLUDE_HOST_FILE"  ] && EXCLUDE_HOST_ARG=(--exclude-from "$EXCLUDE_HOST_FILE")
