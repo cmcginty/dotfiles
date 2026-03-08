@@ -37,7 +37,6 @@ alias gencode='/var/www/scripts/entschema/gencode'
 alias gensandcastle='phps SandcastleAutogenScript'
 alias hack='hphpd -h localhost'
 alias jest-e2e='http_proxy= jest-e2e'
-alias t='testpilot'
 
 # Sandcastle
 alias odc='ondemand connect'
@@ -47,6 +46,7 @@ function scutil-retry() { scutil get-spec $1 | grep -v nonce | scutil canary-com
 alias ar='arc rebuild'
 alias arb='arc rebuild'
 alias unit='arc unit --no-time-limit'
+alias meerkat='meerkat --force-run-on-bad-mergebase'
 
 alias pm='pingme'
 alias fin="pingme \"\$(hostname | rg -o '^\w+\.\w+') READY\""
