@@ -67,7 +67,7 @@ alias epoch=unixdate
 if [[ "$OSTYPE" == darwin* ]]; then
     alias timeat='date -r'
 else
-    function timeat { date -d @$1; }
+    function timeat() { date -d @"$1"; }
 fi
 alias now='date +"%T"'
 alias nowtime=now
@@ -75,6 +75,6 @@ alias nowdate='date +"%d-%m-%Y"'
 
 # notifications
 alias chime='afplay /System/Library/Sounds/Ping.aiff'
-function nag() {while true; do chime; sleep 10; done}
-function alarm() {while true; do chime -t 0.5; done}
-function samples() {for X in /System/Library/Sounds/*; do echo $X; afplay $X; done}
+function nag() { while true; do chime; sleep 10; done;}
+function alarm() { while true; do chime -t 0.5; done;}
+function samples() { for X in /System/Library/Sounds/*; do echo "$X"; afplay "$X"; done;}
