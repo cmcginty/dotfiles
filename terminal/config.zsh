@@ -2,7 +2,9 @@
 stty -ixon
 
 # disable Ctrl-L (clear_screen) to prevent accidental usage
+if [ -n "$ZSH_VERSION" ]; then
 bindkey '\C-l' undefined-key
+fi
 
 if [[ "$OSTYPE" == darwin* ]]; then
    # increase key repeat rate
@@ -41,8 +43,8 @@ alias rgl='rg --files-with-matches'
 # FZF fuzzy searcher
 # NOTE: Set "Option" key to Esc+ in Iterm->Preferences->Profile->Keys
 
-local FZF_CTRLO="ctrl-o:execute-silent(gvim {})+abort"          # Ctrl-O open file in vim
-local FZF_CTRLY="ctrl-y:execute-silent(echo {}|pbcopy)+abort"   # Ctrl-Y copy the line
+FZF_CTRLO="ctrl-o:execute-silent(gvim {})+abort"          # Ctrl-O open file in vim
+FZF_CTRLY="ctrl-y:execute-silent(echo {}|pbcopy)+abort"   # Ctrl-Y copy the line
 
 export FZF_DEFAULT_COMMAND="fd --type f"                            # use fd
 export FZF_ALT_C_COMMAND="fd --type d"                              # use fd
@@ -54,4 +56,4 @@ export FZF_CTRL_T_OPTS="--select-1 --exit-0"
 
 alias preview="fzf --preview 'bat --color \"always\" {}'"
 # preview all files that contain string
-function rgp() { rg --files-with-matches $@ | preview }
+function rgp() { rg --files-with-matches $@ | preview; }
