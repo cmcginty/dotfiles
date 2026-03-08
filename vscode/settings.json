@@ -65,6 +65,36 @@
             "type": "ondemand_www_fbsource_configerator",
             "flavor": "default",
             "folders": []
+        },
+        {
+            "type": "ondemand_dataswarm",
+            "flavor": "default",
+            "folders": []
+        },
+        {
+            "type": "ondemand_xplat_react",
+            "flavor": "default",
+            "folders": []
+        },
+        {
+            "type": "ondemand_bento",
+            "flavor": "default",
+            "folders": []
+        },
+        {
+            "type": "ondemand_aosp_nucleus_fourteen_mint_grepo",
+            "flavor": "default",
+            "folders": []
+        },
+        {
+            "type": "ondemand_snowfort",
+            "flavor": "default",
+            "folders": []
+        },
+        {
+            "type": "ondemand_www_fbsource_configerator",
+            "flavor": "base_maps_www_fbcode_cfgr",
+            "folders": []
         }
     ],
     "fb.ms-remote-connections.starred": [
@@ -88,16 +118,26 @@
     "interactive-smartlog.prefer-new-isl": true,
     // ---------------------------------------------
     // -------- VSCode Core Settings ---------------
+    "accessibility.openChatEditedFiles": false,
+    "bento.defaultPythonNotebookViewTypeOnOpeningFile": "notebook",
     "blame.disableInlineBlame": true,
     "debug.saveBeforeStart": "nonUntitledEditorsInActiveGroup",
+    "devmate.clickableSparkleDecorator": false,
+    "devmate.sidebar.open-on-startup": false,
+    "editor.accessibilitySupport": "off",
     "editor.autoClosingBrackets": "never",
     "editor.autoClosingQuotes": "never", // NO, GOD! PLEASE NO!!! NOOOOOO!!!
     "editor.autoSurround": "never", // When the word is selected.
     "editor.cursorSmoothCaretAnimation": "off",
     "editor.fontFamily": "UbuntuMono Nerd Font Mono",
     "editor.fontSize": 13,
+    "editor.inlineSuggest.allowSuggestOnTriggerCharacters": true,
+    "editor.lightbulb.enabled": "on",
     "editor.lineHeight": 13,
     "editor.minimap.enabled": true,
+    "editor.smoothScrolling": false,
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    "editor.tabCompletion": "on",
     "editor.quickSuggestions": {
         "comments": "off",
         "strings": "off",
@@ -108,11 +148,10 @@
         80,
         120
     ],
-    "editor.formatOnSave": true,
-    "editor.smoothScrolling": false,
-    "editor.suggest.snippetsPreventQuickSuggestions": false,
-    "editor.tabCompletion": "on",
+    "emmet.showAbbreviationSuggestions": false,
+    "emmet.showExpandedAbbreviation": "never",
     "explorer.openEditors.visible": 12,
+    "extensions.experimental.deferredStartupFinishedActivation": true,
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": true,
@@ -120,16 +159,27 @@
     "homepage.startup": "Never",
     "meta.global.history.enabled": true,
     "notebook.formatOnSave.enabled": true,
+    "python-debugger.displaySeamlessDebuggingMessage": false,
+    "python.languageServer": "None",
     "terminal.integrated.defaultProfile.osx": "zsh",
     "terminal.integrated.enableMultiLinePasteWarning": false,
+    "terminal.integrated.scrollback": 10000,
+    "terminal.integrated.showDevmateQuickFixButton": false,
     "terminal.integrated.systemd.shouldUse": true,
+    "wasabi.interactiveDevelopment.disableIntroMessage": true,
+    "wasabi.interactiveDevelopment.introMessageNumTimesShown": 3,
+    "window.customTitleBarVisibility": "never",
+    "window.nativeTabs": true,
+    "window.openNewWindowsInNativeTabs": true,
     "window.restoreWindows": "none",
+    "window.title": "${devmate:status}${separator}${activeEditorShort}${separator}${rootName}${separator}${profileName}",
     "window.zoomLevel": 1,
     "workbench.colorTheme": "Super One Dark",
     "workbench.editor.empty.hint": "hidden",
     "workbench.editor.enablePreview": true,
     "workbench.editor.enablePreviewFromCodeNavigation": true,
     "workbench.editor.enablePreviewFromQuickOpen": true,
+    "workbench.secondarySideBar.defaultVisibility": "hidden",
     "workbench.startupEditor": "newUntitledFile",
     "workbench.colorCustomizations": {
         "tab.activeBackground": "#2B78C8",
@@ -137,39 +187,37 @@
     },
     // ---------------------------------------------
     // --------- Language Overrides ----------------
+    "[blueprint]": {
+        "editor.defaultFormatter": "nuclide.arclint"
+    },
+    "[c]": {
+        "files.trimTrailingWhitespace": false,
+        "editor.defaultFormatter": "nuclide.arclint",
+        "editor.formatOnSave": true
+    },
     "[cpp]": {
         "editor.defaultFormatter": "nuclide.arclint",
         "files.trimTrailingWhitespace": false,
         "editor.formatOnSave": true
+    },
+    "[cuda-cpp]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "nuclide.arclint"
     },
     "[git-commit]": {
         "editor.rulers": [
             50
         ]
     },
+    "[go]": {
+        "editor.defaultFormatter": "nuclide.go"
+    },
     "[hack]": {
         "editor.formatOnType": false,
         "editor.tabSize": 2,
         "editor.wordSeparators": "`~!@#%^&*()-=+[{]}\\|;:'\",.<>/?",
         "editor.autoClosingBrackets": "never",
-        "editor.defaultFormatter": "nuclide.hack"
-    },
-    "[plaintext]": {
-        "editor.quickSuggestions": {
-            "comments": "off",
-            "strings": "off",
-            "other": "off"
-        }
-    },
-    "[python]": {
-        "editor.rulers": [
-            88
-        ],
-        "editor.codeActionsOnSave": {
-            "source.organizeImports": "always"
-        },
-        "files.trimTrailingWhitespace": true,
-        "editor.defaultFormatter": "nuclide.arclint",
+        "editor.defaultFormatter": "nuclide.hack",
         "editor.formatOnSave": true
     },
     "[java]": {
@@ -182,10 +230,65 @@
         "editor.defaultFormatter": "nuclide.arclint",
         "editor.formatOnSave": true
     },
+    "[markdown]": {
+        "editor.formatOnSave": false
+    },
+    "[objective-c]": {
+        "editor.defaultFormatter": "nuclide.cpp",
+        "editor.formatOnSave": true
+    },
+    "[objective-cpp]": {
+        "editor.defaultFormatter": "nuclide.arclint",
+        "editor.formatOnSave": true
+    },
+    "[ocaml]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "nuclide.arclint"
+    },
+    "[plaintext]": {
+        "editor.quickSuggestions": {
+            "comments": "off",
+            "strings": "off",
+            "other": "off"
+        }
+    },
+    "[proto]": {
+        "files.trimTrailingWhitespace": false,
+        "editor.defaultFormatter": "nuclide.arclint",
+        "editor.formatOnSave": true
+    },
+    "[python]": {
+        "editor.rulers": [
+            88
+        ],
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": "always"
+        },
+        "files.trimTrailingWhitespace": true,
+        "editor.defaultFormatter": "nuclide.arclint",
+        "editor.formatOnSave": true
+    },
     "[rust]": {
         "files.trimTrailingWhitespace": true,
         "editor.defaultFormatter": "nuclide.arclint",
         "editor.formatOnSave": true
+    },
+    "[starlark]": {
+        "files.trimTrailingWhitespace": false,
+        "editor.defaultFormatter": "nuclide.arclint",
+        "editor.formatOnSave": true
+    },
+    "[starlark-skycastle]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "nuclide.arclint"
+    },
+    "[swift]": {
+        "editor.defaultFormatter": "nuclide.arclint",
+        "editor.formatOnSave": true
+    },
+    "[tcc-cpp]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "nuclide.arclint"
     },
     // ---------------------------------------------
     // -------- Force Extension Type --------------
@@ -208,6 +311,7 @@
         "classname",
         "Clearning",
         "cmcginty",
+        "Coinflip",
         "config's",
         "configerator",
         "EMEA",
@@ -215,6 +319,8 @@
         "FBID",
         "fblite",
         "frontends",
+        "gallatin",
+        "gcapella",
         "instanceof",
         "Krusty",
         "Landcastle",
@@ -232,6 +338,7 @@
         "oncall",
         "Oncalls",
         "Phabricator",
+        "pitloot",
         "println",
         "referer",
         "releng",
@@ -359,7 +466,7 @@
             ],
             "commands": [
                 "workbench.action.quit"
-            ],
+            ]
         },
         // ## Window toggles:
         { // toggle file explorer
@@ -368,7 +475,7 @@
             ],
             "commands": [
                 "workbench.explorer.fileView.focus"
-            ],
+            ]
         },
         { // toggle sidebar (cmd-b)
             "before": [
@@ -406,7 +513,7 @@
             ],
             "commands": [
                 "nuclide-biggrep:open-pane"
-            ],
+            ]
         },
         { // open terminal
             "before": [
@@ -416,7 +523,7 @@
             ],
             "commands": [
                 "workbench.action.terminal.toggleTerminal"
-            ],
+            ]
         },
         { // open interactive smartlog (ISL)
             "before": [
@@ -448,7 +555,7 @@
             ],
             "commands": [
                 "editor.action.toggleWordWrap"
-            ],
+            ]
         },
         { // toggle hg blame
             "before": [
@@ -747,7 +854,7 @@
             "commands": [
                 "cSpell.addWordToUserSettings"
             ]
-        },
+        }
     ],
     // INSERT mode
     "vim.insertModeKeyBindingsNonRecursive": [
@@ -856,7 +963,7 @@
             "commands": [
                 "editor.action.smartSelect.shrink"
             ]
-        },
+        }
     ],
     // ---------------------------------------------
     // --------  Multi-Command Extension   ---------
@@ -869,44 +976,5 @@
                 "workbench.action.files.save"
             ]
         },
-    ],
-    "extensions.experimental.deferredStartupFinishedActivation": true,
-    "[c]": {
-        "files.trimTrailingWhitespace": false,
-        "editor.defaultFormatter": "nuclide.arclint",
-        "editor.formatOnSave": true
-    },
-    "[proto]": {
-        "files.trimTrailingWhitespace": false,
-        "editor.defaultFormatter": "nuclide.arclint"
-    },
-    "editor.inlineSuggest.allowSuggestOnTriggerCharacters": true,
-    "[starlark]": {
-        "files.trimTrailingWhitespace": false,
-        "editor.defaultFormatter": "nuclide.arclint",
-        "editor.formatOnSave": true
-    },
-    "wasabi.interactiveDevelopment.introMessageNumTimesShown": 3,
-    "wasabi.interactiveDevelopment.disableIntroMessage": true,
-    "python-debugger.displaySeamlessDebuggingMessage": false,
-    "bento.defaultPythonNotebookViewTypeOnOpeningFile": "notebook",
-    "terminal.integrated.scrollback": 10000,
-    "[objective-c]": {
-        "editor.defaultFormatter": "nuclide.arclint"
-    },
-    "[objective-cpp]": {
-        "editor.defaultFormatter": "nuclide.arclint"
-    },
-    "[cuda-cpp]": {
-        "editor.formatOnSave": true,
-        "editor.defaultFormatter": "nuclide.arclint"
-    },
-    "[tcc-cpp]": {
-        "editor.formatOnSave": true,
-        "editor.defaultFormatter": "nuclide.arclint"
-    },
-    "[ocaml]": {
-        "editor.formatOnSave": true,
-        "editor.defaultFormatter": "nuclide.arclint"
-    },
+    ]
 }
