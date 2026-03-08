@@ -18,6 +18,10 @@ interface=text
 # p4merge.gui = true
 # p4merge.premerge = true
 
+[committemplate]
+tasknum = \n
+  Tags: no_accept2ship
+
 [templatealias]
 fb_rev = if(globalrev, 'rWWW{globalrev}', rev)
 fb_diff = if(phabdiff, ' {phabdiff}')
