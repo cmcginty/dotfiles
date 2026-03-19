@@ -39,7 +39,7 @@ alias hack='hphpd -h localhost'
 alias jest-e2e='http_proxy= jest-e2e'
 
 # Sandcastle
-alias odc='ondemand connect'
+alias odc='ondemand connect --ssh'
 function scutil-retry() { scutil get-spec $1 | grep -v nonce | scutil canary-command --parameters-stdin; }
 
 # Arc
